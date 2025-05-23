@@ -115,6 +115,10 @@ class Tab: UIView {
 			else {
 				secureMode = .secure
 			}
+
+			DispatchQueue.main.async { [weak self] in
+				self?.tabDelegate?.updateChrome()
+			}
 		}
 	}
 
@@ -425,11 +429,11 @@ class Tab: UIView {
 
 			// Will empty the webView, but keep the URL and doesn't create a history entry.
 			self.stringByEvaluatingJavaScript(from: "document.open()") { _ in }
-			
+
 			self.needsRefresh = true
 		}
 	}
-	
+
 	func getSnapshot(size: CGSize) -> UIImage? {
 		if snapshot == nil, let scrollView = scrollView {
 			let offset = scrollView.contentOffset
@@ -461,7 +465,7 @@ class Tab: UIView {
 		needsRefresh = true
 	}
 
-	
+
 	// MARK: Private Methods
 
 	private func setup() {

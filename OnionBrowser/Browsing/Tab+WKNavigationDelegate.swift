@@ -188,6 +188,12 @@ extension Tab: WKNavigationDelegate {
 
 			self?.skipHistory = false
 		}
+
+		if let trust = webView.serverTrust {
+			DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+				self?.tlsCertificate = TlsCertificate.load(trust: trust)
+			}
+		}
 	}
 
 	func webView(_ webView: WKWebView, didFail navigation: WKNavigation?, withError error: Error) {
@@ -216,14 +222,6 @@ extension Tab: WKNavigationDelegate {
 			}
 			else {
 				completionHandler(.performDefaultHandling, nil)
-			}
-
-			if let trust = space.serverTrust {
-				if url.host == space.host {
-					DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-						self?.tlsCertificate = TlsCertificate.load(trust: trust)
-					}
-				}
 			}
 
 		case NSURLAuthenticationMethodHTTPBasic, NSURLAuthenticationMethodHTTPDigest:
