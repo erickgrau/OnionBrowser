@@ -93,6 +93,8 @@ These people helped with translations. Thank you so much, folks!
   Liljana_Ackovska, Zarko_Gjurov, MatejMecka
 - Norwegian (Bokmål): 
   kingu, eirik174
+- Pashto:
+  leoprohacker
 - Persian: 
   ariaa, arminoza, nariman, sabs, magnifico, Gilberto1, Zaefarani, alinbipr, hamidreza_yazdani, mo.hoseini, noneck, voxp, gonjayesh, koofi, nonecknoel
 - Polish:
