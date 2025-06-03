@@ -17,11 +17,11 @@ target 'OnionBrowser' do
   pod 'ImageRow', :git => 'https://github.com/erickyim/ImageRow.git', :commit => 'd38369b8894425a9225ccf1e267226833b1950f0'
 
   pod 'Tor/GeoIP',
-    '~> 408.14'
+    '~> 408.16'
 #    :path => '../Tor.framework'
 
   pod 'IPtProxyUI',
-    '~> 4.7'
+    '~> 4.8'
 #    :git => 'https://github.com/tladesignz/IPtProxyUI-ios'
 #    :path => '../IPtProxyUI'
 
