@@ -1,7 +1,7 @@
-- Frissítettük a Tor-t a legújabb, 0.4.8.14-es verzióra.
-- Lockdown Mode támogatás hozzáadva iOS 16 és újabb operációs rendszerekhez.
-- Hozzáadva a „Bizonytalan HTTP-kérések blokkolása” funkció.
-- Javítottuk a gyorsítótár törlését a „lapok elfelejtése kikapcsoláskor” módban.
-- Beépített Tor: javítottuk a törött állapotot, amikor az alkalmazás túl sokáig volt a háttérben.
-- Beépített Tor: Nextcloud Bookmarks szerverrel való beszélgetéskor, élő keresési eredmények és elemek letöltésekor.
-- Néhány kisebb UI-probléma javítása. 
+- Frissítettük a Tor-t a legújabb, 0.4.8.16-os verzióra.
+- Lyrebird frissítve a legújabb 0.6.1 verzióra.
+- Pashto fordítás hozzáadva. (Köszönöm leoprohacker!)
+- Kisebb fordítási frissítések.
+- Javítottuk a WhatsApp linkek összeomlását.
+- Javított UI hiba az új lezárási mód körül.
+- Javítottuk a tanúsítványinformációk megjelenítését.

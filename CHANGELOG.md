@@ -1,5 +1,14 @@
 #  Onion Browser Changelog
 
+## 3.2.1
+- Updated Tor to latest version 0.4.8.16.
+- Updated Lyrebird to latest version 0.6.1.
+- Added Pashto translation. (Thanks leoprohacker!)
+- Minor translation updates.
+- Fixed crash with WhatsApp links.
+- Fixed UI bug around new lockdown mode.
+- Improved display of certificate information.
+
 ## 3.2.0
 - Updated Tor to latest version 0.4.8.14.
 - Added Lockdown Mode support for iOS 16 and up.

@@ -1,7 +1,7 @@
-- Tor son 0.4.8.14 sürümüne güncellendi.
-- iOS 16 ve üzeri için Kilit Modu desteği eklendi.
-- “Güvenli olmayan HTTP istekleri engellensin” özelliği eklendi.
-- “Kapatıldığında sekmeler unutulsun” modunda ön belleğin temizlenmesi düzeltildi.
-- İç Tor: Uygulamanın çok uzun süre arka planda kaldığında bozulması durumu düzeltildi.
-- İç Tor: Yer imi favicon'larını isterken, Nextcloud Yer İmleri sunucusuyla konuşurken, canlı arama sonuçları yaparken ve öğeleri indirirken yaşanan sızıntılar düzeltildi.
-- Bazı küçük kullanıcı arayüzü sorunları düzeltildi.
+- Tor en son 0.4.8.16 sürümüne güncellendi.
+- Lyrebird en son 0.6.1 sürümüne güncellendi.
+- Peştuca çeviri eklendi. (Teşekkürler leoprohacker!)
+- Küçük çeviri güncellemeleri.
+- WhatsApp bağlantılarındaki çökme düzeltildi.
+- Yeni kilitleme modu ile ilgili kullanıcı arayüzü hatası düzeltildi.
+- Sertifika bilgilerinin gösterimi iyileştirildi.

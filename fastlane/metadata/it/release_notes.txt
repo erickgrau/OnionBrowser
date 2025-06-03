@@ -1,7 +1,7 @@
-- Aggiornato Tor all'ultima versione 0.4.8.14.
-- Aggiunto il supporto della modalità Lockdown per iOS 16 e successivi.
-- Aggiunta la funzione “blocca le richieste HTTP non sicure”.
-- Corretta la cancellazione della cache quando si è in modalità “dimentica le schede allo spegnimento”.
-- Tor incorporato: corretto lo stato di rottura quando l'app rimaneva in background per troppo tempo.
-- Tor incorporato: Corretto il leak quando si richiedono le favicon dei segnalibri, quando si parla con un server Nextcloud Bookmarks, quando si eseguono risultati di ricerca live e quando si scaricano elementi.
-- Risolti alcuni problemi minori dell'interfaccia utente. 
+- Aggiornato Tor all'ultima versione 0.4.8.16.
+- Aggiornato Lyrebird all'ultima versione 0.6.1.
+- Aggiunta la traduzione in pashto. (Grazie leoprohacker!)
+- Aggiornamenti minori delle traduzioni.
+- Corretto l'arresto anomalo con i link di WhatsApp.
+- Corretto il bug dell'interfaccia utente relativo alla nuova modalità di blocco.
+- Migliorata la visualizzazione delle informazioni sul certificato.
