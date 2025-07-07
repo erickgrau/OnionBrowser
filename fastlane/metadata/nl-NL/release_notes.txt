@@ -1,7 +1,2 @@
-- Tor bijgewerkt naar de nieuwste versie 0.4.8.16.
-- Lyrebird bijgewerkt naar de nieuwste versie 0.6.1.
-- Pashto vertaling toegevoegd. (Bedankt leoprohacker!)
-- Kleine vertaalupdates.
-- Crash met WhatsApp-links verholpen.
-- UI-bug rond de nieuwe vergrendelingsmodus opgelost.
-- Verbeterde weergave van certificaatinformatie.
+- Tor bijgewerkt naar de nieuwste versie 0.4.8.17.
+- Lek via share sheet verholpen door onze eigen metadata te verstrekken die is verkregen via Tor.

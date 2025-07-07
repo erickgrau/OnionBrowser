@@ -1,7 +1,2 @@
-- Zaktualizowano Tor do najnowszej wersji 0.4.8.16.
-- Zaktualizowano Lyrebird do najnowszej wersji 0.6.1.
-- Dodano tłumaczenie na język paszto. (Dzięki leoprohacker!)
-- Drobne aktualizacje tłumaczeń.
-- Naprawiono awarię linków WhatsApp.
-- Naprawiono błąd interfejsu użytkownika związany z nowym trybem blokady.
-- Poprawiono wyświetlanie informacji o certyfikacie.
+- Zaktualizowano Tor do najnowszej wersji 0.4.8.17.
+- Naprawiono wyciek przez arkusz udostępniania, dostarczając własne metadane uzyskane przez Tor.

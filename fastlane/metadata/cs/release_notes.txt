@@ -1,7 +1,2 @@
-- Aktualizován Tor na nejnovější verzi 0.4.8.16.
-- Aktualizován Lyrebird na nejnovější verzi 0.6.1.
-- Přidán překlad do paštiny. (Díky leoprohacker!)
-- Drobné aktualizace překladů.
-- Opraven pád odkazů ve WhatsApp.
-- Opravena chyba uživatelského rozhraní kolem nového režimu uzamčení.
-- Vylepšeno zobrazování informací o certifikátu.
+- Aktualizován Tor na nejnovější verzi 0.4.8.17.
+- Opraven únik přes list sdílení poskytnutím vlastních metadat získaných prostřednictvím Toru.

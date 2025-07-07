@@ -1,7 +1,2 @@
-- Đã cập nhật Tor lên phiên bản mới nhất 0.4.8.16.
-- Đã cập nhật Lyrebird lên phiên bản mới nhất 0.6.1.
-- Đã thêm bản dịch tiếng Pashto. (Cảm ơn leoprohacker!)
-- Cập nhật bản dịch nhỏ.
-- Đã sửa lỗi sập liên kết WhatsApp.
-- Đã sửa lỗi giao diện người dùng xung quanh chế độ khóa mới.
-- Cải thiện hiển thị thông tin chứng chỉ.
+- Cập nhật Tor lên phiên bản mới nhất 0.4.8.17.
+- Sửa lỗi rò rỉ thông qua bảng chia sẻ bằng cách cung cấp metadata của riêng chúng tôi được thu thập qua Tor.

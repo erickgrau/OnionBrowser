@@ -1,7 +1,2 @@
-- Memperbarui Tor ke versi terbaru 0.4.8.16.
-- Memperbarui Lyrebird ke versi terbaru 0.6.1.
-- Menambahkan terjemahan Pashto. (Terima kasih leoprohacker!)
-- Pembaruan terjemahan kecil.
-- Memperbaiki kerusakan dengan tautan WhatsApp.
-- Memperbaiki bug UI di sekitar mode penguncian baru.
-- Peningkatan tampilan informasi sertifikat.
+- Memperbarui Tor ke versi terbaru 0.4.8.17.
+- Memperbaiki kebocoran melalui lembar berbagi dengan menyediakan metadata kami sendiri yang diperoleh melalui Tor.

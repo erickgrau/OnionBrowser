@@ -1,7 +1,2 @@
-- Tor ažuriran na najnoviju verziju 0.4.8.16.
-- Lyrebird ažuriran na najnoviju verziju 0.6.1.
-- Dodan prijevod na paštunski. (Hvala leoprohacker!)
-- Manja ažuriranja prijevoda.
-- Ispravljen pad sustava s WhatsApp poveznicama.
-- Ispravljena greška korisničkog sučelja oko novog načina zaključavanja.
-- Poboljšan prikaz informacija o certifikatu.
+- Tor je ažuriran na najnoviju verziju 0.4.8.17.
+- Ispravljeno curenje podataka kroz listu dijeljenja pružanjem vlastitih metapodataka dobivenih putem Tora.

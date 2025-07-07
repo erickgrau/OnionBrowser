@@ -1,7 +1,2 @@
-- Tor wurde auf die neueste Version 0.4.8.16 aktualisiert.
-- Lyrebird wurde auf die neueste Version 0.6.1 aktualisiert.
-- Pashto Übersetzung hinzugefügt. (Danke leoprohacker!)
-- Kleinere Aktualisierungen der Übersetzung.
-- Absturz mit WhatsApp-Links behoben.
-- UI-Fehler im Zusammenhang mit dem neuen Lockdown-Modus behoben.
-- Verbesserte Anzeige von Zertifikatsinformationen.
+- Tor wurde auf die neueste Version 0.4.8.17 aktualisiert.
+- Leck im Share Sheet behoben, indem eigene Metadaten bereitgestellt werden, die über Tor geladen werden.

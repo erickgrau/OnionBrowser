@@ -1,7 +1,2 @@
-- Tor en son 0.4.8.16 sürümüne güncellendi.
-- Lyrebird en son 0.6.1 sürümüne güncellendi.
-- Peştuca çeviri eklendi. (Teşekkürler leoprohacker!)
-- Küçük çeviri güncellemeleri.
-- WhatsApp bağlantılarındaki çökme düzeltildi.
-- Yeni kilitleme modu ile ilgili kullanıcı arayüzü hatası düzeltildi.
-- Sertifika bilgilerinin gösterimi iyileştirildi.
+- Tor en son 0.4.8.17 sürümüne güncellendi.
+- Tor aracılığıyla elde edilen kendi meta verilerimizi sağlayarak paylaşım sayfasındaki sızıntı düzeltildi.

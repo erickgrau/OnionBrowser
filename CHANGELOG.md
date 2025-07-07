@@ -1,5 +1,9 @@
 #  Onion Browser Changelog
 
+## 3.2.2
+- Updated Tor to latest version 0.4.8.17.
+- Fixed leak through share sheet by providing our own metadata acquired through Tor.
+
 ## 3.2.1
 - Updated Tor to latest version 0.4.8.16.
 - Updated Lyrebird to latest version 0.6.1.

@@ -1,7 +1,2 @@
-- Oppdaterte Tor til siste versjon 0.4.8.16.
-- Oppdatert Lyrebird til siste versjon 0.6.1.
-- Lagt til pashto-oversettelse. (Takk leoprohacker!)
-- Mindre oppdateringer av oversettelser.
-- Fikset krasj med WhatsApp-lenker.
-- Fikset UI-feil rundt ny lockdown-modus.
-- Forbedret visning av sertifikatinformasjon.
+- Oppdatert Tor til siste versjon 0.4.8.17.
+- Fikset lekkasje gjennom delingsark ved å tilby våre egne metadata innhentet gjennom Tor.

@@ -1,7 +1,2 @@
-- Actualizado Tor a la última versión 0.4.8.16.
-- Actualizado Lyrebird a la última versión 0.6.1.
-- Añadida traducción a Pashto. (¡Gracias leoprohacker!)
-- Actualizaciones menores de traducción.
-- Corregido fallo con enlaces de WhatsApp.
-- Corregido error de interfaz de usuario en torno al nuevo modo de bloqueo.
-- Mejora de la visualización de la información del certificado.
+- Actualizado Tor a la última versión 0.4.8.17.
+- Corregida la fuga a través de la hoja de compartición proporcionando nuestros propios metadatos adquiridos a través de Tor.

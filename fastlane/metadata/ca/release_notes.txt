@@ -1,7 +1,2 @@
-- Tor actualitzat a la darrera versió 0.4.8.16.
-- Lyrebird actualitzat a la darrera versió 0.6.1.
-- Traducció al paixtu afegida. (Gràcies leoprohacker!)
-- Actualitzacions menors de la traducció.
-- S'ha corregit un error amb els enllaços de WhatsApp.
-- S'ha corregit un error d'IU al voltant del nou mode de bloqueig.
-- Millora de la visualització de la informació del certificat.
+- Tor actualitzat a la darrera versió 0.4.8.17.
+- S'ha corregit la filtració a través del full de compartició proporcionant les nostres pròpies metadades adquirides a través de Tor.

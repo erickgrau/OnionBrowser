@@ -1,7 +1,2 @@
-- Frissítettük a Tor-t a legújabb, 0.4.8.16-os verzióra.
-- Lyrebird frissítve a legújabb 0.6.1 verzióra.
-- Pashto fordítás hozzáadva. (Köszönöm leoprohacker!)
-- Kisebb fordítási frissítések.
-- Javítottuk a WhatsApp linkek összeomlását.
-- Javított UI hiba az új lezárási mód körül.
-- Javítottuk a tanúsítványinformációk megjelenítését.
+- Frissítettük a Tor-t a legújabb, 0.4.8.17-es verzióra.
+- Javítottuk a megosztási lapon keresztül történő szivárgást a Toron keresztül szerzett saját metaadataink megadásával.

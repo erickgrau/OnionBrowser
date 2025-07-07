@@ -1,7 +1,2 @@
-- Tor päivitetty uusimpaan versioon 0.4.8.16.
-- Lyrebird päivitetty uusimpaan versioon 0.6.1.
-- Lisätty pashtu-käännös. (Kiitos leoprohacker!)
-- Pieniä käännöspäivityksiä.
-- Korjattu kaatuminen WhatsApp-linkkien kanssa.
-- Korjattu UI-virhe uuden lukitustilan ympärillä.
-- Parannettu varmenteen tietojen näyttämistä.
+- Tor päivitetty uusimpaan versioon 0.4.8.17.
+- Korjattu vuoto jakotiedoston kautta tarjoamalla omaa metatietoa, joka on hankittu Torin kautta.

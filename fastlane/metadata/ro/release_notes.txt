@@ -1,7 +1,2 @@
-- Actualizat Tor la ultima versiune 0.4.8.16.
-- Actualizat Lyrebird la ultima versiune 0.6.1.
-- Adăugată traducerea în pașto. (Mulțumesc leoprohacker!)
-- Actualizări minore ale traducerii.
-- Fixed crash cu link-uri WhatsApp.
-- Fixed UI bug în jurul noului mod de blocare.
-- Afișarea îmbunătățită a informațiilor despre certificat.
+- Am actualizat Tor la ultima versiune 0.4.8.17.
+- Rezolvat scurgerea prin foaia de partajare prin furnizarea propriilor noastre metadate obținute prin Tor.
