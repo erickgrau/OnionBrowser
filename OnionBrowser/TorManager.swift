@@ -100,7 +100,7 @@ class TorManager {
 	}
 
 	func start(_ transport: Transport,
-			   _ progressCallback: @escaping (_ progress: Int?) -> Void,
+			   _ progressCallback: @escaping (_ progress: Int?, _ summary: String?) -> Void,
 			   _ completion: @escaping (Error?) -> Void)
 	{
 		self.transport = transport
@@ -174,18 +174,15 @@ class TorManager {
 					[weak self] (type, severity, action, arguments) -> Bool in
 
 					if type == "STATUS_CLIENT" && action == "BOOTSTRAP" {
-						let progress: Int?
+						self?.log("#startTunnel arguments=\(arguments?.description ?? "(nil)")")
+
+						var progress: Int? = nil
 
 						if let p = arguments?["PROGRESS"] {
 							progress = Int(p)
 						}
-						else {
-							progress = nil
-						}
 
-						self?.log("#startTunnel progress=\(progress?.description ?? "(nil)")")
-
-						progressCallback(progress)
+						progressCallback(progress, arguments?["SUMMARY"])
 
 						if progress ?? 0 >= 100 {
 							torController.removeObserver(self?.progressObs)
