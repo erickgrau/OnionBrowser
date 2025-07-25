@@ -44,6 +44,7 @@
 		A0204FA12D721006006CDA3B /* UpdateAdvertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0204FA02D720FF6006CDA3B /* UpdateAdvertisement.swift */; };
 		A02414372A0260B1009AEE25 /* WhyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02414352A0260B1009AEE25 /* WhyViewController.xib */; };
 		A02414382A0260B1009AEE25 /* WhyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02414362A0260B1009AEE25 /* WhyViewController.swift */; };
+		A02640D72E33A9EE003D2C60 /* light-onlydomains.txt in Resources */ = {isa = PBXBuildFile; fileRef = A02640D62E33A9EE003D2C60 /* light-onlydomains.txt */; };
 		A02885802893FA23007D5AE8 /* WebsiteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028857F2893FA23007D5AE8 /* WebsiteStorage.swift */; };
 		A028858228940B93007D5AE8 /* Storage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028858128940B93007D5AE8 /* Storage2ViewController.swift */; };
 		A02A09082AD6B92800A9334C /* TorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DD6B42AC5914B00441B48 /* TorManager.swift */; };
@@ -80,7 +81,6 @@
 		A0A1A35A2A03DAB800DE4991 /* security-levels.html in Resources */ = {isa = PBXBuildFile; fileRef = A0A1A3582A03DAB800DE4991 /* security-levels.html */; };
 		A0A83AC228A14CAB005C15C9 /* Tab+WKScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A83AC128A14CAB005C15C9 /* Tab+WKScriptMessageHandler.swift */; };
 		A0AF2C062A123E65000BCC85 /* BrowsingViewController+UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AF2C052A123E65000BCC85 /* BrowsingViewController+UIResponder.swift */; };
-		A0BF51E523AFBF250096624A /* urlblocker.json in Resources */ = {isa = PBXBuildFile; fileRef = A0BF51AE23AFBF250096624A /* urlblocker.json */; };
 		A0BF51ED23AFBF250096624A /* start.html in Resources */ = {isa = PBXBuildFile; fileRef = A0BF51C723AFBF250096624A /* start.html */; };
 		A0BF51EF23AFBF250096624A /* SearchEngines.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0BF51D123AFBF250096624A /* SearchEngines.plist */; };
 		A0BF51F423AFBF250096624A /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = A0BF51DE23AFBF250096624A /* credits.html */; };
@@ -221,6 +221,8 @@
 		A02414352A0260B1009AEE25 /* WhyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhyViewController.xib; sourceTree = "<group>"; };
 		A02414362A0260B1009AEE25 /* WhyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyViewController.swift; sourceTree = "<group>"; };
 		A025F27421F62C100034B947 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		A02640D42E33A9A0003D2C60 /* update-blocklist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "update-blocklist.sh"; sourceTree = "<group>"; };
+		A02640D62E33A9EE003D2C60 /* light-onlydomains.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "light-onlydomains.txt"; sourceTree = "<group>"; };
 		A028857F2893FA23007D5AE8 /* WebsiteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteStorage.swift; sourceTree = "<group>"; };
 		A028858128940B93007D5AE8 /* Storage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage2ViewController.swift; sourceTree = "<group>"; };
 		A02A090D2AD6BA9600A9334C /* OrbotOrBuiltInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbotOrBuiltInViewController.swift; sourceTree = "<group>"; };
@@ -413,7 +415,6 @@
 		A0A83AC128A14CAB005C15C9 /* Tab+WKScriptMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+WKScriptMessageHandler.swift"; sourceTree = "<group>"; };
 		A0AF2C052A123E65000BCC85 /* BrowsingViewController+UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowsingViewController+UIResponder.swift"; sourceTree = "<group>"; };
 		A0B2240E23A92B2700EA2C47 /* OnionBrowser_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnionBrowser_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
-		A0BF51AE23AFBF250096624A /* urlblocker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = urlblocker.json; sourceTree = "<group>"; };
 		A0BF51C523AFBF250096624A /* credits.html.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = credits.html.in; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
 		A0BF51C723AFBF250096624A /* start.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = start.html; sourceTree = "<group>"; };
 		A0BF51D123AFBF250096624A /* SearchEngines.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SearchEngines.plist; sourceTree = "<group>"; };
@@ -617,6 +618,7 @@
 				A07D65592208A2540002D775 /* decode_bundle_version.sh */,
 				A07D655A2208A2540002D775 /* decimalize_git_hash.bash */,
 				A07D655B2208A2540002D775 /* minutes_since_date.bash */,
+				A02640D42E33A9A0003D2C60 /* update-blocklist.sh */,
 			);
 			path = "build-util";
 			sourceTree = "<group>";
@@ -655,7 +657,7 @@
 				A0BF51DE23AFBF250096624A /* credits.html */,
 				A0BF51C523AFBF250096624A /* credits.html.in */,
 				A0BF51C723AFBF250096624A /* start.html */,
-				A0BF51AE23AFBF250096624A /* urlblocker.json */,
+				A02640D62E33A9EE003D2C60 /* light-onlydomains.txt */,
 				A08563842A05419000A3A7FF /* Launch Screen.storyboard */,
 				A06881D02A66ADF60084D26D /* release.entitlements */,
 				A06881D12A66B0070084D26D /* debug.entitlements */,
@@ -808,6 +810,7 @@
 			buildPhases = (
 				65319E2856D38575BBE828A1 /* [CP] Check Pods Manifest.lock */,
 				A06F5F4A275692870023622E /* BartyCrouch */,
+				A02640D52E33A9B2003D2C60 /* Load Blocklist */,
 				01801E8E1A32CA2A002B4718 /* Sources */,
 				01801E8F1A32CA2A002B4718 /* Frameworks */,
 				01801E901A32CA2A002B4718 /* Resources */,
@@ -954,12 +957,12 @@
 				A0BF526723AFC3580096624A /* BookmarkCell.xib in Resources */,
 				A0BF526523AFC3580096624A /* FavIconCell.xib in Resources */,
 				A0BF525823AFC3580096624A /* TabCell.xib in Resources */,
-				A0BF51E523AFBF250096624A /* urlblocker.json in Resources */,
 				A02414372A0260B1009AEE25 /* WhyViewController.xib in Resources */,
 				A0BF51EF23AFBF250096624A /* SearchEngines.plist in Resources */,
 				A0BF524C23AFC3580096624A /* CircuitViewController.xib in Resources */,
 				A08563142A04E9D900A3A7FF /* Localizable.strings in Resources */,
 				A08563602A04EA8C00A3A7FF /* InfoPlist.strings in Resources */,
+				A02640D72E33A9EE003D2C60 /* light-onlydomains.txt in Resources */,
 				A085633A2A04EA1E00A3A7FF /* Localizable.stringsdict in Resources */,
 				A0BF525A23AFC3580096624A /* BrowsingViewController-iPad.xib in Resources */,
 				A0FA965D2A015EBB005EDC3F /* WelcomeViewController.xib in Resources */,
@@ -1072,6 +1075,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$SRCROOT\"/build-util/mk_build_versions.sh\n";
+		};
+		A02640D52E33A9B2003D2C60 /* Load Blocklist */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Load Blocklist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbuild-util/update-blocklist.sh\n";
 		};
 		A06F5F4A275692870023622E /* BartyCrouch */ = {
 			isa = PBXShellScriptBuildPhase;
