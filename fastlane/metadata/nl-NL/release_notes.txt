@@ -1,2 +1,7 @@
-- Tor bijgewerkt naar de nieuwste versie 0.4.8.17.
-- Lek via share sheet verholpen door onze eigen metadata te verstrekken die is verkregen via Tor.
+- Toon statustekst bij het opstarten van Tor.
+- Verbeterde URL-blokkering:
+  - Verouderde blokkeerlijst vervangen door de lijst van HaGeZi: https://github.com/hagezi/dns-blocklists
+  - App wordt standaard geleverd met een lichte lijst.
+  - Kan door de gebruiker worden bijgewerkt, keuze uit 5 verschillende lijsten.
+  - Kan optioneel volledig worden uitgeschakeld.
+- Vertalingen bijgewerkt.

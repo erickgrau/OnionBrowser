@@ -1,2 +1,7 @@
-- Tor en son 0.4.8.17 sürümüne güncellendi.
-- Tor aracılığıyla elde edilen kendi meta verilerimizi sağlayarak paylaşım sayfasındaki sızıntı düzeltildi.
+- Tor'u başlatırken durum metnini göster.
+- Geliştirilmiş URL engelleyici:
+    - Eski engelleme listesi HaGeZi'nin listesiyle değiştirildi: https://github.com/hagezi/dns-blocklists
+    - Uygulama varsayılan olarak hafif listeyle birlikte gelir.
+    - Kullanıcı tarafından güncellenebilir, 5 farklı liste arasından seçim yapılabilir.
+    - İsteğe bağlı olarak tamamen kapatılabilir.
+- Çeviriler güncellendi.

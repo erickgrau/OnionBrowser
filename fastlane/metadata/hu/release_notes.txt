@@ -1,2 +1,7 @@
-- Frissítettük a Tor-t a legújabb, 0.4.8.17-es verzióra.
-- Javítottuk a megosztási lapon keresztül történő szivárgást a Toron keresztül szerzett saját metaadataink megadásával.
+- A Tor indításakor megjelenik az állapot szövege.
+- Továbbfejlesztett URL-blokkoló:
+    - Az elavult blokkolási listát HaGeZi listájával helyettesítettük: https://github.com/hagezi/dns-blocklists
+    - Az alkalmazás alapértelmezés szerint könnyű listával érkezik.
+    - A felhasználó frissítheti, 5 különböző lista közül választhat.
+    - Opcionálisan teljesen kikapcsolható.
+- Frissített fordítások.

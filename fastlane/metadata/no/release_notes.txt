@@ -1,2 +1,7 @@
-- Oppdatert Tor til siste versjon 0.4.8.17.
-- Fikset lekkasje gjennom delingsark ved å tilby våre egne metadata innhentet gjennom Tor.
+- Vis statustekst når Tor startes opp.
+- Forbedret URL-blokkering:
+    - Erstattet utdatert blokkeringsliste med HaGeZis liste: https://github.com/hagezi/dns-blocklists
+    - Appen leveres med en lett liste som standard.
+    - Kan oppdateres av brukeren, 5 forskjellige lister å velge mellom.
+    - Kan slås av helt hvis ønskelig.
+- Oppdaterte oversettelser.

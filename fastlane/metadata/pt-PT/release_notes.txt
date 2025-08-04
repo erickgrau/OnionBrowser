@@ -1,2 +1,7 @@
-- Atualização do Tor para a última versão 0.4.8.17.
-- Corrigida a fuga através da folha de partilha, fornecendo os nossos próprios metadados adquiridos através do Tor.
+- Mostrar texto de estado ao iniciar o Tor.
+- Bloqueador de URL melhorado:
+    - Substituição da lista de bloqueio desatualizada pela lista de HaGeZi: https://github.com/hagezi/dns-blocklists
+    - A aplicação é fornecida com uma lista leve por predefinição.
+    - Atualizável pelo utilizador, com 5 listas diferentes à escolha.
+    - Opcionalmente, pode ser desativado completamente.
+- Traduções atualizadas.

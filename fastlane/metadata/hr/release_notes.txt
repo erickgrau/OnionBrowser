@@ -1,2 +1,7 @@
-- Tor je ažuriran na najnoviju verziju 0.4.8.17.
-- Ispravljeno curenje podataka kroz listu dijeljenja pružanjem vlastitih metapodataka dobivenih putem Tora.
+- Prikaži tekst statusa prilikom pokretanja Tora.
+- Poboljšani blokator URL-ova:
+    - Zamijenjen je zastarjeli popis blokiranih s HaGeZijevim popisom: https://github.com/hagezi/dns-blocklists
+    - Aplikacija se isporučuje s laganim popisom prema zadanim postavkama.
+    - Korisnik ga može ažurirati, 5 različitih popisa za odabir.
+    - Opcionalno potpuno isključivanje.
+- Ažurirani prijevodi.

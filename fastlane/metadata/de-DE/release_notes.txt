@@ -1,2 +1,7 @@
-- Tor wurde auf die neueste Version 0.4.8.17 aktualisiert.
-- Leck im Share Sheet behoben, indem eigene Metadaten bereitgestellt werden, die über Tor geladen werden.
+- Statustext beim Starten von Tor anzeigen.
+- Verbesserter URL-Blocker:
+  - Veraltete Blockliste durch HaGeZis Liste ersetzt: https://github.com/hagezi/dns-blocklists
+  - Die App wird standardmäßig mit einer Light-Liste ausgeliefert.
+  - Vom Benutzer aktualisierbar, 5 verschiedene Listen zur Auswahl.
+  - Optional vollständig deaktivierbar.
+- Übersetzungen aktualisiert.

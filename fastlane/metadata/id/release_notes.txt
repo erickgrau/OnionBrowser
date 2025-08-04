@@ -1,2 +1,7 @@
-- Memperbarui Tor ke versi terbaru 0.4.8.17.
-- Memperbaiki kebocoran melalui lembar berbagi dengan menyediakan metadata kami sendiri yang diperoleh melalui Tor.
+- Tampilkan teks status saat melakukan bootstrap Tor.
+- Peningkatan pemblokir URL:
+  - Mengganti daftar blokir yang sudah usang dengan daftar HaGeZi: https://github.com/hagezi/dns-blocklists
+  - Aplikasi dilengkapi dengan daftar ringan secara default.
+  - Dapat diperbarui oleh pengguna, dengan 5 daftar berbeda untuk dipilih.
+  - Dapat dinonaktifkan sepenuhnya secara opsional.
+- Pembaruan terjemahan.

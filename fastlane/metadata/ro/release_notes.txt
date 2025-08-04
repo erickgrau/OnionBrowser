@@ -1,2 +1,7 @@
-- Am actualizat Tor la ultima versiune 0.4.8.17.
-- Rezolvat scurgerea prin foaia de partajare prin furnizarea propriilor noastre metadate obținute prin Tor.
+- Afișează textul de stare la pornirea Tor.
+- Blocator URL îmbunătățit:
+  - Lista de blocare învechită a fost înlocuită cu lista HaGeZi: https://github.com/hagezi/dns-blocklists
+  - Aplicația este livrată cu lista ușoară în mod implicit.
+  - Poate fi actualizată de utilizator, cu 5 liste diferite din care se poate alege.
+  - Opțional, poate fi dezactivată complet.
+- Traduceri actualizate.
