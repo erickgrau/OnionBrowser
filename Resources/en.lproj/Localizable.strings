@@ -2,7 +2,7 @@
 "%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems.";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ If you have connectivity issues with %2$@" = "%1$@ If you have connectivity issues with %2$@";
+"%1$@ if you have connectivity issues with %2$@" = "%1$@ if you have connectivity issues with %2$@";
 
 /* Placeholder 1 is bullet point, Placeholder 2 is 'Onion Browser' */
 "%1$@ if you want to use %2$@ over another VPN" = "%1$@ if you want to use %2$@ over another VPN";
@@ -50,7 +50,7 @@
 "%@ video and audio streams don't go through Tor and might get blocked" = "%@ video and audio streams don't go through Tor and might get blocked";
 
 /* Placeholder is bullet point */
-"%@ Websites can uncover your real IP address using JavaScript" = "%@ Websites can uncover your real IP address using JavaScript";
+"%@ websites can uncover your real IP address using JavaScript" = "%@ websites can uncover your real IP address using JavaScript";
 
 /* No comment provided by engineer. */
 "(not recommended)" = "(not recommended)";

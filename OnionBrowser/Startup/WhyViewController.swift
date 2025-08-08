@@ -107,7 +107,7 @@ class WhyViewController: UIViewController {
 	@IBOutlet weak var body8Lb: UILabel! {
 		didSet {
 			eventuallyHide(body8Lb)
-			body8Lb.text = String(format: NSLocalizedString("%1$@ If you have connectivity issues with %2$@", comment: "Placeholder 1 is bullet point, placeholder 2 is 'Orbot'"), "•", OrbotKit.orbotName)
+			body8Lb.text = String(format: NSLocalizedString("%1$@ if you have connectivity issues with %2$@", comment: "Placeholder 1 is bullet point, placeholder 2 is 'Orbot'"), "•", OrbotKit.orbotName)
 		}
 	}
 
@@ -138,7 +138,7 @@ class WhyViewController: UIViewController {
 		didSet {
 			eventuallyHide(body12Lb)
 			body12Lb.text = String(format: NSLocalizedString(
-				"%@ Websites can uncover your real IP address using JavaScript",
+				"%@ websites can uncover your real IP address using JavaScript",
 				comment: "Placeholder is bullet point"), "•")
 		}
 	}

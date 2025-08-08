@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -33,20 +33,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXl-of-5Fo">
-                    <rect key="frame" x="0.0" y="59" width="430" height="839"/>
+                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhA-k7-OTj">
-                            <rect key="frame" x="0.0" y="0.0" width="430" height="947.33333333333337"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="1013.3333333333334"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dY-5A-efk">
-                                    <rect key="frame" x="16" y="20" width="398" height="64"/>
+                                    <rect key="frame" x="16" y="20" width="361" height="64"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-onion-browser" translatesAutoresizingMaskIntoConstraints="NO" id="FmA-Aw-nI6">
-                                            <rect key="frame" x="116.66666666666666" y="0.0" width="64" height="64"/>
+                                            <rect key="frame" x="98" y="0.0" width="64" height="64"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="FmA-Aw-nI6" secondAttribute="height" multiplier="1:1" id="RX9-g2-TR4"/>
                                                 <constraint firstAttribute="width" constant="64" id="aBb-lz-iOu"/>
@@ -58,13 +58,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lV-Mt-g1p">
-                                            <rect key="frame" x="188.66666666666666" y="11.666666666666671" width="21" height="41"/>
+                                            <rect key="frame" x="170" y="11.666666666666657" width="21" height="41"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-orbot" translatesAutoresizingMaskIntoConstraints="NO" id="OMf-TS-Xud">
-                                            <rect key="frame" x="209.66666666666666" y="-8" width="79.999999999999972" height="80"/>
+                                            <rect key="frame" x="191" y="-8" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="OyU-pl-PnL"/>
                                                 <constraint firstAttribute="width" secondItem="OMf-TS-Xud" secondAttribute="height" multiplier="1:1" id="l94-PJ-OLb"/>
@@ -83,55 +83,55 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why Onion Browser needs Orbot" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGw-9l-gi9">
-                                    <rect key="frame" x="20" y="100" width="390" height="81.666666666666686"/>
+                                    <rect key="frame" x="20" y="100" width="353" height="81.666666666666686"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So that you can do more with Tor on iOS! In %1$@, %2$@ improves the browsing experience with:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiZ-ny-5Lj">
-                                    <rect key="frame" x="16" y="197.66666666666669" width="398" height="42.333333333333343"/>
+                                    <rect key="frame" x="16" y="197.66666666666669" width="361" height="64.333333333333314"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%@ a little more speed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vv-ru-inL">
-                                    <rect key="frame" x="20" y="248.00000000000003" width="390" height="20.333333333333343"/>
+                                    <rect key="frame" x="20" y="270" width="353" height="20.333333333333314"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%@ new standards" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jn-aO-y8q">
-                                    <rect key="frame" x="20" y="276.33333333333331" width="390" height="20.333333333333314"/>
+                                    <rect key="frame" x="20" y="298.33333333333331" width="353" height="20.333333333333314"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%@ video and audio streaming" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH2-nw-Wgh">
-                                    <rect key="frame" x="20" y="304.66666666666669" width="390" height="20.333333333333314"/>
+                                    <rect key="frame" x="20" y="326.66666666666669" width="353" height="20.333333333333314"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%@ more protection from IP leaks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ge-41-vXS">
-                                    <rect key="frame" x="20" y="333" width="390" height="20.333333333333314"/>
+                                    <rect key="frame" x="20" y="355" width="353" height="20.333333333333314"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%@ alone provides a VPN proxy. It will hide apps from network monitoring and give you access when they are blocked." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFa-bJ-6Py">
-                                    <rect key="frame" x="20" y="369.33333333333331" width="390" height="64.333333333333314"/>
+                                    <rect key="frame" x="20" y="391.33333333333331" width="353" height="64.333333333333314"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Both are free to use. Free of tracking. Code is open source." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPU-ZR-u7d">
-                                    <rect key="frame" x="20" y="449.66666666666669" width="390" height="42.333333333333314"/>
+                                    <rect key="frame" x="20" y="471.66666666666663" width="353" height="42.333333333333371"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="LKJ-Kz-eqW">
-                                    <rect key="frame" x="151" y="524" width="128" height="40"/>
+                                    <rect key="frame" x="132.66666666666666" y="546" width="127.99999999999997" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="7Uz-Zk-1vU"/>
                                         <constraint firstAttribute="height" constant="40" id="OzD-E8-bM3"/>
@@ -149,43 +149,43 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reasons to use the built-in Tor (iOS 17 only)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l1o-3m-Zog">
-                                    <rect key="frame" x="20" y="580" width="390" height="81.666666666666629"/>
+                                    <rect key="frame" x="20" y="602" width="353" height="81.666666666666629"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%1$@ If you have connectivity issues with %2$@" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7q-s0-DY8">
-                                    <rect key="frame" x="20" y="677.66666666666663" width="390" height="20.333333333333371"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%1$@ if you have connectivity issues with %2$@" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7q-s0-DY8">
+                                    <rect key="frame" x="20" y="699.66666666666663" width="353" height="42.333333333333371"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%1$@ if you want to use %2$@ over another VPN" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEk-zh-gS8">
-                                    <rect key="frame" x="20" y="706" width="390" height="20.333333333333371"/>
+                                    <rect key="frame" x="20" y="750" width="353" height="42.333333333333371"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawbacks:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-4n-1ht">
-                                    <rect key="frame" x="20" y="734.33333333333337" width="390" height="20.333333333333371"/>
+                                    <rect key="frame" x="20" y="800.33333333333337" width="353" height="20.333333333333371"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%@ video and audio streams don't go through Tor and might get blocked" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1re-7a-aih">
-                                    <rect key="frame" x="20" y="762.66666666666663" width="390" height="42.333333333333371"/>
+                                    <rect key="frame" x="20" y="828.66666666666663" width="353" height="42.333333333333371"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%@ Websites can uncover your real IP address using JavaScript" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efO-1f-M1z">
-                                    <rect key="frame" x="20" y="813" width="390" height="42.333333333333371"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%@ websites can uncover your real IP address using JavaScript" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efO-1f-M1z">
+                                    <rect key="frame" x="20" y="879" width="353" height="42.333333333333371"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="w6I-PL-TEy">
-                                    <rect key="frame" x="138" y="887.33333333333337" width="154.33333333333337" height="40"/>
+                                    <rect key="frame" x="119.33333333333333" y="953.33333333333326" width="154.33333333333337" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="ALq-t6-hzy"/>
                                         <constraint firstAttribute="height" constant="40" id="yTk-54-lOe"/>
