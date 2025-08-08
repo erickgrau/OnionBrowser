@@ -15,7 +15,7 @@ CARACTÉRISTIQUES :
 • Et d’autres caractéristiques qui améliorent la confidentialité !
 
 AVERTISSEMENTS :
-– La navigation Web est beaucoup plus lente qu’avec un navigateur Web et un RPV normaux, car votre trafic est chiffré et relayé par le réseau Tor.
+– La navigation Web est beaucoup plus lente qu’avec un navigateur Web ou un RPV/VPN normaux, car votre trafic est chiffré et relayé par le réseau Tor.
 
 – Le Navigateur Onion pourrait ne pas fonctionner sur les réseaux qui appliquent des restrictions réseau sophistiquées. Si l’appli ne se connecte pas, essayez d’utiliser des ponts (ou un type de pont différent), forcez la fermeture et redémarrez l’appli.
 
