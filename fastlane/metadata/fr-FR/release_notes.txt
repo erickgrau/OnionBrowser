@@ -1,2 +1,7 @@
-- Mise à jour de Tor vers la version la plus récente 0.4.8.17.
-- Correction de la fuite dans la feuille de partage en fournissant nos propres métadonnées acquises avec Tor.
+– Afficher le texte d’état au démarrage de Tor.
+– Amélioration du bloqueur d’URL:
+  – Remplacement de la liste de blocage obsolète par celle de HaGeZi : https://github.com/hagezi/dns-blocklists
+  – L’appli est livrée avec une liste allégée par défaut.
+  – Modifiable par l’utilisateur, 5 listes différentes au choix.
+  – Désactivation facultative complète.
+– Mise à jour des traductions.
