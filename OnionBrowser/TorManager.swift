@@ -385,10 +385,7 @@ class TorManager {
 	}
 
 	private func startTransport() throws {
-		Transport.custom.stop()
-		Transport.meekAzure.stop()
-		Transport.obfs4.stop()
-		Transport.snowflake.stop()
+		transport.stopAllOthers()
 
 		try transport.start()
 	}
