@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "العنوان";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "جميع القواعد ";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "نسيان في الخلفية";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "تمويل التطوير";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "أمن التبويبة";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "أخبر مواقع الويب أنك تعترض على معالجة بياناتك الشخصية وبيعها";

@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "Osoite";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "Lisää sääntöjä";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "Unohda taustalla";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "Rahoita kehitystä";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "Välilehtien suojaus";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Kerro verkkosivustoille, että vastustat henkilökohtaisten tietojesi käsittelyä ja myyntiä.";

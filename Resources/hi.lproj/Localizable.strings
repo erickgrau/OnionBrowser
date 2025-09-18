@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "पता";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "सभी नियम";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "पृष्ठभूमि में भूल जाओ";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "निधि विकास";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "टैब सुरक्षा";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Tell websites that you object to processing and selling of your personal data";

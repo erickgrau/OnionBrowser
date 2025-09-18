@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "Adres";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "Wszystkie reguły";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "Zapominaj w Tle";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "Wspieraj Rozwój";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "Bezpieczeństwo Kart";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Tell websites that you object to processing and selling of your personal data";

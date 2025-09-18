@@ -2,7 +2,7 @@
 "%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@ kann entweder %2$@ für eine sichere Verbindung zum Tor-Netzwerk benutzen oder ein eingebautes Tor verwenden. Das eingebaute Tor hat Sicherheitsprobleme.";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ if you have connectivity issues with %2$@" = "%1$@ if you have connectivity issues with %2$@";
+"%1$@ if you have connectivity issues with %2$@" = "%1$@ Wenn Du Verbindungsprobleme mit %2$@ hast";
 
 /* Placeholder 1 is bullet point, Placeholder 2 is 'Onion Browser' */
 "%1$@ if you want to use %2$@ over another VPN" = "%1$@ wenn Du %2$@ über ein weiteres VPN benutzen willst";
@@ -50,7 +50,7 @@
 "%@ video and audio streams don't go through Tor and might get blocked" = "%@ Video- und Audiostreams gehen nicht durch Tor und könnten blockiert sein";
 
 /* Placeholder is bullet point */
-"%@ websites can uncover your real IP address using JavaScript" = "%@ websites can uncover your real IP address using JavaScript";
+"%@ websites can uncover your real IP address using JavaScript" = "%@ Websites können Deine richtige IP-Adresse mittels JavaScript ermitteln";
 
 /* No comment provided by engineer. */
 "(not recommended)" = "(nicht empfohlen)";
@@ -96,6 +96,9 @@
 
 /* BookmarkViewController */
 "Address" = "Adresse";
+
+/* VoiceOver */
+"Address and search bar" = "Adress- und Suchleiste";
 
 /* RuleEditorController */
 "All rules" = "Alle Regeln";
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "Im Hintergrund vergessen";
+
+/* VoiceOver */
+"Forward" = "Vorwärts";
 
 /* SettingsViewController */
 "Fund Development" = "Spenden";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "Reitersicherheit";
+
+/* VoiceOver */
+"Tabs" = "Reiter";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Widerspreche der Verarbeitung und dem Verkauf Deiner persönlichen Daten auf Webseiten";

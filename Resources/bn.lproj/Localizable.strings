@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "ঠিকানা";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "সকল নিয়মগুলি";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "পটভূমিতে ভুলে যান";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "তহবিল উন্নয়ন";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "ট্যাবের নিরাপত্তা";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Tell websites that you object to processing and selling of your personal data";

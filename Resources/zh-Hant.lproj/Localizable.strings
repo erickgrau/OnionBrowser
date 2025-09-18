@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "網址";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "所有規則";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "程式於背景執行時清除資料";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "捐助開發";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "分頁安全性";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "告訴網站您拒絕其處理與販售您的個人資料";

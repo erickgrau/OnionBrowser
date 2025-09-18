@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "アドレス";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "全てのルール";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "バックグラウンド時に消去";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "開発資金を支援";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "タブのセキュリティ";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "あなたの個人情報を処理したり転売することに反対であることをサイトに伝える";

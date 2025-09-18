@@ -29,11 +29,17 @@ class BrowsingViewController: UIViewController, TabDelegate {
 			searchBarHeight = searchBarHeightConstraint?.constant
 		}
 	}
-	@IBOutlet weak var securityBt: UIButton?
+	@IBOutlet weak var securityBt: UIButton? {
+		didSet {
+			securityBt?.accessibilityHint = NSLocalizedString("Security Level for This Site", comment: "VoiceOver")
+		}
+	}
+
 	@IBOutlet weak var searchFl: UITextField? {
 		didSet {
 			searchFl?.leftView = encryptionBt
 			searchFl?.rightView = reloadBt
+			searchFl?.accessibilityHint = NSLocalizedString("Address and search bar", comment: "VoiceOver")
 		}
 	}
 
@@ -42,6 +48,8 @@ class BrowsingViewController: UIViewController, TabDelegate {
 		button.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
 
 		button.addTarget(self, action: #selector(action), for: .touchUpInside)
+
+		button.accessibilityLabel = NSLocalizedString("Certificate Information", comment: "VoiceOver")
 
 		return button
 	}()
@@ -60,7 +68,12 @@ class BrowsingViewController: UIViewController, TabDelegate {
 		return button
 	}()
 
-	@IBOutlet weak var torBt: UIButton?
+	@IBOutlet weak var torBt: UIButton? {
+		didSet {
+			torBt?.accessibilityLabel = NSLocalizedString("Tor Circuit", comment: "VoiceOver")
+		}
+	}
+
 	@IBOutlet weak var progress: UIProgressView?
 	@IBOutlet weak var container: UIView?
 	@IBOutlet weak var containerBottomConstraint2Toolbar: NSLayoutConstraint? // Not available on iPad
@@ -79,8 +92,16 @@ class BrowsingViewController: UIViewController, TabDelegate {
 	}
 	@IBOutlet weak var mainTools: UIStackView? // Not available on iPad
 	@IBOutlet weak var tabsTools: UIView?
-	@IBOutlet weak var backBt: UIButton?
-	@IBOutlet weak var frwrdBt: UIButton?
+	@IBOutlet weak var backBt: UIButton? {
+		didSet {
+			backBt?.accessibilityLabel = NSLocalizedString("Back", comment: "VoiceOver")
+		}
+	}
+	@IBOutlet weak var frwrdBt: UIButton? {
+		didSet {
+			frwrdBt?.accessibilityLabel = NSLocalizedString("Forward", comment: "VoiceOver")
+		}
+	}
 
 	@IBOutlet weak var findBt: UIButton? {
 		didSet {
@@ -114,19 +135,29 @@ class BrowsingViewController: UIViewController, TabDelegate {
 	@IBOutlet weak var actionBt: UIButton?
 	@IBOutlet weak var bookmarksBt: UIButton?
 	@IBOutlet weak var newTabBt: UIButton?
+
 	@IBOutlet weak var tabsBt: UIButton? {
 		didSet {
 			tabsBt?.setTitleColor(tabsBt?.tintColor, for: .normal)
 
 			tabsBt?.addTarget(self, action: #selector(showOverview), for: .touchUpInside)
+
+			tabsBt?.accessibilityHint = NSLocalizedString("Tabs", comment: "VoiceOver")
 		}
 	}
-	@IBOutlet weak var settingsBt: UIButton?
+
+	@IBOutlet weak var settingsBt: UIButton? {
+		didSet {
+			settingsBt?.accessibilityLabel = NSLocalizedString("Settings", comment: "VoiceOver")
+		}
+	}
+
 	@IBOutlet weak var newTabFromOverviewBt: UIButton? {
 		didSet {
 			newTabFromOverviewBt?.addTarget(self, action: #selector(newTabFromOverview), for: .touchUpInside)
 		}
 	}
+
 	@IBOutlet weak var hideOverviewBt: UIButton? {
 		didSet {
 			hideOverviewBt?.setTitle(NSLocalizedString("Done", comment: ""))

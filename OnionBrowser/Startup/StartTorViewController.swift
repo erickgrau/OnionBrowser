@@ -87,6 +87,8 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 			DispatchQueue.main.async {
 				self?.progressView.setProgress(Float(progress) / 100, animated: true)
 
+				UIAccessibility.post(notification: .announcement, argument: String(format: "%d%%", progress))
+
 				if let summary = summary, !summary.isEmpty {
 					self?.statusLb.text = summary
 					self?.statusLb.textColor = .label
@@ -104,6 +106,8 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 					self?.statusLb.text = (error ?? TorManager.Errors.noSocksAddr).localizedDescription
 					self?.statusLb.textColor = .systemRed
 					self?.statusLb.isHidden = false
+
+					UIAccessibility.post(notification: .announcement, argument: self?.statusLb.text)
 				}
 
 				return

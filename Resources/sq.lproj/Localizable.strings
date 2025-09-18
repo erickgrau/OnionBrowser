@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "Adresë";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "Të gjitha rregullat";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "Harroje në Prapaskenë";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "Financoni Zhvillimin";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "Siguri Skede";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "U thoni sajteve se kundërshtoni përpunimin dhe shitjen e të dhënave tuaja personale";

@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "Διεύθυνση";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "Όλοι οι κανόνες";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "Να ξεχαστεί στο παρασκήνιο";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "Ανάπτυξη πόρων";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "Ασφάλεια καρτελών";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Tell websites that you object to processing and selling of your personal data";

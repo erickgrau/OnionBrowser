@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "Vistfang";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "Allar reglur";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "Gleyma þegar forrit er í bakgrunni";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "Styrkja þróunina";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "Öryggi flipa";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Segðu vefsvæðum að þú hafnir vinnslu og sölu á persónuupplýsingum þínum";

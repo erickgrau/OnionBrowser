@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "Adresă";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "Toate regulile";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "Uită în Fundal";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "Fond de Dezvoltare";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "Securitatea Ferestrei";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Tell websites that you object to processing and selling of your personal data";

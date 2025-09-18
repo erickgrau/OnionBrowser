@@ -97,6 +97,9 @@
 /* BookmarkViewController */
 "Address" = "Адреса";
 
+/* VoiceOver */
+"Address and search bar" = "Address and search bar";
+
 /* RuleEditorController */
 "All rules" = "Усі правила";
 
@@ -294,6 +297,9 @@
 
 /* SettingsViewController */
 "Forget in Background" = "Забути в фоновому режимі";
+
+/* VoiceOver */
+"Forward" = "Forward";
 
 /* SettingsViewController */
 "Fund Development" = "Розвиток Фонду";
@@ -570,6 +576,9 @@
 
 /* SettingsViewController */
 "Tab Security" = "Вкладки по безпеці";
+
+/* VoiceOver */
+"Tabs" = "Tabs";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Tell websites that you object to processing and selling of your personal data";
