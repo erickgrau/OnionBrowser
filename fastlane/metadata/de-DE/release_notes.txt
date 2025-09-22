@@ -1,7 +1,4 @@
-- Statustext beim Starten von Tor anzeigen.
-- Verbesserter URL-Blocker:
-  - Veraltete Blockliste durch HaGeZis Liste ersetzt: https://github.com/hagezi/dns-blocklists
-  - Die App wird standardmäßig mit einer Light-Liste ausgeliefert.
-  - Vom Benutzer aktualisierbar, 5 verschiedene Listen zur Auswahl.
-  - Optional vollständig deaktivierbar.
+- Tor auf die neueste Version 0.4.8.18 aktualisiert.
 - Übersetzungen aktualisiert.
+- Unterstützung für „Vanilla Bridges“ hinzugefügt – Bridges, die keinerlei Verschleierung verwenden.
+- Barrierefreiheit mit VoiceOver verbessert.

@@ -1,7 +1,4 @@
-- Wyświetlanie tekstu statusu podczas uruchamiania programu Tor.
-- Ulepszony bloker adresów URL:
-  - Zastąpiono przestarzałą listę blokowanych adresów listą HaGeZi: https://github.com/hagezi/dns-blocklists
-  - Aplikacja domyślnie zawiera lekką listę.
-  - Możliwość aktualizacji przez użytkownika, 5 różnych list do wyboru.
-  - Opcjonalna możliwość całkowitego wyłączenia.
-- Zaktualizowane tłumaczenia.
+- Zaktualizowano Tor do najnowszej wersji 0.4.8.18.
+- Zaktualizowano tłumaczenia.
+- Dodano obsługę „vanilla bridges” – mostów, które w ogóle nie stosują zaciemniania.
+- Poprawiono dostępność dzięki VoiceOver.

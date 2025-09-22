@@ -1,7 +1,4 @@
-- Zobrazit stavový text při spouštění Toru.
-- Vylepšený blokovač URL:
-    - Nahrazen zastaralý blokovací seznam seznamem HaGeZi: https://github.com/hagezi/dns-blocklists
-    - Aplikace je ve výchozím nastavení dodávána s odlehčeným seznamem.
-    - Aktualizovatelné uživatelem, na výběr je 5 různých seznamů.
-    - Volitelně lze zcela vypnout.
-- Aktualizované překlady.
+- Aktualizováno Tor na nejnovější verzi 0.4.8.18.
+- Aktualizovány překlady.
+- Přidána podpora pro „vanilla bridges“ – mosty, které vůbec nepoužívají obfuskace.
+- Vylepšena přístupnost s VoiceOver.

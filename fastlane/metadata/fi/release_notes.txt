@@ -1,7 +1,4 @@
-- Näytä tilateksti Torin käynnistyksen yhteydessä.
-- Parannettu URL-esto:
-    - Korvattu vanhentunut estolista HaGeZin listalla: https://github.com/hagezi/dns-blocklists
-    - Sovellus toimitetaan oletusarvoisesti kevyellä listalla.
-    - Käyttäjä voi päivittää sen, valittavana on 5 erilaista listaa.
-    - Voidaan haluttaessa kytkeä kokonaan pois päältä.
-- Päivitetyt käännökset.
+- Tor päivitetty uusimpaan versioon 0.4.8.18.
+- Käännökset päivitetty.
+- Lisätty tuki ”vanilla bridges” -silloille, jotka eivät käytä lainkaan salausta.
+- Parannettu esteettömyys VoiceOverin avulla.

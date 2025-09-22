@@ -1,7 +1,4 @@
-- Mostrar texto de estado al iniciar Tor.
-- Bloqueador de URL mejorado:
-  - Se ha sustituido la lista de bloqueo obsoleta por la lista de HaGeZi: https://github.com/hagezi/dns-blocklists
-  - La aplicación se distribuye con una lista ligera por defecto.
-  - Actualizable por el usuario, con 5 listas diferentes entre las que elegir.
-  - Opción de desactivarlo por completo.
-- Traducciones actualizadas.
+- Actualización de Tor a la última versión 0.4.8.18.
+- Actualización de las traducciones.
+- Se ha añadido compatibilidad con «puentes vanilla», es decir, puentes que no utilizan ofuscación en absoluto.
+- Se ha mejorado la accesibilidad con VoiceOver.

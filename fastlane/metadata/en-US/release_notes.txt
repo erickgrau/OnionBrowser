@@ -1,7 +1,4 @@
-- Show status text when bootstrapping Tor.
-- Improved URL blocker:
-  - Replaced outdated blocklist with HaGeZi's list: https://github.com/hagezi/dns-blocklists
-  - App ships with light list by default.
-  - Updateable by user, 5 different lists to choose from.
-  - Optionally switch off completely.
+- Updated Tor to latest version 0.4.8.18.
 - Updated translations.
+- Added support for "vanilla bridges" - bridges, that don't use obfuscation at all.
+- Improved accessibility with VoiceOver.

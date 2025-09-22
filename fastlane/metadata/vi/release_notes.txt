@@ -1,7 +1,4 @@
-- Hiển thị văn bản trạng thái khi khởi động Tor.
-- Cải tiến trình chặn URL:
-  - Thay thế danh sách chặn cũ bằng danh sách của HaGeZi: https://github.com/hagezi/dns-blocklists
-  - Ứng dụng được cài đặt sẵn với danh sách nhẹ theo mặc định.
-  - Người dùng có thể cập nhật, với 5 danh sách khác nhau để lựa chọn.
-  - Có thể tắt hoàn toàn nếu muốn.
+- Cập nhật Tor lên phiên bản mới nhất 0.4.8.18.
 - Cập nhật bản dịch.
+- Thêm hỗ trợ cho "vanilla bridges" - các cầu nối không sử dụng kỹ thuật che giấu dữ liệu.
+- Cải thiện khả năng truy cập với VoiceOver.

@@ -1,7 +1,4 @@
-- Toon statustekst bij het opstarten van Tor.
-- Verbeterde URL-blokkering:
-  - Verouderde blokkeerlijst vervangen door de lijst van HaGeZi: https://github.com/hagezi/dns-blocklists
-  - App wordt standaard geleverd met een lichte lijst.
-  - Kan door de gebruiker worden bijgewerkt, keuze uit 5 verschillende lijsten.
-  - Kan optioneel volledig worden uitgeschakeld.
+- Tor bijgewerkt naar de nieuwste versie 0.4.8.18.
 - Vertalingen bijgewerkt.
+- Ondersteuning toegevoegd voor “vanilla bridges” - bruggen die helemaal geen obfuscation gebruiken.
+- Toegankelijkheid verbeterd met VoiceOver.

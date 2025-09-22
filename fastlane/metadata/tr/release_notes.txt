@@ -1,7 +1,4 @@
-- Tor'u başlatırken durum metnini göster.
-- Geliştirilmiş URL engelleyici:
-    - Eski engelleme listesi HaGeZi'nin listesiyle değiştirildi: https://github.com/hagezi/dns-blocklists
-    - Uygulama varsayılan olarak hafif listeyle birlikte gelir.
-    - Kullanıcı tarafından güncellenebilir, 5 farklı liste arasından seçim yapılabilir.
-    - İsteğe bağlı olarak tamamen kapatılabilir.
+- Tor en son sürüm olan 0.4.8.18'e güncellendi.
 - Çeviriler güncellendi.
+- “Vanilla bridges” (hiçbir şekilde gizleme kullanmayan köprüler) için destek eklendi.
+- VoiceOver ile erişilebilirlik iyileştirildi.

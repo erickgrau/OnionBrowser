@@ -1,7 +1,4 @@
-- A Tor indításakor megjelenik az állapot szövege.
-- Továbbfejlesztett URL-blokkoló:
-    - Az elavult blokkolási listát HaGeZi listájával helyettesítettük: https://github.com/hagezi/dns-blocklists
-    - Az alkalmazás alapértelmezés szerint könnyű listával érkezik.
-    - A felhasználó frissítheti, 5 különböző lista közül választhat.
-    - Opcionálisan teljesen kikapcsolható.
-- Frissített fordítások.
+- A Tor frissítése a legújabb 0.4.8.18 verzióra.
+- Fordítások frissítése.
+- Támogatás hozzáadása a „vanília hidakhoz” – olyan hidakhoz, amelyek egyáltalán nem használnak homályosítást.
+- Javított hozzáférhetőség a VoiceOver segítségével.

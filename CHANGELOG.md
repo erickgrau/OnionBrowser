@@ -1,5 +1,11 @@
 #  Onion Browser Changelog
 
+## 3.2.4
+- Updated Tor to latest version 0.4.8.18.
+- Updated translations.
+- Added support for "vanilla bridges" - bridges, that don't use obfuscation at all.
+- Improved accessibility with VoiceOver.
+
 ## 3.2.3
 - Show status text when bootstrapping Tor.
 - Improved URL blocker:

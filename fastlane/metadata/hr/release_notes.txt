@@ -1,7 +1,4 @@
-- Prikaži tekst statusa prilikom pokretanja Tora.
-- Poboljšani blokator URL-ova:
-    - Zamijenjen je zastarjeli popis blokiranih s HaGeZijevim popisom: https://github.com/hagezi/dns-blocklists
-    - Aplikacija se isporučuje s laganim popisom prema zadanim postavkama.
-    - Korisnik ga može ažurirati, 5 različitih popisa za odabir.
-    - Opcionalno potpuno isključivanje.
+- Tor je ažuriran na najnoviju verziju 0.4.8.18.
 - Ažurirani prijevodi.
+- Dodana je podrška za "vanilla bridges" - mostove koji uopće ne koriste obfuscation.
+- Poboljšana pristupačnost s VoiceOverom.

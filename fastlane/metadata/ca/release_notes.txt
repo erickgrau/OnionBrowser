@@ -1,7 +1,4 @@
-- Mostra el text d'estat en arrencar Tor.
-- Bloquejador d'URL millorat:
-    - S'ha substituït la llista de bloqueig obsoleta per la llista de HaGeZi: https://github.com/hagezi/dns-blocklists
-    - L'aplicació s'envia amb una llista lleugera per defecte.
-    - L'usuari l'actualitza, 5 llistes diferents per triar.
-    - Opcionalment, es pot desactivar completament.
+- Tor actualitzat a la darrera versió 0.4.8.18.
 - Traduccions actualitzades.
+- Compatibilitat afegida amb "ponts vanilla", és a dir, ponts que no utilitzen cap ofuscació.
+- Accessibilitat millorada amb VoiceOver.
