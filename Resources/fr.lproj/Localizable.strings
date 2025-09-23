@@ -98,7 +98,7 @@
 "Address" = "Adresse";
 
 /* VoiceOver */
-"Address and search bar" = "Address and search bar";
+"Address and search bar" = "Barre d’adresse et de recherche";
 
 /* RuleEditorController */
 "All rules" = "Toutes les règles";
@@ -299,7 +299,7 @@
 "Forget in Background" = "Oublier si en arrière–plan";
 
 /* VoiceOver */
-"Forward" = "Forward";
+"Forward" = "En avant";
 
 /* SettingsViewController */
 "Fund Development" = "Financer le développement";
@@ -578,7 +578,7 @@
 "Tab Security" = "Sécurité des onglets";
 
 /* VoiceOver */
-"Tabs" = "Tabs";
+"Tabs" = "Onglets";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Indiquez aux sites Web que vous vous opposez au traitement et à la vente de vos données personnelles";

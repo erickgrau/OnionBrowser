@@ -98,7 +98,7 @@
 "Address" = "Адрес";
 
 /* VoiceOver */
-"Address and search bar" = "Address and search bar";
+"Address and search bar" = "Адрес и строка поиска";
 
 /* RuleEditorController */
 "All rules" = "Все правила";
@@ -299,7 +299,7 @@
 "Forget in Background" = "Забыть в фоне";
 
 /* VoiceOver */
-"Forward" = "Forward";
+"Forward" = "Вперед";
 
 /* SettingsViewController */
 "Fund Development" = "Фонд развития";
@@ -578,7 +578,7 @@
 "Tab Security" = "Безопасность вкладок";
 
 /* VoiceOver */
-"Tabs" = "Tabs";
+"Tabs" = "Вкладки";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Сообщать сайтам, что вы возражаете против обработки и продажи ваших персональных данных";
