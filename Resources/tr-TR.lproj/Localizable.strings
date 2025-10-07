@@ -98,7 +98,7 @@
 "Address" = "Adres";
 
 /* VoiceOver */
-"Address and search bar" = "Address and search bar";
+"Address and search bar" = "Adres ve arama çubuğu";
 
 /* RuleEditorController */
 "All rules" = "Tüm kurallar";
@@ -299,7 +299,7 @@
 "Forget in Background" = "Arka planda çalışırken unutulsun";
 
 /* VoiceOver */
-"Forward" = "Forward";
+"Forward" = "İleri";
 
 /* SettingsViewController */
 "Fund Development" = "Geliştirmeyi destekleyin";
@@ -578,7 +578,7 @@
 "Tab Security" = "Sekme güvenliği";
 
 /* VoiceOver */
-"Tabs" = "Tabs";
+"Tabs" = "Sekmeler";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Kişisel verilerinizin işlenmesine ve satılmasını kabul etmediğinizi sitelere bildirin";
