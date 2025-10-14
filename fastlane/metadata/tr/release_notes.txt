@@ -1,4 +1,2 @@
-- Tor en son sürüm olan 0.4.8.18'e güncellendi.
+- Tor en son sürüm olan 0.4.8.19'a güncellendi.
 - Çeviriler güncellendi.
-- “Vanilla bridges” (hiçbir şekilde gizleme kullanmayan köprüler) için destek eklendi.
-- VoiceOver ile erişilebilirlik iyileştirildi.

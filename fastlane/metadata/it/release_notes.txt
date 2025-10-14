@@ -1,4 +1,2 @@
-- Aggiornamento di Tor all'ultima versione 0.4.8.18.
-- Aggiornamento delle traduzioni.
-- Aggiunto il supporto per i “vanilla bridge”, ovvero ponti che non utilizzano alcuna forma di offuscamento.
-- Migliorata l'accessibilità con VoiceOver.
+- Aggiornato Tor all'ultima versione 0.4.8.19.
+- Aggiornate le traduzioni.

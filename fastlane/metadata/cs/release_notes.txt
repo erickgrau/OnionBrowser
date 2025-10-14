@@ -1,4 +1,2 @@
-- Aktualizováno Tor na nejnovější verzi 0.4.8.18.
+- Aktualizováno Tor na nejnovější verzi 0.4.8.19.
 - Aktualizovány překlady.
-- Přidána podpora pro „vanilla bridges“ – mosty, které vůbec nepoužívají obfuskace.
-- Vylepšena přístupnost s VoiceOver.

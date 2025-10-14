@@ -1,4 +1,2 @@
-- Perbarui Tor ke versi terbaru 0.4.8.18.
+- Perbarui Tor ke versi terbaru 0.4.8.19.
 - Perbarui terjemahan.
-- Tambahkan dukungan untuk “vanilla bridges” - jembatan yang tidak menggunakan obfuscation sama sekali.
-- Perbaiki aksesibilitas dengan VoiceOver.

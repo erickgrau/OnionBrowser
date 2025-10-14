@@ -1,4 +1,2 @@
-- Oppdatert Tor til den nyeste versjonen 0.4.8.18.
+- Oppdatert Tor til den nyeste versjonen 0.4.8.19.
 - Oppdaterte oversettelser.
-- Lagt til støtte for «vanilla bridges» – broer som ikke bruker obfuskering i det hele tatt.
-- Forbedret tilgjengelighet med VoiceOver.

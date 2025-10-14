@@ -1,4 +1,2 @@
-- Actualización de Tor a la última versión 0.4.8.18.
+- Actualización de Tor a la última versión 0.4.8.19.
 - Actualización de las traducciones.
-- Se ha añadido compatibilidad con «puentes vanilla», es decir, puentes que no utilizan ofuscación en absoluto.
-- Se ha mejorado la accesibilidad con VoiceOver.

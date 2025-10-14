@@ -1,4 +1,2 @@
-- Actualizare Tor la ultima versiune 0.4.8.18.
+- Actualizare Tor la ultima versiune 0.4.8.19.
 - Actualizare traduceri.
-- Adăugare suport pentru „vanilla bridges” - punți care nu utilizează deloc tehnici de ascundere.
-- Îmbunătățire accesibilitate cu VoiceOver.

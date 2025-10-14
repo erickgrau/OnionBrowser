@@ -1,4 +1,2 @@
-- Zaktualizowano Tor do najnowszej wersji 0.4.8.18.
+- Zaktualizowano Tor do najnowszej wersji 0.4.8.19.
 - Zaktualizowano tłumaczenia.
-- Dodano obsługę „vanilla bridges” – mostów, które w ogóle nie stosują zaciemniania.
-- Poprawiono dostępność dzięki VoiceOver.

@@ -1,4 +1,2 @@
-- Tor päivitetty uusimpaan versioon 0.4.8.18.
+- Tor päivitetty uusimpaan versioon 0.4.8.19.
 - Käännökset päivitetty.
-- Lisätty tuki ”vanilla bridges” -silloille, jotka eivät käytä lainkaan salausta.
-- Parannettu esteettömyys VoiceOverin avulla.

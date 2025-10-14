@@ -1,4 +1,2 @@
-- Tor je ažuriran na najnoviju verziju 0.4.8.18.
+- Tor ažuriran na najnoviju verziju 0.4.8.19.
 - Ažurirani prijevodi.
-- Dodana je podrška za "vanilla bridges" - mostove koji uopće ne koriste obfuscation.
-- Poboljšana pristupačnost s VoiceOverom.

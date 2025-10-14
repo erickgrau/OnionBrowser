@@ -1,4 +1,2 @@
-- Cập nhật Tor lên phiên bản mới nhất 0.4.8.18.
+- Cập nhật Tor lên phiên bản mới nhất 0.4.8.19.
 - Cập nhật bản dịch.
-- Thêm hỗ trợ cho "vanilla bridges" - các cầu nối không sử dụng kỹ thuật che giấu dữ liệu.
-- Cải thiện khả năng truy cập với VoiceOver.

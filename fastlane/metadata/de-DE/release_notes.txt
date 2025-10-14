@@ -1,4 +1,2 @@
-- Tor auf die neueste Version 0.4.8.18 aktualisiert.
+- Tor auf die neueste Version 0.4.8.19 aktualisiert.
 - Übersetzungen aktualisiert.
-- Unterstützung für „Vanilla Bridges“ hinzugefügt – Bridges, die keinerlei Verschleierung verwenden.
-- Barrierefreiheit mit VoiceOver verbessert.

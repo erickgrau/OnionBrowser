@@ -1,5 +1,9 @@
 #  Onion Browser Changelog
 
+## 3.2.5
+- Updated Tor to latest version 0.4.8.19.
+- Updated translations.
+
 ## 3.2.4
 - Updated Tor to latest version 0.4.8.18.
 - Updated translations.

@@ -1,4 +1,2 @@
-- A Tor frissítése a legújabb 0.4.8.18 verzióra.
-- Fordítások frissítése.
-- Támogatás hozzáadása a „vanília hidakhoz” – olyan hidakhoz, amelyek egyáltalán nem használnak homályosítást.
-- Javított hozzáférhetőség a VoiceOver segítségével.
+- A Tor frissítve a legújabb 0.4.8.19 verzióra.
+- Frissített fordítások.
