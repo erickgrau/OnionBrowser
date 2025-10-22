@@ -262,7 +262,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 			WebsiteStorage.shared.cleanup()
 
-
 			completion?(true)
 		}
 		else {
