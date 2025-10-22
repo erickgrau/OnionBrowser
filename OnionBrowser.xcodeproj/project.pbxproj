@@ -491,6 +491,14 @@
 		A7CE50C2429233D841D5F1C1 /* Pods_OnionBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnionBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A0CEE4762EA9273600F278A0 /* AppIntents */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AppIntents;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		01801E8F1A32CA2A002B4718 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -670,6 +678,7 @@
 		A0BF51F523AFC3580096624A /* OnionBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				A0CEE4762EA9273600F278A0 /* AppIntents */,
 				A0A8E5F523C88FFB007E5FAD /* Startup */,
 				A0BF520123AFC3580096624A /* Browsing */,
 				A0C1FB122D50FC5200AE97A7 /* Blocking */,
@@ -821,6 +830,9 @@
 			);
 			dependencies = (
 				8A3EBA9421700B0A0054A9FF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A0CEE4762EA9273600F278A0 /* AppIntents */,
 			);
 			name = OnionBrowser;
 			productName = Endless;

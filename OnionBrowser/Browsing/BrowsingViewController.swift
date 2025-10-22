@@ -535,6 +535,10 @@ class BrowsingViewController: UIViewController, TabDelegate {
 			container?.transition(animations, completionForeground)
 		}
 
+		if #available(iOS 18, *) {
+			TabEntity.addTab(tab)
+		}
+
 		return tab
 	}
 
@@ -549,6 +553,10 @@ class BrowsingViewController: UIViewController, TabDelegate {
 		}) { _ in
 			tab.close()
 			self.tabs.removeAll { $0 == tab }
+
+			if #available(iOS 18, *) {
+				TabEntity.removeTab(withId: tab.hash)
+			}
 
 			self.currentTab = focus ?? self.tabs.last
 			self.currentTab?.isHidden = false

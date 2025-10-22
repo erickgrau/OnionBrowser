@@ -375,12 +375,13 @@ class Tab: UIView {
 		}
 	}
 
-	func toggleFind() {
+	func toggleFind(searchText: String? = nil) {
 		if #available(iOS 16.0, *) {
 			webView?.isFindInteractionEnabled = !((webView?.isFindInteractionEnabled ?? false) && webView?.findInteraction?.isFindNavigatorVisible ?? false)
 
 			if webView?.isFindInteractionEnabled ?? false {
 				webView?.findInteraction?.presentFindNavigator(showingReplace: false)
+				webView?.findInteraction?.searchText = searchText
 			}
 		}
 	}

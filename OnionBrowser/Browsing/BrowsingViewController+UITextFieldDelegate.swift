@@ -176,16 +176,13 @@ extension BrowsingViewController: UITextFieldDelegate {
 		searchFl?.leftViewMode = searchFl?.isFirstResponder ?? false || icon == nil ? .never : .always
 	}
 
-
-	// MARK: Private Methods
-
 	/**
 	Parse a user search.
 
 	- parameter search: The user entry, which could be a (semi-)valid URL or a search engine query.
 	- returns: A parsed (and fixed) URL or `nil`, in which case you should treat the string as a search engine query.
 	*/
-	private func parseSearch(_ search: String?) -> URL? {
+	func parseSearch(_ search: String?) -> URL? {
 		// Must not be empty, must not be the explicit blank page.
 		if let search = search,
 		   !search.isEmpty
@@ -241,6 +238,9 @@ extension BrowsingViewController: UITextFieldDelegate {
 		//  Return start page.
 		return URL.start
 	}
+
+
+	// MARK: Private Methods
 
 	/**
 	 Will try to create a URL from the given text. If the resulting URL has a `.onion`  host,
