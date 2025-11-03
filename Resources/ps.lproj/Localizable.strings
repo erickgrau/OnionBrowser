@@ -82,6 +82,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "ليكنښه زیاتول";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Add Search Engine";
 
@@ -265,6 +268,9 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "ليكنښې سمون";
 
+/* Scene title */
+"Edit Folder" = "Edit Folder";
+
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Edit Search Engine";
 
@@ -415,7 +421,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "Offline Web Application Cache";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "سمه ده";
 
 /* Tab+Gestures */
@@ -565,19 +571,19 @@
 /* AppDelegate */
 "Switch to Tab %d" = "%d ټوپ ته ونجول";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "ليكنښو هممهالول";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "د Nextcloud پالنګر سره ليکنښې هممهالې کړئ";
 
-/* BookmarksViewController */
-"Sync with Nextcloud" = "Nextcloud سره هممهالول";
-
 /* SettingsViewController */
 "Tab Security" = "ټوپ خونديتوب";
 
-/* No comment provided by engineer. */
+/* VoiceOver */
 "Tabs" = "Tabs";
 
 /* Option title */
