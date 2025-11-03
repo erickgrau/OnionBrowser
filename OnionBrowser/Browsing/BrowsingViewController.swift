@@ -536,7 +536,7 @@ class BrowsingViewController: UIViewController, TabDelegate {
 		}
 
 		if #available(iOS 18, *) {
-			TabEntity.addTab(tab)
+			TabEntity.add(tab: tab)
 		}
 
 		return tab

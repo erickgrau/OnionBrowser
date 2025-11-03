@@ -36,7 +36,7 @@ struct CreateTabIntent: AppIntent {
 		var entity = TabEntity.getEntity(for: tab)
 
 		if entity == nil {
-			entity = TabEntity.addTab(tab)
+			entity = TabEntity.add(tab: tab)
 		}
 
 		return .result(value: entity!)

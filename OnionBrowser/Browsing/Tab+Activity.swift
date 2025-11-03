@@ -126,7 +126,7 @@ extension Tab: UIActivityItemSource {
 
 		let bookmark = NcBookmarks.find { bookmark in
 			URL(string: bookmark.url)?.host == url.host
-		}
+		}.first
 
 		if #available(iOS 16.0, *), let icon = bookmark?.iconUrl {
 			metadata.iconProvider = .init(contentsOf: icon, contentType: .png, openInPlace: false,

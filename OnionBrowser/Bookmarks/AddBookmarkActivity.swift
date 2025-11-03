@@ -45,7 +45,7 @@ class AddBookmarkActivity: UIActivity {
 
 		Task {
 			for url in urls ?? [] {
-				var title = await MainActor.run {
+				let title = await MainActor.run {
 					// .title contains a call which needs the UI thread.
 					tabs?.first(where: { $0.url == url })?.title
 				}

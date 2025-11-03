@@ -50,6 +50,10 @@ class NcBookmarks {
 				}
 			}
 
+			if #available(iOS 18.0, *) {
+				BookmarkEntity.add(folder: root)
+			}
+
 			return root
 		}
 
@@ -57,6 +61,11 @@ class NcBookmarks {
 		   let data = try? Data(contentsOf: storageFile),
 		   let root = try? PropertyListDecoder().decode(NcFolder.self, from: data)
 		{
+
+			if #available(iOS 18.0, *) {
+				BookmarkEntity.add(folder: root)
+			}
+
 			return root
 		}
 
@@ -247,16 +256,16 @@ class NcBookmarks {
 		}
 	}
 
-	class func find(_ lambda: (_ bookmark: NcBookmark) -> Bool) -> NcBookmark? {
+	class func find(_ lambda: (_ bookmark: NcBookmark) -> Bool) -> [NcBookmark] {
 		return recurse(root, lambda)
 	}
 
 	class func find(_ url: URL) -> NcBookmark? {
 		let url = url.absoluteString
 
-		return find { bookmark in
+		return find({ bookmark in
 			return bookmark.url == url
-		}
+		}).first
 	}
 
 
@@ -280,19 +289,19 @@ class NcBookmarks {
 	}
 
 	@discardableResult
-	private class func recurse(_ folder: NcFolder, _ lambda: (_ bookmark: NcBookmark) -> Bool) -> NcBookmark? {
+	private class func recurse(_ folder: NcFolder, _ lambda: (_ bookmark: NcBookmark) -> Bool) -> [NcBookmark] {
+		var result = [NcBookmark]()
+
 		for bookmark in folder.bookmarks {
 			if lambda(bookmark) {
-				return bookmark
+				result.append(bookmark)
 			}
 		}
 
 		for folder in folder.folders {
-			if let bookmark = recurse(folder, lambda) {
-				return bookmark
-			}
+			result.append(contentsOf: recurse(folder, lambda))
 		}
 
-		return nil
+		return result
 	}
 }

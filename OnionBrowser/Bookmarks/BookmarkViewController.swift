@@ -112,6 +112,10 @@ class BookmarkViewController: FixedFormViewController {
 			NcBookmarks.store()
 
 			if let bookmark {
+				if #available(iOS 18.0, *) {
+					BookmarkEntity.add(bookmark: bookmark)
+				}
+
 				Task {
 					do {
 						if try await bookmark.upload() {

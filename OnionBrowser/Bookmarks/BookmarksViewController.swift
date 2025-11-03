@@ -168,6 +168,10 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 
 			folder.bookmarks.remove(at: indexPath.row)
 
+			if #available(iOS 18.0, *) {
+				BookmarkEntity.remove(bookmark: bookmark)
+			}
+
 			Task {
 				do{
 					try await NcServer.delete(bookmark)

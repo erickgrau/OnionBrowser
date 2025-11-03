@@ -31,7 +31,7 @@ struct OpenUrlInTabIntent: AppIntent {
 			   let idx = browsingUi.getIndex(of: tab)
 			{
 				browsingUi.switchToTab(idx)
-				tab.load(url)
+				tab.load(url.withFixedScheme)
 
 				return .result()
 			}

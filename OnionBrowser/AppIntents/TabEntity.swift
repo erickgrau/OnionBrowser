@@ -13,6 +13,9 @@ import AppIntents
 struct TabEntity: AppEntity {
 
 	struct Query: EntityStringQuery {
+
+		static var persistentIdentifier = "TabEntityQuery"
+
 		func entities(for identifiers: [TabEntity.ID]) async throws -> [TabEntity] {
 			return await AppDelegate.shared?.allOpenTabs
 				.filter({ identifiers.contains($0.hash) })
@@ -30,7 +33,7 @@ struct TabEntity: AppEntity {
 	private static var tabShadow = [TabEntity]()
 
 	@discardableResult
-	static func addTab(_ tab: Tab) -> TabEntity {
+	static func add(tab: Tab) -> TabEntity {
 		let entity = TabEntity(tab)
 
 		tabShadow.append(entity)
