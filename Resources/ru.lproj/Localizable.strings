@@ -82,6 +82,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "Добавить закладку";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Добавить поисковую систему";
 
@@ -265,6 +268,9 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "Редактировать закладку";
 
+/* Scene title */
+"Edit Folder" = "Edit Folder";
+
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Изменить поисковую систему";
 
@@ -415,7 +421,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "Автономный кэш веб-приложений";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "OK";
 
 /* Tab+Gestures */
@@ -565,14 +571,14 @@
 /* AppDelegate */
 "Switch to Tab %d" = "Переключиться на вкладку %d";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "Синхронизировать закладки";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "Синхронизировать закладки с сервером Nextcloud";
-
-/* BookmarksViewController */
-"Sync with Nextcloud" = "Синхронизация с Nextcloud";
 
 /* SettingsViewController */
 "Tab Security" = "Безопасность вкладок";

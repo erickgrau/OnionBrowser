@@ -267,7 +267,7 @@ class Tab: UIView {
 	@objc
 	func refresh() {
 		if url == URL.start {
-			Bookmark.updateStartPage()
+			NcBookmarks.updateStartPage()
 		}
 
 		needsRefresh = false
@@ -315,14 +315,12 @@ class Tab: UIView {
 
 		if let url = request.url {
 			if url == URL.start {
-				Bookmark.updateStartPage()
+				NcBookmarks.updateStartPage()
 			}
-			else if let bookmark = Bookmark.all.first(where: { $0.url == url }) {
-				DispatchQueue.global(qos: .utility).async {
-					bookmark.acquireIcon { updated in
-						if updated {
-							Bookmark.store()
-						}
+			else if let bookmark = NcBookmarks.find(url) {
+				Task {
+					if await bookmark.acquireIcon() {
+						NcBookmarks.store()
 					}
 				}
 			}

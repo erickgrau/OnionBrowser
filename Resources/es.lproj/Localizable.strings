@@ -82,6 +82,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "Añadir marcador";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Agrega un motor de busqueda";
 
@@ -265,6 +268,9 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "Editar marcador";
 
+/* Scene title */
+"Edit Folder" = "Edit Folder";
+
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Editar motor de búsqueda";
 
@@ -415,7 +421,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "Caché de aplicaciones web sin conexión";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "OK";
 
 /* Tab+Gestures */
@@ -565,14 +571,14 @@
 /* AppDelegate */
 "Switch to Tab %d" = "Cambiar a la pestaña %d";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "Sincronizar Marcadores";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "Sincronizar Marcadores con el Servidor de Nextcloud";
-
-/* BookmarksViewController */
-"Sync with Nextcloud" = "Sincronizar con Nextcloud";
 
 /* SettingsViewController */
 "Tab Security" = "Seguridad de Pestaña";

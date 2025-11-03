@@ -2,7 +2,7 @@
 "%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@ ose mund të bazohet në %2$@ për një lidhje të siguruar me Tor-in, ose të xhirojë Tor-in e vet të brendshëm. Tor-i i brendshëm ka probleme sigurie.";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ if you have connectivity issues with %2$@" = "%1$@ if you have connectivity issues with %2$@";
+"%1$@ if you have connectivity issues with %2$@" = "%1$@, nëse keni probleme lidhjeje me %2$@";
 
 /* Placeholder 1 is bullet point, Placeholder 2 is 'Onion Browser' */
 "%1$@ if you want to use %2$@ over another VPN" = "%1$@ nëse doni të përdorni %2$@ përmes një tjetri VPN";
@@ -50,7 +50,7 @@
 "%@ video and audio streams don't go through Tor and might get blocked" = "%@ rrjedhat video dhe audio nuk kalojnë përmes Tor-it dhe mund të bllokohen";
 
 /* Placeholder is bullet point */
-"%@ websites can uncover your real IP address using JavaScript" = "%@ websites can uncover your real IP address using JavaScript";
+"%@ websites can uncover your real IP address using JavaScript" = "%@ duke përdorur JavaScript, sajtet mund të lënë zbuluar adresën tuaj të njëmendtë IP";
 
 /* No comment provided by engineer. */
 "(not recommended)" = "(nuk rekomandohet)";
@@ -82,6 +82,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "Shto Fletëshënues";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Shtoni Motor Kërkimesh";
 
@@ -98,7 +101,7 @@
 "Address" = "Adresë";
 
 /* VoiceOver */
-"Address and search bar" = "Address and search bar";
+"Address and search bar" = "Shtyllë adresash dhe kërkimesh";
 
 /* RuleEditorController */
 "All rules" = "Të gjitha rregullat";
@@ -179,7 +182,7 @@
 "Choose how long app remembers open tabs." = "Zgjidhni për sa kohë mban mend skedat e hapura aplikacioni.";
 
 /* No comment provided by engineer. */
-"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
+"Choose your preferred blocklist:" = "Zgjidhni listën tuaj të parapëlqyer të bllokimeve:";
 
 /* AppDelegate */
 "Close Tab" = "Mbylle Skedën";
@@ -265,6 +268,9 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "Përpunoni Faqerojtës";
 
+/* Scene title */
+"Edit Folder" = "Edit Folder";
+
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Përpunoni Motor Kërkimesh";
 
@@ -299,7 +305,7 @@
 "Forget in Background" = "Harroje në Prapaskenë";
 
 /* VoiceOver */
-"Forward" = "Forward";
+"Forward" = "Përpara";
 
 /* SettingsViewController */
 "Fund Development" = "Financoni Zhvillimin";
@@ -415,7 +421,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "Fshehtëin Jashtë Interneti Aplikacioni Web";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "OK";
 
 /* Tab+Gestures */
@@ -565,20 +571,20 @@
 /* AppDelegate */
 "Switch to Tab %d" = "Kalo tek Skeda %d";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "Njëkohësoni Faqerojtës";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "Njëkohësoni Faqerojtës me Shërbyes Nextcloud";
 
-/* BookmarksViewController */
-"Sync with Nextcloud" = "Njëkohësojini me Nextcloud";
-
 /* SettingsViewController */
 "Tab Security" = "Siguri Skede";
 
 /* VoiceOver */
-"Tabs" = "Tabs";
+"Tabs" = "Skeda";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "U thoni sajteve se kundërshtoni përpunimin dhe shitjen e të dhënave tuaja personale";
@@ -632,7 +638,7 @@
 "Update" = "Përditësoje";
 
 /* No comment provided by engineer. */
-"Update Blocklist" = "Update Blocklist";
+"Update Blocklist" = "Përditëso Listë Bllokimesh";
 
 /* SettingsViewController */
 "URL Blocker" = "Bllokuesi i URL-ve";
@@ -644,7 +650,7 @@
 "Use built-in Tor" = "Përdor Tor-in e brendshëm";
 
 /* No comment provided by engineer. */
-"Use URL Blocker" = "Use URL Blocker";
+"Use URL Blocker" = "Përdor Bllokues URL-sh";
 
 /* SecurityViewController */
 "User Agent" = "Agjent Përdoruesi ";

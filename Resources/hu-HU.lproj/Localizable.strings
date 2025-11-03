@@ -82,6 +82,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "Könyvjelző hozzáadása";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Keresőmotor hozzáadása";
 
@@ -265,6 +268,9 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "Könyvjelző szerkesztése";
 
+/* Scene title */
+"Edit Folder" = "Edit Folder";
+
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Keresőmotor szerkesztése";
 
@@ -415,7 +421,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "Offline Web Application Cache";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "OK";
 
 /* Tab+Gestures */
@@ -565,14 +571,14 @@
 /* AppDelegate */
 "Switch to Tab %d" = "Váltás az %d fülre";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "Könyvjelző szinkronizálás";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "A könyvjelzők szinkronizálása a Nextcloud szerverrel";
-
-/* BookmarksViewController */
-"Sync with Nextcloud" = "Szinkronizálás Nextcloud-dal";
 
 /* SettingsViewController */
 "Tab Security" = "Fül biztonság";

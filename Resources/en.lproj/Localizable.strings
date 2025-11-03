@@ -82,6 +82,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "Add Bookmark";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Add Search Engine";
 
@@ -264,6 +267,9 @@
 
 /* BookmarkViewController */
 "Edit Bookmark" = "Edit Bookmark";
+
+/* Scene title */
+"Edit Folder" = "Edit Folder";
 
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Edit Search Engine";
@@ -565,14 +571,14 @@
 /* AppDelegate */
 "Switch to Tab %d" = "Switch to Tab %d";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "Sync Bookmarks";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "Sync Bookmarks with Nextcloud Server";
-
-/* BookmarksViewController */
-"Sync with Nextcloud" = "Sync with Nextcloud";
 
 /* SettingsViewController */
 "Tab Security" = "Tab Security";

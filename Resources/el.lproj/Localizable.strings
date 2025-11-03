@@ -82,6 +82,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "Προσθήκη σελιδοδείκτη";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Add Search Engine";
 
@@ -265,6 +268,9 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "Επεξεργασία σελιδοδείκτη";
 
+/* Scene title */
+"Edit Folder" = "Edit Folder";
+
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Edit Search Engine";
 
@@ -415,7 +421,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "Offline Web Application Cache";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "Εντάξει";
 
 /* Tab+Gestures */
@@ -565,14 +571,14 @@
 /* AppDelegate */
 "Switch to Tab %d" = "Μετάβαση στην καρτέλα %d";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "Συγχρονισμός σελιδοδεικτών";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "Συγχρονισμός σελιδοδεικτών στον Nextcloud Server";
-
-/* BookmarksViewController */
-"Sync with Nextcloud" = "Συγχρονισμός με το Nextcloud";
 
 /* SettingsViewController */
 "Tab Security" = "Ασφάλεια καρτελών";

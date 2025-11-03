@@ -53,6 +53,9 @@
 		A02A09132AD6D17B00A9334C /* OrbotOrBuiltInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02A090E2AD6BA9600A9334C /* OrbotOrBuiltInViewController.xib */; };
 		A02A09142AD6E8C000A9334C /* StartTorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02A09102AD6CAF000A9334C /* StartTorViewController.xib */; };
 		A02CB2B523D0B0B300880720 /* AddBookmarkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02CB2B423D0B0B300880720 /* AddBookmarkActivity.swift */; };
+		A0325D932EAA7540009C3DE9 /* NcFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0325D922EAA7540009C3DE9 /* NcFolder.swift */; };
+		A0325D952EAA7598009C3DE9 /* NcBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0325D942EAA7598009C3DE9 /* NcBookmark.swift */; };
+		A0325D972EAA766C009C3DE9 /* NcBookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0325D962EAA766C009C3DE9 /* NcBookmarks.swift */; };
 		A036C3B22937A06C0035AA4F /* AddSearchEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036C3B12937A06C0035AA4F /* AddSearchEngineViewController.swift */; };
 		A03CFA042892B05500F01DB5 /* DownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03CFA032892B05500F01DB5 /* DownloadHelper.swift */; };
 		A043B9522A02897A008025A7 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A043B9502A02897A008025A7 /* PermissionViewController.xib */; };
@@ -66,7 +69,6 @@
 		A068DD99240D348300BF46E3 /* AltSvcHeader_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A068DD98240D348300BF46E3 /* AltSvcHeader_Tests.swift */; };
 		A068DD9A240D37FB00BF46E3 /* HostSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522B23AFC3580096624A /* HostSettings.swift */; };
 		A0696EAD2406C7D000512695 /* SyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAC2406C7D000512695 /* SyncViewController.swift */; };
-		A0696EAF2406D94200512695 /* Nextcloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0696EAE2406D94200512695 /* Nextcloud.swift */; };
 		A06EC2A12BBA0C80003A9944 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A06EC2A02BBA0C71003A9944 /* PrivacyInfo.xcprivacy */; };
 		A07037C623C7571B00D670EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07037C523C7571B00D670EC /* AppDelegate.swift */; };
 		A07037C723C79AE500D670EC /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07037C223C74DC900D670EC /* Media.xcassets */; };
@@ -109,7 +111,6 @@
 		A0BF526123AFC3580096624A /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF521B23AFC3580096624A /* BookmarkViewController.swift */; };
 		A0BF526223AFC3580096624A /* FavIconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF521C23AFC3580096624A /* FavIconRow.swift */; };
 		A0BF526323AFC3580096624A /* BookmarksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BF521D23AFC3580096624A /* BookmarksViewController.xib */; };
-		A0BF526423AFC3580096624A /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF521E23AFC3580096624A /* Bookmark.swift */; };
 		A0BF526523AFC3580096624A /* FavIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BF521F23AFC3580096624A /* FavIconCell.xib */; };
 		A0BF526623AFC3580096624A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF522023AFC3580096624A /* BookmarksViewController.swift */; };
 		A0BF526723AFC3580096624A /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BF522123AFC3580096624A /* BookmarkCell.xib */; };
@@ -143,6 +144,8 @@
 		A0C3770E1F47342C0039198E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C3770D1F47342C0039198E /* CoreData.framework */; };
 		A0C582582AE9136200A81084 /* Thread+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C582572AE9136200A81084 /* Thread+Helpers.swift */; };
 		A0CD36982890194900628DA6 /* Tab+WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD36972890194900628DA6 /* Tab+WKNavigationDelegate.swift */; };
+		A0CD76DE2EAB7A4400DA1AFB /* NcServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD76DD2EAB7A4400DA1AFB /* NcServer.swift */; };
+		A0CD76E02EAB8BB500DA1AFB /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD76DF2EAB8BB500DA1AFB /* FolderViewController.swift */; };
 		A0D070FD275A513700922D70 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D070FC275A513700922D70 /* FileManager+Helpers.swift */; };
 		A0D9008B24095F5C0046C9B3 /* AltSvcHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9008A24095F5C0046C9B3 /* AltSvcHeader.swift */; };
 		A0E8E8B12938CDFB00DC2A2F /* SearchEnginesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E8E8B02938CDFB00DC2A2F /* SearchEnginesViewController.swift */; };
@@ -234,6 +237,9 @@
 		A02AB5C32AA5F34000CC6779 /* tt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tt; path = tt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A02AB5C42AA5F34000CC6779 /* tt */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = tt; path = "tt.lproj/security-levels.html"; sourceTree = "<group>"; };
 		A02CB2B423D0B0B300880720 /* AddBookmarkActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookmarkActivity.swift; sourceTree = "<group>"; };
+		A0325D922EAA7540009C3DE9 /* NcFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcFolder.swift; sourceTree = "<group>"; };
+		A0325D942EAA7598009C3DE9 /* NcBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcBookmark.swift; sourceTree = "<group>"; };
+		A0325D962EAA766C009C3DE9 /* NcBookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcBookmarks.swift; sourceTree = "<group>"; };
 		A036C3B12937A06C0035AA4F /* AddSearchEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSearchEngineViewController.swift; sourceTree = "<group>"; };
 		A03A5C05EE3C1632DC4828FF /* Pods-OnionBrowser Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnionBrowser Tests.debug.xcconfig"; path = "Target Support Files/Pods-OnionBrowser Tests/Pods-OnionBrowser Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A03CFA032892B05500F01DB5 /* DownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHelper.swift; sourceTree = "<group>"; };
@@ -246,7 +252,6 @@
 		A06881D12A66B0070084D26D /* debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = debug.entitlements; sourceTree = "<group>"; };
 		A068DD98240D348300BF46E3 /* AltSvcHeader_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltSvcHeader_Tests.swift; sourceTree = "<group>"; };
 		A0696EAC2406C7D000512695 /* SyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncViewController.swift; sourceTree = "<group>"; };
-		A0696EAE2406D94200512695 /* Nextcloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nextcloud.swift; sourceTree = "<group>"; };
 		A06DF455241A60E700A07796 /* SecureEnclave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureEnclave.swift; sourceTree = "<group>"; };
 		A06EC2A02BBA0C71003A9944 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		A06F5F49275692060023622E /* .bartycrouch.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .bartycrouch.toml; sourceTree = "<group>"; };
@@ -445,7 +450,6 @@
 		A0BF521B23AFC3580096624A /* BookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		A0BF521C23AFC3580096624A /* FavIconRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavIconRow.swift; sourceTree = "<group>"; };
 		A0BF521D23AFC3580096624A /* BookmarksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarksViewController.xib; sourceTree = "<group>"; };
-		A0BF521E23AFC3580096624A /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		A0BF521F23AFC3580096624A /* FavIconCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavIconCell.xib; sourceTree = "<group>"; };
 		A0BF522023AFC3580096624A /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		A0BF522123AFC3580096624A /* BookmarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
@@ -480,6 +484,8 @@
 		A0C3770D1F47342C0039198E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A0C582572AE9136200A81084 /* Thread+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Helpers.swift"; sourceTree = "<group>"; };
 		A0CD36972890194900628DA6 /* Tab+WKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+WKNavigationDelegate.swift"; sourceTree = "<group>"; };
+		A0CD76DD2EAB7A4400DA1AFB /* NcServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcServer.swift; sourceTree = "<group>"; };
+		A0CD76DF2EAB8BB500DA1AFB /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
 		A0D070FC275A513700922D70 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
 		A0D9008A24095F5C0046C9B3 /* AltSvcHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltSvcHeader.swift; sourceTree = "<group>"; };
 		A0DB59522747D36200B20436 /* Tor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -734,17 +740,20 @@
 		A0BF521A23AFC3580096624A /* Bookmarks */ = {
 			isa = PBXGroup;
 			children = (
-				A0BF521E23AFC3580096624A /* Bookmark.swift */,
-				A0696EAE2406D94200512695 /* Nextcloud.swift */,
 				A0BF521D23AFC3580096624A /* BookmarksViewController.xib */,
 				A0BF522023AFC3580096624A /* BookmarksViewController.swift */,
 				A0BF522123AFC3580096624A /* BookmarkCell.xib */,
 				A0BF522223AFC3580096624A /* BookmarkCell.swift */,
+				A0CD76DF2EAB8BB500DA1AFB /* FolderViewController.swift */,
 				A0BF521B23AFC3580096624A /* BookmarkViewController.swift */,
 				A0BF521F23AFC3580096624A /* FavIconCell.xib */,
 				A0BF521C23AFC3580096624A /* FavIconRow.swift */,
 				A02CB2B423D0B0B300880720 /* AddBookmarkActivity.swift */,
 				A0696EAC2406C7D000512695 /* SyncViewController.swift */,
+				A0325D922EAA7540009C3DE9 /* NcFolder.swift */,
+				A0325D942EAA7598009C3DE9 /* NcBookmark.swift */,
+				A0325D962EAA766C009C3DE9 /* NcBookmarks.swift */,
+				A0CD76DD2EAB7A4400DA1AFB /* NcServer.swift */,
 			);
 			path = Bookmarks;
 			sourceTree = "<group>";
@@ -1189,6 +1198,7 @@
 				A0BF527C23AFC3580096624A /* UIView+Helpers.swift in Sources */,
 				A036C3B22937A06C0035AA4F /* AddSearchEngineViewController.swift in Sources */,
 				54F7DBC8281C189700CBEFDB /* CALayer+Helpers.swift in Sources */,
+				A0325D972EAA766C009C3DE9 /* NcBookmarks.swift in Sources */,
 				A02885802893FA23007D5AE8 /* WebsiteStorage.swift in Sources */,
 				A0BF525F23AFC3580096624A /* BrowsingViewController+UITextFieldDelegate.swift in Sources */,
 				A09F7ADD2AD80A1A00F7072F /* TorCircuit+Helper.swift in Sources */,
@@ -1207,8 +1217,6 @@
 				A0BF525123AFC3580096624A /* HistoryViewController.swift in Sources */,
 				A0BF524F23AFC3580096624A /* CircuitViewController.swift in Sources */,
 				A0BF527E23AFC3580096624A /* UIButton+Helpers.swift in Sources */,
-				A0BF526423AFC3580096624A /* Bookmark.swift in Sources */,
-				A0696EAF2406D94200512695 /* Nextcloud.swift in Sources */,
 				A0BF528223AFC3580096624A /* String+Helpers.swift in Sources */,
 				A0172C70288824BD008D42CD /* FixedFormViewController.swift in Sources */,
 				A0A83AC228A14CAB005C15C9 /* Tab+WKScriptMessageHandler.swift in Sources */,
@@ -1233,6 +1241,7 @@
 				A0BF526223AFC3580096624A /* FavIconRow.swift in Sources */,
 				A0172C6E2888247C008D42CD /* AlertHelper.swift in Sources */,
 				A0C582582AE9136200A81084 /* Thread+Helpers.swift in Sources */,
+				A0325D952EAA7598009C3DE9 /* NcBookmark.swift in Sources */,
 				A028858228940B93007D5AE8 /* Storage2ViewController.swift in Sources */,
 				A02CB2B523D0B0B300880720 /* AddBookmarkActivity.swift in Sources */,
 				A0C1FB192D50FC9A00AE97A7 /* TlsCertificate.swift in Sources */,
@@ -1247,12 +1256,15 @@
 				A0BF526A23AFC3580096624A /* SecurityPresetsRow.swift in Sources */,
 				A0140DB92D70844700BD2658 /* Log.swift in Sources */,
 				A0BF526E23AFC3580096624A /* Storage1ViewController.swift in Sources */,
+				A0CD76DE2EAB7A4400DA1AFB /* NcServer.swift in Sources */,
 				A0BF525B23AFC3580096624A /* Tab+Gestures.swift in Sources */,
 				A0FA96622A0161DA005EDC3F /* InstallViewController.swift in Sources */,
+				A0CD76E02EAB8BB500DA1AFB /* FolderViewController.swift in Sources */,
 				A02A090F2AD6BA9600A9334C /* OrbotOrBuiltInViewController.swift in Sources */,
 				A0BF527B23AFC3580096624A /* Formatter.swift in Sources */,
 				A0BF524B23AFC3580096624A /* CircuitNodeCell.swift in Sources */,
 				A003A1932A0D1628008D8845 /* SceneDelegate.swift in Sources */,
+				A0325D932EAA7540009C3DE9 /* NcFolder.swift in Sources */,
 				A07B55FC23D736D60051663B /* CertificateViewController.swift in Sources */,
 				A0172C72288827E1008D42CD /* ApiError.swift in Sources */,
 				A0BF525723AFC3580096624A /* SecurityPopUpViewController.swift in Sources */,

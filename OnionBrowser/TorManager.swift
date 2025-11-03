@@ -303,11 +303,15 @@ class TorManager {
 		}
 	}
 
-	func session(_ cookies: [HTTPCookie]? = nil, for url: URL? = nil, delegate: URLSessionDelegate? = nil) -> URLSession {
+	func session(_ cookies: [HTTPCookie]? = nil, for url: URL? = nil, delegate: URLSessionDelegate? = nil, timeout: TimeInterval? = nil) -> URLSession {
 		let conf = URLSessionConfiguration.ephemeral
 		conf.waitsForConnectivity = true
 		conf.allowsConstrainedNetworkAccess = true
 		conf.allowsExpensiveNetworkAccess = true
+
+		if let timeout {
+			conf.timeoutIntervalForResource = timeout
+		}
 
 		if let cookies = cookies {
 			conf.httpCookieStorage?.setCookies(cookies, for: url, mainDocumentURL: nil)

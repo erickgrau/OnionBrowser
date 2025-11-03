@@ -82,6 +82,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "زيادة علامة مرجعيّة ";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "أضف محرّك بحث ";
 
@@ -265,6 +268,9 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "تعديل العلامة المرجعيّة";
 
+/* Scene title */
+"Edit Folder" = "Edit Folder";
+
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "تعديل محرك البحث";
 
@@ -415,7 +421,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "ذاكرة التخزين المؤقت لتطبيق الويب غير متصل";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "موافق/ة";
 
 /* Tab+Gestures */
@@ -565,14 +571,14 @@
 /* AppDelegate */
 "Switch to Tab %d" = "التبديل إلى التبويبه %d";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "مزامنة الإشارات";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "مزامنة الإشارات المرجعية مع خادم Nextcloud";
-
-/* BookmarksViewController */
-"Sync with Nextcloud" = "تزامن مع Nextcloud";
 
 /* SettingsViewController */
 "Tab Security" = "أمن التبويبة";

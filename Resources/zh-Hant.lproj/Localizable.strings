@@ -82,6 +82,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "新增書籤";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "新增搜尋引擎";
 
@@ -265,6 +268,9 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "編輯書籤";
 
+/* Scene title */
+"Edit Folder" = "Edit Folder";
+
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "編輯搜尋引擎";
 
@@ -415,7 +421,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "離線網頁應用程式快取";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "確定";
 
 /* Tab+Gestures */
@@ -565,14 +571,14 @@
 /* AppDelegate */
 "Switch to Tab %d" = "切換到%d分頁";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "同步書籤";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "使用 Nextcloud 伺服器同步書籤";
-
-/* BookmarksViewController */
-"Sync with Nextcloud" = "和 Nextcloud 同步";
 
 /* SettingsViewController */
 "Tab Security" = "分頁安全性";

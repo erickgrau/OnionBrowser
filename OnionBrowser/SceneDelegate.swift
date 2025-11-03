@@ -209,8 +209,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 				if self?.firstRun ?? false {
 					self?.firstRun = false
 
-					Bookmark.firstRunSetup()
-					Bookmark.migrateToV3()
+					NcBookmarks.firstRunSetup()
+					NcBookmarks.migrateToV3()
 
 					if let vc = self?.browsingUi {
 						UpdateAdvertisement.lockdownMode(vc)

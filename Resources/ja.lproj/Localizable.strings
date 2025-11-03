@@ -82,6 +82,9 @@
 /* BookmarkViewController */
 "Add Bookmark" = "お気に入りリストに追加";
 
+/* Scene title */
+"Add Folder" = "Add Folder";
+
 /* AddSearchEngineViewController */
 "Add Search Engine" = "検索エンジンを追加";
 
@@ -265,6 +268,9 @@
 /* BookmarkViewController */
 "Edit Bookmark" = "お気に入りを編集";
 
+/* Scene title */
+"Edit Folder" = "Edit Folder";
+
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "検索エンジンを編集";
 
@@ -415,7 +421,7 @@
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "オフラインキャッシュ";
 
-/* JAHPAuthenticatingHTTPProtocol, AlertHelper */
+/* AlertHelper */
 "OK" = "OK";
 
 /* Tab+Gestures */
@@ -565,14 +571,14 @@
 /* AppDelegate */
 "Switch to Tab %d" = "タブ%dへ切り替え";
 
+/* BookmarksViewController */
+"Sync" = "Sync";
+
 /* SyncViewController */
 "Sync Bookmarks" = "お気に入りを同期する";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "お気に入りをNextCloudサーバーと同期する";
-
-/* BookmarksViewController */
-"Sync with Nextcloud" = "NextCloudと同期する";
 
 /* SettingsViewController */
 "Tab Security" = "タブのセキュリティ";
