@@ -1,2 +1,2 @@
-- Tor auf die neueste Version 0.4.8.19 aktualisiert.
-- Übersetzungen aktualisiert.
+- Unterstützung für Siri-Shortcuts hinzugefügt.
+- Unterstützung für Lesezeichenordner hinzugefügt.

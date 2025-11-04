@@ -1,2 +1,2 @@
-- Aggiornato Tor all'ultima versione 0.4.8.19.
-- Aggiornate le traduzioni.
+- Aggiunto supporto per Siri Shortcuts.
+- Aggiunto supporto per cartelle segnalibri.

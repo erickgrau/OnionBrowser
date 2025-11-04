@@ -1,2 +1,2 @@
-- Cập nhật Tor lên phiên bản mới nhất 0.4.8.19.
-- Cập nhật bản dịch.
+- Hỗ trợ Siri Shortcuts đã được thêm vào.
+- Hỗ trợ thư mục dấu trang đã được thêm vào.

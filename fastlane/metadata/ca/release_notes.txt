@@ -1,2 +1,2 @@
-- Tor actualitzat a la darrera versió 0.4.8.19.
-- Traduccions actualitzades.
+- S'ha afegit compatibilitat amb les dreceres de Siri.
+- S'ha afegit compatibilitat amb la carpeta de marcadors.

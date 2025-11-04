@@ -1,2 +1,2 @@
-- Aktualizováno Tor na nejnovější verzi 0.4.8.19.
-- Aktualizovány překlady.
+- Přidána podpora zkratek Siri.
+- Přidána podpora složek záložek.

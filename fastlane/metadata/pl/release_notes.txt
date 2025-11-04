@@ -1,2 +1,2 @@
-- Zaktualizowano Tor do najnowszej wersji 0.4.8.19.
-- Zaktualizowano tłumaczenia.
+- Dodano obsługę skrótów Siri.
+- Dodano obsługę folderów zakładek.

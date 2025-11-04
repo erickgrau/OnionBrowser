@@ -1,2 +1,2 @@
-- Tor en son sürüm olan 0.4.8.19'a güncellendi.
-- Çeviriler güncellendi.
+- Siri Kısayolları desteği eklendi.
+- Yer imleri klasörü desteği eklendi.

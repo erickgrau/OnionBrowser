@@ -1,2 +1,2 @@
-- Oppdatert Tor til den nyeste versjonen 0.4.8.19.
-- Oppdaterte oversettelser.
+- Støtte for Siri-snarveier er lagt til.
+- Støtte for bokmerkemapper er lagt til.

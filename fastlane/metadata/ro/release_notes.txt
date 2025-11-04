@@ -1,2 +1,2 @@
-- Actualizare Tor la ultima versiune 0.4.8.19.
-- Actualizare traduceri.
+- S-a adăugat suportul pentru Siri Shortcuts.
+- S-a adăugat suportul pentru folderul de marcaje.

@@ -1,2 +1,2 @@
-- Tor bijgewerkt naar de nieuwste versie 0.4.8.19.
-- Vertalingen bijgewerkt.
+- Ondersteuning voor Siri-snelkoppelingen toegevoegd.
+- Ondersteuning voor bladwijzermappen toegevoegd.

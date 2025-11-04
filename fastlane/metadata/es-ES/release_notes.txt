@@ -1,2 +1,2 @@
-- Actualización de Tor a la última versión 0.4.8.19.
-- Actualización de las traducciones.
+- Se ha añadido compatibilidad con los atajos de Siri.
+- Se ha añadido compatibilidad con carpetas de marcadores.

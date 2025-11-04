@@ -1,5 +1,9 @@
 #  Onion Browser Changelog
 
+## 3.3.0
+- Added Siri Shortcuts support.
+- Added bookmarks folder support.
+
 ## 3.2.5
 - Updated Tor to latest version 0.4.8.19.
 - Updated translations.

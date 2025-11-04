@@ -1,2 +1,2 @@
-- Perbarui Tor ke versi terbaru 0.4.8.19.
-- Perbarui terjemahan.
+- Ditambahkan dukungan untuk Siri Shortcuts.
+- Ditambahkan dukungan untuk folder bookmark.

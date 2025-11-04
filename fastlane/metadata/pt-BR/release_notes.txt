@@ -1,2 +1,2 @@
-- Atualização do Tor para a versão mais recente 0.4.8.19.
-- Atualização das traduções.
+- Adicionado suporte para atalhos da Siri.
+- Adicionado suporte para pastas de favoritos.

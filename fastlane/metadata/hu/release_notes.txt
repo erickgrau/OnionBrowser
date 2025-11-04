@@ -1,2 +1,2 @@
-- A Tor frissítve a legújabb 0.4.8.19 verzióra.
-- Frissített fordítások.
+- Siri Shortcuts támogatás hozzáadva.
+- Könyvjelzők mappa támogatása hozzáadva.
