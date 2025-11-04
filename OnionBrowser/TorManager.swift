@@ -127,7 +127,7 @@ class TorManager {
 			updateConfig(transport)
 		}
 
-		controllerQueue.asyncAfter(deadline: .now() + 0.65) {
+		controllerQueue.asyncAfter(deadline: .now() + 0.8) {
 			if self.torController == nil, let url = self.torConf?.controlPortFile {
 				self.torController = TorController(controlPortFile: url)
 			}
