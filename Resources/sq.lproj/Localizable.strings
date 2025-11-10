@@ -83,7 +83,7 @@
 "Add Bookmark" = "Shto Fletëshënues";
 
 /* Scene title */
-"Add Folder" = "Add Folder";
+"Add Folder" = "Shtoin Dosje";
 
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Shtoni Motor Kërkimesh";
@@ -269,7 +269,7 @@
 "Edit Bookmark" = "Përpunoni Faqerojtës";
 
 /* Scene title */
-"Edit Folder" = "Edit Folder";
+"Edit Folder" = "Përpunoni Dosje";
 
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Përpunoni Motor Kërkimesh";
@@ -572,7 +572,7 @@
 "Switch to Tab %d" = "Kalo tek Skeda %d";
 
 /* BookmarksViewController */
-"Sync" = "Sync";
+"Sync" = "Njëkohësojini";
 
 /* SyncViewController */
 "Sync Bookmarks" = "Njëkohësoni Faqerojtës";

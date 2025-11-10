@@ -95,20 +95,3 @@ trans.pt_PT   = fastlane/metadata/pt-PT/description.txt
 trans.de      = fastlane/metadata/de-DE/description.txt
 trans.nl      = fastlane/metadata/nl-NL/description.txt
 trans.nb      = fastlane/metadata/no/description.txt
-
-[o:otf:p:onion-browser:r:release-notes]
-file_filter   = fastlane/metadata/<lang>/release_notes.txt
-source_file   = fastlane/metadata/en-US/release_notes.txt
-source_lang   = en_US
-type          = TXT
-minimum_perc  = 25
-trans.nl      = fastlane/metadata/nl-NL/release_notes.txt
-trans.pt_BR   = fastlane/metadata/pt-BR/release_notes.txt
-trans.tr_TR   = fastlane/metadata/tr/release_notes.txt
-trans.ar      = fastlane/metadata/ar-SA/release_notes.txt
-trans.es      = fastlane/metadata/es-ES/release_notes.txt
-trans.hu_HU   = fastlane/metadata/hu/release_notes.txt
-trans.de      = fastlane/metadata/de-DE/release_notes.txt
-trans.pt_PT   = fastlane/metadata/pt-PT/release_notes.txt
-trans.fr      = fastlane/metadata/fr-FR/release_notes.txt
-trans.nb      = fastlane/metadata/no/release_notes.txt

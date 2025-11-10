@@ -83,7 +83,7 @@
 "Add Bookmark" = "Добавить закладку";
 
 /* Scene title */
-"Add Folder" = "Add Folder";
+"Add Folder" = "Добавить папку";
 
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Добавить поисковую систему";
@@ -269,7 +269,7 @@
 "Edit Bookmark" = "Редактировать закладку";
 
 /* Scene title */
-"Edit Folder" = "Edit Folder";
+"Edit Folder" = "Изменить папку";
 
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Изменить поисковую систему";
@@ -572,7 +572,7 @@
 "Switch to Tab %d" = "Переключиться на вкладку %d";
 
 /* BookmarksViewController */
-"Sync" = "Sync";
+"Sync" = "Синхронизация";
 
 /* SyncViewController */
 "Sync Bookmarks" = "Синхронизировать закладки";

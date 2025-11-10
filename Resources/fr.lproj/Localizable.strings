@@ -83,7 +83,7 @@
 "Add Bookmark" = "Ajouter un marque-page";
 
 /* Scene title */
-"Add Folder" = "Add Folder";
+"Add Folder" = "Ajouter un dossier";
 
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Ajouter un moteur de recherche";
@@ -269,7 +269,7 @@
 "Edit Bookmark" = "Modifier le marque-page";
 
 /* Scene title */
-"Edit Folder" = "Edit Folder";
+"Edit Folder" = "Modifier le dossier";
 
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Modifier le moteur de recherche";
@@ -572,7 +572,7 @@
 "Switch to Tab %d" = "Basculer vers l’onglet %d";
 
 /* BookmarksViewController */
-"Sync" = "Sync";
+"Sync" = "Synchroniser";
 
 /* SyncViewController */
 "Sync Bookmarks" = "Synchroniser les marque-pages";

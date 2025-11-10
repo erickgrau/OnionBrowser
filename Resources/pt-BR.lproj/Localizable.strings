@@ -2,7 +2,7 @@
 "%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@ pode confiar em %2$@ para uma conexão segura com o Tor ou executar seu próprio Tor integrado. O Tor integrado tem problemas de segurança.";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ if you have connectivity issues with %2$@" = "%1$@ if you have connectivity issues with %2$@";
+"%1$@ if you have connectivity issues with %2$@" = "%1$@ se você tem problemas de conectividade com %2$@";
 
 /* Placeholder 1 is bullet point, Placeholder 2 is 'Onion Browser' */
 "%1$@ if you want to use %2$@ over another VPN" = "%1$@ se você quiser usar %2$@ sobre outra VPN";
@@ -11,7 +11,7 @@
 "%1$@ now relies on %2$@ for a secure connection to Tor." = "%1$@ agora depende de %2$@ para uma conexão segura com o Tor.";
 
 /* 1. placeholder is 'Onion Browser', 2. is translated 'Lockdown Mode', 3. is two line breaks, 4. is translated 'Default Security', 5. is translated 'Block Insecure HTTP Requests'. */
-"%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature." = "%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature.";
+"%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature." = "%1$@now selectively supports iOS' %2$@now selectively supports iOS' %3$@O ouro e a prata níveis de segurança vai ter isso definido por padrão. Suas configurações não mudam automaticamente, embora.%3$@Visite a '%4$@' página para atualizar seu nível de segurança padrão %3$@P.S.: Você pode querer dar um a olhada em nosso '%5$@' recurso.";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
 "%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue." = "%1$@ Depende %2$@ para uma conexão segura com o Tor. Instale o %2$@ aplicativo para continuar.";
@@ -50,7 +50,7 @@
 "%@ video and audio streams don't go through Tor and might get blocked" = "%@ fluxos de vídeo e áudio não passam pelo Tor e podem ser bloqueados";
 
 /* Placeholder is bullet point */
-"%@ websites can uncover your real IP address using JavaScript" = "%@ websites can uncover your real IP address using JavaScript";
+"%@ websites can uncover your real IP address using JavaScript" = "%@ os sites podem descobrir o seu verdadeiro endereço IP usando JavaScript";
 
 /* No comment provided by engineer. */
 "(not recommended)" = "(não recomendado)";
@@ -83,7 +83,7 @@
 "Add Bookmark" = "Adicionar marcador";
 
 /* Scene title */
-"Add Folder" = "Add Folder";
+"Add Folder" = "Adicionar Pasta";
 
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Adicionar motor de busca";
@@ -101,7 +101,7 @@
 "Address" = "Endereço";
 
 /* VoiceOver */
-"Address and search bar" = "Address and search bar";
+"Address and search bar" = "Adicionar e pesquisar na barra de tarefas";
 
 /* RuleEditorController */
 "All rules" = "Todas as regras";
@@ -182,7 +182,7 @@
 "Choose how long app remembers open tabs." = "Escolha por quanto tempo o aplicativo se lembrará das abas abertas.";
 
 /* No comment provided by engineer. */
-"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
+"Choose your preferred blocklist:" = "Escolha sua lista de bloqueio preferida:";
 
 /* AppDelegate */
 "Close Tab" = "Fechar aba";
@@ -269,7 +269,7 @@
 "Edit Bookmark" = "Editar marcador";
 
 /* Scene title */
-"Edit Folder" = "Edit Folder";
+"Edit Folder" = "Editar Pasta";
 
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Editar Mecanismo de Pesquisa";
@@ -305,7 +305,7 @@
 "Forget in Background" = "Esquecer em segundo plano";
 
 /* VoiceOver */
-"Forward" = "Forward";
+"Forward" = "Encaminhar";
 
 /* SettingsViewController */
 "Fund Development" = "Financiar o desenvolvimento";
@@ -572,7 +572,7 @@
 "Switch to Tab %d" = "Alterne para a aba %d";
 
 /* BookmarksViewController */
-"Sync" = "Sync";
+"Sync" = "Sincronizar";
 
 /* SyncViewController */
 "Sync Bookmarks" = "Sincronizar Favoritos";
@@ -584,7 +584,7 @@
 "Tab Security" = "Segurança da aba";
 
 /* VoiceOver */
-"Tabs" = "Tabs";
+"Tabs" = "Abas";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Informar sites que você se opõe ao processamento e à venda de seus dados pessoais";
@@ -638,7 +638,7 @@
 "Update" = "Atualização";
 
 /* No comment provided by engineer. */
-"Update Blocklist" = "Update Blocklist";
+"Update Blocklist" = "Atualizar lista de bloqueio ";
 
 /* SettingsViewController */
 "URL Blocker" = "Bloqueador de URL";
@@ -650,7 +650,7 @@
 "Use built-in Tor" = "Use o Tor integrado";
 
 /* No comment provided by engineer. */
-"Use URL Blocker" = "Use URL Blocker";
+"Use URL Blocker" = "Use Bloqueador de URL";
 
 /* SecurityViewController */
 "User Agent" = "Usuário/Usuária";

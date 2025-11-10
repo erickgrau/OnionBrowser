@@ -83,7 +83,7 @@
 "Add Bookmark" = "Yer imi ekle";
 
 /* Scene title */
-"Add Folder" = "Add Folder";
+"Add Folder" = "Klasör ekle";
 
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Arama motoru ekle";
@@ -269,7 +269,7 @@
 "Edit Bookmark" = "Yer imini düzenle";
 
 /* Scene title */
-"Edit Folder" = "Edit Folder";
+"Edit Folder" = "Klasörü düzenle";
 
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Arama motorunu düzenle";
@@ -572,7 +572,7 @@
 "Switch to Tab %d" = "%d sekmesine geç";
 
 /* BookmarksViewController */
-"Sync" = "Sync";
+"Sync" = "Eşitle";
 
 /* SyncViewController */
 "Sync Bookmarks" = "Yer imlerini eşitle";
