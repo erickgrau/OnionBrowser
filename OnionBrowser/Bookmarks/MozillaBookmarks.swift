@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import SwiftSoup
 
 class MozillaBookmarks {
 
-	static func export(_ folder: NcFolder) throws -> URL {
+	class func export(_ folder: NcFolder) throws -> URL {
 		var result = """
 <!DOCTYPE NETSCAPE-Bookmark-file-1>
 <html>
@@ -41,9 +42,61 @@ class MozillaBookmarks {
 		return url
 	}
 
+	class func `import`(_ content: String) async throws {
+		let document = try SwiftSoup.parse(content)
 
-	private static func render(_ folder: NcFolder, level: UInt8) -> String {
-		let prefix = String(repeating: "\t", count: Int(level) + 1)
+		let dts = try document.select("body > dl > dt")
+
+		try `import`(dts, into: NcBookmarks.root)
+
+		NcBookmarks.store()
+
+		try await NcServer.sync()
+	}
+
+	// MARK: Private Methods
+
+	private class func `import`(_ dts: Elements, into folder: NcFolder) throws {
+		for dt in dts {
+			if let header = try dt.select("h1, h2, h3, h4, h5, h6").first() {
+				let ncFolder = NcFolder(
+					id: Int(try header.attr("id")),
+					title: try header.text(),
+					parentFolder: folder.id)
+
+				folder.folders.append(ncFolder)
+
+				try `import`(dt.select("dl > dt"), into: ncFolder)
+			}
+			else {
+				for bookmark in try dt.select("a") {
+					let ncBookmark = NcBookmark(
+						id: Int(try bookmark.attr("id")),
+						url: try bookmark.attr("href"),
+						title: try bookmark.text(),
+						added: Int(try bookmark.attr("add_date")) ?? Int(Date().timeIntervalSince1970),
+						lastModified: Int(try bookmark.attr("last_modified")) ?? Int(Date().timeIntervalSince1970),
+						folder: folder)
+
+					let iconData = try bookmark.attr("icon")
+
+					if iconData.starts(with: "data:image/png;base64,") {
+						let iconData = String(iconData.dropFirst(22))
+
+						if !iconData.isEmpty, let data = Data(base64Encoded: iconData) {
+							ncBookmark.icon = UIImage(data: data)
+						}
+					}
+
+					folder.bookmarks.append(ncBookmark)
+				}
+			}
+		}
+	}
+
+
+	private class func render(_ folder: NcFolder, level: UInt8) -> String {
+		var prefix = String(repeating: "\t", count: Int(level) + 1)
 
 		var idAttr = ""
 
@@ -57,15 +110,15 @@ class MozillaBookmarks {
 			title = NSLocalizedString("Bookmarks", comment: "")
 		}
 
-		var dtOpen = ""
-		var dtClose = ""
+		var result = ""
 
 		if level > 1 {
-			dtOpen = "<dt>"
-			dtClose = "</dt>"
+			result += "\(prefix)<dt>\n"
+
+			prefix = String(repeating: "\t", count: Int(level) + 2)
 		}
 
-		var result = "\(prefix)\(dtOpen)<h\(level)\(idAttr)>\(title)</h\(level)>\(dtClose)\n"
+		result += "\(prefix)<h\(level)\(idAttr)>\(title)</h\(level)>\n"
 		result += "\(prefix)<dl><p>\n"
 
 		for folders in folder.folders {
@@ -74,16 +127,21 @@ class MozillaBookmarks {
 
 		if !folder.bookmarks.isEmpty {
 			for bookmark in folder.bookmarks {
-				result += render(bookmark, level: level)
+				result += render(bookmark, level: level + (level > 1 ? 1 : 0))
 			}
 		}
 
 		result += "\(prefix)</p></dl>\n"
 
+		if level > 1 {
+			prefix = String(repeating: "\t", count: Int(level) + 1)
+			result += "\(prefix)</dt>\n"
+		}
+
 		return result
 	}
 
-	private static func render(_ bookmark: NcBookmark, level: UInt8) -> String {
+	private class func render(_ bookmark: NcBookmark, level: UInt8) -> String {
 		let prefix = String(repeating: "\t", count: Int(level) + 2)
 
 		var idAttr = ""

@@ -16,8 +16,9 @@ protocol BookmarksViewControllerDelegate {
 }
 
 class BookmarksViewController: UIViewController, UITableViewDataSource,
-UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
-
+							   UITableViewDelegate, UISearchResultsUpdating,
+							   BookmarksViewControllerDelegate, UIDocumentPickerDelegate
+{
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var toolbar: UIToolbar!
 
@@ -66,7 +67,9 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 		}
 
 		navigationItem.title = folder.title.isEmpty ? NSLocalizedString("Bookmarks", comment: "Scene title") : folder.title
-		navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .action, target: self, action: #selector(export))
+		navigationItem.rightBarButtonItems = [
+			.init(image: .init(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(exportBookmarks)),
+			.init(image: .init(systemName: "square.and.arrow.down"), style: .plain, target: self, action: #selector(importBookmarks))]
 		updateButtons()
 
 		tableView.register(BookmarkCell.nib, forCellReuseIdentifier: BookmarkCell.reuseId)
@@ -276,13 +279,65 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 	}
 
 
+	// MARK: UIDocumentPickerDelegate
+
+	func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+		guard let file = urls.first else {
+			return
+		}
+
+		let data: Data
+
+		do {
+			data = try Data(contentsOf: file)
+		}
+		catch {
+			return AlertHelper.present(self, message: error.localizedDescription)
+		}
+
+		guard let contents = String(data: data, encoding: .utf8) else {
+			return
+		}
+
+		let hud = MBProgressHUD.showAdded(to: view, animated: true)
+		hud.mode = .indeterminate
+		hud.label.numberOfLines = 0
+
+		Task {
+			var err: Error? = nil
+
+			do {
+				try await MozillaBookmarks.import(contents)
+			}
+			catch {
+				Log.error(for: Self.self, error.localizedDescription)
+
+				err = error
+			}
+
+			await MainActor.run {
+				if let err {
+					hud.mode = .text
+					hud.label.text = err.localizedDescription
+					hud.hide(animated: true, afterDelay: 3)
+				}
+				else {
+					hud.hide(animated: true)
+				}
+
+				tableView.reloadData()
+			}
+		}
+	}
+
+
 	// MARK: Actions
 
 	@objc private func dismiss_() {
 		navigationController?.dismiss(animated: true)
 	}
 
-	@objc private func export(sender: UIBarButtonItem) {
+	@objc private func exportBookmarks(sender: UIBarButtonItem) {
 		do {
 			let exported = try MozillaBookmarks.export(folder)
 
@@ -295,6 +350,13 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 		catch {
 			AlertHelper.present(self, message: error.localizedDescription)
 		}
+	}
+
+	@objc private func importBookmarks() {
+		let vc = UIDocumentPickerViewController(forOpeningContentTypes: [.html], asCopy: true)
+		vc.delegate = self
+
+		present(vc)
 	}
 
 	@objc private func add() {
