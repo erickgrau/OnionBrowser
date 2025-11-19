@@ -148,6 +148,7 @@
 		A0CD76E02EAB8BB500DA1AFB /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD76DF2EAB8BB500DA1AFB /* FolderViewController.swift */; };
 		A0D070FD275A513700922D70 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D070FC275A513700922D70 /* FileManager+Helpers.swift */; };
 		A0D9008B24095F5C0046C9B3 /* AltSvcHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9008A24095F5C0046C9B3 /* AltSvcHeader.swift */; };
+		A0DDCCCD2ECDCD7B00907CE1 /* MozillaBookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DDCCCC2ECDCD7B00907CE1 /* MozillaBookmarks.swift */; };
 		A0E8E8B12938CDFB00DC2A2F /* SearchEnginesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E8E8B02938CDFB00DC2A2F /* SearchEnginesViewController.swift */; };
 		A0F8BE8527C50549002D2999 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D070FC275A513700922D70 /* FileManager+Helpers.swift */; };
 		A0F8BE8627C50586002D2999 /* AltSvcHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D9008A24095F5C0046C9B3 /* AltSvcHeader.swift */; };
@@ -489,6 +490,7 @@
 		A0D070FC275A513700922D70 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
 		A0D9008A24095F5C0046C9B3 /* AltSvcHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltSvcHeader.swift; sourceTree = "<group>"; };
 		A0DB59522747D36200B20436 /* Tor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0DDCCCC2ECDCD7B00907CE1 /* MozillaBookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MozillaBookmarks.swift; sourceTree = "<group>"; };
 		A0E8E8B02938CDFB00DC2A2F /* SearchEnginesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEnginesViewController.swift; sourceTree = "<group>"; };
 		A0FA965B2A015EBB005EDC3F /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		A0FA965C2A015EBB005EDC3F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -754,6 +756,7 @@
 				A0325D942EAA7598009C3DE9 /* NcBookmark.swift */,
 				A0325D962EAA766C009C3DE9 /* NcBookmarks.swift */,
 				A0CD76DD2EAB7A4400DA1AFB /* NcServer.swift */,
+				A0DDCCCC2ECDCD7B00907CE1 /* MozillaBookmarks.swift */,
 			);
 			path = Bookmarks;
 			sourceTree = "<group>";
@@ -1238,6 +1241,7 @@
 				A043B9572A029FC3008025A7 /* StartOrbotViewController.swift in Sources */,
 				A0BF527323AFC3580096624A /* AddSiteViewController.swift in Sources */,
 				A0BF527423AFC3580096624A /* DonationViewController.swift in Sources */,
+				A0DDCCCD2ECDCD7B00907CE1 /* MozillaBookmarks.swift in Sources */,
 				A0BF526223AFC3580096624A /* FavIconRow.swift in Sources */,
 				A0172C6E2888247C008D42CD /* AlertHelper.swift in Sources */,
 				A0C582582AE9136200A81084 /* Thread+Helpers.swift in Sources */,

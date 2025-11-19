@@ -66,6 +66,7 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 		}
 
 		navigationItem.title = folder.title.isEmpty ? NSLocalizedString("Bookmarks", comment: "Scene title") : folder.title
+		navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .action, target: self, action: #selector(export))
 		updateButtons()
 
 		tableView.register(BookmarkCell.nib, forCellReuseIdentifier: BookmarkCell.reuseId)
@@ -279,6 +280,21 @@ UITableViewDelegate, UISearchResultsUpdating, BookmarksViewControllerDelegate {
 
 	@objc private func dismiss_() {
 		navigationController?.dismiss(animated: true)
+	}
+
+	@objc private func export(sender: UIBarButtonItem) {
+		do {
+			let exported = try MozillaBookmarks.export(folder)
+
+			let vc = UIActivityViewController(activityItems: [exported], applicationActivities: nil)
+			vc.modalPresentationStyle = .popover
+			vc.popoverPresentationController?.barButtonItem = sender
+
+			present(vc, animated: true)
+		}
+		catch {
+			AlertHelper.present(self, message: error.localizedDescription)
+		}
 	}
 
 	@objc private func add() {
