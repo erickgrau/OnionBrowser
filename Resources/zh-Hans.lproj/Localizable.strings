@@ -283,6 +283,9 @@
 /* CertificateViewController */
 "Expires After" = "有效期剩余";
 
+/* BookmarksViewController */
+"Export Bookmarks" = "Export Bookmarks";
+
 /* CertificateViewController */
 "Extended Validation: Organization" = "额外验证：组织";
 
@@ -348,6 +351,9 @@
 
 /* SecurityViewController */
 "Ignore TLS Errors" = "忽略 TLS 错误";
+
+/* BookmarksViewController */
+"Import Bookmarks" = "Import Bookmarks";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "IndexedDB 数据库";

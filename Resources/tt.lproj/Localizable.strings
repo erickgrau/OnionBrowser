@@ -283,6 +283,9 @@
 /* CertificateViewController */
 "Expires After" = "Вакыты чыга";
 
+/* BookmarksViewController */
+"Export Bookmarks" = "Export Bookmarks";
+
 /* CertificateViewController */
 "Extended Validation: Organization" = "Киңәйтелгән тикшерү: Оешма";
 
@@ -348,6 +351,9 @@
 
 /* SecurityViewController */
 "Ignore TLS Errors" = "TLS хаталарга игътибар итмәү";
+
+/* BookmarksViewController */
+"Import Bookmarks" = "Import Bookmarks";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "IndexedDB мәгълүмат базалары";

@@ -283,6 +283,9 @@
 /* CertificateViewController */
 "Expires After" = "انقضا پس از";
 
+/* BookmarksViewController */
+"Export Bookmarks" = "Export Bookmarks";
+
 /* CertificateViewController */
 "Extended Validation: Organization" = "اعتبار تمدید شده: سازمان";
 
@@ -348,6 +351,9 @@
 
 /* SecurityViewController */
 "Ignore TLS Errors" = "چشم‌پوشی از خطاهای TLS";
+
+/* BookmarksViewController */
+"Import Bookmarks" = "Import Bookmarks";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "پایگاه های داده ی IndexedDB";

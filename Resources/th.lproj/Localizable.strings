@@ -283,6 +283,9 @@
 /* CertificateViewController */
 "Expires After" = "หมดอายุหลังจาก";
 
+/* BookmarksViewController */
+"Export Bookmarks" = "Export Bookmarks";
+
 /* CertificateViewController */
 "Extended Validation: Organization" = "Extended Validation: Organization";
 
@@ -348,6 +351,9 @@
 
 /* SecurityViewController */
 "Ignore TLS Errors" = "เพิกเฉยข้อผิดพลาด TLS";
+
+/* BookmarksViewController */
+"Import Bookmarks" = "Import Bookmarks";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "ฐานข้อมูล IndexedDB";

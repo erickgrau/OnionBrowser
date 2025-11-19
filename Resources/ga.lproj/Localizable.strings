@@ -283,6 +283,9 @@
 /* CertificateViewController */
 "Expires After" = "Dáta Éagtha";
 
+/* BookmarksViewController */
+"Export Bookmarks" = "Export Bookmarks";
+
 /* CertificateViewController */
 "Extended Validation: Organization" = "Bailíochtú Breise: Eagraíocht";
 
@@ -348,6 +351,9 @@
 
 /* SecurityViewController */
 "Ignore TLS Errors" = "Déan neamhaird d'earráidí TLS";
+
+/* BookmarksViewController */
+"Import Bookmarks" = "Import Bookmarks";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "IndexedDB Databases";

@@ -283,6 +283,9 @@
 /* CertificateViewController */
 "Expires After" = "Erääntyy kun on kulunut";
 
+/* BookmarksViewController */
+"Export Bookmarks" = "Export Bookmarks";
+
 /* CertificateViewController */
 "Extended Validation: Organization" = "Laajennettu vahvistus: Organisaatio";
 
@@ -348,6 +351,9 @@
 
 /* SecurityViewController */
 "Ignore TLS Errors" = "Älä huomioi TLS-virheitä";
+
+/* BookmarksViewController */
+"Import Bookmarks" = "Import Bookmarks";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "IndexedDB-tietokannat";

@@ -283,6 +283,9 @@
 /* CertificateViewController */
 "Expires After" = "Skadon Pas";
 
+/* BookmarksViewController */
+"Export Bookmarks" = "Export Bookmarks";
+
 /* CertificateViewController */
 "Extended Validation: Organization" = "Vlerësim i Zgjatur: Ent";
 
@@ -348,6 +351,9 @@
 
 /* SecurityViewController */
 "Ignore TLS Errors" = "Shpërfill Gabim TLS";
+
+/* BookmarksViewController */
+"Import Bookmarks" = "Import Bookmarks";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "Baza të dhënash IndexedDB";

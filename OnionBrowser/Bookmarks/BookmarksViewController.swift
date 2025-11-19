@@ -59,6 +59,9 @@ class BookmarksViewController: UIViewController, UITableViewDataSource,
 			UIBarButtonItem(image: NcFolder.icon, style: .plain, target: self, action: #selector(addFolder)),
 			UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)]
 
+		toolbarItems?.first?.accessibilityLabel = NSLocalizedString("Add Bookmark", comment: "")
+		toolbarItems?[1].accessibilityLabel = NSLocalizedString("Add Folder", comment: "")
+
 		if folder.id == -1 {
 			toolbarItems?.append(contentsOf: [
 				UIBarButtonItem(title: NSLocalizedString("Sync", comment: ""), style: .plain,
@@ -67,9 +70,13 @@ class BookmarksViewController: UIViewController, UITableViewDataSource,
 		}
 
 		navigationItem.title = folder.title.isEmpty ? NSLocalizedString("Bookmarks", comment: "Scene title") : folder.title
+
 		navigationItem.rightBarButtonItems = [
 			.init(image: .init(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(exportBookmarks)),
 			.init(image: .init(systemName: "square.and.arrow.down"), style: .plain, target: self, action: #selector(importBookmarks))]
+		navigationItem.rightBarButtonItems?.first?.accessibilityLabel = NSLocalizedString("Import Bookmarks", comment: "")
+		navigationItem.rightBarButtonItems?.last?.accessibilityLabel = NSLocalizedString("Export Bookmarks", comment: "")
+
 		updateButtons()
 
 		tableView.register(BookmarkCell.nib, forCellReuseIdentifier: BookmarkCell.reuseId)
