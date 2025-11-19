@@ -141,19 +141,44 @@ class TorManager {
 			}
 
 			if !torController.isConnected {
-				do {
-					try torController.connect()
-				}
-				catch let error {
-					self.log("#startTunnel error=\(error)")
+				var err: Error? = nil
 
+				// Why did this become unstable?
+				for _ in 0 ..< 3 {
+					do {
+						err = nil
+						try torController.connect()
+						break
+					}
+					catch let error {
+						self.log("#startTunnel error=\(error)")
+						err = error
+
+						Thread.sleep(forTimeInterval: 0.25)
+					}
+				}
+
+				if let err {
 					self.stop()
 
-					return completion(error)
+					return completion(err)
 				}
 			}
 
-			guard let cookie = self.torConf?.cookie else {
+			var cookie: Data? = nil
+
+			// Why did this become unstable?
+			for _ in 0 ..< 3 {
+				cookie = self.torConf?.cookie
+
+				if cookie != nil {
+					break
+				}
+
+				Thread.sleep(forTimeInterval: 0.25)
+			}
+
+			guard let cookie = cookie else {
 				self.log("#startTunnel cookie unreadable")
 
 				self.stop()
