@@ -61,9 +61,7 @@ class NcBookmark: Codable, Equatable, CustomStringConvertible {
 	var icon: UIImage? {
 		get {
 			if _icon == nil,
-			   let iconName,
-			   !iconName.isEmpty,
-			   let path = NcBookmarks.rootDir?.appendingPathComponent(iconName).path
+			   let path = iconUrl?.path
 			{
 				_icon = UIImage(contentsOfFile: path)
 			}
