@@ -1,2 +1,2 @@
-- S-a adăugat suportul pentru Siri Shortcuts.
-- S-a adăugat suportul pentru folderul de marcaje.
+- Actualizare Tor la versiunea 0.4.8.20.
+- Adăugare import/export marcaje cu fișier HTML compatibil cu Firefox.

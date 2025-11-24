@@ -1,2 +1,2 @@
-- Støtte for Siri-snarveier er lagt til.
-- Støtte for bokmerkemapper er lagt til.
+- Oppdatert Tor til 0.4.8.20.
+- Lagt til import/eksport av bokmerker med Firefox-kompatibel HTML-fil.

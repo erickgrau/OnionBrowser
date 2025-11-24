@@ -1,2 +1,2 @@
-- Se ha añadido compatibilidad con los atajos de Siri.
-- Se ha añadido compatibilidad con carpetas de marcadores.
+- Actualización de Tor a la versión 0.4.8.20.
+- Se ha añadido la importación/exportación de marcadores con archivos HTML compatibles con Firefox.

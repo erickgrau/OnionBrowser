@@ -1,2 +1,2 @@
-- Unterstützung für Siri-Shortcuts hinzugefügt.
-- Unterstützung für Lesezeichenordner hinzugefügt.
+- Tor auf 0.4.8.20 aktualisiert.
+- Import/Export von Lesezeichen mit Firefox-kompatibler HTML-Datei hinzugefügt.

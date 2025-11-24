@@ -1,2 +1,2 @@
-- Dodano obsługę skrótów Siri.
-- Dodano obsługę folderów zakładek.
+- Zaktualizowano Tor do wersji 0.4.8.20.
+- Dodano import/eksport zakładek za pomocą pliku HTML zgodnego z przeglądarką Firefox.

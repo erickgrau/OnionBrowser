@@ -1,2 +1,2 @@
-- Siri Shortcuts támogatás hozzáadva.
-- Könyvjelzők mappa támogatása hozzáadva.
+- A Tor frissítése 0.4.8.20-ra.
+- Könyvjelzők importálása/exportálása Firefox-kompatibilis HTML fájlokkal.

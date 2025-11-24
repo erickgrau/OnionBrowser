@@ -1,2 +1,2 @@
-- Adicionado suporte para atalhos da Siri.
-- Adicionado suporte para pastas de favoritos.
+- Atualização do Tor para a versão 0.4.8.20.
+- Adicionada importação/exportação de favoritos com arquivo HTML compatível com o Firefox.

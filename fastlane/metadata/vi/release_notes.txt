@@ -1,2 +1,2 @@
-- Hỗ trợ Siri Shortcuts đã được thêm vào.
-- Hỗ trợ thư mục dấu trang đã được thêm vào.
+- Cập nhật Tor lên phiên bản 0.4.8.20.
+- Thêm tính năng nhập/xuất dấu trang bằng tệp HTML tương thích với Firefox.

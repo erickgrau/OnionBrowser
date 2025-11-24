@@ -1,5 +1,9 @@
 #  Onion Browser Changelog
 
+## 3.3.1
+- Updated Tor to 0.4.8.20.
+- Added bookmarks import/export with Firefox-compatible HTML file.
+
 ## 3.3.0
 - Added Siri Shortcuts support.
 - Added bookmarks folder support.

@@ -1,2 +1,2 @@
-- S'ha afegit compatibilitat amb les dreceres de Siri.
-- S'ha afegit compatibilitat amb la carpeta de marcadors.
+- S'ha actualitzat Tor a la versió 0.4.8.20.
+- S'ha afegit la importació/exportació de marcadors amb un fitxer HTML compatible amb Firefox.

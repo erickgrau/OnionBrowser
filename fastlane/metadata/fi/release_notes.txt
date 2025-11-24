@@ -1,2 +1,2 @@
-- Lisätty Siri-pikakomentojen tuki.
-- Lisätty kirjanmerkkikansioiden tuki.
+- Tor päivitetty versioon 0.4.8.20.
+- Lisätty kirjanmerkkien tuonti/vienti Firefox-yhteensopivalla HTML-tiedostolla.

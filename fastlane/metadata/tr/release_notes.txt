@@ -1,2 +1,2 @@
-- Siri Kısayolları desteği eklendi.
-- Yer imleri klasörü desteği eklendi.
+- Tor 0.4.8.20 sürümüne güncellendi.
+- Firefox uyumlu HTML dosyası ile yer imleri içe/dışa aktarma özelliği eklendi.

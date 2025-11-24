@@ -1,2 +1,2 @@
-- Ditambahkan dukungan untuk Siri Shortcuts.
-- Ditambahkan dukungan untuk folder bookmark.
+- Memperbarui Tor ke versi 0.4.8.20.
+- Menambahkan fitur impor/ekspor bookmark dengan file HTML yang kompatibel dengan Firefox.

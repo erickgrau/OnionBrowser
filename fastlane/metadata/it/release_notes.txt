@@ -1,2 +1,2 @@
-- Aggiunto supporto per Siri Shortcuts.
-- Aggiunto supporto per cartelle segnalibri.
+- Aggiornato Tor alla versione 0.4.8.20.
+- Aggiunta la funzione di importazione/esportazione dei segnalibri con file HTML compatibile con Firefox.

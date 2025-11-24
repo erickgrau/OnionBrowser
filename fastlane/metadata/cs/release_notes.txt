@@ -1,2 +1,2 @@
-- Přidána podpora zkratek Siri.
-- Přidána podpora složek záložek.
+- Aktualizováno Tor na verzi 0.4.8.20.
+- Přidáno importování/exportování záložek pomocí souboru HTML kompatibilního s Firefoxem.

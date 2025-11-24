@@ -1,2 +1,2 @@
-- Dodana je podrška za Siri prečace.
-- Dodana je podrška za mapu oznaka.
+- Ažuriran Tor na verziju 0.4.8.20.
+- Dodan je uvoz/izvoz oznaka s HTML datotekom kompatibilnom s Firefoxom.

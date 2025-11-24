@@ -1,2 +1,2 @@
-- Ondersteuning voor Siri-snelkoppelingen toegevoegd.
-- Ondersteuning voor bladwijzermappen toegevoegd.
+- Tor bijgewerkt naar 0.4.8.20.
+- Bladwijzers importeren/exporteren met Firefox-compatibel HTML-bestand toegevoegd.
