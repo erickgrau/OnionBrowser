@@ -19,7 +19,7 @@ target 'OnionBrowser' do
   pod 'SwiftSoup', '~> 2.7'
 
   pod 'Tor/GeoIP',
-    '~> 408.18'
+    '~> 408.21'
 #    :path => '../Tor.framework'
 
   pod 'IPtProxyUI',
