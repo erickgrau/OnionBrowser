@@ -284,7 +284,7 @@
 "Expires After" = "Срок действия";
 
 /* BookmarksViewController */
-"Export Bookmarks" = "Export Bookmarks";
+"Export Bookmarks" = "Экспортировать закладки";
 
 /* CertificateViewController */
 "Extended Validation: Organization" = "Расширенная проверка: Организация";
@@ -353,7 +353,7 @@
 "Ignore TLS Errors" = "Игнорировать ошибки TLS";
 
 /* BookmarksViewController */
-"Import Bookmarks" = "Import Bookmarks";
+"Import Bookmarks" = "Импортировать закладки";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "Базы данных IndexedDB";

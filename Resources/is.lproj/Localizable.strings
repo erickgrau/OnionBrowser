@@ -2,7 +2,7 @@
 "%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@ getur annað hvort reitt sig á %2$@ fyrir örugga tengingu við Tor eða keyrt sitt eigið innbyggða Tor. Innbyggt Tor er með vandamál varðandi öryggi.";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ if you have connectivity issues with %2$@" = "%1$@ if you have connectivity issues with %2$@";
+"%1$@ if you have connectivity issues with %2$@" = "%1$@ ef þú rekst á tengivandamál í %2$@";
 
 /* Placeholder 1 is bullet point, Placeholder 2 is 'Onion Browser' */
 "%1$@ if you want to use %2$@ over another VPN" = "%1$@ ef þú vilt nota %2$@ yfir aðra VPN-tengingu";
@@ -50,7 +50,7 @@
 "%@ video and audio streams don't go through Tor and might get blocked" = "%@ mynd- og hljóðstreymi fara ekki í gegnum Tor og gætu því lent í hindrunum";
 
 /* Placeholder is bullet point */
-"%@ websites can uncover your real IP address using JavaScript" = "%@ websites can uncover your real IP address using JavaScript";
+"%@ websites can uncover your real IP address using JavaScript" = "%@ vefsvæði geta flett ofan af raunverulegu IP-vistfangi þínu með JavaScript";
 
 /* No comment provided by engineer. */
 "(not recommended)" = "(ekki er mælt með þessu)";
@@ -83,7 +83,7 @@
 "Add Bookmark" = "Bæta við bókamerki";
 
 /* Scene title */
-"Add Folder" = "Add Folder";
+"Add Folder" = "Bæta við möppu";
 
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Bæta við leitarvél";
@@ -101,7 +101,7 @@
 "Address" = "Vistfang";
 
 /* VoiceOver */
-"Address and search bar" = "Address and search bar";
+"Address and search bar" = "Vistfanga og leitarstika";
 
 /* RuleEditorController */
 "All rules" = "Allar reglur";
@@ -143,13 +143,13 @@
 "Autocomplete URL" = "Sjálfvirk klárun vefslóða";
 
 /* No comment provided by engineer. */
-"Back" = "Back";
+"Back" = "Til baka";
 
 /* CertificateViewController */
 "Begins On" = "Byrjar þann";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+"Block Insecure HTTP Requests" = "Loka á óöruggar HTTP-beiðnir";
 
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "Bannaðir utanaðkomandi þjónar";
@@ -182,7 +182,7 @@
 "Choose how long app remembers open tabs." = "Veldu hve lengi forritið man opna flipa.";
 
 /* No comment provided by engineer. */
-"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
+"Choose your preferred blocklist:" = "Veldu þér útilokunarlista:";
 
 /* AppDelegate */
 "Close Tab" = "Loka flipa";
@@ -269,7 +269,7 @@
 "Edit Bookmark" = "Breyta bókamerki";
 
 /* Scene title */
-"Edit Folder" = "Edit Folder";
+"Edit Folder" = "Breyta möppu";
 
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "Breyta leitarvél";
@@ -284,7 +284,7 @@
 "Expires After" = "Rennur út eftir";
 
 /* BookmarksViewController */
-"Export Bookmarks" = "Export Bookmarks";
+"Export Bookmarks" = "Flytja út bókamerki";
 
 /* CertificateViewController */
 "Extended Validation: Organization" = "Útvíkkað gildi: Stofnun";
@@ -308,7 +308,7 @@
 "Forget in Background" = "Gleyma þegar forrit er í bakgrunni";
 
 /* VoiceOver */
-"Forward" = "Forward";
+"Forward" = "Áfram";
 
 /* SettingsViewController */
 "Fund Development" = "Styrkja þróunina";
@@ -353,7 +353,7 @@
 "Ignore TLS Errors" = "Hunsa TLS-villur";
 
 /* BookmarksViewController */
-"Import Bookmarks" = "Import Bookmarks";
+"Import Bookmarks" = "Flytja inn bókamerki";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "IndexedDB-gagnagrunnar";
@@ -389,7 +389,7 @@
 "Lock App with Touch ID or Device Passcode" = "Læsa forriti með snertiauðkenni (Touch ID) eða aðgangskóða tækis";
 
 /* Option title */
-"Lockdown Mode" = "Lockdown Mode";
+"Lockdown Mode" = "Læsingarhamur";
 
 /* AppDelegate */
 "Log In" = "Skrá inn";
@@ -413,7 +413,7 @@
 "New Circuit for this Site" = "Ný rás fyrir þetta vefsvæði";
 
 /* No comment provided by engineer. */
-"New Security Features" = "New Security Features";
+"New Security Features" = "Nýir öryggiseiginleikar";
 
 /* No comment provided by engineer. */
 "Next" = "Næsta";
@@ -578,7 +578,7 @@
 "Switch to Tab %d" = "Skipta yfir í flipa %d";
 
 /* BookmarksViewController */
-"Sync" = "Sync";
+"Sync" = "Samst.";
 
 /* SyncViewController */
 "Sync Bookmarks" = "Samstilla bókamerki";
@@ -590,7 +590,7 @@
 "Tab Security" = "Öryggi flipa";
 
 /* VoiceOver */
-"Tabs" = "Tabs";
+"Tabs" = "Flipar";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "Segðu vefsvæðum að þú hafnir vinnslu og sölu á persónuupplýsingum þínum";
@@ -644,7 +644,7 @@
 "Update" = "Uppfæra";
 
 /* No comment provided by engineer. */
-"Update Blocklist" = "Update Blocklist";
+"Update Blocklist" = "Uppfæra útilokunarlista";
 
 /* SettingsViewController */
 "URL Blocker" = "Banna URL-slóðir";
@@ -656,7 +656,7 @@
 "Use built-in Tor" = "Nota innbyggt Tor";
 
 /* No comment provided by engineer. */
-"Use URL Blocker" = "Use URL Blocker";
+"Use URL Blocker" = "Nota útilokun URL-slóða";
 
 /* SecurityViewController */
 "User Agent" = "Kennisstrengur";
