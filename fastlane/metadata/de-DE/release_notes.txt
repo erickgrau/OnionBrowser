@@ -1,2 +1,3 @@
-- Tor auf 0.4.8.20 aktualisiert.
-- Import/Export von Lesezeichen mit Firefox-kompatibler HTML-Datei hinzugefügt.
+- Tor auf 0.4.8.21 aktualisiert.
+- Kleinere Fehler im Zusammenhang mit Lesezeichen behoben.
+- Übersetzungen aktualisiert.

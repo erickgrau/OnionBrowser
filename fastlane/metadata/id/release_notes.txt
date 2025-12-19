@@ -1,2 +1,3 @@
-- Memperbarui Tor ke versi 0.4.8.20.
-- Menambahkan fitur impor/ekspor bookmark dengan file HTML yang kompatibel dengan Firefox.
+- Memperbarui Tor ke versi 0.4.8.21.
+- Memperbaiki bug kecil terkait bookmark.
+- Memperbarui terjemahan.

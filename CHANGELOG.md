@@ -1,5 +1,10 @@
 #  Onion Browser Changelog
 
+## 3.3.2
+- Updated Tor to 0.4.8.21.
+- Fixed minor bugs around bookmarks.
+- Updated translations.
+
 ## 3.3.1
 - Updated Tor to 0.4.8.20.
 - Added bookmarks import/export with Firefox-compatible HTML file.

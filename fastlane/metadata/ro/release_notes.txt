@@ -1,2 +1,3 @@
-- Actualizare Tor la versiunea 0.4.8.20.
-- Adăugare import/export marcaje cu fișier HTML compatibil cu Firefox.
+- Actualizare Tor la versiunea 0.4.8.21.
+- Remedierea unor erori minore legate de marcaje.
+- Actualizare traduceri.

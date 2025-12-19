@@ -1,2 +1,3 @@
-- Tor bijgewerkt naar 0.4.8.20.
-- Bladwijzers importeren/exporteren met Firefox-compatibel HTML-bestand toegevoegd.
+- Tor bijgewerkt naar 0.4.8.21.
+- Kleine bugs rond bladwijzers verholpen.
+- Vertalingen bijgewerkt.

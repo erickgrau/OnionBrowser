@@ -1,2 +1,3 @@
-- A Tor frissítése 0.4.8.20-ra.
-- Könyvjelzők importálása/exportálása Firefox-kompatibilis HTML fájlokkal.
+- A Tor frissítése 0.4.8.21-re.
+- A könyvjelzőkkel kapcsolatos kisebb hibák kijavítása.
+- Fordítások frissítése.

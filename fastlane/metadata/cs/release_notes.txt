@@ -1,2 +1,3 @@
-- Aktualizováno Tor na verzi 0.4.8.20.
-- Přidáno importování/exportování záložek pomocí souboru HTML kompatibilního s Firefoxem.
+- Aktualizováno Tor na verzi 0.4.8.21.
+- Opraveny drobné chyby týkající se záložek.
+- Aktualizovány překlady.

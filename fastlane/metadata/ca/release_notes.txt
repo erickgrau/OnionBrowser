@@ -1,2 +1,3 @@
-- S'ha actualitzat Tor a la versió 0.4.8.20.
-- S'ha afegit la importació/exportació de marcadors amb un fitxer HTML compatible amb Firefox.
+- Actualitzat Tor a la versió 0.4.8.21.
+- Corregits errors menors relacionats amb els marcadors.
+- Actualitzades les traduccions.

@@ -1,2 +1,3 @@
-- Tor päivitetty versioon 0.4.8.20.
-- Lisätty kirjanmerkkien tuonti/vienti Firefox-yhteensopivalla HTML-tiedostolla.
+- Tor päivitetty versioon 0.4.8.21.
+- Korjattu pieniä virheitä kirjanmerkkien toiminnassa.
+- Päivitetty käännökset.

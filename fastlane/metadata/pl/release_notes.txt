@@ -1,2 +1,3 @@
-- Zaktualizowano Tor do wersji 0.4.8.20.
-- Dodano import/eksport zakładek za pomocą pliku HTML zgodnego z przeglądarką Firefox.
+- Zaktualizowano Tor do wersji 0.4.8.21.
+- Naprawiono drobne błędy związane z zakładkami.
+- Zaktualizowano tłumaczenia.

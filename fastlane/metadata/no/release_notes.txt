@@ -1,2 +1,3 @@
-- Oppdatert Tor til 0.4.8.20.
-- Lagt til import/eksport av bokmerker med Firefox-kompatibel HTML-fil.
+- Oppdatert Tor til 0.4.8.21.
+- Rettet mindre feil rundt bokmerker.
+- Oppdaterte oversettelser.

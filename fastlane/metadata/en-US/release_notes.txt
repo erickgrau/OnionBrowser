@@ -1,2 +1,3 @@
-- Updated Tor to 0.4.8.20.
-- Added bookmarks import/export with Firefox-compatible HTML file.
+- Updated Tor to 0.4.8.21.
+- Fixed minor bugs around bookmarks.
+- Updated translations.
