@@ -169,10 +169,17 @@ class NcBookmarks {
 					icon = bookmarks[i].icon ?? NcBookmark.defaultIcon
 				}
 				else {
-					// Make sure that the first 6 default bookmarks are available!
-					url = defaultBookmarks[i].url
-					name = defaultBookmarks[i].title.isEmpty ? URL(string: url)?.host ?? "" : defaultBookmarks[i].title
-					icon = defaultBookmarks[i].icon ?? NcBookmark.defaultIcon
+					if i < defaultBookmarks.count {
+						// Make sure that the first 6 default bookmarks are available!
+						url = defaultBookmarks[i].url
+						name = defaultBookmarks[i].title.isEmpty ? URL(string: url)?.host ?? "" : defaultBookmarks[i].title
+						icon = defaultBookmarks[i].icon ?? NcBookmark.defaultIcon
+					}
+					else {
+						url = ""
+						name = ""
+						icon = NcBookmark.defaultIcon
+					}
 				}
 
 				template = template
