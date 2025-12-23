@@ -1,3 +1,4 @@
 - Actualizare Tor la versiunea 0.4.8.21.
-- Remedierea unor erori minore legate de marcaje.
+- Actualizare Lyrebird la versiunea 0.8.0.
+- Remediere erori minore legate de marcaje.
 - Actualizare traduceri.

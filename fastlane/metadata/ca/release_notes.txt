@@ -1,3 +1,4 @@
 - Actualitzat Tor a la versió 0.4.8.21.
-- Corregits errors menors relacionats amb els marcadors.
+- Actualitzat Lyrebird a la versió 0.8.0.
+- Corregits errors menors amb els marcadors.
 - Actualitzades les traduccions.

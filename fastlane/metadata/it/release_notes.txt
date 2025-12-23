@@ -1,3 +1,4 @@
 - Aggiornato Tor alla versione 0.4.8.21.
+- Aggiornato Lyrebird alla versione 0.8.0.
 - Risolti bug minori relativi ai segnalibri.
 - Aggiornate le traduzioni.

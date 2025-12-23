@@ -1,3 +1,4 @@
 - Memperbarui Tor ke versi 0.4.8.21.
+- Memperbarui Lyrebird ke versi 0.8.0.
 - Memperbaiki bug kecil terkait bookmark.
 - Memperbarui terjemahan.

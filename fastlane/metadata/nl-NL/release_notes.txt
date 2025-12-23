@@ -1,3 +1,4 @@
 - Tor bijgewerkt naar 0.4.8.21.
+- Lyrebird bijgewerkt naar 0.8.0.
 - Kleine bugs rond bladwijzers verholpen.
 - Vertalingen bijgewerkt.

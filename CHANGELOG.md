@@ -2,6 +2,7 @@
 
 ## 3.3.2
 - Updated Tor to 0.4.8.21.
+- Updated Lyrebird to 0.8.0.
 - Fixed minor bugs around bookmarks.
 - Updated translations.
 

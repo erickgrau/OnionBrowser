@@ -1,3 +1,4 @@
 - A Tor frissítése 0.4.8.21-re.
+- A Lyrebird frissítése 0.8.0-ra.
 - A könyvjelzőkkel kapcsolatos kisebb hibák kijavítása.
-- Fordítások frissítése.
+- A fordítások frissítése.

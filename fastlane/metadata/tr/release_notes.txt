@@ -1,3 +1,4 @@
 - Tor 0.4.8.21 sürümüne güncellendi.
+- Lyrebird 0.8.0 sürümüne güncellendi.
 - Yer imleriyle ilgili küçük hatalar düzeltildi.
 - Çeviriler güncellendi.

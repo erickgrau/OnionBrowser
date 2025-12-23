@@ -1,3 +1,4 @@
-- Tor auf 0.4.8.21 aktualisiert.
-- Kleinere Fehler im Zusammenhang mit Lesezeichen behoben.
-- Übersetzungen aktualisiert.
+- Tor wurde auf Version 0.4.8.21 aktualisiert.
+- Lyrebird wurde auf Version 0.8.0 aktualisiert.
+- Kleinere Fehler im Zusammenhang mit Lesezeichen wurden behoben.
+- Übersetzungen wurden aktualisiert.

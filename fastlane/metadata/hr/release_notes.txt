@@ -1,3 +1,4 @@
 - Ažuriran Tor na verziju 0.4.8.21.
+- Ažuriran Lyrebird na verziju 0.8.0.
 - Ispravljene sitne greške vezane uz oznake.
 - Ažurirani prijevodi.

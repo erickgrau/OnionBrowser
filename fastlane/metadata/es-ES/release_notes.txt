@@ -1,3 +1,4 @@
 - Actualización de Tor a la versión 0.4.8.21.
+- Actualización de Lyrebird a la versión 0.8.0.
 - Corrección de errores menores relacionados con los marcadores.
 - Actualización de las traducciones.

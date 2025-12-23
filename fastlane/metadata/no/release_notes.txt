@@ -1,3 +1,4 @@
 - Oppdatert Tor til 0.4.8.21.
+- Oppdatert Lyrebird til 0.8.0.
 - Rettet mindre feil rundt bokmerker.
-- Oppdaterte oversettelser.
+- Oppdatert oversettelser.
