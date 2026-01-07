@@ -90,6 +90,8 @@ class NcBookmarks {
 		defaults.append(.init(url: "http://fpfjxcrmw437h6z2xl3w4czl55kvkmxpapg37bbopsafdu7q454byxid.onion/", title: "Freedom of the Press Foundation"))
 		defaults.append(.init(url: "https://www.dwnewsgngmhlplxy6o2twtfgjnrnjxbegbwqx6wnotdhkzt562tszfid.onion/", title: "Deutsche Welle"))
 
+		defaults.append(.init(url: "http://juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion/", title: "Ahmia"))
+
 		defaults.append(.init(url: "https://m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion/", title: "Facebook"))
 
 		defaults.append(.init(url: "https://onionbrowser.com", title: "Onion Browser official site"))
