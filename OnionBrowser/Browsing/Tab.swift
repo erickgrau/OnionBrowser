@@ -167,6 +167,7 @@ class Tab: UIView {
 			// injecting this a second time crashes the app.
 			setupJsInjections(conf)
 
+			_conf = conf
 			return conf
 		}
 		set {
@@ -470,8 +471,7 @@ class Tab: UIView {
 	private func setup() {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
 			if let proxy = TorManager.shared.torSocks5 {
-				conf.websiteDataStore.proxyConfigurations.removeAll()
-				conf.websiteDataStore.proxyConfigurations.append(ProxyConfiguration(socksv5Proxy: proxy))
+				conf.websiteDataStore.proxyConfigurations = [ProxyConfiguration(socksv5Proxy: proxy)]
 			}
 			else {
 				// Delay setup until we have Tor available and somebody tells us.
