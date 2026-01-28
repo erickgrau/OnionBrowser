@@ -40,7 +40,6 @@
 		A0172C6E2888247C008D42CD /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0172C6D2888247C008D42CD /* AlertHelper.swift */; };
 		A0172C70288824BD008D42CD /* FixedFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0172C6F288824BD008D42CD /* FixedFormViewController.swift */; };
 		A0172C72288827E1008D42CD /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0172C71288827E1008D42CD /* ApiError.swift */; };
-		A0172C74288828D8008D42CD /* URLSession+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0172C73288828D8008D42CD /* URLSession+Helpers.swift */; };
 		A0204FA12D721006006CDA3B /* UpdateAdvertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0204FA02D720FF6006CDA3B /* UpdateAdvertisement.swift */; };
 		A02414372A0260B1009AEE25 /* WhyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02414352A0260B1009AEE25 /* WhyViewController.xib */; };
 		A02414382A0260B1009AEE25 /* WhyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02414362A0260B1009AEE25 /* WhyViewController.swift */; };
@@ -220,7 +219,6 @@
 		A0172C6D2888247C008D42CD /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		A0172C6F288824BD008D42CD /* FixedFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedFormViewController.swift; sourceTree = "<group>"; };
 		A0172C71288827E1008D42CD /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
-		A0172C73288828D8008D42CD /* URLSession+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Helpers.swift"; sourceTree = "<group>"; };
 		A0204FA02D720FF6006CDA3B /* UpdateAdvertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAdvertisement.swift; sourceTree = "<group>"; };
 		A02414352A0260B1009AEE25 /* WhyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhyViewController.xib; sourceTree = "<group>"; };
 		A02414362A0260B1009AEE25 /* WhyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyViewController.swift; sourceTree = "<group>"; };
@@ -808,7 +806,6 @@
 				A0BF523823AFC3580096624A /* UIViewController+Helpers.swift */,
 				A0204FA02D720FF6006CDA3B /* UpdateAdvertisement.swift */,
 				A0BF524023AFC3580096624A /* URL+Helpers.swift */,
-				A0172C73288828D8008D42CD /* URLSession+Helpers.swift */,
 				A028857F2893FA23007D5AE8 /* WebsiteStorage.swift */,
 			);
 			path = Helpers;
@@ -1194,7 +1191,6 @@
 				A0BF526623AFC3580096624A /* BookmarksViewController.swift in Sources */,
 				A0BF527923AFC3580096624A /* Bundle+Helpers.swift in Sources */,
 				A0CD36982890194900628DA6 /* Tab+WKNavigationDelegate.swift in Sources */,
-				A0172C74288828D8008D42CD /* URLSession+Helpers.swift in Sources */,
 				A0BF526B23AFC3580096624A /* Settings.swift in Sources */,
 				A0BF525323AFC3580096624A /* Tab.swift in Sources */,
 				A0BF525D23AFC3580096624A /* LiveSearchViewController.swift in Sources */,

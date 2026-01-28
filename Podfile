@@ -24,7 +24,7 @@ target 'OnionBrowser' do
 #    :path => '../Tor.framework'
 
   pod 'IPtProxyUI',
-    '~> 4.10'
+    '~> 5.1'
 #    :git => 'https://github.com/tladesignz/IPtProxyUI-ios'
 #    :path => '../IPtProxyUI'
 
