@@ -227,7 +227,9 @@ class TorManager {
 					torController.removeObserver(self?.establishedObs)
 					torController.removeObserver(self?.progressObs)
 
-					torController.getInfoForKeys(["net/listeners/socks"]) { response in
+					Task {
+						let response = await torController.info(forKeys: ["net/listeners/socks"])
+
 						guard let parts = response.first?.split(separator: ":"),
 							  let host = parts.first,
 							  let host = IPv4Address(String(host)),
@@ -262,26 +264,26 @@ class TorManager {
 			return
 		}
 
-		let group = DispatchGroup()
-
 		let resetKeys = ["UseBridges", "ClientTransportPlugin", "Bridge",
 						 "EntryNodes", "ExitNodes", "ExcludeNodes", "StrictNodes"]
 
-		for key in resetKeys {
-			group.enter()
-
-			torController.resetConf(forKey: key) { [weak self] _, error in
-				if let error = error {
-					self?.log("error=\(error)")
+		Task {
+			for key in resetKeys {
+				do {
+					try await torController.resetConf(forKey: key)
 				}
-
-				group.leave()
+				catch {
+					log("error=\(error)")
+				}
 			}
 
-			group.wait()
+			do {
+				try await torController.setConfs(transportConf(Transport.asConf))
+			}
+			catch {
+				log("error=\(error)")
+			}
 		}
-
-		torController.setConfs(transportConf(Transport.asConf))
 	}
 
 	func stop() {
@@ -301,31 +303,17 @@ class TorManager {
 		transport.stop()
 	}
 
-	func getCircuits(_ completion: @escaping ([TorCircuit]) -> Void) {
-		if let torController = torController {
-			torController.getCircuits(completion)
-		}
-		else {
-			completion([])
-		}
+	func getCircuits() async -> [TorCircuit] {
+		await torController?.circuits() ?? []
 	}
 
-	func close(_ circuits: [TorCircuit], _ completion: ((Bool) -> Void)?) {
-		if let torController = torController {
-			torController.close(circuits, completion: completion)
-		}
-		else {
-			completion?(false)
-		}
+	func close(_ circuits: [TorCircuit]) async -> Bool {
+		await torController?.close(circuits) ?? false
 	}
 
-	func close(_ ids: [String], _ completion: ((Bool) -> Void)?) {
-		if let torController = torController {
-			torController.closeCircuits(byIds: ids, completion: completion)
-		}
-		else {
-			completion?(false)
-		}
+	@discardableResult
+	func close(_ ids: [String]) async -> Bool {
+		await torController?.closeCircuits(byIds: ids) ?? false
 	}
 
 	func session(_ cookies: [HTTPCookie]? = nil, for url: URL? = nil, delegate: URLSessionDelegate? = nil, timeout: TimeInterval? = nil) -> URLSession {

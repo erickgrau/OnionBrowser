@@ -98,56 +98,50 @@ class WebsiteStorage {
 	/**
 	 Get a sorted list of hosts which have stored stuff.
 
-	 - parameter completion: Callback with a list of hosts which have stored stuff.
+	 - returns: List of hosts which have stored stuff.
 	 */
-	func hosts(_ completion: @escaping (_ hosts: [String]) -> Void) {
-		var hosts: Set<String> = []
+	@MainActor
+	func hosts() async -> [String] {
+		let cookies = await store.httpCookieStore.allCookies()
 
-		store.httpCookieStore.getAllCookies { cookies in
-			for cookie in cookies {
-				hosts.insert(self.sanitize(cookie.domain))
-			}
+		var hosts = Set(cookies.map({ sanitize($0.domain) }))
 
-			self.store.fetchDataRecords(ofTypes: Self.allTypesButCookies) { records in
-				for record in records {
-					hosts.insert(self.sanitize(record.displayName))
-				}
-
-				completion(hosts.sorted())
-			}
+		for record in await store.dataRecords(ofTypes: Self.allTypesButCookies) {
+			hosts.insert(sanitize(record.displayName))
 		}
+
+		return hosts.sorted()
 	}
 
 	/**
 	 Get storage details for a given host.
 
 	 - parameter host: The host to get details for.
-	 - parameter completion: Callback with a list of stuff, this host has stored.
+	 - returns: A list of stuff, this host has stored.
 	 */
-	func details(for host: String, _ completion: @escaping (_ details: [String: Int]) -> Void) {
+	@MainActor
+	func details(for host: String) async -> [String: Int] {
 		var details = [String: Int]()
 
-		store.httpCookieStore.getAllCookies { cookies in
-			let count = cookies.filter({ self.isEqual($0.domain, host) }).count
+		let cookies = await store.httpCookieStore.allCookies()
 
-			if count > 0 {
-				details[NSLocalizedString("Cookies", comment: "")] = count
-			}
+		let count = cookies.filter({ isEqual($0.domain, host) }).count
 
-			self.store.fetchDataRecords(ofTypes: Self.allTypesButCookies) { records in
-				for record in records {
-					if self.isEqual(record.displayName, host) {
-						for type in record.dataTypes {
-							let type = self.pretty(type: type)
+		if count > 0 {
+			details[NSLocalizedString("Cookies", comment: "")] = count
+		}
 
-							details[type] = details[type] ?? 0 + 1
-						}
-					}
+		for record in await store.dataRecords(ofTypes: Self.allTypesButCookies) {
+			if self.isEqual(record.displayName, host) {
+				for type in record.dataTypes {
+					let type = self.pretty(type: type)
+
+					details[type] = details[type] ?? 0 + 1
 				}
-
-				completion(details)
 			}
 		}
+
+		return details
 	}
 
 

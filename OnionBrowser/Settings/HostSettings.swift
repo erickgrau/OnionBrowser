@@ -121,8 +121,10 @@ class HostSettings: NSObject {
 		if host != defaultHost && has(host) {
 			raw.removeValue(forKey: host)
 
-			DispatchQueue.main.async {
-				NotificationCenter.default.post(name: .hostSettingsChanged, object: host)
+			Task {
+				await MainActor.run {
+					NotificationCenter.default.post(name: .hostSettingsChanged, object: host)
+				}
 			}
 		}
 
@@ -334,8 +336,10 @@ class HostSettings: NSObject {
 
 		let host = self.host == Self.defaultHost ? nil : self.host
 
-		DispatchQueue.main.async {
-			NotificationCenter.default.post(name: .hostSettingsChanged, object: host)
+		Task {
+			await MainActor.run {
+				NotificationCenter.default.post(name: .hostSettingsChanged, object: host)
+			}
 		}
 
 		return type(of: self)

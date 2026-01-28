@@ -121,8 +121,14 @@ class LiveSearchViewController: UITableViewController {
 
 		browserTab = tab
 
-		let task = session.dataTask(with: request) { data, response, error in
-			if let error = error {
+		Task {
+			let data: Data
+			let response: URLResponse
+
+			do {
+				(data, response) = try await session.data(for: request)
+			}
+			catch {
 				Log.error(for: Self.self, "failed auto-completing: \(error)")
 				return
 			}
@@ -142,29 +148,26 @@ class LiveSearchViewController: UITableViewController {
 				return
 			}
 
-			if let data = data {
-				if let contentType = (response.allHeaderFields["Content-Type"] as? String)?.lowercased(),
-					contentType.contains("javascript") || contentType.contains("json") {
+			if let contentType = (response.allHeaderFields["Content-Type"] as? String)?.lowercased(),
+				contentType.contains("javascript") || contentType.contains("json")
+			{
+				if let result = try? JSONSerialization.jsonObject(with: data, options: []) as? [Any],
+					result.count > 1 {
 
-					if let result = try? JSONSerialization.jsonObject(with: data, options: []) as? [Any],
-						result.count > 1 {
-
-						self.results = result[1] as? [String] ?? []
-					}
-					else {
-						Log.error(for: Self.self, "failed parsing JSON: \(data)")
-					}
+					self.results = result[1] as? [String] ?? []
 				}
 				else {
-					self.results = String(data: data, encoding: .utf8)?.split(separator: "\n").map({ String($0) }) ?? []
-				}
-
-				DispatchQueue.main.async {
-					self.tableView.reloadData()
+					Log.error(for: Self.self, "failed parsing JSON: \(data)")
 				}
 			}
+			else {
+				results = String(data: data, encoding: .utf8)?.split(separator: "\n").map({ String($0) }) ?? []
+			}
+
+			await MainActor.run {
+				tableView.reloadData()
+			}
 		}
-		task.resume()
 
 		lastQuery = query
 	}

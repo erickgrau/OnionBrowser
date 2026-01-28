@@ -84,41 +84,45 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 				return
 			}
 
-			DispatchQueue.main.async {
-				self?.progressView.setProgress(Float(progress) / 100, animated: true)
+			Task {
+				await MainActor.run {
+					self?.progressView.setProgress(Float(progress) / 100, animated: true)
 
-				UIAccessibility.post(notification: .announcement, argument: String(format: "%d%%", progress))
+					UIAccessibility.post(notification: .announcement, argument: String(format: "%d%%", progress))
 
-				if let summary = summary, !summary.isEmpty {
-					self?.statusLb.text = summary
-					self?.statusLb.textColor = .label
-					self?.statusLb.isHidden = false
-				}
-				else {
-					self?.statusLb.isHidden = true
+					if let summary = summary, !summary.isEmpty {
+						self?.statusLb.text = summary
+						self?.statusLb.textColor = .label
+						self?.statusLb.isHidden = false
+					}
+					else {
+						self?.statusLb.isHidden = true
+					}
 				}
 			}
 		} _: { [weak self] error in
-			guard error == nil else {
-				DispatchQueue.main.async {
-					self?.activityIndicator.isHidden = true
-					self?.retryBt.isHidden = false
-					self?.statusLb.text = (error ?? TorManager.Errors.noSocksAddr).localizedDescription
-					self?.statusLb.textColor = .systemRed
-					self?.statusLb.isHidden = false
+			Task {
+				guard error == nil else {
+					await MainActor.run {
+						self?.activityIndicator.isHidden = true
+						self?.retryBt.isHidden = false
+						self?.statusLb.text = (error ?? TorManager.Errors.noSocksAddr).localizedDescription
+						self?.statusLb.textColor = .systemRed
+						self?.statusLb.isHidden = false
 
-					UIAccessibility.post(notification: .announcement, argument: self?.statusLb.text)
+						UIAccessibility.post(notification: .announcement, argument: self?.statusLb.text)
+					}
+
+					return
 				}
 
-				return
-			}
+				await MainActor.run {
+					AppDelegate.shared?.allOpenTabs.forEach { tab in
+						tab.reinitWebView()
+					}
 
-			DispatchQueue.main.async {
-				AppDelegate.shared?.allOpenTabs.forEach { tab in
-					tab.reinitWebView()
+					self?.view.sceneDelegate?.show(OrbotManager.shared.checkStatus())
 				}
-
-				self?.view.sceneDelegate?.show(OrbotManager.shared.checkStatus())
 			}
 		}
 	}

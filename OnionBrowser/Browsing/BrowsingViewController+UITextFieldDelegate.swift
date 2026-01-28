@@ -27,31 +27,33 @@ extension BrowsingViewController: UITextFieldDelegate {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		let search = searchFl?.text
 
-		DispatchQueue.main.async {
-			self.liveSearchVc.hide()
-			textField.resignFirstResponder()
+		Task {
+			await MainActor.run {
+				liveSearchVc.hide()
+				textField.resignFirstResponder()
 
-			// User is shifting to a new place. Probably a good time to clear old data.
-			WebsiteStorage.shared.cleanup()
+				// User is shifting to a new place. Probably a good time to clear old data.
+				WebsiteStorage.shared.cleanup()
 
-			if let url = self.parseSearch(search) {
-				self.debug("#textFieldShouldReturn url=\(url)")
+				if let url = parseSearch(search) {
+					debug("#textFieldShouldReturn url=\(url)")
 
-				if let currentTab = self.currentTab {
-					currentTab.load(url)
+					if let currentTab {
+						currentTab.load(url)
+					}
+					else {
+						addNewTab(url)
+					}
 				}
 				else {
-					self.addNewTab(url)
-				}
-			}
-			else {
-				self.debug("#textFieldShouldReturn search=\(String(describing: search))")
+					debug("#textFieldShouldReturn search=\(String(describing: search))")
 
-				if self.currentTab == nil {
-					self.addNewTab()
-				}
+					if currentTab == nil {
+						addNewTab()
+					}
 
-				self.currentTab?.search(for: search)
+					currentTab?.search(for: search)
+				}
 			}
 		}
 

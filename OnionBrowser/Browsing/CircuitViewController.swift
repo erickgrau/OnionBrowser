@@ -162,17 +162,19 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 	// MARK: Actions
 
 	@IBAction func newCircuits() {
-		let completion = { [weak self] (_: Bool) in
-			self?.view.sceneDelegate?.browsingUi.currentTab?.refresh()
+		Task {
+			if Settings.useBuiltInTor == true {
+				await TorManager.shared.close(usedCircuits.compactMap({ $0.circuitId }))
+			}
+			else {
+				await OrbotManager.shared.closeCircuits(usedCircuits)
+			}
 
-			self?.dismiss(animated: true)
-		}
+			await MainActor.run {
+				view.sceneDelegate?.browsingUi.currentTab?.refresh()
 
-		if Settings.useBuiltInTor == true {
-			TorManager.shared.close(usedCircuits.compactMap({ $0.circuitId }), completion)
-		}
-		else {
-			OrbotManager.shared.closeCircuits(usedCircuits, completion)
+				dismiss(animated: true)
+			}
 		}
 	}
 
@@ -189,75 +191,73 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 	}
 
 	private func reloadCircuits() {
-		// TODO: A lot of this needs to move to Tor.framework for better reuse!
-		let completion = { (circuits: [OrbotKit.TorCircuit]) in
-			// Store in-use circuits (identified by having a SOCKS username,
-			// so the user can close them and get fresh ones on #newCircuits.
-			self.usedCircuits = circuits
+		Task {
+			let host = currentUrl?.host
 
-
-			self.nodes.removeAll()
-
-			self.nodes.append(Node(title: NSLocalizedString("This browser", comment: "")))
-
-			for node in circuits.first?.nodes ?? [] {
-				self.nodes.append(Node(node))
-			}
-			if self.nodes.count > 1 {
-				self.nodes[1].note = NSLocalizedString("Guard", comment: "")
-			}
-
-			self.nodes.append(Node(title: BrowsingViewController.prettyTitle(self.currentUrl)))
-
-			DispatchQueue.main.async {
-				self.tableView.reloadData()
-			}
-		}
-
-		DispatchQueue.global(qos: .userInitiated).async {
-			let host = self.currentUrl?.host
+			let okCircuits: [OrbotKit.TorCircuit]
 
 			if Settings.useBuiltInTor == true {
-				TorManager.shared.getCircuits { circuits in
-					var candidates = TorCircuit.filter(circuits)
+				let circuits = await TorManager.shared.getCircuits()
 
-					if let host = host {
-						var query: String?
+				var candidates = TorCircuit.filter(circuits)
 
-						let matches = Self.onionAddressRegex?.matches(
-							in: host, options: [],
-							range: NSRange(host.startIndex ..< host.endIndex, in: host))
+				if let host = host {
+					var query: String?
 
-						if let match = matches?.first,
-						   match.numberOfRanges > 1
-						{
-						   let nsRange = match.range(at: match.numberOfRanges - 2)
+					let matches = Self.onionAddressRegex?.matches(
+						in: host, options: [],
+						range: NSRange(host.startIndex ..< host.endIndex, in: host))
 
-							if let range = Range(nsRange, in: host) {
-								query = String(host[range])
-							}
-						}
+					if let match = matches?.first,
+					   match.numberOfRanges > 1
+					{
+					   let nsRange = match.range(at: match.numberOfRanges - 2)
 
-						// Circuits used for .onion addresses can be identified by their
-						// rendQuery, which is equal to the "domain".
-						if let query = query {
-							candidates = candidates.filter { circuit in
-								circuit.purpose == TorCircuit.purposeHsClientRend
-								&& circuit.rendQuery == query
-							}
-						}
-						else {
-							candidates = candidates.filter { circuit in
-								circuit.purpose == TorCircuit.purposeGeneral || circuit.purpose == TorCircuit.purposeConfluxLinked
-							}
+						if let range = Range(nsRange, in: host) {
+							query = String(host[range])
 						}
 					}
 
-					completion(candidates.compactMap({ $0.toOrbotKitType() }))
+					// Circuits used for .onion addresses can be identified by their
+					// rendQuery, which is equal to the "domain".
+					if let query = query {
+						candidates = candidates.filter { circuit in
+							circuit.purpose == TorCircuit.purposeHsClientRend
+							&& circuit.rendQuery == query
+						}
+					}
+					else {
+						candidates = candidates.filter { circuit in
+							circuit.purpose == TorCircuit.purposeGeneral || circuit.purpose == TorCircuit.purposeConfluxLinked
+						}
+					}
 				}
+
+				okCircuits = candidates.compactMap({ $0.toOrbotKitType() })
 			}
 			else {
-				OrbotManager.shared.getCircuits(host: host, completion)
+				okCircuits = await OrbotManager.shared.getCircuits(host: host)
+			}
+
+			// Store in-use circuits (identified by having a SOCKS username,
+			// so the user can close them and get fresh ones on #newCircuits.
+			usedCircuits = okCircuits
+
+			nodes.removeAll()
+
+			nodes.append(Node(title: NSLocalizedString("This browser", comment: "")))
+
+			for node in okCircuits.first?.nodes ?? [] {
+				nodes.append(Node(node))
+			}
+			if nodes.count > 1 {
+				nodes[1].note = NSLocalizedString("Guard", comment: "")
+			}
+
+			nodes.append(Node(title: BrowsingViewController.prettyTitle(currentUrl)))
+
+			await MainActor.run {
+				tableView.reloadData()
 			}
 		}
 	}

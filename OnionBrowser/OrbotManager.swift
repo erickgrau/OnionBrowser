@@ -27,45 +27,52 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 
 	// MARK: Public Methods
 
-	func closeCircuits(_ circuits: [OrbotKit.TorCircuit], _ callback: @escaping ((_ success: Bool) -> Void)) {
-		let group = DispatchGroup()
-		var suc = false
+	@discardableResult
+	func closeCircuits(_ circuits: [OrbotKit.TorCircuit]) async -> Bool {
+		var groupSuccess = false
 
 		for circuit in circuits {
-			group.enter()
+			let singleSuccess: Bool = await withCheckedContinuation { continuation in
+				OrbotKit.shared.closeCircuit(circuit: circuit) { success, error in
+					if let error = error {
+						Log.error(for: Self.self, "#closeCircuits error=\(error)")
+					}
 
-			OrbotKit.shared.closeCircuit(circuit: circuit) { success, error in
-				if let error = error {
-					Log.error(for: Self.self, "#closeCircuits error=\(error)")
+					continuation.resume(returning: success)
 				}
+			}
 
-				// If only one call succeeds, we count that as a success.
-				if success {
-					suc = true
-				}
-
-				group.leave()
+			// If only one call succeeds, we count that as a success.
+			if singleSuccess {
+				groupSuccess = true
 			}
 		}
 
-		group.notify(queue: .main) {
-			callback(suc)
-		}
+		return groupSuccess
 	}
 
 	/**
 	Get all fully built circuits and detailed info about their nodes.
 
 	- parameter callback: Called, when all info is available.
-	- parameter circuits: A list of circuits and the nodes they consist of.
+	- returns: A list of circuits and the nodes they consist of.
 	*/
-	func getCircuits(host: String?, _ callback: @escaping ((_ circuits: [OrbotKit.TorCircuit]) -> Void)) {
-		OrbotKit.shared.circuits(host: host) { circuits, error in
-			if let error = error {
-				Log.error(for: Self.self, "#getCircuits error=\(error)")
-			}
+	func getCircuits(host: String?) async -> [OrbotKit.TorCircuit] {
+		do {
+			return try await withCheckedThrowingContinuation { continuation in
+				OrbotKit.shared.circuits { circuits, error in
+					if let error {
+						return continuation.resume(throwing: error)
+					}
 
-			callback(circuits ?? [])
+					continuation.resume(returning: circuits ?? [])
+				}
+			}
+		}
+		catch {
+			Log.error(for: Self.self, "#getCircuits error=\(error)")
+
+			return []
 		}
 	}
 
@@ -189,17 +196,19 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 
 		lastInfo = info
 
-		DispatchQueue.main.async {
-			if info.status == .stopped || info.onionOnly {
-				self.fullStop()
+		Task {
+			await MainActor.run {
+				if info.status == .stopped || info.onionOnly {
+					fullStop()
 
-				for delegate in AppDelegate.shared?.sceneDelegates ?? [] {
-					delegate.show(self.checkStatus())
+					for delegate in AppDelegate.shared?.sceneDelegates ?? [] {
+						delegate.show(checkStatus())
+					}
 				}
-			}
-			else {
-				for delegate in AppDelegate.shared?.sceneDelegates ?? [] {
-					delegate.show()
+				else {
+					for delegate in AppDelegate.shared?.sceneDelegates ?? [] {
+						delegate.show()
+					}
 				}
 			}
 		}
@@ -208,11 +217,13 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 	func statusChangeListeningStopped(error: Error) {
 		lastError = error
 
-		DispatchQueue.main.async {
-			self.fullStop()
+		Task {
+			await MainActor.run {
+				fullStop()
 
-			for delegate in AppDelegate.shared?.sceneDelegates ?? [] {
-				delegate.show(self.checkStatus())
+				for delegate in AppDelegate.shared?.sceneDelegates ?? [] {
+					delegate.show(checkStatus())
+				}
 			}
 		}
 	}
@@ -247,11 +258,10 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 	/**
 	Cancel all connections and re-evalutate Orbot situation and show respective UI.
 	*/
+	@MainActor
 	private func fullStop() {
-		DispatchQueue.main.async {
-			for tab in AppDelegate.shared?.allOpenTabs ?? [] {
-				tab.stop()
-			}
+		for tab in AppDelegate.shared?.allOpenTabs ?? [] {
+			tab.stop()
 		}
 	}
 }

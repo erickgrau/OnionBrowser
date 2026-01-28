@@ -96,12 +96,16 @@ extension BrowsingViewController: UIScrollViewDelegate, UIGestureRecognizerDeleg
 
 				UIView.animate(withDuration: 0.25,
 							   animations: { self.view.layoutIfNeeded() })
-				{ _ in
-					// Need to delay this a little, otherwise animation isn't seen,
-					// because isHidden becomes in effect before the animation,
-					// regardless, if we only do this in the completed callback.
-					DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-						self.toolbar?.isHidden = true
+				{ [weak self] _ in
+					Task {
+						// Need to delay this a little, otherwise animation isn't seen,
+						// because isHidden becomes in effect before the animation,
+						// regardless, if we only do this in the completed callback.
+						try await Task.sleep(nanoseconds: 100_000_000)
+
+						await MainActor.run {
+							self?.toolbar?.isHidden = true
+						}
 					}
 				}
 			}

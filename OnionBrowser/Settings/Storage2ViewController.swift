@@ -25,10 +25,12 @@ class Storage2ViewController: UITableViewController {
 
 		navigationItem.title = host
 
-		WebsiteStorage.shared.details(for: host) { [weak self] details in
-			self?.details = details
+		Task {
+			details = await WebsiteStorage.shared.details(for: host)
 
-			self?.tableView.reloadData()
+			await MainActor.run {
+				tableView.reloadData()
+			}
 		}
 	}
 

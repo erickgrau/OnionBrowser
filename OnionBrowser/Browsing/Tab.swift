@@ -116,8 +116,10 @@ class Tab: UIView {
 				secureMode = .secure
 			}
 
-			DispatchQueue.main.async { [weak self] in
-				self?.tabDelegate?.updateChrome()
+			Task {
+				await MainActor.run {
+					tabDelegate?.updateChrome()
+				}
 			}
 		}
 	}
@@ -127,8 +129,10 @@ class Tab: UIView {
 	@nonobjc
 	var progress: Float = 0 {
 		didSet {
-			DispatchQueue.main.async {
-				self.tabDelegate?.updateChrome()
+			Task {
+				await MainActor.run {
+					tabDelegate?.updateChrome()
+				}
 			}
 		}
 	}
@@ -206,9 +210,9 @@ class Tab: UIView {
 	var previewController: QLPreviewController?
 
 	/**
-	Add another overlay (a hack to create a transparant clickable view)
-	to disable interaction with the file preview when used in the tab overview.
-	*/
+	 Add another overlay (a hack to create a transparant clickable view)
+	 to disable interaction with the file preview when used in the tab overview.
+	 */
 	private(set) lazy var overlay: UIView = {
 		let view = UIView()
 		view.backgroundColor = .white
@@ -301,8 +305,10 @@ class Tab: UIView {
 	}
 
 	func load(_ request: URLRequest?) {
-		DispatchQueue.main.async {
-			self.webView?.stopLoading()
+		Task {
+			await MainActor.run {
+				webView?.stopLoading()
+			}
 		}
 
 		reset()
@@ -329,18 +335,20 @@ class Tab: UIView {
 			self.url = url
 		}
 
-		DispatchQueue.main.async {
-			var userAgent = HostSettings.for(request.url?.host).userAgent
+		Task {
+			await MainActor.run {
+				var userAgent = HostSettings.for(request.url?.host).userAgent
 
-			if userAgent.isEmpty {
-				userAgent = Self.defaultUserAgent
+				if userAgent.isEmpty {
+					userAgent = Self.defaultUserAgent
+				}
+
+				if !userAgent.isEmpty {
+					webView?.customUserAgent = userAgent
+				}
+
+				webView?.load(request)
 			}
-
-			if !userAgent.isEmpty {
-				self.webView?.customUserAgent = userAgent
-			}
-
-			self.webView?.load(request)
 		}
 	}
 
@@ -385,20 +393,24 @@ class Tab: UIView {
 		}
 	}
 
-	func stringByEvaluatingJavaScript(from script: String, _ completion: @escaping (String?) -> Void) {
-		guard let webView = webView else {
-			return completion(nil)
+	@discardableResult
+	@MainActor
+	func stringByEvaluatingJavaScript(from script: String) async -> String? {
+		guard let webView else {
+			return nil
 		}
 
-		webView.evaluateJavaScript(script) { result, error in
-			let string = result as? String
+		let result: Any?
 
-			if let error = error {
-				Log.error(for: Self.self, "#stringByEvaluatingJavaScript error=\(error)")
-			}
-
-			completion(string)
+		do {
+			result = try await webView.evaluateJavaScript(script)
 		}
+		catch {
+			Log.error(for: Self.self, "#stringByEvaluatingJavaScript error=\(error)")
+			result = nil
+		}
+
+		return result as? String
 	}
 
 	/**
@@ -423,15 +435,16 @@ class Tab: UIView {
 		}
 	}
 
+	@MainActor
 	func empty() {
-		Thread.performOnMain {
-			self.stop()
+		self.stop()
 
+		Task {
 			// Will empty the webView, but keep the URL and doesn't create a history entry.
-			self.stringByEvaluatingJavaScript(from: "document.open()") { _ in }
-
-			self.needsRefresh = true
+			await self.stringByEvaluatingJavaScript(from: "document.open()")
 		}
+
+		self.needsRefresh = true
 	}
 
 	func getSnapshot(size: CGSize) -> UIImage? {
@@ -498,7 +511,9 @@ class Tab: UIView {
 		setupGestureRecognizers()
 
 		if Self.defaultUserAgent.isEmpty {
-			stringByEvaluatingJavaScript(from: "navigator.userAgent") { ua in
+			Task {
+				let ua = await stringByEvaluatingJavaScript(from: "navigator.userAgent")
+
 				if let ua = ua, !ua.isEmpty {
 					Self.defaultUserAgent = ua
 				}

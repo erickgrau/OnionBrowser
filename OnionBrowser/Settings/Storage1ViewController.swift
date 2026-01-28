@@ -33,10 +33,12 @@ class Storage1ViewController: SearchableTableViewController {
 
 		self.navigationItem.rightBarButtonItem = self.editButtonItem
 
-		WebsiteStorage.shared.hosts { [weak self] hosts in
-			self?.hosts = hosts
+		Task {
+			hosts = await WebsiteStorage.shared.hosts()
 
-			self?.tableView.reloadData()
+			await MainActor.run {
+				tableView.reloadData()
+			}
 		}
 	}
 

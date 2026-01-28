@@ -133,8 +133,10 @@ extension Tab: WKNavigationDelegate {
 
 			decisionHandler(.cancel)
 
-			DispatchQueue.main.async { [weak self] in
-				self?.load(onionLocation)
+			Task {
+				await MainActor.run {
+					load(onionLocation)
+				}
 			}
 
 			return
@@ -164,34 +166,32 @@ extension Tab: WKNavigationDelegate {
 	}
 
 	func webView(_ webView: WKWebView, didFinish navigation: WKNavigation?) {
-		// If we have JavaScript blocked, these will be empty.
-		stringByEvaluatingJavaScript(from: "window.location.href") { [weak self] (finalUrl) in
-			var finalUrl = finalUrl
+		Task {
+			// If we have JavaScript blocked, these will be empty.
+			var finalUrl = await stringByEvaluatingJavaScript(from: "window.location.href")
 
 			if finalUrl?.isEmpty ?? true {
 				finalUrl = webView.url?.absoluteString
 			}
 
-			self?.url = URL(string: finalUrl ?? URL.start.absoluteString) ?? URL.start
+			url = URL(string: finalUrl ?? URL.start.absoluteString) ?? URL.start
 
-			if !(self?.skipHistory ?? true) {
-				while self?.history.count ?? 0 > Tab.historySize {
-					self?.history.remove(at: 0)
+			if !skipHistory {
+				while history.count > Tab.historySize {
+					history.remove(at: 0)
 				}
 
-				if self?.history.isEmpty ?? true || self?.history.last?.url.absoluteString != finalUrl,
-				   let cleanUrl = self?.url.clean
+				if history.isEmpty || history.last?.url.absoluteString != finalUrl,
+				   let cleanUrl = url.clean
 				{
-					self?.history.append(HistoryViewController.Item(url: cleanUrl, title: self?.title))
+					history.append(HistoryViewController.Item(url: cleanUrl, title: title))
 				}
 			}
 
-			self?.skipHistory = false
-		}
+			skipHistory = false
 
-		if let trust = webView.serverTrust {
-			DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-				self?.tlsCertificate = TlsCertificate.load(trust: trust)
+			if let trust = webView.serverTrust {
+				tlsCertificate = TlsCertificate.load(trust: trust)
 			}
 		}
 	}
@@ -267,9 +267,11 @@ extension Tab: WKNavigationDelegate {
 					completionHandler(.useCredential, credential)
 				})
 
-				DispatchQueue.main.async { [weak self] in
-					guard self?.tabDelegate?.present(alert, nil) ?? false else {
-						return completionHandler(.rejectProtectionSpace, nil)
+				Task {
+					await MainActor.run {
+						guard tabDelegate?.present(alert, nil) ?? false else {
+							return completionHandler(.rejectProtectionSpace, nil)
+						}
 					}
 				}
 			}
@@ -439,8 +441,10 @@ extension Tab: WKNavigationDelegate {
 						actions: [
 							AlertHelper.cancelAction(),
 							AlertHelper.defaultAction(NSLocalizedString("Retry", comment: ""), handler: { _ in
-								DispatchQueue.main.async {
-									self?.load(failedUrl)
+								Task {
+									await MainActor.run {
+										self?.load(failedUrl)
+									}
 								}
 							})
 						])

@@ -121,8 +121,10 @@ class SyncViewController: FixedFormViewController {
 									actions: [
 										AlertHelper.cancelAction(),
 										AlertHelper.defaultAction(NSLocalizedString("Try Again", comment: ""), handler: { _ in
-											DispatchQueue.main.async {
-												vc.form.rowBy(tag: "sync")?.didSelect()
+											Task {
+												await MainActor.run {
+													vc.form.rowBy(tag: "sync")?.didSelect()
+												}
 											}
 										})
 									])

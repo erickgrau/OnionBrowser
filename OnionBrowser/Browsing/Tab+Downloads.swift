@@ -69,9 +69,11 @@ extension Tab: WKDownloadDelegate, QLPreviewControllerDelegate, QLPreviewControl
 	}
 
 	func downloadDidFinish(_ download: WKDownload) {
-		DispatchQueue.main.async {
-			if self.downloadedFile?.exists ?? false {
-				self.showDownload()
+		Task {
+			await MainActor.run {
+				if downloadedFile?.exists ?? false {
+					showDownload()
+				}
 			}
 		}
 	}
