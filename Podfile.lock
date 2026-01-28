@@ -7,11 +7,11 @@ PODS:
   - ImageRow (4.1.0):
     - Eureka (~> 5.0)
   - IPtProxy (5.1.0)
-  - IPtProxyUI (5.1.0):
+  - IPtProxyUI (5.1.1):
     - Eureka (~> 5.3)
     - IPtProxy (~> 5.1.0)
-    - IPtProxyUI/App (= 5.1.0)
-  - IPtProxyUI/App (5.1.0):
+    - IPtProxyUI/App (= 5.1.1)
+  - IPtProxyUI/App (5.1.1):
     - Eureka (~> 5.3)
     - IPtProxy (~> 5.1.0)
     - ProgressHUD (~> 14.1)
@@ -78,7 +78,7 @@ SPEC CHECKSUMS:
   FavIcon: 21651b47d8f6b33517973859f85e2cb6f9fcfaee
   ImageRow: b438fec4f4b68b367c5161bbb6bc372baaa49cc4
   IPtProxy: fa8eee0c64aa21383992a27265c47d5039523582
-  IPtProxyUI: a00a46267d0783942fa1026c8efca8653037d0a2
+  IPtProxyUI: 76881249bf8b8d40f94c42a9cbd23dfd438d20da
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   OCMock: 589f2c84dacb1f5aaf6e4cec1f292551fe748e74
   OrbotKit: e932cc741c18e9a39242ae1c61eea6d54e54bd87
