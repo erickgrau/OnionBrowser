@@ -260,7 +260,7 @@
 		A0734CFF2DEF0893007B5249 /* ps */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ps; path = ps.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		A0734D002DEF0893007B5249 /* ps */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ps; path = ps.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A0734D012DEF0893007B5249 /* ps */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = ps; path = "ps.lproj/security-levels.html"; sourceTree = "<group>"; };
-		A0759DEA20975DDE000DFBFE /* config */ = {isa = PBXFileReference; lastKnownFileType = text; name = config; path = .tx/config; sourceTree = "<group>"; };
+		A077D6BA2F361FED00CFC6FD /* .weblate */ = {isa = PBXFileReference; lastKnownFileType = text; path = .weblate; sourceTree = "<group>"; };
 		A07B55FB23D736D60051663B /* CertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
 		A07D65582208A2540002D775 /* mk_build_versions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = mk_build_versions.sh; sourceTree = "<group>"; };
 		A07D65592208A2540002D775 /* decode_bundle_version.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = decode_bundle_version.sh; sourceTree = "<group>"; };
@@ -499,6 +499,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		A03CBD982F3B98EA00B22D96 /* misc */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = misc;
+			sourceTree = "<group>";
+		};
 		A0CEE4762EA9273600F278A0 /* AppIntents */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = AppIntents;
@@ -616,11 +621,12 @@
 				A07D65572208A2540002D775 /* build-util */,
 				A0A4F6A42818530E0089E7D5 /* fastlane */,
 				A0894E36236AE7C800EE2743 /* CHANGELOG.md */,
-				A0759DEA20975DDE000DFBFE /* config */,
 				A06F5F49275692060023622E /* .bartycrouch.toml */,
 				A07D655C2208A4320002D775 /* LICENSE */,
 				A004360B1E81856F0067652D /* Podfile */,
 				A004360C1E81856F0067652D /* Podfile.lock */,
+				A077D6BA2F361FED00CFC6FD /* .weblate */,
+				A03CBD982F3B98EA00B22D96 /* misc */,
 			);
 			name = Build;
 			sourceTree = "<group>";
