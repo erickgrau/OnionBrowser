@@ -1,4 +1,4 @@
-- Cập nhật Tor lên phiên bản 0.4.8.21.
-- Cập nhật Lyrebird lên phiên bản 0.8.0.
-- Sửa các lỗi nhỏ liên quan đến dấu trang.
-- Cập nhật bản dịch.
+- Cập nhật Tor lên phiên bản 0.4.8.22.
+- Cập nhật Lyrebird lên phiên bản 0.8.1.
+- Thêm hỗ trợ DNSTT thử nghiệm.
+- Thêm nguồn cầu nối bổ sung.

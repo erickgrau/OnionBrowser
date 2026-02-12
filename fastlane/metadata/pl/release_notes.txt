@@ -1,4 +1,4 @@
-- Zaktualizowano Tor do wersji 0.4.8.21.
-- Zaktualizowano Lyrebird do wersji 0.8.0.
-- Naprawiono drobne błędy związane z zakładkami.
-- Zaktualizowano tłumaczenia.
+- Zaktualizowano Tor do wersji 0.4.8.22.
+- Zaktualizowano Lyrebird do wersji 0.8.1.
+- Dodano eksperymentalną obsługę DNSTT.
+- Dodano dodatkowe źródło mostów.

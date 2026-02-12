@@ -1,4 +1,4 @@
-- Tor päivitetty versioon 0.4.8.21.
-- Lyrebird päivitetty versioon 0.8.0.
-- Pienet kirjanmerkkejä koskevat virheet korjattu.
-- Käännökset päivitetty.
+- Tor päivitetty versioon 0.4.8.22.
+- Lyrebird päivitetty versioon 0.8.1.
+- Lisätty kokeellinen DNSTT-tuki.
+- Lisätty uusia siltojen lähteitä.

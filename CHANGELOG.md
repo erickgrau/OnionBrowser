@@ -1,5 +1,11 @@
 #  Onion Browser Changelog
 
+## 3.3.3
+- Updated Tor to 0.4.8.22.
+- Updated Lyrebird to 0.8.1.
+- Added experimental DNSTT support.
+- Added additional source of bridges.
+
 ## 3.3.2
 - Updated Tor to 0.4.8.21.
 - Updated Lyrebird to 0.8.0.

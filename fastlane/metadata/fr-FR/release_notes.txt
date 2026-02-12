@@ -1,4 +1,4 @@
-- Mise à jour de Tor vers la version 0.4.8.21.
-- Mise à jour de Lyrebird vers la version 0.8.0.
-- Correction de bugs mineurs liés aux signets.
-- Mise à jour des traductions.
+- Mise à jour de Tor vers la version 0.4.8.22.
+- Mise à jour de Lyrebird vers la version 0.8.1.
+- Ajout d'une prise en charge expérimentale de DNSTT.
+- Ajout d'une source supplémentaire de ponts.

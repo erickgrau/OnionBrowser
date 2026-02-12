@@ -1,4 +1,4 @@
-- Tor wurde auf Version 0.4.8.21 aktualisiert.
-- Lyrebird wurde auf Version 0.8.0 aktualisiert.
-- Kleinere Fehler im Zusammenhang mit Lesezeichen wurden behoben.
-- Übersetzungen wurden aktualisiert.
+- Tor auf 0.4.8.22 aktualisiert.
+- Lyrebird auf 0.8.1 aktualisiert.
+- Experimentelle DNSTT-Unterstützung hinzugefügt.
+- Zusätzliche Quelle für Bridges hinzugefügt.

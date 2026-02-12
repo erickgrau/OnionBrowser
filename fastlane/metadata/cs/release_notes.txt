@@ -1,4 +1,4 @@
-- Aktualizováno Tor na verzi 0.4.8.21.
-- Aktualizováno Lyrebird na verzi 0.8.0.
-- Opraveny drobné chyby týkající se záložek.
-- Aktualizovány překlady.
+- Aktualizováno Tor na verzi 0.4.8.22.
+- Aktualizováno Lyrebird na verzi 0.8.1.
+- Přidána experimentální podpora DNSTT.
+- Přidán další zdroj mostů.

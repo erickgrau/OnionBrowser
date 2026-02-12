@@ -1,4 +1,4 @@
-- Actualitzat Tor a la versió 0.4.8.21.
-- Actualitzat Lyrebird a la versió 0.8.0.
-- Corregits errors menors amb els marcadors.
-- Actualitzades les traduccions.
+- S'ha actualitzat Tor a la versió 0.4.8.22.
+- S'ha actualitzat Lyrebird a la versió 0.8.1.
+- S'ha afegit suport experimental per a DNSTT.
+- S'ha afegit una font addicional de ponts.
