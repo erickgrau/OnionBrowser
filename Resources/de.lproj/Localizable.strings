@@ -142,7 +142,7 @@
 /* AddSearchEngineViewController */
 "Autocomplete URL" = "Vorschläge-URL";
 
-/* No comment provided by engineer. */
+/* VoiceOver */
 "Back" = "Zurück";
 
 /* CertificateViewController */
@@ -296,7 +296,7 @@
 "Find in Page" = "Auf Seite finden";
 
 /* AppDelegate */
-"Focus URL Field" = "URL Feld fokusieren";
+"Focus URL Field" = "URL Feld fokussieren";
 
 /* SecurityViewController */
 "Follow Onion-Location Header Automatically" = "Onion-Location Header automatisch folgen";
@@ -563,7 +563,7 @@
 "Stop Auto-Complete at First Dot" = "Auto-Vervollständigung endet bei erstem Punkt";
 
 /* Bookmark */
-"Subscribe to Tor Newsletter" = "Tor Newsletter abonieren";
+"Subscribe to Tor Newsletter" = "Tor Newsletter abonnieren";
 
 /* SettingsViewController */
 "Support" = "Unterstützung";
