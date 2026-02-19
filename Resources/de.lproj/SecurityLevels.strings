@@ -18,13 +18,13 @@
 
 "Many website features are disabled." = "Viele Website-Features werden unterbunden.";
 
-"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Viele Websites werden nicht richtig funktionieren oder schlecht aussehen, aber Ihre Identität wird vor allen, außer den alleraggressivsten Gegnern geschützt.";
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Viele Websites werden nicht richtig funktionieren oder schlecht aussehen, aber Deine Identität wird vor allen, außer den alleraggressivsten Gegnern geschützt.";
 
 "Most website features are allowed." = "Die meisten Website-Funktionen sind erlaubt.";
 
 "No JavaScript allowed" = "Kein JavaScript erlaubt";
 
-"Security Levels" = "Sicherheits­niveaus";
+"Security Levels" = "Sicherheitsniveaus";
 
 "Some of the protections can be overridden or modified by changing your security settings." = "Das Sicherheitsniveau kann im Detail individualisiert und für einzelne Seiten überschrieben werden.";
 
@@ -36,17 +36,17 @@
 
 "Universal Link Protection:" = "Universeller Linkschutz:";
 
-"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Benutzen Sie dies, wenn Sie Zensur umgehen müssen und andere davon abhalten wollen, Ihre Aktivitäten zu verfolgen, aber nicht darüber besorgt sind, daß Gegner manche Ihrer Aktivitäten dennoch sehen werden.";
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Benutze dies, wenn Du Zensur umgehen musst und andere davon abhalten willst, Deine Aktivitäten zu verfolgen, aber nicht darüber besorgt bist, daß Gegner manche Deiner Aktivitäten dennoch sehen werden.";
 
-"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Benutzen Sie dies, wenn Sie ernsthaft über Gegner besorgt sind, die Ihre Identität herausfinden und Ihre Aktiviäten verfolgen wollen.";
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Benutze dies, wenn Du ernsthaft über Gegner besorgt bist, die Deine Identität herausfinden und Deine Aktiviäten verfolgen wollen.";
 
-"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Benutzen Sie dies, wenn Sie grundsätzlich verhindern wollen, daß ihre Aktivitäten beobachtet werden, aber akzeptieren, daß manchmal etwas davon durchdringt.";
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Benutze dies, wenn Du grundsätzlich verhindern willst, daß Deine Aktivitäten beobachtet werden, aber akzeptierst, daß manchmal etwas davon durchdringt.";
 
 "Websites may break. But you get great security." = "Websites sind oft kaputt. Aber super-sicher.";
 
 "When to Use:" = "Wann benutzen:";
 
-"Works pretty well. Your identity is mostly protected." = "Funktioniert sehr gut. Ihre Identität ist größtenteils geschützt.";
+"Works pretty well. Your identity is mostly protected." = "Funktioniert sehr gut. Deine Identität ist größtenteils geschützt.";
 
 "Yes" = "Ja";
 
