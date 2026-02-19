@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "حظر الإعلانات والنوافذ المنبثقة:";
+
+"Allows microphone and video access" = "يسمح الوصول إلى للميكروفون و الفيديو";
+
+"Allows orientation and motion data access" = "يسمح بالوصول إلى بيانات التوجيه والحركة";
+
+"Disables microphone and video access" = "تعطيل الوصول إلى الميكروفون والفيديو";
+
+"Disables orientation and motion data access" = "تعطيل الوصول إلى بيانات التوجيه والحركة";
+
+"Easy breezy. Though it could be dangerous." = "من السهل منسم. على الرغم من أنه يمكن أن يكون خطيرا.";
+
+"JavaScript allowed" = "مسموح JavaScript";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "تم تعطيل العديد من ميزات الموقع.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "العديد من مواقع الويب لن تعمل أو ستعرض بشكل سيء، لكن هويتك كذلك محمية من جميع الأعداء عدا أكثرهم عدوانية.";
+
+"Most website features are allowed." = "يُسمح بمعظم ميزات موقع الويب.";
+
+"No JavaScript allowed" = "غير مسموح بجافا سكريبت";
+
+"Security Levels" = "مستويات الأمان";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "يمكن تجاوز بعض أشكال الحماية أو تعديلها عن طريق تغيير إعدادات الأمان.";
+
+"Some website features are disabled." = "تم تعطيل بعض ميزات موقع الويب.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "غالبًا ما يكون لمستوى الأمان الذي تختاره لموقع ويب تأثير مباشر على أداء هذا الموقع.";
+
+"These are the specific implications for each level." = "هذه هي الآثار المحددة لكل مستوى.";
+
+"Universal Link Protection:" = "حماية الارتباط العالمي:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "استخدمه عندما تحتاج إلى التهرب من الرقابة ومنع شخص ما من المراقبة نشاطك ، ولكن أقل قلقا بشأن تسرب هويتك إلى الخصوم.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "استخدم عندما تكون قلقًا بشأن اكتشاف الخصوم لهويتك و مراقبة أو مراقبة نشاطك.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "استخدم عندما تكون قلقًا بشأن تسجيل نشاطك ، ولكن اقبل أن بعضًا منه قد تتم مراقبته.";
+
+"Websites may break. But you get great security." = "قد تنقطع مواقع الويب. لكنك تحصل على أمان كبير.";
+
+"When to Use:" = "متى يجب استخدام:";
+
+"Works pretty well. Your identity is mostly protected." = "يعمل بشكل جيد. هويتك محمية في الغالب.";
+
+"Yes" = "نعم";
+
+"Yes (website links can't open apps on the device)" = "نعم (لا تستطيع روابط مواقع الويب فتح التطبيقات على الجهاز)";

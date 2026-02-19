@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Блокування реклами та вікон, що спливають:";
+
+"Allows microphone and video access" = "Дозволяє доступ до мікрофона та відео";
+
+"Allows orientation and motion data access" = "Дозволяє доступ до орієнтації та руху пристрою";
+
+"Disables microphone and video access" = "Відключає доступ до мікрофона та відео";
+
+"Disables orientation and motion data access" = "Відключає доступ до орієнтації та руху пристрою";
+
+"Easy breezy. Though it could be dangerous." = "Легенький захист. Може бути небезпечним.";
+
+"JavaScript allowed" = "JavaScript дозволено";
+
+"Lockdown Mode disabled" = "Lockdown Mode вимкнено";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode увімкнено (iOS 16 і пізніше)";
+
+"Many website features are disabled." = "Багато функцій вебсайтів вимкнені.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Багато вебсайтів не працюватимуть або відображатимуться неправильно, проте ваша особистість захищена від усіх, крім найагресивніших загроз.";
+
+"Most website features are allowed." = "Більшість функцій вебсайтів дозволені.";
+
+"No JavaScript allowed" = "JavaScript не дозволено";
+
+"Security Levels" = "Рівні захисту";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Деякі види захисту можна перезаписати або змінити, змінивши налаштування безпеки.";
+
+"Some website features are disabled." = "Деякі функції вебсайтів вимкнені.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Рівень безпеки, який ви обираєте для вебсайту, безпосередньо впливає на його продуктивність.";
+
+"These are the specific implications for each level." = "Кожен рівень безпеки має свої обмеження.";
+
+"Universal Link Protection:" = "Універсальний захист посилань:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "коли потрібно уникнути цензури та перешкодити комусь відстежувати вашу активність, але ви не сильно стурбовані розкриттям даних про вашу особу внаслідок загроз.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Коли ви стурбовані щодо загроз, які можуть розкрити дані про вашу особу та відстежувати чи цензурувати вашу активність.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Коли ви стурбовані тим, що ваша активність записується, проте розумієте, що певна активність може відстежуватися.";
+
+"Websites may break. But you get great security." = "Вебсайти можуть не працювати як треба. Проте ви дуже добре захищені.";
+
+"When to Use:" = "Коли використовувати:";
+
+"Works pretty well. Your identity is mostly protected." = "Працює досить добре. Ваша особистість здебільшого захищена.";
+
+"Yes" = "Так";
+
+"Yes (website links can't open apps on the device)" = "Так (посилання вебсайтів не можуть відкрити застосунки на пристрої)";

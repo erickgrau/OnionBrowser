@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Bllokim Reklamash dhe Flluskash:";
+
+"Allows microphone and video access" = "Lejon përdorimin e mikrofonit dhe videos.";
+
+"Allows orientation and motion data access" = "Lejon hyrje në të dhëna orientimi dhe lëvizjeje";
+
+"Disables microphone and video access" = "Çaktivizon përdorimin e mikrofonit dhe videos";
+
+"Disables orientation and motion data access" = "Çaktivizon hyrje në të dhëna orientimi dhe lëvizjeje";
+
+"Easy breezy. Though it could be dangerous." = "Kollaj fare. Ama mund të jetë e rrezikshme.";
+
+"JavaScript allowed" = "JavaScript-i lejohet";
+
+"Lockdown Mode disabled" = "Mënyra “Lockdown” e çaktivizuar";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Mënyra “Lockdown” e aktivizuar (iOS 16 dhe të mëvonshëm)";
+
+"Many website features are disabled." = "Mjaft veçori të sajtit çaktivizohen.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Mjaft sajte s’do të funksionojnë, ose do të shfaqen dobët, por identiteti juaj mbrohet nga krejt kundërshtarët, hiq ata më agresivët.";
+
+"Most website features are allowed." = "Shumica e veçorive të sajteve lejohen.";
+
+"No JavaScript allowed" = "S’lejohet JavaScript";
+
+"Security Levels" = "Shkallë Sigurie";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Disa nga mbrojtjet mund të anashkalohet ose ndryshohen duke ndryshuar rregullimet tuaja të sigurisë.";
+
+"Some website features are disabled." = "Disa veçori të sajtit janë çaktivizuar.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Shkalla e sigurisë që zgjidhni për një sajt, shpesh ka ndikim të drejtpërdrejtë mbi funksionimin e atij sajti.";
+
+"These are the specific implications for each level." = "Këto janë pasojat specifikime për çdo shkallë.";
+
+"Universal Link Protection:" = "Mbrojtje Universale Lidhjesh:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Përdoreni kur ju duhet t’i shmangeni censurimit dhe t’i pengoni dikujt të mbikëqyrë veprimtarinë tuaj, por e keni më pak problem zbulimin e identitetit tuaj nga kundërshtarët.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Përdoreni kur e keni problem zbulimin e identitetit tuaj dhe mbikëqyrjen apo censurimin e veprimtarisë tuaj nga nga kundërshtarë.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Përdoreni kur keni problem regjistrimin e veprimtarisë tuaj, por pranoni që një pjesë e saj mund të mbikëqyret.";
+
+"Websites may break. But you get great security." = "Mund të preket funksionimi për disa sajte. Por përfitoni siguri më të madhe.";
+
+"When to Use:" = "Kur të Përdoret:";
+
+"Works pretty well. Your identity is mostly protected." = "Funksionon goxha mirë. Identiteti juaj, në pjesën më të madhe, është i mbrojtur.";
+
+"Yes" = "Po";
+
+"Yes (website links can't open apps on the device)" = "Po (lidhje sajtesh s’mund të hapin aplikacione te pajisja)";

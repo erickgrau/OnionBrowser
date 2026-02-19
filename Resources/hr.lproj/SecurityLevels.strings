@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Blokiranje oglasa i skočnih prozora:";
+
+"Allows microphone and video access" = "Dozvoljava pristup mikrofonu i videu";
+
+"Allows orientation and motion data access" = "Dozvoljava pristup podacima orijentacije i kretanja";
+
+"Disables microphone and video access" = "Deaktivira pristup mikrofonu i videu";
+
+"Disables orientation and motion data access" = "Deaktivira pristup podacima orijentacije i kretanja";
+
+"Easy breezy. Though it could be dangerous." = "Propusno, ali može biti opasno.";
+
+"JavaScript allowed" = "JavaScript je dozvoljen";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Mnoge funkcije web stranice nisu aktivirane.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Mnoge web stranice neće raditi ili će se loše prikazivati, ali tvoj identitet je zaštićeni od svih osim od najagresivnijih protivnika.";
+
+"Most website features are allowed." = "Većina funkcija web stranice su dozvoljene.";
+
+"No JavaScript allowed" = "JavaScript nije dozvoljen";
+
+"Security Levels" = "Razine sigurnosti";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Neke se zaštite mogu zaobići ili promijeniti u sigurnosnim postavkama.";
+
+"Some website features are disabled." = "Neke funkcije web stranice su deaktivirane.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Razina sigurnosti koja se odabere za web mjesto često ima izravan utjecaj na njen rad.";
+
+"These are the specific implications for each level." = "Ovo su specifične implikacije za svaku razinu.";
+
+"Universal Link Protection:" = "Univerzalna zaštita poveznica:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Kad želiš izbjeći cenzuru i spriječiti nekoga da prati tvoje aktivnosti, pri čemu te manje brine otkrivanje tvog identiteta protivnicima.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Kad ti je stalo do toga da protivnici ne otkriju tvoj identitet i da ne prate ili cenzuriraju tvoje aktivnosti.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Kad se brineš o tome, je li se tvoje aktivnosti zapisuju, dok istovremeno prihvaćaš da se mogu pratiti.";
+
+"Websites may break. But you get great security." = "Web-stranice možda neće raditi, ali je zato sigurnost velika.";
+
+"When to Use:" = "Kada koristiti:";
+
+"Works pretty well. Your identity is mostly protected." = "Radi dosta dobro. Tvoj je identitet uglavnom zaštićen.";
+
+"Yes" = "Da";
+
+"Yes (website links can't open apps on the device)" = "Da (poveznice web-stranice ne mogu otvoriti aplikacije na uređaju)";

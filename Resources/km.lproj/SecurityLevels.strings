@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "ការរាំងខ្ទប់​ការ​ផ្សាយ​ពាណិជ្ជកម្ម និង​ផ្ទាំង​ផុសឡើង៖";
+
+"Allows microphone and video access" = "Allows microphone and video access";
+
+"Allows orientation and motion data access" = "Allows orientation and motion data access";
+
+"Disables microphone and video access" = "Disables microphone and video access";
+
+"Disables orientation and motion data access" = "Disables orientation and motion data access";
+
+"Easy breezy. Though it could be dangerous." = "ងាយស្រួល ប៉ុន្តែ​ប្រយ័ត្ន​គ្រោះថ្នាក់។";
+
+"JavaScript allowed" = "JavaScript allowed";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Many website features are disabled.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries.";
+
+"Most website features are allowed." = "Most website features are allowed.";
+
+"No JavaScript allowed" = "មិន​អនុញ្ញាត JavaScript ទេ";
+
+"Security Levels" = "កម្រតិ​សន្តិសុខ";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "ការ​ការពារ​មួយចំនួន​អាច​ដាក់​ជាន់ពីលើ ឬ​កែប្រែ​ដោយ​ការ​ផ្លាស់ប្ដូរ​ការកំណត់​សន្តិសុខ​របស់​អ្នក។";
+
+"Some website features are disabled." = "Some website features are disabled.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "កម្រិត​សន្តិសុខ​ដែល​អ្នក​ជ្រើសរើស​សម្រាប់​វែបសាយ​មួយ ជា​រឿយៗ​ជះ​ឥទ្ធិពល​ដោយផ្ទាល់​ទៅលើ​ដំណើរការ​របស់​វែបសាយ​នោះ។";
+
+"These are the specific implications for each level." = "ទាំងនេះ​គឺជា​ផលប៉ះពាល់​ជាក់លាក់​សម្រាប់​កម្រិត​នីមួយៗ។";
+
+"Universal Link Protection:" = "ការពារ​តំណភ្ជាប់​ជា​សកល៖";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "ប្រើ​នៅពេល​អ្នក​ត្រូវការ​គេចពី​ការ​ស្កាត់ចាប់ និង​ការពារ​ពី​នរណា​ម្នាក់តាមដាន សកម្មភាព​របស់​អ្នក ប៉ុន្តែ​មិនសូវ​ខ្វល់​ពី​ការ​លេចធ្លាយ​អត្តសញ្ញាណ​របស់​អ្នក​ទៅ​គូបដិបក្ខ។";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "ប្រើ​នៅពេល​អ្នក​ព្រួយបារម្ភ​អំពី​គូបដិបក្ខ​ស្វែងរក​អត្តសញ្ញាណ​របស់​អ្នក និង តាមដាន ឬស្កាត់ចាប់​សកម្មភាព​របស់​អ្នក។";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "ប្រើ​នៅពេល​ដែល​អ្នក​ព្រួយបារម្ភ​អំពី​សកម្មភាព​របស់​អ្នក​ត្រូវបាន​កត់ត្រា ប៉ុន្តែ​សូម​ទទួលយក​ថា សកម្មភាព​មួយចំនួន​អាច​ត្រូវបាន​គេ​តាមដាន។";
+
+"Websites may break. But you get great security." = "វែបសាយ​អាចនឹង​ខូច ប៉ុន្តែ​អ្នក​ទទួលបាន​សន្ដិសុខ​ដ៏​ល្អបំផុត។";
+
+"When to Use:" = "ពេលត្រូវប្រើ៖";
+
+"Works pretty well. Your identity is mostly protected." = "ដំណើរការ​ល្អណាស់។ អត្តសញ្ញាណ​របស់​អ្នក​ភាគច្រើន​ត្រូវបាន​ការពារ។";
+
+"Yes" = "មែន";
+
+"Yes (website links can't open apps on the device)" = "មែន (តំណភ្ជាប់​វែបសាយ​មិនអាច​បើក​កម្មវិធី​នៅលើ​ឧបករណ៍​បានទេ)";

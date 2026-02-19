@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Cosc ar Fhógraí agus ar Phreabfhuinneoga:";
+
+"Allows microphone and video access" = "Allows microphone and video access";
+
+"Allows orientation and motion data access" = "Allows orientation and motion data access";
+
+"Disables microphone and video access" = "Disables microphone and video access";
+
+"Disables orientation and motion data access" = "Disables orientation and motion data access";
+
+"Easy breezy. Though it could be dangerous." = "Éasca péasca. Ach d'fhéadfadh sé a bheith contúirteach.";
+
+"JavaScript allowed" = "JavaScript allowed";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Some website features are disabled.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries.";
+
+"Most website features are allowed." = "Most website features are allowed.";
+
+"No JavaScript allowed" = "Cosc ar JavaScript";
+
+"Security Levels" = "Leibhéil Slándála";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Is féidir roinnt de na cosaintí a shárú nó a athrú sna socruithe slándála.";
+
+"Some website features are disabled." = "Some website features are disabled.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Imríonn an leibhéal slándála a roghnaíonn tú ar shuíomh áirithe tionchar díreach ar fheidhmíocht an tsuímh sin.";
+
+"These are the specific implications for each level." = "Seo iad na himpleachtaí a bhaineann le gach leibhéal slándála.";
+
+"Universal Link Protection:" = "Cosaint Uilíoch Nascanna:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Má tá imní ort go ndéanfaí cinsireacht nó monatóireacht ar do ghníomhaíocht ar líne ach níl aon mhéid sin imní ort faoi d'aitheantas a nochtadh do naimhde.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Má tá imní ort go dtiocfadh namhaid ar d'aitheantas nó go ndéanfaí monatóireacht nó cinsireacht ar do ghníomhaíocht ar line.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Má tá imní ort go ndéanfaí logáil ar do ghníomhaíocht ar líne, ach glacann tú leis go ndéanfar monatóireacht ort.";
+
+"Websites may break. But you get great security." = "Seans go mbrisfeadh suímh áirithe. Ach gheobhaidh tú cosaint den chéad scoth.";
+
+"When to Use:" = "Cás Úsáide:";
+
+"Works pretty well. Your identity is mostly protected." = "Slándáil measartha maith. Tá d'aitheantas cosanta den chuid is mó.";
+
+"Yes" = "Tá";
+
+"Yes (website links can't open apps on the device)" = "Tá (ní féidir le nasc Gréasáin aip a oscailt ar do ghléas)";

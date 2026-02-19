@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Chặn quảng cáo và cửa sổ bật lên:";
+
+"Allows microphone and video access" = "Allows microphone and video access";
+
+"Allows orientation and motion data access" = "Allows orientation and motion data access";
+
+"Disables microphone and video access" = "Disables microphone and video access";
+
+"Disables orientation and motion data access" = "Disables orientation and motion data access";
+
+"Easy breezy. Though it could be dangerous." = "Dễ dãi nhưng có thể nguy hiểm.";
+
+"JavaScript allowed" = "JavaScript allowed";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Many website features are disabled.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries.";
+
+"Most website features are allowed." = "Most website features are allowed.";
+
+"No JavaScript allowed" = "Không cho phép JavaScript";
+
+"Security Levels" = "Cấp độ bảo mật";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Một số lớp bảo vệ có thể được bỏ qua hoặc sửa đổi bằng cách sửa cài đặt bảo mật của bạn.";
+
+"Some website features are disabled." = "Some website features are disabled.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Thông thường, cấp độ bảo mật bạn chọn cho từng trang web có ảnh hưởng trực tiếp đến hiệu suất trang web.";
+
+"These are the specific implications for each level." = "Mỗi cấp độ sẽ được chú thích bên dưới";
+
+"Universal Link Protection:" = "Chặn Universal Link:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Khi bạn cần vượt qua kiểm duyệt và tránh kẻ xấu theo dõi hoạt động của bạn, nhưng không quá lo ngại về rò rỉ danh tính tới kẻ xấu.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Khi bạn lo ngại kẻ xấu phát hiện danh tính của bạn và theo dõi hay cản trở hoạt động của bạn.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Khi bạn lo ngại về hoạt động của bạn bị theo dõi, nhưng chấp nhận rằng không thể tránh hoàn toàn.";
+
+"Websites may break. But you get great security." = "Các trang web có thể sẽ hỏng. Nhưng bạn đạt được độ bảo mật cao.";
+
+"When to Use:" = "Khi nào nên sử dụng:";
+
+"Works pretty well. Your identity is mostly protected." = "Hoạt động khá tốt. Danh tính của bạn được gần như được bảo vệ hoàn toàn.";
+
+"Yes" = "Bật";
+
+"Yes (website links can't open apps on the device)" = "Bật (trang web không thể yêu cầu mở trong ứng dụng khác)";

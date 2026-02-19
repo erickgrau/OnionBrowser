@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Блокирање на Реклами и Скокачки прозорци:";
+
+"Allows microphone and video access" = "Allows microphone and video access";
+
+"Allows orientation and motion data access" = "Allows orientation and motion data access";
+
+"Disables microphone and video access" = "Disables microphone and video access";
+
+"Disables orientation and motion data access" = "Disables orientation and motion data access";
+
+"Easy breezy. Though it could be dangerous." = "Лесно и едноставно. Сепак може да биде опасно.";
+
+"JavaScript allowed" = "JavaScript allowed";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Many website features are disabled.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries.";
+
+"Most website features are allowed." = "Most website features are allowed.";
+
+"No JavaScript allowed" = "Недозволени JavaScript-и";
+
+"Security Levels" = "Безбедносни нивоа";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Некои од заштитите можат да бидат превчитани или модификувани со промената на вашите безбедносни поставки.";
+
+"Some website features are disabled." = "Some website features are disabled.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Безбедносното ниво што го одбирате за веб страна често има директно влијание на пероформансот на истата.";
+
+"These are the specific implications for each level." = "Овие се специфични влијанија за секое ниво.";
+
+"Universal Link Protection:" = "Универзална Линк заштита:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Користете кога треба да избегнете цензура или да превенирате некој да ја надгледува вашата активност, но со помалку грижа за откривање на вашиот идентитет од противниците.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Користете кога сте загрижени дека противниците го откриваат вашиот идентитет и ја мониторираат или цензурираат вашата активност.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Користете кога сте загрижени дека вашата активност е зачувувана , но прифаќате дека дел од неа може да биде надгледувана.";
+
+"Websites may break. But you get great security." = "Веб станите можат да не се отворат. Но ова е најдобрата заштита.";
+
+"When to Use:" = "Кога користите:";
+
+"Works pretty well. Your identity is mostly protected." = "Работи доста добро. Вашиот идентитет е најчесто заштитен.";
+
+"Yes" = "Да";
+
+"Yes (website links can't open apps on the device)" = "Да (линковите на веб страната не можат да отвораат апликации на уредот)";

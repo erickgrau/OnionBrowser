@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Блокировка рекламы и всплывающих окон:";
+
+"Allows microphone and video access" = "Разрешает доступ к микрофону и видео";
+
+"Allows orientation and motion data access" = "Разрешает доступ к данным об ориентации и движении";
+
+"Disables microphone and video access" = "Отключает доступ к микрофону и видео";
+
+"Disables orientation and motion data access" = "Отключает доступ к данным об ориентации и движении";
+
+"Easy breezy. Though it could be dangerous." = "Проще простого. Хотя это может быть рискованным.";
+
+"JavaScript allowed" = "JavaScript разрешен";
+
+"Lockdown Mode disabled" = "Режим блокировки отключен";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Режим блокировки включен (iOS 16 и более поздние версии)";
+
+"Many website features are disabled." = "Многие возможности сайта отключены.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Многие сайты не будут работать или будут отображаться некорректно, но ваша личность будет защищена от всех, кроме самых агрессивных противников.";
+
+"Most website features are allowed." = "Большинство функций сайта разрешены.";
+
+"No JavaScript allowed" = "JavaScript не разрешен";
+
+"Security Levels" = "Уровень безопасности";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Некоторые средства защиты могут быть переопределены или скорректированы путем изменения настроек безопасности.";
+
+"Some website features are disabled." = "Некоторые функции сайта отключены.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Уровень безопасности, который вы выбираете для веб-сайта, зачастую напрямую влияет на его работоспособность.";
+
+"These are the specific implications for each level." = "Здесь приведены специфические последствия выбора каждого из уровней.";
+
+"Universal Link Protection:" = "Универсальная защита ссылок:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Используйте, когда вам нужно избежать цензуры и помешать кому-либо отслеживать вашу активность, но вы меньше беспокоитесь об утечке вашей идентичности к неприятелям.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "если вас беспокоит, что неприятели раскроют вашу идентичность и будут следить за вашей активностью или подвергать ее цензуре.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Используйте, когда вас беспокоит, что ваша активность фиксируется, но имейте в виду, что некоторая ее часть может быть отслежена.";
+
+"Websites may break. But you get great security." = "Работа некоторых сайтов может быть нарушена, но вы получите превосходную безопасность.";
+
+"When to Use:" = "Когда использовать:";
+
+"Works pretty well. Your identity is mostly protected." = "Работает неплохо. Ваша идентичность в основном защищена.";
+
+"Yes" = "Да";
+
+"Yes (website links can't open apps on the device)" = "Да (ссылки на веб-сайты не могут открывать приложения на устройстве).";

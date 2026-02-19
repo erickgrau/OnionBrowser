@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Mainos- ja ponnahdusesto:";
+
+"Allows microphone and video access" = "Myöntää mikrofonin ja kameran käyttöoikeuden";
+
+"Allows orientation and motion data access" = "Myöntää suuntaus- ja liikeantureiden käyttöoikeuden";
+
+"Disables microphone and video access" = "Mitätöi mikrofonin ja kameran käyttöoikeuden";
+
+"Disables orientation and motion data access" = "Mitätöi suuntaus- ja liikeantureiden käyttöoikeuden";
+
+"Easy breezy. Though it could be dangerous." = "Helppo nakki. Joskin se saattaa olla vaarallista.";
+
+"JavaScript allowed" = "JavaScript sallitaan";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Monet sivustojen ominaisuudet estyvät.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Monet sivustot eivät toimi oikein tai niiden ulkoasu ei näy oikein, mutta henkilöllisyytesi on suojassa kaikilta paitsi kaikkien aggressiivisimmilta tahoilta.";
+
+"Most website features are allowed." = "Suurin osa sivustojen ominaisuuksista toimii.";
+
+"No JavaScript allowed" = "JavaScriptiä ei sallita";
+
+"Security Levels" = "Suojaustasot";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Joitakin suojauksia voidaan ohittaa tai muokata suojausasetuksia muuttamalla.";
+
+"Some website features are disabled." = "Jotkin sivustojen ominaisuudet eivät toimi.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Verkkosivustolle valitsemallasi suojaustasolla on usein suora vaikutus sivuston toimivuuteen.";
+
+"These are the specific implications for each level." = "Nämä ovat jokaisen tason tarkat vaikutukset.";
+
+"Universal Link Protection:" = "Universaali linkkisuojaus:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Käytä silloin kun pyrit välttämään sensuurin ja estämään ulkopuolisia valvomasta toimintaasi, mutta olet kuitenkin vähemmän huolissasi identiteettisi vuotamisesta vastuksille.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Käytä, kun olet huolissasi identiteettisi paljastumisesta ja toimintasi seurannasta ja sensuroinnista.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Käytä silloin, kun olet huolissasi toimiesi kirjauksesta, mutta kuitenkin hyväksyt, että osaa siitä saatetaan valvoa.";
+
+"Websites may break. But you get great security." = "Verkkosivustot saattavat rikkoutua, mutta saat vahvan suojauksen.";
+
+"When to Use:" = "Milloin käyttää:";
+
+"Works pretty well. Your identity is mostly protected." = "Toimii varsin hyvin. Identiteettisi on pääosin suojattu.";
+
+"Yes" = "Kyllä";
+
+"Yes (website links can't open apps on the device)" = "Kyllä (verkkosivustojen linkit eivät voi avata laitteen sovelluksia)";

@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "مسدود کردن تبلیغات و پاپ آپ:";
+
+"Allows microphone and video access" = "دسترسی به میکروفون و ویدیو را مجاز می‌کند.";
+
+"Allows orientation and motion data access" = "دسترسی به داده‌های جهت‌یابی و حرکت را مجاز می‌کند.";
+
+"Disables microphone and video access" = "دسترسی به میکروفون و ویدیو را غیرفعال می‌کند.";
+
+"Disables orientation and motion data access" = "دسترسی به داده‌های جهت‌یابی و حرکت را غیرفعال می‌کند.";
+
+"Easy breezy. Though it could be dangerous." = "مثل آب خوردن! هر چند ممکن است خطرناک باشد.";
+
+"JavaScript allowed" = "جاوااسکریپت مجاز است.";
+
+"Lockdown Mode disabled" = "حالت قفل کامل غیرفعال است.";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "حالت قفل کامل فعال است (iOS 16 به بعد)";
+
+"Many website features are disabled." = "بسیاری از قابلیت‌های وب‌سایت غیرفعال شده‌اند.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "ممکن است بسیاری از سایت‌ها کار نکنند یا به‌درستی نمایش داده نشوند، اما هویت شما از همه مهاجمان به‌جز تهاجمی‌ترین آن‌ها محافظت می‌شود.";
+
+"Most website features are allowed." = "بیشتر قابلیت‌های وب‌سایت مجاز هستند.";
+
+"No JavaScript allowed" = "هیچ JavaScriptی مجاز نیست";
+
+"Security Levels" = "سطوح امنیتی";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "برخی از اقدامات مراقبتی ممکن است با تغییر تنظیمات امنیتی شما، بازنویسی شده یا تغییر یابند.";
+
+"Some website features are disabled." = "برخی قابلیت‌های وب‌سایت غیرفعال شده‌اند.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "سطح امنیتی که برای یک وبسایت انتخاب می‌کنید گاهی اثر مستقیمی بر روی عملکرد آن سایت دارد.";
+
+"These are the specific implications for each level." = "این موارد، کاربرد خاص هر سطح هستند.";
+
+"Universal Link Protection:" = "حفاظت لینک فراگیر:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "هنگامی که قصد دور زدن سانسور و جلوگیری از نظارت فعالیت خود توسط دیگران را دارید اما در خصوص نشت هویت خود نگران نیستید.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "هنگامی استفاده کنید که از دستیابی مهاجمین به هویت خود و نظارت و سانسور فعالیت خود نگران هستید.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "هنگامی که در خصوص ثبت فعالیت‌های خود نگرانید اما می‌پذیرید که بخشی از فعالیتتان ممکن است تحت نظر باشد.</p>";
+
+"Websites may break. But you get great security." = "ممکن است وبسایت خراب شود. اما شما بهترین امنیت را خواهید داشت.";
+
+"When to Use:" = "چه موقع باید استفاده کرد:";
+
+"Works pretty well. Your identity is mostly protected." = "خوب کار می‌کند. هویت شما تقریبا حفظ می‌شود.";
+
+"Yes" = "بله";
+
+"Yes (website links can't open apps on the device)" = "بله (لینک‌های وبسایت قادر به باز کردن برنامه بر روی دستگاه نیستند)";

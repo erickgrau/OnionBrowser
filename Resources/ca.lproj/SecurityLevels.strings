@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Bloca anuncis i finestres emergents:";
+
+"Allows microphone and video access" = "Permet l'accés al micròfon i al vídeo";
+
+"Allows orientation and motion data access" = "Permet l'accés a les dades d'orientació i moviment";
+
+"Disables microphone and video access" = "Desactiva l'accés al micròfon i al vídeo";
+
+"Disables orientation and motion data access" = "Desactiva l'accés a les dades d'orientació i moviment";
+
+"Easy breezy. Though it could be dangerous." = "Fàcil, però podria ser perillós.";
+
+"JavaScript allowed" = "Es permet el JavaScript";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Moltes de les funcionalitats del lloc web són desactivades.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Molts llocs web no funcionaran o es mostraran pobrament, però la vostra identitat es troba protegida de tots els adversaris, excepte dels més agressius.";
+
+"Most website features are allowed." = "Es permeten la majoria de les funcionalitats del lloc web.";
+
+"No JavaScript allowed" = "No es permet el JavaScript";
+
+"Security Levels" = "Nivells de seguretat";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Algunes de les proteccions poden eludir-se o modificar-se si canvieu la configuració de seguretat.";
+
+"Some website features are disabled." = "Algunes funcionalitats del lloc web són desactivades.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "El nivell de seguretat que trieu per a un lloc web sovint té un impacte directe en el rendiment del lloc.";
+
+"These are the specific implications for each level." = "Hi ha implicacions específices per a cada nivell.";
+
+"Universal Link Protection:" = "Protecció d'enllaç universal:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Useu-lo si us cal evadir la censura i prevenir que algú faci seguiment de la vostra activitat, però teniu menys preocupació perquè es filtri la vostra identitat als adversaris.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Useu-lo si no voleu que adversaris descobreixin la vostra identitat i facin seguiment o censura de la vostra activitat.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Useu-lo si esteu afectat perquè s'enregistri la vostra activitat, però accepteu que se'n pugui enregistrar una part.";
+
+"Websites may break. But you get great security." = "Els llocs web poden deixar de funcionar. Però obteniu una gran seguretat.";
+
+"When to Use:" = "Quan usar-lo?";
+
+"Works pretty well. Your identity is mostly protected." = "Funciona força bé. La vostra identitat està majoritàriament protegida.";
+
+"Yes" = "Sí";
+
+"Yes (website links can't open apps on the device)" = "Sí (els enllaços web no poden obrir aplicacions en el dispositiu)";

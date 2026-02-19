@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "광고 및 팝업 차단:";
+
+"Allows microphone and video access" = "Allows microphone and video access";
+
+"Allows orientation and motion data access" = "Allows orientation and motion data access";
+
+"Disables microphone and video access" = "Disables microphone and video access";
+
+"Disables orientation and motion data access" = "Disables orientation and motion data access";
+
+"Easy breezy. Though it could be dangerous." = "매우 간단합니다. 위험할 수도 있지만요.";
+
+"JavaScript allowed" = "JavaScript allowed";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Many website features are disabled.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries.";
+
+"Most website features are allowed." = "Most website features are allowed.";
+
+"No JavaScript allowed" = "자바 스크립트를 사용할 수 없음";
+
+"Security Levels" = "보안 수준";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "일부 보호는 보안 설정을 변경하여 재정의하거나 수정할 수 있습니다.";
+
+"Some website features are disabled." = "Some website features are disabled.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "웹사이트에 대해 선택하는 보안 수준은 종종 해당 사이트 성능에 직접적인 영향을 미칩니다.";
+
+"These are the specific implications for each level." = "각 수준에 대한 구체적인 의미는 다음과 같습니다.";
+
+"Universal Link Protection:" = "유니버셜 링크 보호:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "검열을 회피하고 다른 사람이 사용자의 활동을 감시하지 못하도록 해야 할 때 사용하되, 다른 사람에게 자신의 신원이 노출되는 것을 덜 염려합니다.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "적이 자신의 신원을 발견하고 활동을 모니터링하거나 검열할 때 사용합니다.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "활동이 기록되는 것이 염려될 때 사용하지만 일부 활동이 모니터링될 수 있다는 점을 인정합니다.";
+
+"Websites may break. But you get great security." = "웹사이트가 손상될 수 있습니다. 하지만 보안은 아주 뛰어납니다.";
+
+"When to Use:" = "사용 시기:";
+
+"Works pretty well. Your identity is mostly protected." = "꽤 잘 작동합니다. 귀하의 신원은 대부분 보호받고 있습니다.";
+
+"Yes" = "예";
+
+"Yes (website links can't open apps on the device)" = "예(웹사이트 링크가 장치에서 앱을 열 수 없음)";

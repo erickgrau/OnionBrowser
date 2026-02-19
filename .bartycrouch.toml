@@ -8,6 +8,7 @@ defaultToKeys = true
 additive = false
 unstripped = false
 plistArguments = false
+ignoreKeys = ["#bartycrouch-ignore!", "#bc-ignore!", "#i!"]
 
 [update.normalize]
 paths = ["Resources"]

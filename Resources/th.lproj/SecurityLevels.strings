@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "ปิดกั้นโฆษณาและป๊อปอัป:";
+
+"Allows microphone and video access" = "อนุญาตให้เข้าถึงไมโครโฟนและวิดีโอ";
+
+"Allows orientation and motion data access" = "อนุญาตให้เข้าถึงข้อมูลทิศทางและการเคลื่อนไหว";
+
+"Disables microphone and video access" = "ปิดการเข้าถึงไมโครโฟนและวิดีโอ";
+
+"Disables orientation and motion data access" = "ปิดการเข้าถึงข้อมูลทิศทางและการเคลื่อนไหว";
+
+"Easy breezy. Though it could be dangerous." = "ใช้ได้สบายๆ ไม่ติดขัด แต่มันอาจมีอันตราย";
+
+"JavaScript allowed" = "อนุญาตให้ใช้จาวาสคริปต์";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "ความสามารถหลายอย่างของเว็บไซต์ถูกปิดใช้งาน";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "เว็บไซต์จำนวนมากจะไม่ทำงานหรือจะแสดงผลแย่ แต่ข้อมูลตัวตนของคุณ จะพ้นจากผู้ประสงค์ร้ายทั้งหมด จะเว้นก็แต่ผู้ประสงค์ร้ายที่โหดที่สุด";
+
+"Most website features are allowed." = "ความสามารถเกือบทั้งหมดของเว็บไซต์ได้รับอนุญาต";
+
+"No JavaScript allowed" = "ไม่อนุญาตให้ใช้จาวาสคริปต์เลย";
+
+"Security Levels" = "ระดับความมั่นคงปลอดภัย";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "การป้องกันบางอย่างสามารถถูกสั่งทับหรือแก้ไขได้ด้วยการเปลี่ยนการตั้งค่าความปลอดภัยของคุณ";
+
+"Some website features are disabled." = "ความสามารถบางอย่างของเว็บไซต์ถูกปิดใช้งาน";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "ระดับความมั่นคงปลอดภัยที่คุณเลือกสำหรับเว็บไซต์หนึ่ง มักมีผลกระทบโดยตรงกับประสิทธิภาพของไซต์นั้น";
+
+"These are the specific implications for each level." = "สิ่งเหล่านี้คือผลกระทบที่เจาะจงสำหรับแต่ละระดับ";
+
+"Universal Link Protection:" = "ปกป้อง Universal Link:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "ใช้เมื่อคุณต้องการหลบเลี่ยงการปิดกั้นและป้องกันคนมาตรวจตรากิจกรรมของคุณ แต่ไม่ค่อยกังวลว่าข้อมูลอัตลักษณ์ของคุณอาจรั่วไหลสู่คู่อริ";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "ใช้เมื่อคุณกังวลว่าคู่อริอาจค้นพบตัวตนของคุณ และจะเฝ้าจับตาดูหรือปิดกั้นกิจกรรมของคุณ";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "ใช้เมื่อคุณกังวล ไม่อยากให้กิจกรรมของคุณถูกลงบันทึก แต่ยอมรับได้ว่าบางอย่างอาจถูกตรวจตราได้";
+
+"Websites may break. But you get great security." = "เว็บไซต์อาจใช้งานไม่ได้ตามปกติ แต่คุณจะได้ความมั่นคงปลอดภัยที่ดี";
+
+"When to Use:" = "เมื่อใดที่ควรใช้:";
+
+"Works pretty well. Your identity is mostly protected." = "ใช้งานได้ดีทีเดียว ตัวตนของคุณได้รับการปกป้องเกือบทั้งหมด";
+
+"Yes" = "ใช่";
+
+"Yes (website links can't open apps on the device)" = "ใช่ (ลิงก์เว็บไซต์จะไม่สามารถเปิดแอปในอุปกรณ์ได้)";

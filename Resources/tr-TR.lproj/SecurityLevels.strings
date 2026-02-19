@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Reklam ve açılır pencere engelleme:";
+
+"Allows microphone and video access" = "Mikrofon ve kamera erişimine izin verir";
+
+"Allows orientation and motion data access" = "Doğrultu ve hareket verisi erişimine izin verir";
+
+"Disables microphone and video access" = "Mikrofon ve kamera erişimini devre dışı bırakır";
+
+"Disables orientation and motion data access" = "Doğrultu ve hareket verisi erişimini devre dışı bırakır";
+
+"Easy breezy. Though it could be dangerous." = "Kolay seçim ancak tehlikeli olabilir.";
+
+"JavaScript allowed" = "JavaScript betiklerine izin verilir";
+
+"Lockdown Mode disabled" = "Kilit modu kapalı";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Kilit modu açık (iOS 16 ve üzeri)";
+
+"Many website features are disabled." = "Çoğu site özelliği devre dışı bırakılır.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Sitelerin çoğu çalışmaz ya da kötü görünür ancak kimliğiniz en saldırgan olanları dışında tüm düşmanlardan gizlenir.";
+
+"Most website features are allowed." = "Çoğu site özelliklerine izin verilir";
+
+"No JavaScript allowed" = "Java betiklerine izin verilmez";
+
+"Security Levels" = "Güvenlik düzeyleri";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Güvenlik ayarlarınız değiştirilerek bazı korumalar geçersiz kılınabilir ya da değiştirilebilir.";
+
+"Some website features are disabled." = "Bazı site özellikleri devre dışı bırakılır.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Bir site için seçtiğiniz güvenlik düzeyinin genellikle o sitenin başarımı üzerinde doğrudan etkisi vardır.";
+
+"These are the specific implications for each level." = "Her düzeyde yapılan uygulamalar farklıdır.";
+
+"Universal Link Protection:" = "Evrensel bağlantı koruması:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Sansürden kaçınmanız ve yaptıklarınızı başkalarının izlemesini önlemek istediğinizde, kimliğinizin kötü niyetli kişilere sızacağından daha az endişe duymak için kullanın.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Kötü niyetli kişilerin kimliğinizi öğrenmesinden ve yaptıklarınızı izleyip engellemesinden endişeleniyorsanız kullanın.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Yaptığınız işlemlerin kaydedilmesinden endişleniyorsanız, ancak bazı işlemlerinizin izlenebileceğini kabul ediyorsanız kullanın.";
+
+"Websites may break. But you get great security." = "Siteler bozuk görüntülenebilir. Ama iyi bir güvenlik elde edersiniz.";
+
+"When to Use:" = "Ne zaman kullanmalısınız:";
+
+"Works pretty well. Your identity is mostly protected." = "Oldukça iyi çalışır. Kimliğiniz çoğunlukla korunur.";
+
+"Yes" = "Evet";
+
+"Yes (website links can't open apps on the device)" = "Evet (site bağlantıları aygıt üzerindeki uygulamalarda açılamaz)";

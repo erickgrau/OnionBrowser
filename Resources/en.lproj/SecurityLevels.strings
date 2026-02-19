@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Ad- and Pop-up Blocking:";
+
+"Allows microphone and video access" = "Allows microphone and video access";
+
+"Allows orientation and motion data access" = "Allows orientation and motion data access";
+
+"Disables microphone and video access" = "Disables microphone and video access";
+
+"Disables orientation and motion data access" = "Disables orientation and motion data access";
+
+"Easy breezy. Though it could be dangerous." = "Easy breezy. Though it could be dangerous.";
+
+"JavaScript allowed" = "JavaScript allowed";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Many website features are disabled.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries.";
+
+"Most website features are allowed." = "Most website features are allowed.";
+
+"No JavaScript allowed" = "No JavaScript allowed";
+
+"Security Levels" = "Security Levels";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Some of the protections can be overridden or modified by changing your security settings.";
+
+"Some website features are disabled." = "Some website features are disabled.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "The security level you choose for a website often has a direct impact on that site’s performance.";
+
+"These are the specific implications for each level." = "These are the specific implications for each level.";
+
+"Universal Link Protection:" = "Universal Link Protection:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Use when you’re concerned about your activity being logged, but accept that some of it might be monitored.";
+
+"Websites may break. But you get great security." = "Websites may break. But you get great security.";
+
+"When to Use:" = "When to Use:";
+
+"Works pretty well. Your identity is mostly protected." = "Works pretty well. Your identity is mostly protected.";
+
+"Yes" = "Yes";
+
+"Yes (website links can't open apps on the device)" = "Yes (website links can't open apps on the device)";

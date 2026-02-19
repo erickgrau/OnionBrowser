@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Pemblokiran Iklan dan Pop-up:";
+
+"Allows microphone and video access" = "Izinkan akses mikrofon dan video";
+
+"Allows orientation and motion data access" = "Izinkan akses data pergerakan dan orientasi";
+
+"Disables microphone and video access" = "Nonaktifkan akses mikrofon dan video";
+
+"Disables orientation and motion data access" = "Nonaktifkan akses data pergerakan dan orientasi";
+
+"Easy breezy. Though it could be dangerous." = "Sangat mudah. Tapi dapat menjadi berbahaya.";
+
+"JavaScript allowed" = "JavaScript diizinkan";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Banyak fitur situs web yang dinonaktifkan.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Banyak situs web tidak akan bekerja atau akan ditampilkan secara buruk, tapi identitas Anda terlindungi dari semua musuh kecuali yang paling agresif.";
+
+"Most website features are allowed." = "Kebanyakan fitur situs web diizinkan.";
+
+"No JavaScript allowed" = "Tidak ada JavaScript yang diizinkan";
+
+"Security Levels" = "Tingkat Keamanan";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Beberapa perlindungan dapat diganti atau dimodifikasi dengan mengubah pengaturan keamanan Anda.";
+
+"Some website features are disabled." = "Beberapa fitur situs web dinonaktifkan.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Tingkat keamanan yang Anda pilih untuk situs web sering kali berdampak langsung pada kinerja situs tersebut.";
+
+"These are the specific implications for each level." = "Hal ini merupakan implikasi khusus untuk setiap level.";
+
+"Universal Link Protection:" = "Perlindungan Tautan Universal:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Gunakan saat Anda perlu menghindari sensor dan mencegah seseorang memantau aktivitas Anda, namun tidak pada kebocoran identitas anda kepada musuh.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Gunakan saat Anda khawatir tentang musuh yang menemukan identitas Anda dan memantau atau menyensor aktivitas Anda.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Gunakan saat Anda khawatir tentang aktivitas Anda yang terekam, tetapi Anda harus menerima bahwa beberapa di antaranya mungkin masih tetap terpantau.";
+
+"Websites may break. But you get great security." = "Situs web mungkin rusak. Tapi Anda mendapatkan keamanan yang baik.";
+
+"When to Use:" = "Kapan Harus Menggunakan:";
+
+"Works pretty well. Your identity is mostly protected." = "Bekerja cukup baik. Identitas Anda sebagian besar dilindungi.";
+
+"Yes" = "Ya";
+
+"Yes (website links can't open apps on the device)" = "Ya (tautan situs web tidak dapat membuka aplikasi pada perangkat)";

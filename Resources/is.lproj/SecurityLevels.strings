@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Útilokun auglýsinga og sprettglugga:";
+
+"Allows microphone and video access" = "Leyfir aðgang að hljóðnema og myndskeiðum";
+
+"Allows orientation and motion data access" = "Leyfir aðgang að gögnum um stefnu og hreyfingu";
+
+"Disables microphone and video access" = "Gerir óvirkan aðgang að hljóðnema og myndskeiðum";
+
+"Disables orientation and motion data access" = "Gerir óvirkan aðgang að gögnum um stefnu og hreyfingu";
+
+"Easy breezy. Though it could be dangerous." = "Einfalt mál. En það gæti falið í sér áhættu.";
+
+"JavaScript allowed" = "JavaScript leyft";
+
+"Lockdown Mode disabled" = "Læsingarhamur óvirkur";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Læsingarhamur virkjaður (iOS 16 og nýrra)";
+
+"Many website features are disabled." = "Margir eiginleikar vefsvæða eru óvirkir.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Mörg vefsvæði virka ekki eða birtast illa, en auðkennin þín eru varin fyrir öllum nema allra erfiðustu andstæðingum.";
+
+"Most website features are allowed." = "Flestir eiginleikar vefsvæða eru leyfðir.";
+
+"No JavaScript allowed" = "Ekkert JavaScript leyft";
+
+"Security Levels" = "Öryggisstig";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Sumar varnir er hægt að fella niður eða breyta í öryggisstillingunum.";
+
+"Some website features are disabled." = "Sumir eiginleikar vefsvæða eru óvirkir.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Öryggisstigið sem þú velur fyrir vefsvæði hefur bein áhrif á hegðun þess vefsvæðis.";
+
+"These are the specific implications for each level." = "Hér eru sértækar afleiðingar fyrir hvert öryggisstig.";
+
+"Universal Link Protection:" = "Almenn vörn tengla:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Nota þegar þú vilt komast fram hjá ritskoðun og komast hjá því að einhver fylgist með athöfnum þínum, en hefur minni áhyggjur af leka á auðkennum þínum til óprúttinna aðila.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Nota þegar þú vilt ekki að andstæðingar uppgötvi auðkennin þín og fylgist með eða ritskoði aðgerðir þínar.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Nota þegar þú hefur áhyggjur af því að einhver skrái athafnir þínar, en sættir þig samt við að einhverjar upplýsingar séu skráðar.";
+
+"Websites may break. But you get great security." = "Vefsvæði gætu bilað. En þú munt njóta aukins öryggis.";
+
+"When to Use:" = "Hvenær skal nota það:";
+
+"Works pretty well. Your identity is mostly protected." = "Virkar nokkuð vel. Auðkennin þín eru að mestu varin.";
+
+"Yes" = "Já";
+
+"Yes (website links can't open apps on the device)" = "Já (tenglar á vefsvæðum geta ekki opnað forrit á tækinu)";

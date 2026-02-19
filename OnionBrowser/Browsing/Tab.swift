@@ -271,7 +271,7 @@ class Tab: UIView {
 
 	@objc
 	func refresh() {
-		if url == URL.start {
+		if url == URL.start || url == URL.aboutSecurityLevels {
 			NcBookmarks.updateStartPage()
 		}
 
@@ -321,7 +321,7 @@ class Tab: UIView {
 		}
 
 		if let url = request.url {
-			if url == URL.start {
+			if url == URL.start || url == URL.aboutSecurityLevels {
 				NcBookmarks.updateStartPage()
 			}
 			else if let bookmark = NcBookmarks.find(url) {

@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "広告とポップアップをブロック:";
+
+"Allows microphone and video access" = "マイクと動画を許可";
+
+"Allows orientation and motion data access" = "画面の向きと動きに関する情報を許可";
+
+"Disables microphone and video access" = "マイクと動画を遮断";
+
+"Disables orientation and motion data access" = "画面の向きと動きに関する情報を遮断";
+
+"Easy breezy. Though it could be dangerous." = "閲覧はスムースですが、リスクがあります。";
+
+"JavaScript allowed" = "JavaScriptは許可されます";
+
+"Lockdown Mode disabled" = "ロックダウンモードを無効化";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "ロックダウンモード（iOS16以降）";
+
+"Many website features are disabled." = "そのサイトの多くの機能が無効にされます。";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "多くのサイトで機能しない、もしくは表示が乱れる場合がありますが、あなたの身元は悪意ある相手から保護されます。";
+
+"Most website features are allowed." = "サイトのほとんどの機能が許可されます";
+
+"No JavaScript allowed" = "JavaScriptは実行されません。";
+
+"Security Levels" = "セキュリティ­レベル";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "セキュリティ設定を変更して、保護レベルを変更できます。";
+
+"Some website features are disabled." = "サイトの一部の機能が無効にされます。";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "設定したセキュリティレベルは、サイトのパフォーマンスに直接的な影響を与えます。";
+
+"These are the specific implications for each level." = "各レベルの意味は以下の通りです。";
+
+"Universal Link Protection:" = "Universal Link保護:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "活動を監視・検閲されることを避ける必要があるが、身元についてはそれほど神経質ではない場合。";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "悪意ある相手に身元が突き止められたり、活動が監視・検閲される恐れがある場合。";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "活動を記録されたくはないが、監視される可能性をある程度容認する場合。";
+
+"Websites may break. But you get great security." = "最高度のセキュリティですが、サイトによってはうまく機能しない場合があります。";
+
+"When to Use:" = "使用例:";
+
+"Works pretty well. Your identity is mostly protected." = "サイトはほぼ機能します。ほとんどの場合、あなたの身元が保護されます。";
+
+"Yes" = "はい";
+
+"Yes (website links can't open apps on the device)" = "はい（リンクによって他のアプリを開くことができません）";

@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Reklám és előugró ablak blokkolás:";
+
+"Allows microphone and video access" = "Mikrofon és videó hozzáférés engedélyezése";
+
+"Allows orientation and motion data access" = "Tájolás és mozgás adat hozzáférés engedélyezése";
+
+"Disables microphone and video access" = "Letiltja a mikrofon és videó hozzáférést";
+
+"Disables orientation and motion data access" = "Letiltja a tájolás és mozgás adat hozzáférést";
+
+"Easy breezy. Though it could be dangerous." = "Csak óvatosan. Ez veszélyes lehet.";
+
+"JavaScript allowed" = "JavaScript engedélyezve";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Sok weboldal szolgáltatás tiltott.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Több weboldal nem fog működni vagy gyengén jelenik meg, de az identitásod védett, kivéve a legagresszívabb ellenfeleket.";
+
+"Most website features are allowed." = "A legtöbb weboldal funkció engedélyezve";
+
+"No JavaScript allowed" = "Nincs JavaScript engedélyezve";
+
+"Security Levels" = "Biztonsági szintek";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Néhány védelem felülírható és módosítható a biztonsági beállításai módosításával.";
+
+"Some website features are disabled." = "Néhány weboldal funkció tiltott.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "A biztonsági szint, amit kiválaszt egy weboldalhoz, gyakran direkt hatással van a weboldal teljesítményére.";
+
+"These are the specific implications for each level." = "Ezek különbözőek minden egyes szinten";
+
+"Universal Link Protection:" = "Univerzális link védelem:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Ha szüksége van a cenzúra elkerülésére és meg akarja előzi, hogy más monitorozza az aktivitását, de kevésbé tart az identitása ellenfelekhez szivárgásától.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Ha  tart attól, hogy az ellenfelei felfedezik identitását, és monitorozzák vagy cenzurálják aktívítását.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Ha  tart attól, hogy aktivitását naplózzák, de elfogadja, hogy egy része monitorozott.";
+
+"Websites may break. But you get great security." = "A weboldalak hibásak lehetnek. De Ön magas biztonságot kap.";
+
+"When to Use:" = "Mikor érdemes használni:";
+
+"Works pretty well. Your identity is mostly protected." = "Elég jól dolgozik. Az identitása többnyire védett.";
+
+"Yes" = "Igen";
+
+"Yes (website links can't open apps on the device)" = "Igen (a weboldal linkek nem nyithatnak meg appokat az eszközön)";

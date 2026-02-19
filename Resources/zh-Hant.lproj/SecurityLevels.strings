@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "關閉廣告與彈出視窗:";
+
+"Allows microphone and video access" = "允許存取麥克風及視訊";
+
+"Allows orientation and motion data access" = "允許存取方向及動作資料";
+
+"Disables microphone and video access" = "停用存取麥克風及視訊";
+
+"Disables orientation and motion data access" = "停用存取方向及動作資料";
+
+"Easy breezy. Though it could be dangerous." = "輕便型，但很有可能遇上危險。";
+
+"JavaScript allowed" = "已允許 JavaScript";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "已停用大多數的網站功能。";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "許多網站可能無法正常使用或顯示異常，但您的個資\n會受到最完整的保護，除非不幸遇到最極端的攻擊手段。";
+
+"Most website features are allowed." = "已允許使用大多數的網站功能。";
+
+"No JavaScript allowed" = "禁用 JavaScript";
+
+"Security Levels" = "安全性等級";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "透過安全設置，可以變動或更新某些防護。";
+
+"Some website features are disabled." = "已停用部分網站功能。";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "為網站選取的安全等級會直接影響該網站的表現效能。";
+
+"These are the specific implications for each level." = "每個等級各有特定意義。";
+
+"Universal Link Protection:" = "通用連結保護:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "需要避開審查以及阻止它人監控\n您的網路行為。較不擔心個人身份被洩漏給對手。";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "擔憂對手能夠發掘找出您的身份以\n監視或審查您的網路行為。";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "擔心自己的網路行為遭到記錄，不過尚可接受某程度的監控。";
+
+"Websites may break. But you get great security." = "網站可能壤掉了，不過您仍然很安全。";
+
+"When to Use:" = "何時使用:";
+
+"Works pretty well. Your identity is mostly protected." = "運作正常，已完善地保護您的識別資料";
+
+"Yes" = "是";
+
+"Yes (website links can't open apps on the device)" = "是 (設備上的網站連結不會開啟相關應用 apps)";

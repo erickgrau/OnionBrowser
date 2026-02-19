@@ -18,7 +18,7 @@ extension URL {
 	static let credits = Bundle.main.url(forResource: "credits", withExtension: "html")!
 
 	static let aboutSecurityLevels = URL(string: "about:security-levels")!
-	static let securityLevels = Bundle.main.url(forResource: "security-levels", withExtension: "html")!
+	static let securityLevels =  FileManager.default.cacheDir!.appendingPathComponent("security-levels.html")
 
 	static let start = FileManager.default.cacheDir!.appendingPathComponent("start.html")
 

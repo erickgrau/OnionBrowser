@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Blokování Reklam a Vyskakovacích Oken:";
+
+"Allows microphone and video access" = "Allows microphone and video access";
+
+"Allows orientation and motion data access" = "Allows orientation and motion data access";
+
+"Disables microphone and video access" = "Disables microphone and video access";
+
+"Disables orientation and motion data access" = "Disables orientation and motion data access";
+
+"Easy breezy. Though it could be dangerous." = "Jednoduchý, ale nebezpečný.";
+
+"JavaScript allowed" = "JavaScript allowed";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabled";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+
+"Many website features are disabled." = "Many website features are disabled.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries.";
+
+"Most website features are allowed." = "Most website features are allowed.";
+
+"No JavaScript allowed" = "JavaScript zakázán";
+
+"Security Levels" = "Bezp. Úrovně";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Některé způsoby ochrany mohou být přepsány nebo upraveny změnou v nastavení bezpečnosti.";
+
+"Some website features are disabled." = "Some website features are disabled.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Vámi vybraná bezpečnostní úroveň často má přímý vliv na výkonnosti stránky";
+
+"These are the specific implications for each level." = "Toto jsou specifické důsledky každé úrovně.";
+
+"Universal Link Protection:" = "Ochrana před Univerzálními Odkazy:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Tuto úroveň použijte když se potřebujete vyhnout cenzuře a zamezit sledování vaší aktivity, ale nemáte takovou starost o únik vaší identity nepřátelům.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Tuto úroveň použijte, pokud máte strach z možného zjištění vaší identity a monitorování či cenzurování vaší aktivity.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Tuto úroveň použijte, když se bojíte, že vaše aktivita je zaznamenávána, ale jste smíření s tím, že část může být monitorována.";
+
+"Websites may break. But you get great security." = "Stránky se můžou rozbít, ale budete skvěle zabezpečení.";
+
+"When to Use:" = "Kdy Používat:";
+
+"Works pretty well. Your identity is mostly protected." = "Funguje celkem dobře. Vaše identita je z větší části chráněná.";
+
+"Yes" = "Ano";
+
+"Yes (website links can't open apps on the device)" = "Ano (zakáže se otevírání odkazů pomocí aplikací)";

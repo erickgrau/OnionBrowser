@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Blocare Pop-Up și Reclame:";
+
+"Allows microphone and video access" = "Accesul la microfon și video este permis";
+
+"Allows orientation and motion data access" = "Accesul la orientare și datele de mișcare este permis";
+
+"Disables microphone and video access" = "Accesul la microfon și video este dezactivat";
+
+"Disables orientation and motion data access" = "Accesul la orientare și datele de mișcare este dezactivat";
+
+"Easy breezy. Though it could be dangerous." = "O ia ușor, deși ar putea fi periculos.";
+
+"JavaScript allowed" = "JavaScript permis";
+
+"Lockdown Mode disabled" = "Lockdown Mode dezactivat";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode activat (iOS 16 sau ulterior)";
+
+"Many website features are disabled." = "Multe funcționalități ale site-urilor sunt dezactivate.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Multe site-uri web nu vor funcționa sau vor afișa prost, dar identitatea ta este protejată de toți, cu excepția celor mai agresivi adversari.";
+
+"Most website features are allowed." = "Majoritatea funcționalităților site-urilor sunt permise.";
+
+"No JavaScript allowed" = "JavaScript nu este permis";
+
+"Security Levels" = "Niveluri de securitate";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Câteva dintre protecții pot fi modificate prin schimbarea setărilor de securitate.";
+
+"Some website features are disabled." = "Unele funcționalități ale site-urilor sunt dezactivate.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Nivelul de securitate ales pentru un site web are adesea impact direct asupra performanței site-ului.";
+
+"These are the specific implications for each level." = "Acestea sunt implicații specifice fiecărui nivel.";
+
+"Universal Link Protection:" = "Protecție Linkuri Universală:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Folosește când ai nevoie să scapi de cenzură și să previi monitorizarea activității de o altă persoană, deși ești mai puțin îngrijorat de scurgerea identității la atacatori.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Folosește când ești îngrijorat(ă) că atacatorii s-ar putea să-ți afle identitatea sau să îți monitorizeze sau cenzureze activitatea.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Folosește când ești îngrijorat(ă) despre înregistrarea activității tale, deși poți accepta faptul că încă s-ar putea să fii monitorizat(ă).";
+
+"Websites may break. But you get great security." = "Site-urile s-ar putea să devină defective, dar beneficiezi de securitate avansată.";
+
+"When to Use:" = "Când să folosești:";
+
+"Works pretty well. Your identity is mostly protected." = "Funcționează foarte bine. Identitatea ta este în mare parte protejată.";
+
+"Yes" = "Da";
+
+"Yes (website links can't open apps on the device)" = "Da (linkurile nu pot deschide aplicații de pe dispozitiv)";

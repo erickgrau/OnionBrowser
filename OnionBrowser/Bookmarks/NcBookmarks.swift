@@ -144,6 +144,10 @@ class NcBookmarks {
 			}
 		}
 
+		try? FileTranslator.translate(
+			Bundle.main.url(forResource: "security-levels", withExtension: "html"),
+			to: .securityLevels, with: "SecurityLevels")
+
 		guard var template = try? String(contentsOf: source) else {
 			return
 		}

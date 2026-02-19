@@ -1,0 +1,53 @@
+"Ad- and Pop-up Blocking:" = "Blocco Ad- e Pop-up:";
+
+"Allows microphone and video access" = "Consente l'accesso a microfono e video";
+
+"Allows orientation and motion data access" = "Consente l'accesso ai dati di orientamento e movimento";
+
+"Disables microphone and video access" = "Disabilita l'accesso a microfono e video";
+
+"Disables orientation and motion data access" = "Disabilita l'accesso ai dati di orientamento e movimento";
+
+"Easy breezy. Though it could be dangerous." = "Disinvolto. Anche se potrebbe essere pericoloso.";
+
+"JavaScript allowed" = "JavaScript permesso";
+
+"Lockdown Mode disabled" = "Lockdown Mode disabilitato";
+
+"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode abilitato (iOS 16 e successivi)";
+
+"Many website features are disabled." = "Molte funzionalità del sito web sono disabilitate.";
+
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "Molti siti web non funzioneranno o appariranno male, ma la tua identità è protetta da tutti tranne i più aggressivi avversari.";
+
+"Most website features are allowed." = "La maggior parte delle funzionalità del sito web sono consentite.";
+
+"No JavaScript allowed" = "Nessun JavaScript permesso";
+
+"Security Levels" = "Livelli Sicurezza";
+
+"Some of the protections can be overridden or modified by changing your security settings." = "Alcune delle protezioni possono essere sovrascritte o modificate cambiando le tue impostazioni di sicurezza.";
+
+"Some website features are disabled." = "Alcune funzionalità del sito web sono disabilitate.";
+
+"The security level you choose for a website often has a direct impact on that site’s performance." = "Il livello di sicurezza che hai scelto per un sito web spesso ha un impatto diretto nelle sue prestazioni.";
+
+"These are the specific implications for each level." = "Queste sono le specifiche implicazioni per ogni livello.";
+
+"Universal Link Protection:" = "Protezione universale collegamento:";
+
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "Usare quando necessiti d'eludere la censura e di prevenire il monitoraggio da parte di qualcuno della tua attività, ma sei meno preoccupato di perdere informazioni della tua identità agli avversari.";
+
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "Usa quando sei preoccupato che i tuoi avversari possano scoprire la tua identità e monitorare o censuare la tua attività.";
+
+"Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "Usa quando sei preoccupato che la tua attività possa essere registrata, ma accetti che qualcosa possa essere monitorata.";
+
+"Websites may break. But you get great security." = "I siti web possono modificarsi. Ma ottieni un'ottima sicurezza.";
+
+"When to Use:" = "Quando usare:";
+
+"Works pretty well. Your identity is mostly protected." = "Funziona molto bene. La tua identità è principalmente protetta.";
+
+"Yes" = "Si";
+
+"Yes (website links can't open apps on the device)" = "Si (collegamenti sito web non possono aprire app sul dispotivo)";
