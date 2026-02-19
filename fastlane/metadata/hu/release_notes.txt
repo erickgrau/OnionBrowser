@@ -1,4 +1,3 @@
-- A Tor frissítése 0.4.8.22-re.
-- A Lyrebird frissítése 0.8.1-re.
-- Kísérleti DNSTT támogatás hozzáadása.
-- További hídforrások hozzáadása.
+- A Tor frissítése 0.4.9.5-re.
+- Javítva az a hiba, amely miatt a tanúsítványadatok néha nem jelentek meg.
+- Frissítve a fordítások.

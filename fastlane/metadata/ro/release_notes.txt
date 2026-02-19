@@ -1,4 +1,3 @@
-- Actualizare Tor la versiunea 0.4.8.22.
-- Actualizare Lyrebird la versiunea 0.8.1.
-- Adăugare suport experimental DNSTT.
-- Adăugare sursă suplimentară de punți.
+- Actualizare Tor la versiunea 0.4.9.5.
+- Remediere eroare care împiedica afișarea informațiilor despre certificat.
+- Actualizare traduceri.

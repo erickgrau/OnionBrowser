@@ -1,4 +1,3 @@
-- Tor bijgewerkt naar 0.4.8.22.
-- Lyrebird bijgewerkt naar 0.8.1.
-- Experimentele DNSTT-ondersteuning toegevoegd.
-- Extra bron van bruggen toegevoegd.
+- Tor bijgewerkt naar 0.4.9.5.
+- Bug verholpen waarbij certificaatinformatie soms niet werd weergegeven.
+- Vertalingen bijgewerkt.

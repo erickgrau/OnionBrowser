@@ -1,4 +1,3 @@
-- Tor 0.4.8.22 sürümüne güncellendi.
-- Lyrebird 0.8.1 sürümüne güncellendi.
-- Deneysel DNSTT desteği eklendi.
-- Ek köprü kaynağı eklendi.
+- Tor 0.4.9.5 sürümüne güncellendi.
+- Sertifika bilgilerinin bazen gösterilmemesi sorunu giderildi.
+- Çeviriler güncellendi.

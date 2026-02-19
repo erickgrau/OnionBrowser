@@ -1,4 +1,3 @@
-- Actualización de Tor a la versión 0.4.8.22.
-- Actualización de Lyrebird a la versión 0.8.1.
-- Se ha añadido compatibilidad experimental con DNSTT.
-- Se ha añadido una fuente adicional de puentes.
+- Actualización de Tor a la versión 0.4.9.5.
+- Se ha corregido un error por el que, en ocasiones, no se mostraba la información del certificado.
+- Se han actualizado las traducciones.

@@ -1,4 +1,3 @@
-- Oppdatert Tor til 0.4.8.22.
-- Oppdatert Lyrebird til 0.8.1.
-- Lagt til eksperimentell DNSTT-støtte.
-- Lagt til ekstra kilde for broer.
+- Oppdatert Tor til 0.4.9.5.
+- Rettet feil der sertifikatinformasjon noen ganger ikke ble vist.
+- Oppdaterte oversettelser.

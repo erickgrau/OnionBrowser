@@ -1,4 +1,3 @@
-- Memperbarui Tor ke versi 0.4.8.22.
-- Memperbarui Lyrebird ke versi 0.8.1.
-- Menambahkan dukungan DNSTT eksperimental.
-- Menambahkan sumber jembatan tambahan.
+- Memperbarui Tor ke versi 0.4.9.5.
+- Memperbaiki bug di mana informasi sertifikat terkadang tidak ditampilkan.
+- Memperbarui terjemahan.

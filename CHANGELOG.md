@@ -1,5 +1,11 @@
 #  Onion Browser Changelog
 
+## 3.3.4
+
+- Updated Tor to 0.4.9.5.
+- Fixed bug where certificate info sometimes wouldn't show.
+- Updated translations.
+
 ## 3.3.3
 - Updated Tor to 0.4.8.22.
 - Updated Lyrebird to 0.8.1.
