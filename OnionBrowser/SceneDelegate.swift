@@ -32,6 +32,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	private var firstRun = true
 
+	private var launchUrls: Set<UIOpenURLContext>?
+
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
 			   options connectionOptions: UIScene.ConnectionOptions)
@@ -42,6 +44,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		window = UIWindow(frame: scene.coordinateSpace.bounds)
 		window?.windowScene = scene
+
+		if !connectionOptions.urlContexts.isEmpty {
+			launchUrls = connectionOptions.urlContexts
+		}
 
 		if Settings.tabSecurity == .alwaysRemember
 			|| (
@@ -126,24 +132,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	}
 
 	func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-		for context in URLContexts {
-			if let urlc = URLComponents(url: context.url, resolvingAgainstBaseURL: true),
-			   urlc.scheme == "onionbrowser"
-			{
-				if urlc.path == "token-callback" {
-					let token = urlc.queryItems?.first(where: { $0.name == "token" })?.value
-
-					Settings.orbotApiToken = token?.isEmpty ?? true ? Settings.orbotAccessDenied : token
-				}
-				else if urlc.path == "main" {
-					// Ignore. We just returned from Orbot.
-					// Do nothing more than already done: show the app.
-				}
-			}
-			else {
-				browsingUi.addNewTab(context.url.withFixedScheme)
-			}
-		}
+		handle(urlContexts: URLContexts)
 	}
 
 	func sceneWillResignActive(_ scene: UIScene) {
@@ -203,6 +192,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			let outerCompletion = completion
 
 			completion = { [weak self] finished in
+				if let launchUrls = self?.launchUrls {
+					self?.handle(urlContexts: launchUrls)
+					self?.launchUrls = nil
+				}
+
 				self?.browsingUi.becomesVisible()
 
 				// Seems, we're running via Tor. Set up bookmarks, if not done, yet.
@@ -267,6 +261,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		else {
 			Log.debug(for: Self.self, "Unable to handle shortcut type '\(shortcut.type)'!")
 			completion?(false)
+		}
+	}
+
+	private func handle(urlContexts: Set<UIOpenURLContext>) {
+		for context in urlContexts {
+			if let urlc = URLComponents(url: context.url, resolvingAgainstBaseURL: true),
+			   urlc.scheme == "onionbrowser"
+			{
+				if urlc.path == "token-callback" {
+					let token = urlc.queryItems?.first(where: { $0.name == "token" })?.value
+
+					Settings.orbotApiToken = token?.isEmpty ?? true ? Settings.orbotAccessDenied : token
+				}
+				else if urlc.path == "main" {
+					// Ignore. We just returned from Orbot.
+					// Do nothing more than already done: show the app.
+				}
+			}
+			else {
+				browsingUi.addNewTab(context.url.withFixedScheme)
+			}
 		}
 	}
 }
