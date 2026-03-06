@@ -65,6 +65,15 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 		}
 	}
 
+	var countryCode: String? {
+		get {
+			Settings.countryCode
+		}
+		set {
+			Settings.countryCode = newValue
+		}
+	}
+
 	func save() {
 		TorManager.shared.updateConfig(Settings.transport)
 	}

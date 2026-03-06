@@ -6,14 +6,14 @@ PODS:
   - FavIcon (3.1.0)
   - ImageRow (4.1.0):
     - Eureka (~> 5.0)
-  - IPtProxy (5.1.1)
-  - IPtProxyUI (5.2.0):
+  - IPtProxy (5.2.0)
+  - IPtProxyUI (5.3.3):
     - Eureka (~> 5.3)
-    - IPtProxy (~> 5.1.1)
-    - IPtProxyUI/App (= 5.2.0)
-  - IPtProxyUI/App (5.2.0):
+    - IPtProxy (~> 5.2.0)
+    - IPtProxyUI/App (= 5.3.3)
+  - IPtProxyUI/App (5.3.3):
     - Eureka (~> 5.3)
-    - IPtProxy (~> 5.1.1)
+    - IPtProxy (~> 5.2.0)
     - ProgressHUD (~> 14.1)
   - MBProgressHUD (1.2.0)
   - OCMock (3.9.4)
@@ -33,7 +33,7 @@ DEPENDENCIES:
   - Eureka (~> 5.5)
   - FavIcon (from `https://github.com/tladesignz/FavIcon.git`)
   - ImageRow (from `https://github.com/erickyim/ImageRow.git`, commit `d38369b8894425a9225ccf1e267226833b1950f0`)
-  - IPtProxyUI (~> 5.2)
+  - IPtProxyUI (~> 5.3)
   - MBProgressHUD (~> 1.2)
   - OCMock
   - OrbotKit (~> 1.1)
@@ -77,8 +77,8 @@ SPEC CHECKSUMS:
   Eureka: 1c18c7fcd8f772cc2ca42d6be36292dffa77eecb
   FavIcon: 21651b47d8f6b33517973859f85e2cb6f9fcfaee
   ImageRow: b438fec4f4b68b367c5161bbb6bc372baaa49cc4
-  IPtProxy: 01482f94b0bef51e310165601fd07a951c66a2bf
-  IPtProxyUI: 2ad57b4dbdcd0f71b2904ff8c22f9e7a40d1ee2f
+  IPtProxy: b034dec9a4288d111544b4c86c5b2e726e20cff6
+  IPtProxyUI: aadd81e5950689e32d5d3eb931aaaa8654272aec
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   OCMock: 589f2c84dacb1f5aaf6e4cec1f292551fe748e74
   OrbotKit: e932cc741c18e9a39242ae1c61eea6d54e54bd87
@@ -88,6 +88,6 @@ SPEC CHECKSUMS:
   Tor: fb12b6bcfa1309d3e40e98908eabd28e5ff4bb61
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
 
-PODFILE CHECKSUM: 7735be5985dedf0f5b91847e6d09088e043e4f0f
+PODFILE CHECKSUM: 8cf3ae53de9d9613c710c2a0a8d54ab8e115e2f7
 
 COCOAPODS: 1.16.2
