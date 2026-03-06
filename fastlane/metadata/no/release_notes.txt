@@ -1,3 +1,2 @@
-- Oppdatert Tor til 0.4.9.5.
-- Rettet feil der sertifikatinformasjon noen ganger ikke ble vist.
-- Oppdaterte oversettelser.
+- Forbedret DNSTT-støtte for land med utfordringer.
+- Løst feil der URL-kall fra en annen app ikke ble gjenkjent ved kaldstart.

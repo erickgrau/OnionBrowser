@@ -1,3 +1,2 @@
-- Tor päivitetty versioon 0.4.9.5.
-- Korjattu virhe, jonka vuoksi varmennetiedot eivät joskus näkyneet.
-- Käännökset päivitetty.
+- Parannettu DNSTT-tuki haasteellisille maille.
+- Korjattu virhe, jossa toisen sovelluksen URL-kutsuja ei tunnistettu kylmäkäynnistyksessä.

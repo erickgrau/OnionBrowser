@@ -1,3 +1,2 @@
-- Memperbarui Tor ke versi 0.4.9.5.
-- Memperbaiki bug di mana informasi sertifikat terkadang tidak ditampilkan.
-- Memperbarui terjemahan.
+- Peningkatan dukungan DNSTT untuk negara-negara yang menghadapi tantangan.
+- Perbaikan bug di mana panggilan URL dari aplikasi lain tidak dikenali saat startup dingin.

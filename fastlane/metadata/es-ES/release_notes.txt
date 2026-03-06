@@ -1,3 +1,2 @@
-- Actualización de Tor a la versión 0.4.9.5.
-- Se ha corregido un error por el que, en ocasiones, no se mostraba la información del certificado.
-- Se han actualizado las traducciones.
+- Se ha mejorado la compatibilidad con DNSTT para países con dificultades.
+- Se ha corregido un error por el que no se reconocía la llamada URL desde otra aplicación en el arranque en frío.

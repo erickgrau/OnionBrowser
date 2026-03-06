@@ -1,3 +1,2 @@
-- Actualizare Tor la versiunea 0.4.9.5.
-- Remediere eroare care împiedica afișarea informațiilor despre certificat.
-- Actualizare traduceri.
+- Îmbunătățirea suportului DNSTT pentru țările cu dificultăți.
+- Remedierea erorii prin care apelul URL din altă aplicație nu era recunoscut la pornirea la rece.

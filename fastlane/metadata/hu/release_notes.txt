@@ -1,3 +1,2 @@
-- A Tor frissítése 0.4.9.5-re.
-- Javítva az a hiba, amely miatt a tanúsítványadatok néha nem jelentek meg.
-- Frissítve a fordítások.
+- Javított DNSTT támogatás a problémás országok számára.
+- Javítva az a hiba, amely miatt a hidegindításkor nem ismerte fel a másik alkalmazásból érkező URL-hívást.

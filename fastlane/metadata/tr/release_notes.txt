@@ -1,3 +1,2 @@
-- Tor 0.4.9.5 sürümüne güncellendi.
-- Sertifika bilgilerinin bazen gösterilmemesi sorunu giderildi.
-- Çeviriler güncellendi.
+- Zor durumdaki ülkeler için DNSTT desteği iyileştirildi.
+- Soğuk başlatmada başka bir uygulamadan gelen URL çağrısının tanınmaması sorunu düzeltildi.

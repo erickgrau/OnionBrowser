@@ -1,3 +1,2 @@
-- Cập nhật Tor lên phiên bản 0.4.9.5.
-- Sửa lỗi khiến thông tin chứng chỉ đôi khi không hiển thị.
-- Cập nhật bản dịch.
+- Cải thiện hỗ trợ DNSTT cho các quốc gia gặp khó khăn.
+- Sửa lỗi khiến yêu cầu URL từ ứng dụng khác không được nhận diện khi khởi động lạnh.

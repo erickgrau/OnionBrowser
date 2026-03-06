@@ -1,3 +1,2 @@
-- Ažuriran Tor na verziju 0.4.9.5.
-- Ispravljen bug zbog kojeg se ponekad nisu prikazivale informacije o certifikatu.
-- Ažurirani prijevodi.
+- Poboljšana DNSTT podrška za zemlje s poteškoćama.
+- Ispravljena greška pri kojoj se URL poziv iz druge aplikacije nije prepoznavao pri hladnom pokretanju.

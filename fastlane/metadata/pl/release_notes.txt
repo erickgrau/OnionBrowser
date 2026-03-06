@@ -1,3 +1,2 @@
-- Zaktualizowano Tor do wersji 0.4.9.5.
-- Naprawiono błąd, który powodował, że informacje o certyfikacie czasami nie były wyświetlane.
-- Zaktualizowano tłumaczenia.
+- Ulepszona obsługa DNSTT dla krajów objętych ograniczeniami.
+- Naprawiono błąd, w wyniku którego wywołanie adresu URL z innej aplikacji nie było rozpoznawane podczas zimnego startu.

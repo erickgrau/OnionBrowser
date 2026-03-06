@@ -1,3 +1,2 @@
-- Tor bijgewerkt naar 0.4.9.5.
-- Bug verholpen waarbij certificaatinformatie soms niet werd weergegeven.
-- Vertalingen bijgewerkt.
+- Verbeterde DNSTT-ondersteuning voor landen met problemen.
+- Bug verholpen waarbij URL-oproepen vanuit andere apps niet werden herkend bij een koude start.
