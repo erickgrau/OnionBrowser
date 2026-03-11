@@ -1,2 +1,2 @@
-- Javított DNSTT támogatás a problémás országok számára.
-- Javítva az a hiba, amely miatt a hidegindításkor nem ismerte fel a másik alkalmazásból érkező URL-hívást.
+- Javított DNSTT leállítás.
+- Frissítés Snowflake 2.12.1-re.

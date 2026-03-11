@@ -1,5 +1,9 @@
 #  Onion Browser Changelog
 
+## 3.3.6
+- Improved DNSTT shutdown.
+- Updated to Snowflake 2.12.1.
+
 ## 3.3.5
 - Improved DNSTT support for challenged countries.
 - Fixed bug where URL call from another app wasn't recognized on cold start.

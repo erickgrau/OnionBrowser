@@ -1,2 +1,2 @@
-- Verbesserte DNSTT-Unterstützung für Länder mit besonderen Herausforderungen.
-- Fehler behoben, bei dem URL-Aufrufe aus anderen Apps beim Kaltstart nicht erkannt wurden.
+- Verbessertes Herunterfahren von DNSTT.
+- Aktualisierung auf Snowflake 2.12.1.

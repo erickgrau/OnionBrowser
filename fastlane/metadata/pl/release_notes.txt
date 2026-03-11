@@ -1,2 +1,2 @@
-- Ulepszona obsługa DNSTT dla krajów objętych ograniczeniami.
-- Naprawiono błąd, w wyniku którego wywołanie adresu URL z innej aplikacji nie było rozpoznawane podczas zimnego startu.
+- Ulepszone wyłączanie DNSTT.
+- Aktualizacja do Snowflake 2.12.1.

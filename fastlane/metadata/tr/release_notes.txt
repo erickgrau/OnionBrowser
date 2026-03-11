@@ -1,2 +1,2 @@
-- Zor durumdaki ülkeler için DNSTT desteği iyileştirildi.
-- Soğuk başlatmada başka bir uygulamadan gelen URL çağrısının tanınmaması sorunu düzeltildi.
+- DNSTT kapatma işlemi iyileştirildi.
+- Snowflake 2.12.1 sürümüne güncellendi.

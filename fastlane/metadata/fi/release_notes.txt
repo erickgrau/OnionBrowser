@@ -1,2 +1,2 @@
-- Parannettu DNSTT-tuki haasteellisille maille.
-- Korjattu virhe, jossa toisen sovelluksen URL-kutsuja ei tunnistettu kylmäkäynnistyksessä.
+- Parannettu DNSTT-sammutus.
+- Päivitetty Snowflake 2.12.1:een.

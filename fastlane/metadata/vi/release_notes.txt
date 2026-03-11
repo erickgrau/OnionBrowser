@@ -1,2 +1,2 @@
-- Cải thiện hỗ trợ DNSTT cho các quốc gia gặp khó khăn.
-- Sửa lỗi khiến yêu cầu URL từ ứng dụng khác không được nhận diện khi khởi động lạnh.
+- Cải thiện quá trình tắt máy DNSTT.
+- Cập nhật lên Snowflake 2.12.1.

@@ -1,2 +1,2 @@
-- Poboljšana DNSTT podrška za zemlje s poteškoćama.
-- Ispravljena greška pri kojoj se URL poziv iz druge aplikacije nije prepoznavao pri hladnom pokretanju.
+- Poboljšan DNSTT zaustavak.
+- Ažurirano na Snowflake 2.12.1.

@@ -1,2 +1,2 @@
-- Improved DNSTT support for challenged countries.
-- Fixed bug where URL call from another app wasn't recognized on cold start.
+- Improved DNSTT shutdown.
+- Updated to Snowflake 2.12.1.

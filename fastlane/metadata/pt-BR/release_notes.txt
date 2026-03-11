@@ -1,2 +1,2 @@
-- Melhoria no suporte ao DNSTT para países com dificuldades.
-- Corrigido o bug em que a chamada de URL de outro aplicativo não era reconhecida na inicialização a frio.
+- Melhoria no encerramento do DNSTT.
+- Atualização para o Snowflake 2.12.1.
