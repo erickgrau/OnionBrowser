@@ -1,2 +1,3 @@
-- Javított DNSTT leállítás.
-- Frissítés Snowflake 2.12.1-re.
+- A Tor szoftvert 0.4.9.5-ös verzióra frissítettük.
+- A Snowflake szoftvert 2.13.1-es verzióra frissítettük.
+- A fordításokat frissítettük.

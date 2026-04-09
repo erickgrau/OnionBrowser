@@ -1,2 +1,3 @@
-- Millora del tancament de DNSTT.
-- Actualització a Snowflake 2.12.1.
+- Actualitzat Tor a la versió 0.4.9.5.
+- Actualitzat a Snowflake 2.13.1.
+- Actualitzades les traduccions.

@@ -1,2 +1,3 @@
-- Poboljšan DNSTT zaustavak.
-- Ažurirano na Snowflake 2.12.1.
+- Ažuriran Tor na verziju 0.4.9.5.
+- Ažuriran Snowflake na verziju 2.13.1.
+- Ažurirani prijevodi.

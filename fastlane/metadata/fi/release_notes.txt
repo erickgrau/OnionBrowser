@@ -1,2 +1,3 @@
-- Parannettu DNSTT-sammutus.
-- Päivitetty Snowflake 2.12.1:een.
+- Tor päivitetty versioon 0.4.9.5.
+- Päivitetty versioon Snowflake 2.13.1.
+- Käännökset päivitetty.

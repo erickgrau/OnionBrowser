@@ -1,5 +1,11 @@
 #  Onion Browser Changelog
 
+## 3.3.7
+
+- Updated Tor to 0.4.9.5.
+- Updated to Snowflake 2.13.1.
+- Updated translations.
+
 ## 3.3.6
 - Improved DNSTT shutdown.
 - Updated to Snowflake 2.12.1.

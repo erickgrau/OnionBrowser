@@ -1,2 +1,3 @@
-- Amélioration de l'arrêt DNSTT.
-- Mise à jour vers Snowflake 2.12.1.
+- Mise à jour de Tor vers la version 0.4.9.5.
+- Mise à jour vers Snowflake 2.13.1.
+- Mise à jour des traductions.

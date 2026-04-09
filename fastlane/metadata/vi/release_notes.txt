@@ -1,2 +1,3 @@
-- Cải thiện quá trình tắt máy DNSTT.
-- Cập nhật lên Snowflake 2.12.1.
+- Đã cập nhật Tor lên phiên bản 0.4.9.5.
+- Đã cập nhật lên Snowflake 2.13.1.
+- Đã cập nhật bản dịch.

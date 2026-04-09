@@ -1,2 +1,3 @@
-- Peningkatan proses shutdown DNSTT.
-- Diperbarui ke Snowflake 2.12.1.
+- Tor telah diperbarui ke versi 0.4.9.5.
+- Telah diperbarui ke Snowflake 2.13.1.
+- Terjemahan telah diperbarui.

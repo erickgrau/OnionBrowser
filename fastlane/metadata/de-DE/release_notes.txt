@@ -1,2 +1,3 @@
-- Verbessertes Herunterfahren von DNSTT.
-- Aktualisierung auf Snowflake 2.12.1.
+- Tor auf Version 0.4.9.5 aktualisiert.
+- Auf Snowflake 2.13.1 aktualisiert.
+- Übersetzungen aktualisiert.

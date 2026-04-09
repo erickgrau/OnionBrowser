@@ -1,2 +1,3 @@
-- DNSTT kapatma işlemi iyileştirildi.
-- Snowflake 2.12.1 sürümüne güncellendi.
+- Tor 0.4.9.5 sürümüne güncellendi.
+- Snowflake 2.13.1 sürümüne güncellendi.
+- Çeviriler güncellendi.

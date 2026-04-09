@@ -1,2 +1,3 @@
-- Vylepšené vypínání DNSTT.
-- Aktualizováno na Snowflake 2.12.1.
+- Aktualizován Tor na verzi 0.4.9.5.
+- Aktualizován Snowflake na verzi 2.13.1.
+- Aktualizovány překlady.

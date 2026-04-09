@@ -1,2 +1,3 @@
-- Ulepszone wyłączanie DNSTT.
-- Aktualizacja do Snowflake 2.12.1.
+- Zaktualizowano program Tor do wersji 0.4.9.5.
+- Zaktualizowano program Snowflake do wersji 2.13.1.
+- Zaktualizowano tłumaczenia.
