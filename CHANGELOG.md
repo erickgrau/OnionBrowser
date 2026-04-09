@@ -2,7 +2,7 @@
 
 ## 3.3.7
 
-- Updated Tor to 0.4.9.5.
+- Updated Tor to 0.4.9.6.
 - Updated to Snowflake 2.13.1.
 - Updated translations.
 

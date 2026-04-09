@@ -1,3 +1,3 @@
-- Tor bijgewerkt naar versie 0.4.9.5.
+- Tor bijgewerkt naar versie 0.4.9.6.
 - Bijgewerkt naar Snowflake 2.13.1.
 - Vertalingen bijgewerkt.
