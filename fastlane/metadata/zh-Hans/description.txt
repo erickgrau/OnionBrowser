@@ -1,24 +1,24 @@
-作为一款真正的使用 Tor 网络的 iOS 免费开源浏览器，Onion 浏览器可帮助您绕过审查，以更加安全隐私的方式访问互联网。
+Onion Browser 是适用于 iOS 的自由开源 Tor 网页浏览器。Onion Browser 能帮助您更安全、更私密地访问互联网，且无需额外费用。
 
-“Onion 浏览器：iOS 上最为物美价廉的 Tor 相关产品” - 《The Daily Dot》，2015年10月14日。
+“目前 iOS 上最好的 Tor 相关应用是 Onion Browser” - The Daily Dot，2015 年 10 月 14 日。
 
 媒体报导：纽约时报、卫报、Salon、TechCrunch、Gizmodo、Boing Boing、Lifehacker、Macworld、Daily Dot 等等。
 
 功能：
 • 使用 Tor 浏览互联网。
-- 保护你的隐私，免受站点追踪的侵扰
-- 在不安全的无线网络和 ISP 下保护你的流量安全
-- 访问只能使用 Tor 的 .onion 站点
+- 保护您的隐私，免受站点追踪的侵扰
+- 在不安全的无线网络和 ISP 下保护您的流量安全
+- 访问仅通过 Tor 才能访问的 .onion 网站。
 
-•打击网络追踪：Onion 浏览器将依据您的偏好屏蔽脚本并自动清除 cookie 和标签页。
+• 阻止网络追踪：根据您的偏好屏蔽脚本并自动清除 Cookie 和标签页。
 
 • 还有更多功能有效保护您的隐私！
 
 免责声明：
-- 访问要比正常网络浏览器和 VPN 要慢，因为你的流量会被 Tor 网络加密和中继。
+- 访问要比普通网页浏览器和 VPN 要慢，因为您的流量会被 Tor 网络加密和中继。
 
-- Onion Browser 在受限的网络连接中可能无法使用。如果无法连接，请设置为使用网桥，并退出重进应用。
+- Onion Browser 可能无法在网络限制较严格的网络环境中正常运行。如果应用无法连接，请尝试使用网桥（或其他类型的网桥），强制退出，然后重启应用。
 
-- 使用 Onion Browser 时责任自负。除了移动设备之外的还有别的隐私数据。
+- 使用 Onion Browser 时需自行承担风险；请记住，敏感数据不应始终存储在移动设备上。
 
-** Onion 浏览器是免费开源软件。 您可以访问onionbrowser.com，以阅读更多关于 Onion 浏览器和如何支持 iOS 的 Tor 开发 **
+** Onion Browser 是自由开源软件。您可以访问 onionbrowser.com 了解更多关于 Onion Browser 的信息，以及如何支持 Tor 在 iOS 上的开发 **

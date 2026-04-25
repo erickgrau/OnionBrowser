@@ -1,17 +1,17 @@
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@可依赖于%2$@安全连接至Tor或运行自身的内置Tor。内置Tor存在安全问题。";
+"%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@ 既可以依赖 %2$@ 来建立与 Tor 的安全连接，也可以运行其内置的 Tor。但内置的 Tor 存在安全问题。";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ if you have connectivity issues with %2$@" = "%1$@ if you have connectivity issues with %2$@";
+"%1$@ if you have connectivity issues with %2$@" = "%1$@ 如果您在使用 %2$@ 时遇到连接问题";
 
 /* Placeholder 1 is bullet point, Placeholder 2 is 'Onion Browser' */
-"%1$@ if you want to use %2$@ over another VPN" = "%1$@如果你想通过另一个VPN使用%2$@";
+"%1$@ if you want to use %2$@ over another VPN" = "%1$@ 如果您想通过其他 VPN 使用 %2$@";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
 "%1$@ now relies on %2$@ for a secure connection to Tor." = "%1$@ 现在依赖 %2$@ 来建立与 Tor 的安全连接。";
 
 /* 1. placeholder is 'Onion Browser', 2. is translated 'Lockdown Mode', 3. is two line breaks, 4. is translated 'Default Security', 5. is translated 'Block Insecure HTTP Requests'. */
-"%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature." = "%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature.";
+"%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature." = "%1$@ 现已选择性地支持 iOS 的 %2$@！（适用于 iOS 16 及更高版本。）%3$@最安全和较安全安全级别默认启用此功能。但您的设置不会自动更改。%3$@请访问“%4$@”页面更新您的默认安全级别！%3$@附注：您可能还想了解一下新增的“%5$@”功能。";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
 "%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue." = "%1$@ 依赖 %2$@ 来建立与 Tor 的安全连接。请安装 %2$@应用程序以继续。";
@@ -26,46 +26,46 @@
 "%@ a little more speed" = "%@ 速度更快一点";
 
 /* Placeholder is 'Orbot' */
-"%@ alone provides a VPN proxy. It will hide apps from network monitoring and give you access when they are blocked." = "%@ 单独提供了 VPN 代理。它能在网络监控下隐藏应用程序，并且让您在网络被屏蔽时仍能访问。";
+"%@ alone provides a VPN proxy. It will hide apps from network monitoring and give you access when they are blocked." = "%@ 单独提供 VPN 代理。它能隐藏应用以规避网络监控，并在应用被屏蔽时获取访问权限。";
 
 /* Placeholder is bullet point */
-"%@ Get updates on the status of the connection." = "%@ 更新连接状态的信息。";
+"%@ Get updates on the status of the connection." = "%@ 获取连接状态更新。";
 
 /* Placeholder is 'Orbot' */
 "%@ installed! One more step." = "%@ 安装完成！还差最后一步。";
 
 /* Placeholder is bullet point */
-"%@ more protection from IP leaks" = "%@ 更能保护您免于 IP 泄露";
+"%@ more protection from IP leaks" = "%@ 更多保护免受 IP 泄露";
 
 /* Placeholder is bullet point */
 "%@ new standards" = "%@ 新的标准";
 
 /* Placeholder is 'Orbot' */
-"%@ or built-in Tor" = "%@或内置Tor";
+"%@ or built-in Tor" = "%@ 或内置 Tor";
 
 /* Placeholder is bullet point */
-"%@ video and audio streaming" = "%@ 视频及音频串流";
+"%@ video and audio streaming" = "%@ 视频和音频流";
 
 /* Placeholder is bullet point */
-"%@ video and audio streams don't go through Tor and might get blocked" = "%@视频和音频串流不经过Tor且可能被阻挡";
+"%@ video and audio streams don't go through Tor and might get blocked" = "%@ 视频和音频流不经过 Tor，可能会被屏蔽";
 
 /* Placeholder is bullet point */
-"%@ websites can uncover your real IP address using JavaScript" = "%@ websites can uncover your real IP address using JavaScript";
+"%@ websites can uncover your real IP address using JavaScript" = "%@ 某些网站可以使用 JavaScript 来获取您的真实 IP 地址";
 
 /* No comment provided by engineer. */
 "(not recommended)" = "（不推荐）";
 
 /* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH1__" = "洋葱浏览器是一个免费软件，但开发和维护需要时间和精力。";
+"__DONATE_EXPLANATION_PARAGRAPH1__" = "Onion Browser 是免费应用，但开发和维护需要时间和资源。";
 
 /* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH2__" = "你可以在下方通过应用内购买，捐赠一小笔钱来支持资助应用。这是一次性、无周期的汇款，但你可以在任何时候再次付款。应用内购买的任何信息都不会被洋葱浏览器的开发者收集或储存。";
+"__DONATE_EXPLANATION_PARAGRAPH2__" = "您可以在下方通过应用内购买，捐赠一小笔钱来支持我们。这是一次性交易，不会自动续费，但您可以在任何时候再次捐赠。Onion Browser 开发者不会收集或存储任何关于您应用内购买的任何信息。";
 
 /* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH3__" = "你可以在“全局设置”页面的“关于”部分找到其他资助方式（包括 Patreon、PayPal、比特币和 Zcash）。";
+"__DONATE_EXPLANATION_PARAGRAPH3__" = "您可以在“设置”页面的“关于”部分找到其他捐赠方式（包括 Patreon、PayPal、比特币和 Zcash）。";
 
 /* DonationViewController */
-"__DONATE_THANKS__" = "谢谢您！每一块钱都对我们很有帮助。你资助的 %@ 使得洋葱浏览器和其他让 Tor 能够更便捷地整合到 iOS 应用的工具能够继续开发。";
+"__DONATE_THANKS__" = "谢谢！您的每一份支持都对我们至关重要。您捐赠的 %@ 将有助于确保 Onion Browser 以及使 Tor 更易于集成到其他 iOS 应用中的工具的持续开发。";
 
 /* SettingsViewController */
 "About" = "关于";
@@ -77,13 +77,13 @@
 "Add" = "添加";
 
 /* AddSearchEngineViewController */
-"Add \"%@\" as the search term placeholder!" = "用“%@”代替搜索词！";
+"Add \"%@\" as the search term placeholder!" = "添加“%@”作为搜索词占位符！";
 
 /* BookmarkViewController */
 "Add Bookmark" = "添加书签";
 
 /* Scene title */
-"Add Folder" = "Add Folder";
+"Add Folder" = "添加文件夹";
 
 /* AddSearchEngineViewController */
 "Add Search Engine" = "添加搜索引擎";
@@ -95,13 +95,13 @@
 "Add to %@" = "添加到 %@";
 
 /* Placeholder is 'Onion Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "此外，所有在 %@ 中存在但在服务器上不存在的书签也会被创建。";
 
 /* BookmarkViewController */
 "Address" = "地址";
 
 /* VoiceOver */
-"Address and search bar" = "Address and search bar";
+"Address and search bar" = "地址和搜索栏";
 
 /* RuleEditorController */
 "All rules" = "所有规则";
@@ -116,40 +116,40 @@
 "Allow Access to Orientation and Motion Data" = "允许访问设备方向及动作数据";
 
 /* SecurityViewController */
-"Allow hosts to permanently store cookies and local storage databases." = "允许站点永久存储 cookie 和本地存储数据库";
+"Allow hosts to permanently store cookies and local storage databases." = "允许站点永久存储 Cookie 和本地存储数据库。";
 
 /* Option title */
 "Allow JavaScript" = "允许 JavaScript";
 
 /* SecurityViewController */
-"Allow Persistent Cookies" = "允许持久性 cookie";
+"Allow Persistent Cookies" = "允许持久性 Cookie";
 
 /* DonationViewController */
-"Are you sure you want to send a %@ tip?" = "请确认你想捐助 %@ 吗？";
+"Are you sure you want to send a %@ tip?" = "确定要捐赠 %@ 吗？";
 
 /* Placeholder is 'Orbot' */
-"Ask %@ for permission to access it." = "请向 %@ 申请访问权限。";
+"Ask %@ for permission to access it." = "请向 %@ 请求访问权限。";
 
 /* No comment provided by engineer. */
-"Ask again to continue." = "请再次申请以继续。";
+"Ask again to continue." = "请再次请求继续。";
 
 /* AppDelegate */
-"Authentication Required" = "需验证";
+"Authentication Required" = "需要身份验证";
 
 /* SettingsViewController */
 "Auto-Complete Search Results" = "自动完成搜索结果";
 
 /* AddSearchEngineViewController */
-"Autocomplete URL" = "自动完成 URL";
+"Autocomplete URL" = "自动完成网址";
 
 /* VoiceOver */
-"Back" = "Back";
+"Back" = "后退";
 
 /* CertificateViewController */
-"Begins On" = "开始时间";
+"Begins On" = "开始于";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+"Block Insecure HTTP Requests" = "阻止不安全的 HTTP 请求";
 
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "已阻拦第三方站点";
@@ -158,7 +158,7 @@
 "Bookmarks" = "书签";
 
 /* No comment provided by engineer. */
-"Both are free to use. Free of tracking. Code is open source." = "两者都完全自由且免费使用。无需担心被追踪。源代码也是开放的。";
+"Both are free to use. Free of tracking. Code is open source." = "两者均为自由软件，可免费使用，不追踪用户，代码开源。";
 
 /* CircuitViewController */
 "Bridge Configuration" = "网桥配置";
@@ -167,7 +167,7 @@
 "Bronze" = "不安全";
 
 /* SecurityViewController */
-"By editing this setting, you have created a custom security setting." = "修改此设置，意味着你自定义了安全设置。";
+"By editing this setting, you have created a custom security setting." = "通过编辑此设置，您已创建了一个自定义安全设置。";
 
 /* AlertHelper */
 "Cancel" = "取消";
@@ -176,13 +176,13 @@
 "Certificate Information" = "证书信息";
 
 /* SettingsViewController */
-"Changing this option requires restarting the app." = "更改该选项需重启应用";
+"Changing this option requires restarting the app." = "更改此选项需要重启应用。";
 
 /* SettingsViewController */
-"Choose how long app remembers open tabs." = "选择应用记住打开的标签页多久";
+"Choose how long app remembers open tabs." = "选择应用记住已打开标签页的时间。";
 
 /* No comment provided by engineer. */
-"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
+"Choose your preferred blocklist:" = "选择您的首选屏蔽列表：";
 
 /* AppDelegate */
 "Close Tab" = "关闭标签页";
@@ -191,28 +191,28 @@
 "Configure Bridges" = "配置网桥";
 
 /* DonationViewController */
-"Confirm %@" = "捐助 %@";
+"Confirm %@" = "捐赠 %@";
 
 /* DonationViewController */
-"Confirm Purchase" = "确认购买";
+"Confirm Purchase" = "确认捐赠";
 
 /* CircuitViewController */
-"Connect to a website to see your circuit." = "连接到一个网页以查看您的链路。";
+"Connect to a website to see your circuit." = "连接到网站查看您的线路。";
 
 /* SyncViewController */
-"Connection to Nextcloud Server Failed" = "与 Nextcloud 服务器连接失败";
+"Connection to Nextcloud Server Failed" = "连接到 Nextcloud 服务器失败";
 
 /* No comment provided by engineer. */
-"Cookies" = "Cookies";
+"Cookies" = "Cookie";
 
 /* SettingsViewController, Storage1ViewController, Storage2ViewController */
-"Cookies and Local Storage" = "cookie 和本地存储";
+"Cookies and Local Storage" = "Cookie 和本地存储";
 
 /* No comment provided by engineer. */
-"Couldn't understand server response." = "无法解析服务器回应。";
+"Couldn't understand server response." = "无法解析服务器响应。";
 
 /* AppDelegate */
-"Create New Tab" = "新建标签页";
+"Create New Tab" = "创建新标签页";
 
 /* SecurityPresetsRow; a security level */
 "Custom" = "自定义";
@@ -221,7 +221,7 @@
 "Custom Site Security" = "自定义站点安全";
 
 /* SecurityViewController */
-"Custom user-agent string, or blank to use the default." = "自定义用户代理字符串，空白时使用默认";
+"Custom user-agent string, or blank to use the default." = "自定义用户代理字符串，留空则使用默认值。";
 
 /* SecurityPopUpViewController */
 "Customize" = "自定义";
@@ -230,7 +230,7 @@
 "Default Security" = "默认安全";
 
 /* CustomSitesViewController */
-"Define custom settings for specific sites." = "定义指定站点的自定义设置。";
+"Define custom settings for specific sites." = "为特定站点定义自定义设置。";
 
 /* SearchEnginesViewController */
 "Delete" = "删除";
@@ -239,19 +239,19 @@
 "Disable" = "禁用";
 
 /* SettingsViewController */
-"Disable Bookmarks on Start Page" = "停用主页的书签列表";
+"Disable Bookmarks on Start Page" = "禁用首页上的书签";
 
 /* RuleEditorController */
 "Disabled: %@" = "已禁用：%@";
 
 /* No comment provided by engineer. */
-"Disk Cache" = "硬盘缓存";
+"Disk Cache" = "磁盘缓存";
 
 /* DonationViewController */
-"Donate" = "捐助";
+"Donate" = "捐赠";
 
 /* Bookmark, placeholder is app name "Onion Browser" */
-"Donate to %@" = "向 %@ 捐款";
+"Donate to %@" = "向 %@ 捐赠";
 
 /* BrowsingViewController */
 "Done" = "完成";
@@ -269,7 +269,7 @@
 "Edit Bookmark" = "编辑书签";
 
 /* Scene title */
-"Edit Folder" = "Edit Folder";
+"Edit Folder" = "编辑文件夹";
 
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "编辑搜索引擎";
@@ -281,10 +281,10 @@
 "Error" = "错误";
 
 /* CertificateViewController */
-"Expires After" = "有效期剩余";
+"Expires After" = "截止于";
 
 /* BookmarksViewController */
-"Export Bookmarks" = "Export Bookmarks";
+"Export Bookmarks" = "导出书签";
 
 /* CertificateViewController */
 "Extended Validation: Organization" = "额外验证：组织";
@@ -293,10 +293,10 @@
 "Fetch Cache" = "获取缓存";
 
 /* No comment provided by engineer. */
-"Find in Page" = "在网页中搜索";
+"Find in Page" = "在页面中查找";
 
 /* AppDelegate */
-"Focus URL Field" = "指向 URL 字段";
+"Focus URL Field" = "聚焦网址字段";
 
 /* SecurityViewController */
 "Follow Onion-Location Header Automatically" = "自动跳转到 Onion-Location 标头";
@@ -308,7 +308,7 @@
 "Forget in Background" = "后台活动时清除";
 
 /* VoiceOver */
-"Forward" = "Forward";
+"Forward" = "前进";
 
 /* SettingsViewController */
 "Fund Development" = "资助开发";
@@ -332,10 +332,10 @@
 "Guard" = "守卫";
 
 /* SecurityViewController */
-"Handle tapping on links in a non-standard way to avoid possibly opening external applications." = "通过非标准方式处理链接点击，避免打开外部应用的潜在可能";
+"Handle tapping on links in a non-standard way to avoid possibly opening external applications." = "以非标准方式处理链接点击，以避免可能打开外部应用程序。";
 
 /* SettingsViewController */
-"Hide App Content when in Background" = "在后台时隐藏应用程序内容";
+"Hide App Content when in Background" = "在后台运行时隐藏应用内容";
 
 /* HistoryViewController */
 "History" = "历史";
@@ -344,7 +344,7 @@
 "Host" = "站点";
 
 /* Placeholder is 'Onion Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "如果您进行同步，所有书签都将从服务器读取并添加到/更新到 %@ 中。";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "忽略来自该站点的错误";
@@ -353,7 +353,7 @@
 "Ignore TLS Errors" = "忽略 TLS 错误";
 
 /* BookmarksViewController */
-"Import Bookmarks" = "Import Bookmarks";
+"Import Bookmarks" = "导入书签";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "IndexedDB 数据库";
@@ -374,28 +374,28 @@
 "Learn more about %@" = "了解更多 %@ 的信息";
 
 /* DonationViewController */
-"Loading in-app purchase data…" = "正在加载应用内购买数据……";
+"Loading in-app purchase data…" = "正在加载应用内购买数据…";
 
 /* Storage2ViewController */
-"Local Storage" = "本地储存";
+"Local Storage" = "本地存储";
 
 /* SettingsViewController */
-"Lock App with Device Passcode" = "用设备口令锁定应用";
+"Lock App with Device Passcode" = "使用设备密码锁定应用";
 
 /* SettingsViewController */
-"Lock App with Face ID or Device Passcode" = "用 Face ID 或设备密码将应用锁上";
+"Lock App with Face ID or Device Passcode" = "使用面容 ID 或设备密码锁定应用";
 
 /* SettingsViewController */
-"Lock App with Touch ID or Device Passcode" = "用 Face ID 或设备密码将应用锁上";
+"Lock App with Touch ID or Device Passcode" = "使用触控 ID 或设备密码锁定应用";
 
 /* Option title */
-"Lockdown Mode" = "Lockdown Mode";
+"Lockdown Mode" = "锁定模式";
 
 /* AppDelegate */
 "Log In" = "登录";
 
 /* No comment provided by engineer. */
-"Memory Cache" = "内存中的缓存";
+"Memory Cache" = "内存缓存";
 
 /* SettingsViewController */
 "Miscellaneous" = "其他";
@@ -410,19 +410,19 @@
 "Name" = "名称";
 
 /* CircuSitsViewController */
-"New Circuit for this Site" = "为此站点启用新的链路";
+"New Circuit for this Site" = "为此站点新建线路";
 
 /* No comment provided by engineer. */
-"New Security Features" = "New Security Features";
+"New Security Features" = "新的安全功能";
 
 /* No comment provided by engineer. */
 "Next" = "下一步";
 
 /* No comment provided by engineer. */
-"No success, but \"%@\" instead." = "服务器返回%@而不是成功执行。";
+"No success, but \"%@\" instead." = "服务器返回“%@”而不是成功执行。";
 
 /* No comment provided by engineer. */
-"No valid HTTP response." = "无有效 HTTP 响应。";
+"No valid HTTP response." = "没有有效的 HTTP 响应。";
 
 /* No comment provided by engineer. */
 "Offline Web Application Cache" = "离线网页应用程序缓存";
@@ -434,13 +434,13 @@
 "Open in a New Tab" = "在新标签页中打开";
 
 /* Tab+Gestures */
-"Open in Background Tab" = "在背景标签页中打开";
+"Open in Background Tab" = "在后台标签页中打开";
 
 /* No comment provided by engineer. */
-"Open in Default Browser" = "用默认浏览器打开";
+"Open in Default Browser" = "在默认浏览器中打开";
 
 /* SecurityViewController */
-"Other" = "其它";
+"Other" = "其他";
 
 /* AppDelegate, SyncViewController */
 "Password" = "密码";
@@ -449,10 +449,10 @@
 "Payment Sent" = "已发送款项";
 
 /* CertificateViewController */
-"Period of Validity" = "有效时长";
+"Period of Validity" = "有效期";
 
 /* SecurityViewController */
-"Popular User Agents" = "常用的浏览器标头";
+"Popular User Agents" = "常见的用户代理";
 
 /* SecurityViewController */
 "Privacy" = "隐私";
@@ -470,16 +470,16 @@
 "Rate on App Store" = "在应用商店评价";
 
 /* No comment provided by engineer. */
-"Reasons to use the built-in Tor (iOS 17 only)" = "使用内置 Tor 的理由 （仅iOS 17）";
+"Reasons to use the built-in Tor (iOS 17 only)" = "使用内置 Tor 的理由（仅限 iOS 17）";
 
 /* AppDelegate */
-"Reload Tab" = "重载标签页";
+"Reload Tab" = "重新加载标签页";
 
 /* TabSecurity */
 "Remember Tabs" = "记住标签页";
 
 /* Storage2ViewController */
-"Remove All Local Storage" = "移除所有本地储存内容";
+"Remove All Local Storage" = "移除所有本地存储";
 
 /* SettingsViewController */
 "Report a Bug" = "报告错误";
@@ -491,13 +491,13 @@
 "Request could not be formed. Please check host and username/password!" = "无法生成请求。请检查主机名和用户名/密码！";
 
 /* No comment provided by engineer. */
-"Response body missing." = "回复的主体部分丢失。";
+"Response body missing." = "响应正文缺失。";
 
 /* No comment provided by engineer. */
 "Retry" = "重试";
 
 /* Placeholder is 'Orbot' */
-"Retry after you added the authentication key to %@." = "将在您为 %@ 新增认证密钥后重试。";
+"Retry after you added the authentication key to %@." = "将身份验证密钥添加到 %@ 后重试。";
 
 /* RuleEditorController */
 "Rules in use on current page" = "当前页面使用的规则";
@@ -509,7 +509,7 @@
 "Search Engine" = "搜索引擎";
 
 /* AddSearchEngineViewController */
-"Search URL" = "搜索 URL";
+"Search URL" = "搜索网址";
 
 /* SecurityPopUpViewController */
 "Security Level for This Site" = "此站点的安全级别";
@@ -530,7 +530,7 @@
 "Settings have been customized." = "已自定义设置。";
 
 /* Storage2ViewController */
-"Show All Sites" = "现实所有站点";
+"Show All Sites" = "显示所有站点";
 
 /* AppDelegate */
 "Show Bookmarks" = "显示书签";
@@ -545,22 +545,22 @@
 "So that you can do more with Tor on iOS! In %1$@, %2$@ improves the browsing experience with:" = "为了让您能在 iOS 上使用 Tor 做到更多！使用 %1$@ 时，%2$@ 能通过这些方式提升您的浏览体验：";
 
 /* DonationViewController */
-"Sorry, in-app purchase is disabled on your device!" = "抱歉，应用内购买已在你的设备上禁用！";
+"Sorry, in-app purchase is disabled on your device!" = "抱歉，您的设备上已禁用应用内购买！";
 
 /* Placeholder is 'Orbot' */
 "Start %@" = "启动 %@";
 
 /* No comment provided by engineer. */
-"Start built-in Tor" = "启动内置Tor";
+"Start built-in Tor" = "启动内置 Tor";
 
 /* Placeholder is 'Orbot' */
-"Start Tor in %@." = "从 %@ 启动 Tor。";
+"Start Tor in %@." = "在 %@ 中启动 Tor。";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "启动Tor";
+"Starting Tor…" = "正在启动 Tor…";
 
 /* SettingsViewController */
-"Stop Auto-Complete at First Dot" = "在第一个点 (.) 处停用自动完成";
+"Stop Auto-Complete at First Dot" = "在第一个句点处停止自动完成";
 
 /* Bookmark */
 "Subscribe to Tor Newsletter" = "订阅 Tor 最新资讯";
@@ -569,37 +569,37 @@
 "Support" = "支持我们";
 
 /* DonationViewController */
-"Support Onion Browser Development" = "资助洋葱浏览器的开发";
+"Support Onion Browser Development" = "支持 Onion Browser 开发";
 
 /* Placeholder is 'Orbot' */
-"Switch back to %@" = "切换回%@";
+"Switch back to %@" = "切换回 %@";
 
 /* AppDelegate */
-"Switch to Tab %d" = "切换至 %d";
+"Switch to Tab %d" = "切换到标签页 %d";
 
 /* BookmarksViewController */
-"Sync" = "Sync";
+"Sync" = "同步";
 
 /* SyncViewController */
 "Sync Bookmarks" = "同步书签";
 
 /* SyncViewController */
-"Sync Bookmarks with Nextcloud Server" = "通过 Nextcloud 服务器同步书签";
+"Sync Bookmarks with Nextcloud Server" = "将书签与 Nextcloud 服务器同步";
 
 /* SettingsViewController */
 "Tab Security" = "标签页安全";
 
 /* VoiceOver */
-"Tabs" = "Tabs";
+"Tabs" = "标签页";
 
 /* Option title */
-"Tell websites that you object to processing and selling of your personal data" = "告诉网站您拒绝其处理与贩卖您的个人资料";
+"Tell websites that you object to processing and selling of your personal data" = "告知网站您反对其处理和出售您的个人数据";
 
 /* No comment provided by engineer. */
-"The encryption method for this server is outdated." = "该服务器的加密方式已过时。";
+"The encryption method for this server is outdated." = "此服务器的加密方法已过时。";
 
 /* No comment provided by engineer. */
-"Then come back for private browsing." = "然后回来享受私密浏览。";
+"Then come back for private browsing." = "然后就可以返回进行私密浏览了。";
 
 /* SecurityViewController */
 "These might change server behaviour. E.g. show or not show Captchas or return pages meant for desktop browsers." = "这会影响网页的效果，比如是否显示验证码，以及是否返回桌面版网页。";
@@ -608,10 +608,10 @@
 "This browser" = "此浏览器";
 
 /* SecurityViewController, placeholder is app name "Onion Browser" */
-"This is your default security setting for every website you visit in %@." = "这是你在 %@ 中访问站点时的默认安全设置。";
+"This is your default security setting for every website you visit in %@." = "这是您在 %@ 中访问每个网站时的默认安全设置。";
 
 /* Placeholder is 'Orbot' */
-"This site may need authentication. If you received an authentication key for this site, add it to %@!" = "这个网站可能需要认证。如果您有这个网站的验证密钥，请将其加入 %@！";
+"This site may need authentication. If you received an authentication key for this site, add it to %@!" = "此网站可能需要身份验证。如果您已收到此网站的身份验证密钥，请将其添加到 %@！";
 
 /* Placeholder is 'Onion Browser' */
 "This will allow %@ to:" = "这将允许 %@：";
@@ -632,7 +632,7 @@
 "TLS protocol error" = "TLS 协议错误";
 
 /* CircuitsViewController */
-"Tor Circuit" = "Tor 链路";
+"Tor Circuit" = "Tor 线路";
 
 /* SyncViewController */
 "Try Again" = "重试";
@@ -644,19 +644,19 @@
 "Update" = "更新";
 
 /* No comment provided by engineer. */
-"Update Blocklist" = "Update Blocklist";
+"Update Blocklist" = "更新屏蔽列表";
 
 /* SettingsViewController */
-"URL Blocker" = "URL 拦截程序";
+"URL Blocker" = "网址拦截器";
 
 /* Placeholder is 'Orbot' */
 "Use %@" = "使用 %@";
 
 /* No comment provided by engineer. */
-"Use built-in Tor" = "使用内置Tor";
+"Use built-in Tor" = "使用内置 Tor";
 
 /* No comment provided by engineer. */
-"Use URL Blocker" = "Use URL Blocker";
+"Use URL Blocker" = "使用网址拦截器";
 
 /* SecurityViewController */
 "User Agent" = "用户代理";
@@ -671,13 +671,13 @@
 "Version" = "版本";
 
 /* SettingsViewController */
-"Version %@" = "%@版本";
+"Version %@" = "版本 %@";
 
 /* SyncViewController */
-"We couldn't sync your bookmarks at this time. Try again to make sure your information is synced." = "我们当前无法同步您的书签。重试以确保信息已同步。";
+"We couldn't sync your bookmarks at this time. Try again to make sure your information is synced." = "我们目前无法同步您的书签。请重试以确保您的信息已同步。";
 
 /* SecurityPresetsRow */
-"Websites may break. But you get great security." = "网页可能损坏。但您能得到更高的安全性。";
+"Websites may break. But you get great security." = "网页可能有所损坏，但您能获得更高的安全性。";
 
 /* No comment provided by engineer. */
 "WebSQL Databases" = "WebSQL 数据库";
@@ -686,7 +686,7 @@
 "Welcome to %@" = "欢迎使用 %@";
 
 /* SettingsViewController */
-"When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\"." = "若禁用，在搜索框输入的全部文本将发送至搜索引擎，“http”开头的除外";
+"When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\"." = "禁用后，除非以“http”开头，否则在搜索栏中输入的所有文本都将发送到搜索引擎。";
 
 /* No comment provided by engineer. */
 "Why" = "为什么";
@@ -701,10 +701,10 @@
 "You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk." = "您可能正在连接到一个试图伪装成 \"%@\" 的服务器，这可能让您的敏感资料暴露在风险中。";
 
 /* DonationViewController */
-"You most recently donated %1$@ on %2$@." = "你最近捐助了 %1$@ 给 %2$@。";
+"You most recently donated %1$@ on %2$@." = "您最近在 %2$@ 捐赠了 %1$@。";
 
 /* No comment provided by engineer. */
 "You're one step closer to private browsing." = "您离私密浏览更近了一步。";
 
 /* CircuitViewController */
-"Your traffic goes to 3 different parts of the world." = "您的流量经过全世界3个不同区域。";
+"Your traffic goes to 3 different parts of the world." = "您的流量经过世界各地的三个不同地区。";
