@@ -1,56 +1,55 @@
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems.";
+"%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@는 Tor에 안전하게 연결하기 위해 %2$@에 의존하거나, 자체 내장 Tor를 실행할 수 있습니다. 내장 Tor는 보안 문제가 있습니다.";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ if you have connectivity issues with %2$@" = "%1$@ if you have connectivity issues with %2$@";
+"%1$@ if you have connectivity issues with %2$@" = "%1$@ %2$@에 연결 문제가 있는 경우";
 
 /* Placeholder 1 is bullet point, Placeholder 2 is 'Onion Browser' */
-"%1$@ if you want to use %2$@ over another VPN" = "%1$@ if you want to use %2$@ over another VPN";
+"%1$@ if you want to use %2$@ over another VPN" = "%1$@ 다른 VPN 대신 %2$@를 사용하려는 경우";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ now relies on %2$@ for a secure connection to Tor." = "%1$@ now relies on %2$@ for a secure connection to Tor.";
+"%1$@ now relies on %2$@ for a secure connection to Tor." = "%1$@은 이제 Tor에 대한 보안 연결을 위해 %2$@에 의존합니다.";
 
 /* 1. placeholder is 'Onion Browser', 2. is translated 'Lockdown Mode', 3. is two line breaks, 4. is translated 'Default Security', 5. is translated 'Block Insecure HTTP Requests'. */
-"%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature." = "%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature.";
+"%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature." = "%1$@가 이제 iOS의 %2$@를 선택적으로 지원합니다! (iOS 16 이상)%3$@Gold 및 Silver 보안 수준에서는 이 설정이 기본으로 적용됩니다. 단, 기존 설정이 자동으로 변경되지는 않습니다.%3$@기본 보안 수준을 변경하려면 '%4$@' 페이지를 방문하세요!%3$@추신: 새로운 '%5$@' 기능도 한 번 살펴보는 것을 추천합니다.";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue." = "%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue.";
+"%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue." = "%1$@는 Tor에 안전하게 연결하기 위해 %2$@에 의존합니다. 계속하려면 %2$@ 앱을 설치하세요.";
 
 /* Placeholder 1 is 'Orbot', placeholder 2 is 'Onion Browser' */
-"%1$@ runs in onion-only mode. This is dangerous and %2$@ does not support it. Switch it off to use %2$@!" = "%1$@ runs in onion-only mode. This is dangerous and %2$@ does not support it. Switch it off to use %2$@!";
+"%1$@ runs in onion-only mode. This is dangerous and %2$@ does not support it. Switch it off to use %2$@!" = "%1$@가 onion-only 모드로 실행 중입니다. 이는 위험하며 %2$@는 이를 지원하지 않습니다. %2$@를 사용하려면 이 기능을 끄세요!";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ Use %2$@ to connect to the official Tor network.";
+"%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ 공식 Tor 네트워크에 연결하려면 %2$@를 사용하세요.";
 
 /* Placeholder is bullet point */
-"%@ a little more speed" = "%@ a little more speed";
+"%@ a little more speed" = "%@ 약간 더 빠른 속도";
 
 /* Placeholder is 'Orbot' */
-"%@ alone provides a VPN proxy. It will hide apps from network monitoring and give you access when they are blocked." = "%@ alone provides a VPN proxy. It will hide apps from network monitoring and give you access when they are blocked.";
-
+"%@ alone provides a VPN proxy. It will hide apps from network monitoring and give you access when they are blocked." = "%@만으로 VPN 프록시를 제공할 수 있습니다. 앱을 네트워크 감시로부터 숨기고 차단된 경우에도 접속할 수 있게 해줍니다.";
 /* Placeholder is bullet point */
-"%@ Get updates on the status of the connection." = "%@ Get updates on the status of the connection.";
+"%@ Get updates on the status of the connection." = "%@ 연결 상태에 대한 업데이트를 받습니다.";
 
 /* Placeholder is 'Orbot' */
-"%@ installed! One more step." = "%@ installed! One more step.";
+"%@ installed! One more step." = "%@이 설치되었습니다! 한 단계만 더 남았습니다.";
 
 /* Placeholder is bullet point */
-"%@ more protection from IP leaks" = "%@ more protection from IP leaks";
+"%@ more protection from IP leaks" = "%@ IP 유출에 대한 강화된 보호";
 
 /* Placeholder is bullet point */
 "%@ new standards" = "%@ new standards";
 
 /* Placeholder is 'Orbot' */
-"%@ or built-in Tor" = "%@ or built-in Tor";
+"%@ or built-in Tor" = "%@ 또는 내장 Tor";
 
 /* Placeholder is bullet point */
-"%@ video and audio streaming" = "%@ video and audio streaming";
+"%@ video and audio streaming" = "%@ 영상 및 오디오 스트리밍";
 
 /* Placeholder is bullet point */
-"%@ video and audio streams don't go through Tor and might get blocked" = "%@ video and audio streams don't go through Tor and might get blocked";
+"%@ video and audio streams don't go through Tor and might get blocked" = "%@ 동영상 및 오디오 스트림은 Tor를 통과하지 않으므로 차단될 수 있습니다.";
 
 /* Placeholder is bullet point */
-"%@ websites can uncover your real IP address using JavaScript" = "%@ websites can uncover your real IP address using JavaScript";
+"%@ websites can uncover your real IP address using JavaScript" = "%@ 웹사이트는 JavaScript를 사용하여 귀하의 실제 IP 주소를 알아낼 수 있습니다.";
 
 /* No comment provided by engineer. */
 "(not recommended)" = "(권장하지 않음)";
@@ -71,22 +70,22 @@
 "About" = "정보";
 
 /* Placeholder is 'Orbot' */
-"Access to %@ was Denied" = "Access to %@ was Denied";
+"Access to %@ was Denied" = "%@에 대한 접근이 거부되었습니다.";
 
 /* SearchEnginesViewController, AddSearchEngineViewController */
 "Add" = "추가";
 
 /* AddSearchEngineViewController */
-"Add \"%@\" as the search term placeholder!" = "Add \"%@\" as the search term placeholder!";
+"Add "%@" as the search term placeholder!" = ""%@"를 검색어 자리 표시자로 추가하시겠습니까!";
 
 /* BookmarkViewController */
 "Add Bookmark" = "북마크 추가";
 
 /* Scene title */
-"Add Folder" = "Add Folder";
+"Add Folder" = "폴더 추가";
 
 /* AddSearchEngineViewController */
-"Add Search Engine" = "Add Search Engine";
+"Add Search Engine" = "검색 엔진 추가";
 
 /* CustomSitesViewController, AddSiteViewController */
 "Add Site" = "사이트 추가";
@@ -95,13 +94,13 @@
 "Add to %@" = "Add to %@";
 
 /* Placeholder is 'Onion Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "Additionally, all bookmarks not existing on the server but in %@ will be created there.";
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "또한, 서버에는 존재하지 않지만 %@에는 존재하는 모든 북마크가 서버에 생성됩니다.";
 
 /* BookmarkViewController */
 "Address" = "사이트 주소";
 
 /* VoiceOver */
-"Address and search bar" = "Address and search bar";
+"Address and search bar" = "주소 및 검색창";
 
 /* RuleEditorController */
 "All rules" = "모든 규칙";
@@ -110,28 +109,28 @@
 "Allow 3rd-Party Keyboards" = "제 3자 키보드 허용";
 
 /* Option title */
-"Allow Access to Microphone and Video" = "Allow Access to Microphone and Video";
+"Allow Access to Microphone and Video" = "마이크 및 비디오 접근 허용";
 
 /* Option title */
-"Allow Access to Orientation and Motion Data" = "Allow Access to Orientation and Motion Data";
+"Allow Access to Orientation and Motion Data" = "방향 및 모션 데이터 접근 허용";
 
 /* SecurityViewController */
 "Allow hosts to permanently store cookies and local storage databases." = "호스트가 쿠키 및 로컬 스토리지 데이터베이스를 영구적으로 저장할 수 있도록 허용합니다.";
 
 /* Option title */
-"Allow JavaScript" = "Allow JavaScript";
+"Allow JavaScript" = "JavaScript 허용";
 
 /* SecurityViewController */
-"Allow Persistent Cookies" = "퍼시스턴트 쿠키 허용";
+"Allow Persistent Cookies" = "영구(Persistent) 쿠키 허용";
 
 /* DonationViewController */
 "Are you sure you want to send a %@ tip?" = "팁 %@ 을 보내시겠습니까?";
 
 /* Placeholder is 'Orbot' */
-"Ask %@ for permission to access it." = "Ask %@ for permission to access it.";
+"Ask %@ for permission to access it." = "접근 권한을 %@에게 요청하세요.";
 
 /* No comment provided by engineer. */
-"Ask again to continue." = "Ask again to continue.";
+"Ask again to continue." = "계속하려면 다시 요청하세요.";
 
 /* AppDelegate */
 "Authentication Required" = "인증 필요";
@@ -140,7 +139,7 @@
 "Auto-Complete Search Results" = "검색 결과 자동 완성";
 
 /* AddSearchEngineViewController */
-"Autocomplete URL" = "Autocomplete URL";
+"Autocomplete URL" = "URL 자동 완성";
 
 /* VoiceOver */
 "Back" = "Back";
@@ -149,7 +148,7 @@
 "Begins On" = "시작 날짜";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "Block Insecure HTTP Requests";
+"Block Insecure HTTP Requests" = "안전하지 않은 HTTP 요청 차단";
 
 /* URLBlockerRuleController */
 "Blocked 3rd-Party Hosts" = "차단된 제 3자 호스트";
@@ -158,7 +157,7 @@
 "Bookmarks" = "북마크";
 
 /* No comment provided by engineer. */
-"Both are free to use. Free of tracking. Code is open source." = "Both are free to use. Free of tracking. Code is open source.";
+"Both are free to use. Free of tracking. Code is open source." = "둘 다 무료로 사용할 수 있으며, 추적이 없고 소스 코드가 공개되어 있습니다.";
 
 /* CircuitViewController */
 "Bridge Configuration" = "브리지 구성";
@@ -167,7 +166,7 @@
 "Bronze" = "브론즈";
 
 /* SecurityViewController */
-"By editing this setting, you have created a custom security setting." = "이 설정을 편집하여 사용자 지정 보안 설정을 만들었습니다.";
+"By editing this setting, you have created a custom security setting." = "이 설정을 편집하여 사용자 정의 보안 설정을 만들었습니다.";
 
 /* AlertHelper */
 "Cancel" = "취소";
@@ -182,13 +181,13 @@
 "Choose how long app remembers open tabs." = "앱이 열린 탭을 기억하는 시간을 선택합니다.";
 
 /* No comment provided by engineer. */
-"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
+"Choose your preferred blocklist:" = "원하는 차단 목록을 선택하세요:";
 
 /* AppDelegate */
 "Close Tab" = "탭 닫기";
 
 /* No comment provided by engineer. */
-"Configure Bridges" = "브릿지 구성";
+"Configure Bridges" = "브리지 구성";
 
 /* DonationViewController */
 "Confirm %@" = "%@ 보내기";
@@ -203,7 +202,7 @@
 "Connection to Nextcloud Server Failed" = "Nextcloud서버에 연결하지 못함";
 
 /* No comment provided by engineer. */
-"Cookies" = "Cookies";
+"Cookies" = "쿠키";
 
 /* SettingsViewController, Storage1ViewController, Storage2ViewController */
 "Cookies and Local Storage" = "쿠키 및 로컬 저장소";
@@ -215,13 +214,13 @@
 "Create New Tab" = "새 탭 만들기";
 
 /* SecurityPresetsRow; a security level */
-"Custom" = "사용자 지정";
+"Custom" = "사용자 정의";
 
 /* SettingsViewController, CustomSitesViewController */
-"Custom Site Security" = "사용자 지정 사이트 보안";
+"Custom Site Security" = "사용자 정의 사이트 보안";
 
 /* SecurityViewController */
-"Custom user-agent string, or blank to use the default." = "사용자 지정 사용자 에이전트 문자열 또는 기본값을 사용하려면 공백입니다.";
+"Custom user-agent string, or blank to use the default." = "사용자 정의 유저 에이전트 문자열 또는 기본값을 사용하려면 공백입니다.";
 
 /* SecurityPopUpViewController */
 "Customize" = "맞춤 설정";
@@ -239,13 +238,13 @@
 "Disable" = "비활성화";
 
 /* SettingsViewController */
-"Disable Bookmarks on Start Page" = "시작 페이지에서 책갈피 비활성화";
+"Disable Bookmarks on Start Page" = "시작 페이지에서 북마크 비활성화";
 
 /* RuleEditorController */
 "Disabled: %@" = "비활성화: %@";
 
 /* No comment provided by engineer. */
-"Disk Cache" = "Disk Cache";
+"Disk Cache" = "디스크 캐시";
 
 /* DonationViewController */
 "Donate" = "기부";
@@ -257,10 +256,10 @@
 "Done" = "완료";
 
 /* No comment provided by engineer. */
-"Download" = "Download";
+"Download" = "다운로드";
 
 /* No comment provided by engineer. */
-"Drawbacks:" = "Drawbacks:";
+"Drawbacks:" = "단점:";
 
 /* SecurityPresetsRow */
 "Easy breezy. Though it could be dangerous." = "매우 간단합니다. 위험할 수도 있지만요.";
@@ -269,10 +268,10 @@
 "Edit Bookmark" = "북마크 편집";
 
 /* Scene title */
-"Edit Folder" = "Edit Folder";
+"Edit Folder" = "폴더 편집";
 
 /* AddSearchEngineViewController */
-"Edit Search Engine" = "Edit Search Engine";
+"Edit Search Engine" = "검색 엔진 편집";
 
 /* RuleEditorController */
 "Enable" = "활성화";
@@ -284,7 +283,7 @@
 "Expires After" = "이후 만료";
 
 /* BookmarksViewController */
-"Export Bookmarks" = "Export Bookmarks";
+"Export Bookmarks" = "북마크 내보내기";
 
 /* CertificateViewController */
 "Extended Validation: Organization" = "확장 유효성 검사: 조직";
@@ -293,13 +292,13 @@
 "Fetch Cache" = "Fetch Cache";
 
 /* No comment provided by engineer. */
-"Find in Page" = "Find in Page";
+"Find in Page" = "페이지 내 검색";
 
 /* AppDelegate */
 "Focus URL Field" = "포커스 URL 필드";
 
 /* SecurityViewController */
-"Follow Onion-Location Header Automatically" = "Follow Onion-Location Header Automatically";
+"Follow Onion-Location Header Automatically" = "Onion-Location 헤더 자동 추적";
 
 /* SettingsViewController */
 "Forget at Shutdown" = "종료 시 잊기";
@@ -335,7 +334,7 @@
 "Handle tapping on links in a non-standard way to avoid possibly opening external applications." = "외부 응용프로그램이 열리지 않도록 비표준 방식으로 링크 탭을 처리합니다.";
 
 /* SettingsViewController */
-"Hide App Content when in Background" = "Hide App Content when in Background";
+"Hide App Content when in Background" = "백그라운드 상태에서 앱 콘텐츠 숨기기";
 
 /* HistoryViewController */
 "History" = "방문 기록";
@@ -344,7 +343,7 @@
 "Host" = "호스트";
 
 /* Placeholder is 'Onion Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "If you sync, all bookmarks will be read from the server and added/updated in %@.";
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "동기화하면 서버에서 모든 북마크를 불러와 %@에 추가/업데이트합니다.";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "이 호스트에 대해 무시";
@@ -353,13 +352,13 @@
 "Ignore TLS Errors" = "TLS 오류 무시";
 
 /* BookmarksViewController */
-"Import Bookmarks" = "Import Bookmarks";
+"Import Bookmarks" = "북마크 가져오기";
 
 /* No comment provided by engineer. */
-"IndexedDB Databases" = "IndexedDB Databases";
+"IndexedDB Databases" = "IndexedDB 데이터베이스";
 
 /* Placeholder is 'Orbot' */
-"Install %@" = "Install %@";
+"Install %@" = "설치 %@";
 
 /* CertificateViewController */
 "Issued By" = "발급자";
@@ -380,22 +379,22 @@
 "Local Storage" = "로컬 저장소";
 
 /* SettingsViewController */
-"Lock App with Device Passcode" = "Lock App with Device Passcode";
+"Lock App with Device Passcode" = "장치 비밀번호로 앱 잠금";
 
 /* SettingsViewController */
-"Lock App with Face ID or Device Passcode" = "Lock App with Face ID or Device Passcode";
+"Lock App with Face ID or Device Passcode" = "Face ID 또는 장치 암호로 앱 잠금";
 
 /* SettingsViewController */
-"Lock App with Touch ID or Device Passcode" = "Lock App with Touch ID or Device Passcode";
+"Lock App with Touch ID or Device Passcode" = "Touch ID 또는 장치 암호로 앱 잠금";
 
 /* Option title */
-"Lockdown Mode" = "Lockdown Mode";
+"Lockdown Mode" = "차단 모드";
 
 /* AppDelegate */
 "Log In" = "로그인";
 
 /* No comment provided by engineer. */
-"Memory Cache" = "Memory Cache";
+"Memory Cache" = "메모리 캐시";
 
 /* SettingsViewController */
 "Miscellaneous" = "기타";
@@ -404,7 +403,7 @@
 "Mute Audio with Mute Switch" = "음소거 스위치를 사용하여 오디오 음소거";
 
 /* AddSearchEngineViewController */
-"My Search Engine" = "My Search Engine";
+"My Search Engine" = "내 검색 엔진";
 
 /* AddSearchEngineViewController */
 "Name" = "이름";
@@ -425,7 +424,7 @@
 "No valid HTTP response." = "올바른 HTTP 응답이 없습니다.";
 
 /* No comment provided by engineer. */
-"Offline Web Application Cache" = "Offline Web Application Cache";
+"Offline Web Application Cache" = "오프라인 웹 애플리케이션 캐시";
 
 /* AlertHelper */
 "OK" = "예";
@@ -437,7 +436,7 @@
 "Open in Background Tab" = "백그라운드 탭에서 열기";
 
 /* No comment provided by engineer. */
-"Open in Default Browser" = "Open in Default Browser";
+"Open in Default Browser" = "기본 브라우저로 열기";
 
 /* SecurityViewController */
 "Other" = "기타";
@@ -452,7 +451,7 @@
 "Period of Validity" = "유효 기간";
 
 /* SecurityViewController */
-"Popular User Agents" = "보편적인 사용자 에이전트";
+"Popular User Agents" = "보편적인 유저 에이전트";
 
 /* SecurityViewController */
 "Privacy" = "개인정보 보호";
@@ -470,7 +469,7 @@
 "Rate on App Store" = "App Store에서 평가하기";
 
 /* No comment provided by engineer. */
-"Reasons to use the built-in Tor (iOS 17 only)" = "Reasons to use the built-in Tor (iOS 17 only)";
+"Reasons to use the built-in Tor (iOS 17 only)" = "내장 Tor를 사용해야 하는 이유 (iOS 17 전용)";
 
 /* AppDelegate */
 "Reload Tab" = "탭 새로고침";
@@ -485,7 +484,7 @@
 "Report a Bug" = "버그 보고하기";
 
 /* No comment provided by engineer. */
-"Request Access" = "Request Access";
+"Request Access" = "접근 권한 요청";
 
 /* No comment provided by engineer. */
 "Request could not be formed. Please check host and username/password!" = "요청을 형성할 수 없습니다. 호스트 및 사용자 이름, 비밀번호를 확인하십시오!";
@@ -494,10 +493,10 @@
 "Response body missing." = "응답 본문이 없습니다.";
 
 /* No comment provided by engineer. */
-"Retry" = "Retry";
+"Retry" = "다시 시도";
 
 /* Placeholder is 'Orbot' */
-"Retry after you added the authentication key to %@." = "Retry after you added the authentication key to %@.";
+"Retry after you added the authentication key to %@." = "%@에 인증 키를 추가한 후 다시 시도하십시오.";
 
 /* RuleEditorController */
 "Rules in use on current page" = "현재 페이지에서 사용 중인 규칙";
@@ -509,7 +508,7 @@
 "Search Engine" = "검색 엔진";
 
 /* AddSearchEngineViewController */
-"Search URL" = "Search URL";
+"Search URL" = "URL 검색";
 
 /* SecurityPopUpViewController */
 "Security Level for This Site" = "이 사이트의 보안 수준";
@@ -518,10 +517,10 @@
 "Serial Number" = "일련 번호";
 
 /* No comment provided by engineer. */
-"Service Worker Registrations" = "Service Worker Registrations";
+"Service Worker Registrations" = "서비스 워커 등록";
 
 /* No comment provided by engineer. */
-"Session Storage" = "Session Storage";
+"Session Storage" = "세션 스토리지";
 
 /* SettingsViewController */
 "Settings" = "설정";
@@ -542,22 +541,22 @@
 "Silver" = "실버";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"So that you can do more with Tor on iOS! In %1$@, %2$@ improves the browsing experience with:" = "So that you can do more with Tor on iOS! In %1$@, %2$@ improves the browsing experience with:";
+"So that you can do more with Tor on iOS! In %1$@, %2$@ improves the browsing experience with:" = "iOS에서 Tor를 더 많이 활용할 수 있도록 하기 위해! %1$@에서 %2$@는 다음과 같은 기능으로 브라우징 경험을 개선합니다:";
 
 /* DonationViewController */
 "Sorry, in-app purchase is disabled on your device!" = "죄송합니다. 디바이스에서 앱 내 구입이 비활성화되었습니다!";
 
 /* Placeholder is 'Orbot' */
-"Start %@" = "Start %@";
+"Start %@" = "%@ 시작";
 
 /* No comment provided by engineer. */
-"Start built-in Tor" = "Start built-in Tor";
+"Start built-in Tor" = "내장 Tor로 시작";
 
 /* Placeholder is 'Orbot' */
-"Start Tor in %@." = "Start Tor in %@.";
+"Start Tor in %@." = "%@에서 Tor를 시작합니다.";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Tor…" = "Tor을 시작하는중...";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "첫 번째 도트에서 자동 완성 중지";
@@ -572,37 +571,37 @@
 "Support Onion Browser Development" = "Onion 브라우저 개발 지원";
 
 /* Placeholder is 'Orbot' */
-"Switch back to %@" = "Switch back to %@";
+"Switch back to %@" = "%@로 다시 전환";
 
 /* AppDelegate */
 "Switch to Tab %d" = "%d번째 탭으로 전환";
 
 /* BookmarksViewController */
-"Sync" = "Sync";
+"Sync" = "동기화";
 
 /* SyncViewController */
 "Sync Bookmarks" = "북마크 동기화";
 
 /* SyncViewController */
-"Sync Bookmarks with Nextcloud Server" = "책갈피를 Nextcloud 서버와 동기화합니다";
+"Sync Bookmarks with Nextcloud Server" = "북마크를 Nextcloud 서버와 동기화합니다";
 
 /* SettingsViewController */
 "Tab Security" = "탭 보안";
 
 /* VoiceOver */
-"Tabs" = "Tabs";
+"Tabs" = "탭";
 
 /* Option title */
-"Tell websites that you object to processing and selling of your personal data" = "Tell websites that you object to processing and selling of your personal data";
+"Tell websites that you object to processing and selling of your personal data" = "웹사이트에 귀하의 개인정보 처리 및 판매에 반대한다는 의사를 전달하세요.";
 
 /* No comment provided by engineer. */
-"The encryption method for this server is outdated." = "The encryption method for this server is outdated.";
+"The encryption method for this server is outdated." = "이 서버의 암호화 방식은 구식입니다.";
 
 /* No comment provided by engineer. */
-"Then come back for private browsing." = "Then come back for private browsing.";
+"Then come back for private browsing." = "그럼 나중에 비공개 브라우징을 위해 다시 오세요.";
 
 /* SecurityViewController */
-"These might change server behaviour. E.g. show or not show Captchas or return pages meant for desktop browsers." = "These might change server behaviour. E.g. show or not show Captchas or return pages meant for desktop browsers.";
+"These might change server behaviour. E.g. show or not show Captchas or return pages meant for desktop browsers." = "이것들은 서버의 동작을 변경할 수 있습니다. 예를 들어, 캡차(Captcha)를 표시하거나 표시하지 않거나, 혹은 데스크톱 브라우저용으로 제작된 페이지를 반환하는 것 등이 있습니다.";
 
 /* CircuitsViewController */
 "This browser" = "이 브라우저";
@@ -611,10 +610,10 @@
 "This is your default security setting for every website you visit in %@." = "이것은 %@에서 방문하는 모든 웹사이트에 대한 기본 보안 설정입니다.";
 
 /* Placeholder is 'Orbot' */
-"This site may need authentication. If you received an authentication key for this site, add it to %@!" = "This site may need authentication. If you received an authentication key for this site, add it to %@!";
+"This site may need authentication. If you received an authentication key for this site, add it to %@!" = "이 사이트는 인증이 필요할 수 있습니다. 이 사이트에 대한 인증 키를 받으셨다면, %@에 추가해 주십시오.";
 
 /* Placeholder is 'Onion Browser' */
-"This will allow %@ to:" = "This will allow %@ to:";
+"This will allow %@ to:" = "이렇게 하면 %@에서 다음을 허용합니다:";
 
 /* DonationViewController */
 "Tip: %@" = "팁: %@";
@@ -641,25 +640,25 @@
 "Universal Link Protection" = "유니버셜 링크 보호";
 
 /* AddSearchEngineViewController */
-"Update" = "Update";
+"Update" = "업데이트";
 
 /* No comment provided by engineer. */
-"Update Blocklist" = "Update Blocklist";
+"Update Blocklist" = "차단 목록 업데이트";
 
 /* SettingsViewController */
-"URL Blocker" = "URL Blocker";
+"URL Blocker" = "URL 차단기";
 
 /* Placeholder is 'Orbot' */
 "Use %@" = "Use %@";
 
 /* No comment provided by engineer. */
-"Use built-in Tor" = "Use built-in Tor";
+"Use built-in Tor" = "내장 Tor 사용";
 
 /* No comment provided by engineer. */
-"Use URL Blocker" = "Use URL Blocker";
+"Use URL Blocker" = "URL 차단기 사용";
 
 /* SecurityViewController */
-"User Agent" = "사용자 에이전트";
+"User Agent" = "유저 에이전트";
 
 /* RuleEditorController */
 "User disabled" = "사용자 사용 안 함";
@@ -680,31 +679,31 @@
 "Websites may break. But you get great security." = "웹사이트가 손상될 수 있습니다. 하지만 보안은 아주 뛰어납니다.";
 
 /* No comment provided by engineer. */
-"WebSQL Databases" = "WebSQL Databases";
+"WebSQL Databases" = "WebSQL 데이터베이스";
 
 /* Placeholder is 'Onion Browser' */
-"Welcome to %@" = "Welcome to %@";
+"Welcome to %@" = "%@에 오신 것을 환영합니다.";
 
 /* SettingsViewController */
 "When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\"." = "비활성화된 경우 \"http\"로 시작하지 않으면 검색란에 입력된 모든 텍스트가 검색 엔진으로 전송됩니다.";
 
 /* No comment provided by engineer. */
-"Why" = "Why";
+"Why" = "왜";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"Why %1$@ needs %2$@" = "Why %1$@ needs %2$@";
+"Why %1$@ needs %2$@" = "왜 %1$@에 %2$@가 필요한가?";
 
 /* SecurityPresetsRow */
 "Works pretty well. Your identity is mostly protected." = "꽤 잘 작동합니다. 당신의 신원은 대부분 보호받고 있습니다.";
 
 /* Placeholder is server domain */
-"You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk." = "You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk.";
+"You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk." = "현재 연결하려는 서버는 자신이 “%@”인 척 위장하고 있을 수 있으며, 이로 인해 귀하의 기밀 정보가 위험에 처할 수 있습니다.";
 
 /* DonationViewController */
 "You most recently donated %1$@ on %2$@." = "최근에 %2$@에 %1$@를 기부했습니다.";
 
 /* No comment provided by engineer. */
-"You're one step closer to private browsing." = "You're one step closer to private browsing.";
+"You're one step closer to private browsing." = "비공개 브라우징에 한 걸음 더 가까워졌습니다.";
 
 /* CircuitViewController */
 "Your traffic goes to 3 different parts of the world." = "당신의 트래픽은 세계 3개 지역으로 갑니다.";
