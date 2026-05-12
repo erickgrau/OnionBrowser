@@ -12,33 +12,33 @@
 
 "JavaScript allowed" = "已允许 JavaScript";
 
-"Lockdown Mode disabled" = "Lockdown Mode disabled";
+"Lockdown Mode disabled" = "锁定模式已禁用";
 
-"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+"Lockdown Mode enabled (iOS 16 an later)" = "锁定模式已启用（iOS 16 及更高版本）";
 
 "Many website features are disabled." = "禁用了大多数的网站功能。";
 
-"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "许多网站可能无法正常使用或显示异常，但您的个人资料\n会受到最完整的保护，除非遭遇最极端的攻击手段。";
+"Many websites won't work or will display poorly, but your identity is protected from all but the most aggressive adversaries." = "许多网站可能无法正常访问或显示异常，但您的身份信息会受到最完整的保护，除非遭遇最极端的攻击手段。";
 
 "Most website features are allowed." = "已允许使用大多数的网站功能。";
 
 "No JavaScript allowed" = "不允许 JavaScript";
 
-"Security Levels" = "安全等级";
+"Security Levels" = "安全级别";
 
 "Some of the protections can be overridden or modified by changing your security settings." = "其中一些保护措施可以通过改变您的安全设定来覆盖或修改。";
 
 "Some website features are disabled." = "已禁用部分网站功能。";
 
-"The security level you choose for a website often has a direct impact on that site’s performance." = "您为一个网站选择的安全等级通常对该网站的访问效果有直接的影响。";
+"The security level you choose for a website often has a direct impact on that site’s performance." = "您为一个网站选择的安全级别通常对该网站的访问效果有直接的影响。";
 
-"These are the specific implications for each level." = "每一层都有着特定的含义。";
+"These are the specific implications for each level." = "各个级别都有着特定的含义。";
 
 "Universal Link Protection:" = "普遍的链接保护：";
 
-"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "当您需要避开审查以及防止他人监视您的行为，\n但不太担心您的身份泄露给攻击者时使用。";
+"Use when you need to evade censorship and prevent someone from monitoring your activity, but are less concerned about leakage of your identity to adversaries." = "当您需要规避审查并防止他人监控您的活动，但不太担心您的身份泄露给攻击者时使用。";
 
-"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "当您担心攻击者发现你的身份并\n监视或审查您的活动时使用。";
+"Use when you’re concerned about adversaries discovering your identity and monitoring or censoring your activity." = "当您担心攻击者发现您的身份并监控或审查您的活动时使用。";
 
 "Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "当您担心您的活动被记录，但是接受其中一些活动可能被监视时使用。";
 
@@ -50,4 +50,4 @@
 
 "Yes" = "是";
 
-"Yes (website links can't open apps on the device)" = "是（网页链接不能在设备上打开应用）";
+"Yes (website links can't open apps on the device)" = "是（网站链接无法在设备上打开应用）";
