@@ -1,5 +1,10 @@
 #  Onion Browser Changelog
 
+## 3.3.8
+- Updated Tor to 0.4.9.8.
+- Updated DNSTT to 1.20260501.0.
+- Updated Korean translation.
+
 ## 3.3.7
 
 - Updated Tor to 0.4.9.6.

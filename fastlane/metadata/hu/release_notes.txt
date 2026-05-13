@@ -1,3 +1,3 @@
-- A Tor szoftvert 0.4.9.6-ös verzióra frissítettük.
-- A Snowflake szoftvert 2.13.1-es verzióra frissítettük.
-- A fordításokat frissítettük.
+- A Tor verziója 0.4.9.8-ra frissült.
+- A DNSTT verziója 1.20260501.0-ra frissült.
+- A koreai fordítás frissült.

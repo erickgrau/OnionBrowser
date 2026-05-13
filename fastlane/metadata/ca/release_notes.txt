@@ -1,3 +1,3 @@
-- Actualitzat Tor a la versió 0.4.9.6.
-- Actualitzat a Snowflake 2.13.1.
-- Actualitzades les traduccions.
+- Actualitzat Tor a la versió 0.4.9.8.
+- Actualitzat DNSTT a la versió 1.20260501.0.
+- Actualitzada la traducció al coreà.

@@ -1,3 +1,3 @@
-- Updated Tor to 0.4.9.6.
-- Updated to Snowflake 2.13.1.
-- Updated translations.
+- Updated Tor to 0.4.9.8.
+- Updated DNSTT to 1.20260501.0.
+- Updated Korean translation.

@@ -86,7 +86,7 @@ These people helped with translations. Thank you so much, folks!
 - Khmer:
   Cantaloupe, PisethKONG, mosesngeth, rasy, sokty, sophatchy
 - Korean:
-  MinGyu19, jmj050716, sector429
+  MinGyu19, jmj050716, sector429, kimjuho
 - Japanese: 
   Naofumi, Songbogong, TokumeiNanashi, pluto987, jpanonowl, TENCO, kiririn
 - Macedonian: 

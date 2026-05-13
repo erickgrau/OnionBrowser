@@ -1,3 +1,3 @@
-- Mise à jour de Tor vers la version 0.4.9.6.
-- Mise à jour vers Snowflake 2.13.1.
-- Mise à jour des traductions.
+- Mise à jour de Tor vers la version 0.4.9.8.
+- Mise à jour de DNSTT vers la version 1.20260501.0.
+- Mise à jour de la traduction en coréen.
