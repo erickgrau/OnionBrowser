@@ -27,6 +27,7 @@
 
 /* Placeholder is 'Orbot' */
 "%@ alone provides a VPN proxy. It will hide apps from network monitoring and give you access when they are blocked." = "%@만으로 VPN 프록시를 제공할 수 있습니다. 앱을 네트워크 감시로부터 숨기고 차단된 경우에도 접속할 수 있게 해줍니다.";
+
 /* Placeholder is bullet point */
 "%@ Get updates on the status of the connection." = "%@ 연결 상태에 대한 업데이트를 받습니다.";
 
@@ -75,8 +76,8 @@
 /* SearchEnginesViewController, AddSearchEngineViewController */
 "Add" = "추가";
 
-/* AddSearchEngineViewController */
-"Add "%@" as the search term placeholder!" = ""%@"를 검색어 자리 표시자로 추가하시겠습니까!";
+/* No comment provided by engineer. */
+"Add \"%@\" as the search term placeholder!" = "\"%@\"를 검색어 자리 표시자로 추가하시겠습니까!";
 
 /* BookmarkViewController */
 "Add Bookmark" = "북마크 추가";
