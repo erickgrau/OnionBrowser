@@ -22,6 +22,9 @@
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
 "%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ Використовуйте %2$@ для з'єднання з офіційною мережею Tor.";
 
+/* No comment provided by engineer. */
+"%1$@31%2$@ days. %1$@5%2$@ ways to give." = "%1$@31%2$@ днів. %1$@5%2$@ способів зробити пожертву.";
+
 /* Placeholder is bullet point */
 "%@ a little more speed" = "%@ трохи більше швидкості";
 
@@ -261,6 +264,9 @@
 
 /* No comment provided by engineer. */
 "Drawbacks:" = "Drawbacks:";
+
+/* No comment provided by engineer. */
+"Each donation to an internet freedom project gets matched." = "Кожна пожертва на підтримку проекту з захисту свободи в Інтернеті подвоюється.";
 
 /* SecurityPresetsRow */
 "Easy breezy. Though it could be dangerous." = "Легенький захист. Може бути небезпечним.";

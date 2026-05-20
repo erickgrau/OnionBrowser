@@ -205,6 +205,10 @@ class NcBookmarks {
 								  with: String(format: NSLocalizedString("Donate to %@", comment: ""), Bundle.main.displayName))
 			.replacingOccurrences(of: "{{ Subscribe to Tor Newsletter }}",
 								  with: NSLocalizedString("Subscribe to Tor Newsletter", comment: ""))
+			.replacingOccurrences(of: "{{ %1$@31%2$@ days. %1$@5%2$@ ways to give. }}",
+								  with: String(format: NSLocalizedString("%1$@31%2$@ days. %1$@5%2$@ ways to give.", comment: ""), "<em>", "</em>"))
+			.replacingOccurrences(of: "{{ Each donation to an internet freedom project gets matched. }}",
+								  with: NSLocalizedString("Each donation to an internet freedom project gets matched.", comment: ""))
 
 		try? template.write(to: URL.start, atomically: true, encoding: .utf8)
 
