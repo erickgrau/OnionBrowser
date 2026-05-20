@@ -1,3 +1,2 @@
-- Tor auf Version 0.4.9.8 aktualisiert.
-- DNSTT auf Version 1.20260501.0 aktualisiert.
-- Koreanische Übersetzung aktualisiert.
+- Die koreanische Übersetzung wurde aktualisiert.
+- Ein Hinweis zur Werbeaktion wurde hinzugefügt.

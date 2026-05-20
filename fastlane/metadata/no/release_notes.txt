@@ -1,3 +1,2 @@
-- Oppdatert Tor til versjon 0.4.9.8.
-- Oppdatert DNSTT til versjon 1.20260501.0.
-- Oppdatert den koreanske oversettelsen.
+- Oppdatert koreansk oversettelse.
+- Lagt til tips om kampanjen.

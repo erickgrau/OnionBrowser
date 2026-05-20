@@ -1,3 +1,2 @@
-- A Tor verziója 0.4.9.8-ra frissült.
-- A DNSTT verziója 1.20260501.0-ra frissült.
-- A koreai fordítás frissült.
+- Frissítettük a koreai fordítást.
+- Hozzáadtunk egy promóciós tippet.

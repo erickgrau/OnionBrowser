@@ -1,3 +1,2 @@
-- Actualitzat Tor a la versió 0.4.9.8.
-- Actualitzat DNSTT a la versió 1.20260501.0.
-- Actualitzada la traducció al coreà.
+- Traducció al coreà actualitzada.
+- S'ha afegit una pista de promoció.

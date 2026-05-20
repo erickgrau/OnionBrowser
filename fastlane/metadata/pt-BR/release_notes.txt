@@ -1,3 +1,2 @@
-- Atualizado o Tor para a versão 0.4.9.8.
-- Atualizado o DNSTT para a versão 1.20260501.0.
-- Atualizada a tradução para o coreano.
+- Atualização da tradução para o coreano.
+- Adicionada dica sobre a promoção.
