@@ -86,6 +86,8 @@
 				background-color: #352044;
 
 				text-align: center;
+
+				cursor: pointer;
 			}
 
 			p.promotion em {
@@ -96,10 +98,10 @@
 	<body>
 		<h1>{{ Onion Browser }}</h1>
 
-		<p class="promotion">
+		<p class="promotion" role="button" tabindex="0">
 		{{ %1$@31%2$@ days. %1$@5%2$@ ways to give. }}<br>
 		{{ Each donation to an internet freedom project gets matched. }}<br>
-		<a href="https://internetfreedom.torproject.org/projects/onion-browser/">internetfreedom.torproject.org</a>
+		<a href="http://swvbwbtmajvfrnz4wztx6ovshilm23ntigi73fz5wczj3aqdquq5icad.onion/projects/onion-browser/">internetfreedom.torproject.org</a>
 		</p>
 
 		<table style="{{ bookmarks_table_style }}">
@@ -221,9 +223,21 @@
 	</body>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
+			const el = document.querySelectorAll("p.promotion")[0];
+
 			if (new Date() > new Date("2026-06-19T23:59:59Z")) {
-				document.querySelectorAll("p.promotion").forEach(function (el) {
-					el.style.display = "none";
+				el.style.display = "none";
+			}
+			else {
+				const go = () => {
+					el.querySelectorAll("a")[0].click();
+				};
+
+				el.addEventListener('click', go);
+				el.addEventListener('keydown', e => {
+					if (e.key === 'Enter' || e.key === ' ') {
+						go();
+					}
 				});
 			}
 		});
