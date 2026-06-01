@@ -44,7 +44,7 @@
 "%@ new standards" = "%@ novi standardi";
 
 /* Placeholder is 'Orbot' */
-"%@ or built-in Tor" = "%@ or built-in Tor";
+"%@ or built-in Tor" = "%@ ili ugrađeni Tor";
 
 /* Placeholder is bullet point */
 "%@ video and audio streaming" = "%@ video i audio prijenos";
@@ -86,7 +86,7 @@
 "Add Bookmark" = "Dodaj zabilješku";
 
 /* Scene title */
-"Add Folder" = "Add Folder";
+"Add Folder" = "Dodaj mapu";
 
 /* AddSearchEngineViewController */
 "Add Search Engine" = "Dodaj tražilicu";
@@ -104,7 +104,7 @@
 "Address" = "Adresa";
 
 /* VoiceOver */
-"Address and search bar" = "Address and search bar";
+"Address and search bar" = "Traka za adresu i pretraživanje";
 
 /* RuleEditorController */
 "All rules" = "Sva pravila";
@@ -146,7 +146,7 @@
 "Autocomplete URL" = "Automatski dovrši URL";
 
 /* VoiceOver */
-"Back" = "Back";
+"Back" = "Natrag";
 
 /* CertificateViewController */
 "Begins On" = "Počinje";
@@ -242,7 +242,7 @@
 "Disable" = "Deaktiviraj";
 
 /* SettingsViewController */
-"Disable Bookmarks on Start Page" = "Onemogući oznake na početnoj stranici";
+"Disable Bookmarks on Start Page" = "Onemogući zabilješke na početnoj stranici";
 
 /* RuleEditorController */
 "Disabled: %@" = "Deaktivirano: %@";
@@ -290,7 +290,7 @@
 "Expires After" = "Istječe";
 
 /* BookmarksViewController */
-"Export Bookmarks" = "Export Bookmarks";
+"Export Bookmarks" = "Izvezi zabilješke";
 
 /* CertificateViewController */
 "Extended Validation: Organization" = "Proširena provjera: organizacija";
@@ -314,7 +314,7 @@
 "Forget in Background" = "Zaboravi u pozadini";
 
 /* VoiceOver */
-"Forward" = "Forward";
+"Forward" = "Naprijed";
 
 /* SettingsViewController */
 "Fund Development" = "Podupri razvoj";
@@ -359,7 +359,7 @@
 "Ignore TLS Errors" = "Zanemari TLS greške";
 
 /* BookmarksViewController */
-"Import Bookmarks" = "Import Bookmarks";
+"Import Bookmarks" = "Uvezi zabilješke";
 
 /* No comment provided by engineer. */
 "IndexedDB Databases" = "IndexedDB baze podataka";
@@ -557,13 +557,13 @@
 "Start %@" = "Start %@";
 
 /* No comment provided by engineer. */
-"Start built-in Tor" = "Start built-in Tor";
+"Start built-in Tor" = "Pokreni ugrađeni Tor";
 
 /* Placeholder is 'Orbot' */
 "Start Tor in %@." = "Pokreni Tor u %@u.";
 
 /* No comment provided by engineer. */
-"Starting Tor…" = "Starting Tor…";
+"Starting Tor…" = "Pokretanje Tor-a …";
 
 /* SettingsViewController */
 "Stop Auto-Complete at First Dot" = "Prekini automatsko dovršavanje pri prvoj točci";
@@ -578,13 +578,13 @@
 "Support Onion Browser Development" = "Podrži razvoj Onion preglednika";
 
 /* Placeholder is 'Orbot' */
-"Switch back to %@" = "Switch back to %@";
+"Switch back to %@" = "Prijeđi natrag na %@";
 
 /* AppDelegate */
 "Switch to Tab %d" = "Prijeđi na karticu %d";
 
 /* BookmarksViewController */
-"Sync" = "Sync";
+"Sync" = "Sinkroniziraj";
 
 /* SyncViewController */
 "Sync Bookmarks" = "Sinkroniziraj zabilješke";

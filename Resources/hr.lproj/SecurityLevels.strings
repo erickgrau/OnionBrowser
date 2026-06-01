@@ -12,9 +12,9 @@
 
 "JavaScript allowed" = "JavaScript je dozvoljen";
 
-"Lockdown Mode disabled" = "Lockdown Mode disabled";
+"Lockdown Mode disabled" = "Modus zaključavanja je deaktiviran";
 
-"Lockdown Mode enabled (iOS 16 an later)" = "Lockdown Mode enabled (iOS 16 an later)";
+"Lockdown Mode enabled (iOS 16 an later)" = "Modus zaključavanja je aktiviran (iOS 16 i novije)";
 
 "Many website features are disabled." = "Mnoge funkcije web stranice nisu aktivirane.";
 
@@ -46,7 +46,7 @@
 
 "When to Use:" = "Kada koristiti:";
 
-"Works pretty well. Your identity is mostly protected." = "Radi dosta dobro. Tvoj je identitet uglavnom zaštićen.";
+"Works pretty well. Your identity is mostly protected." = "Radi dosta dobro. Tvoj identitet je uglavnom zaštićen.";
 
 "Yes" = "Da";
 

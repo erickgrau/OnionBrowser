@@ -1,92 +1,92 @@
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@はTorへの安全な接続に%2$@か組み込みTorを使用できますが、組み込みTorにはセキュリティ上の問題があります。";
+"%1$@ can either rely on %2$@ for a secure connection to Tor or run its own built-in Tor. The built-in Tor has security problems." = "%1$@ は、Tor への安全な接続に %2$@ か内蔵の Tor を使用できますが、内蔵の Tor にはセキュリティ上の問題があります。";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ if you have connectivity issues with %2$@" = "%1$@ if you have connectivity issues with %2$@";
+"%1$@ if you have connectivity issues with %2$@" = "%1$@ %2$@ の接続に問題がある場合";
 
 /* Placeholder 1 is bullet point, Placeholder 2 is 'Onion Browser' */
-"%1$@ if you want to use %2$@ over another VPN" = "%1$@ （別のVPNで%2$@を使いたい場合）";
+"%1$@ if you want to use %2$@ over another VPN" = "%1$@ 別の VPN 経由で %2$@ を利用したい場合";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ now relies on %2$@ for a secure connection to Tor." = "%1$@ は現在、Tor接続のため、%2$@ に依存しています";
+"%1$@ now relies on %2$@ for a secure connection to Tor." = "%1$@ は現在、Tor への安全な接続に %2$@ を利用しています。";
 
 /* 1. placeholder is 'Onion Browser', 2. is translated 'Lockdown Mode', 3. is two line breaks, 4. is translated 'Default Security', 5. is translated 'Block Insecure HTTP Requests'. */
-"%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature." = "%1$@ はiOSをサポートしています%2$@! (iOS 16以降.)%3$@ゴールドとシルバーのセキュリティレベルがデフォルトで設定されます。ただし、あなたの設定が自動で変更されることはありません。%3$@ %4$@のページも参照してください。%3$@追伸: 新機能 '%5$@' もご覧ください。";
+"%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature." = "%1$@ は、iOS の %2$@ を一部サポートするようになりました！(iOS 16 以降)%3$@ゴールドおよびシルバーのセキュリティレベルでは、これがデフォルトで設定されます。ただし、設定は自動的に変更されるわけではありません。%3$@デフォルトのセキュリティレベルを変更するには、「%4$@」ページにアクセスしてください。%3$@また、新しい「%5$@」機能もご確認ください。";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue." = "%1$@ はTor接続のため、%2$@ に依存しています。 %2$@ をインストールしてください。";
+"%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue." = "%1$@ は、Tor への安全な接続に %2$@ を利用しています。続行するには %2$@ アプリをインストールしてください。";
 
 /* Placeholder 1 is 'Orbot', placeholder 2 is 'Onion Browser' */
-"%1$@ runs in onion-only mode. This is dangerous and %2$@ does not support it. Switch it off to use %2$@!" = "%1$@はオニオン限定モードです。リスクがあるため%2$@はサポートしていません。%2$@を使ってください。";
+"%1$@ runs in onion-only mode. This is dangerous and %2$@ does not support it. Switch it off to use %2$@!" = "%1$@ は Onion-Only モードで動作しています。これは危険であり、%2$@ はこのモードをサポートしていません。%2$@ を使用するには、この設定をオフにしてください！";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
-"%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ Torの公式ネットワークに接続するため、%2$@を使ってください。";
+"%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ %2$@ を使用して正規の Tor ネットワークに接続する。";
 
 /* No comment provided by engineer. */
-"%1$@31%2$@ days. %1$@5%2$@ ways to give." = "%1$@31%2$@日間。%1$@5%2$@通りの寄付方法。";
+"%1$@31%2$@ days. %1$@5%2$@ ways to give." = "%1$@31%2$@ 日間。%1$@5%2$@ つの寄付方法。";
 
 /* Placeholder is bullet point */
-"%@ a little more speed" = "%@ 少し速くなります";
+"%@ a little more speed" = "%@ 速度の向上";
 
 /* Placeholder is 'Orbot' */
-"%@ alone provides a VPN proxy. It will hide apps from network monitoring and give you access when they are blocked." = "%@ だけでVPNプロキシーになり、ネットワークの監視からアプリを守り、ブロックされている情報へのアクセスを可能にします。";
+"%@ alone provides a VPN proxy. It will hide apps from network monitoring and give you access when they are blocked." = "%@ 単体でも VPN プロキシーとして機能します。これは、ネットワークの監視からアプリを保護し、ブロックされている場合でもアクセスできるようにします。";
 
 /* Placeholder is bullet point */
-"%@ Get updates on the status of the connection." = "%@ 最新の接続情報を利用できます";
+"%@ Get updates on the status of the connection." = "%@ 接続の状態に関する最新情報を取得する。";
 
 /* Placeholder is 'Orbot' */
-"%@ installed! One more step." = "%@がインストールされました。あと一歩です。";
+"%@ installed! One more step." = "%@ がインストールされました！あと少しです。";
 
 /* Placeholder is bullet point */
-"%@ more protection from IP leaks" = "%@ IPアドレスから情報が漏れることを防ぎます";
+"%@ more protection from IP leaks" = "%@ IP アドレスの漏洩に対する保護の強化";
 
 /* Placeholder is bullet point */
-"%@ new standards" = "%@ 新しい標準です";
+"%@ new standards" = "%@ 新しい規格への対応";
 
 /* Placeholder is 'Orbot' */
-"%@ or built-in Tor" = "%@か組み込みTor";
+"%@ or built-in Tor" = "%@ または内蔵の Tor";
 
 /* Placeholder is bullet point */
-"%@ video and audio streaming" = "%@ 動画と音声のストリーミングに対応";
+"%@ video and audio streaming" = "%@ 動画と音声のストリーミング";
 
 /* Placeholder is bullet point */
-"%@ video and audio streams don't go through Tor and might get blocked" = "%@ 動画とオーディオはTorを通過せず、ブロックされる可能性があります。";
+"%@ video and audio streams don't go through Tor and might get blocked" = "%@ 動画や音声の通信は Tor を経由しないため、ブロックされる可能性があります";
 
 /* Placeholder is bullet point */
-"%@ websites can uncover your real IP address using JavaScript" = "%@ websites can uncover your real IP address using JavaScript";
+"%@ websites can uncover your real IP address using JavaScript" = "%@ ウェブサイトは JavaScript を使用して、あなたの実際の IP アドレスを特定することができます";
 
 /* No comment provided by engineer. */
-"(not recommended)" = "（非推奨）";
+"(not recommended)" = "(非推奨)";
 
 /* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH1__" = "Onion Browserは無料ですが、開発と維持にはコストがかかっています。";
+"__DONATE_EXPLANATION_PARAGRAPH1__" = "Onion Browser は無料アプリですが、開発や維持には時間とリソースが必要です。";
 
 /* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH2__" = "Onion Browserを支援するため、アプリ内課金で送金することができます。この課金は一度だけで、継続課金ではありません。もちろん、繰り返し送金していただいても構いません。課金に関する情報は開発者によって収集されることはありません。";
+"__DONATE_EXPLANATION_PARAGRAPH2__" = "以下のアプリ内購入を通じて、少額の寄付を送ることでアプリをサポートすることができます。これは 1 回限りであり、定期的な支払いはありませんが、いつでも再度寄付を行うことができます。Onion Browser の開発者は、アプリ内購入に関する情報を収集・保存することはありません。";
 
 /* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH3__" = "他の支援方法（Patreon, PayPal, Bitcoin, Zcash）については、一般設定のバージョン情報のページを確認してください。";
+"__DONATE_EXPLANATION_PARAGRAPH3__" = "その他の支援方法 (Patreon、PayPal、Bitcoin、Zcash など) については、「設定」ページの「製品情報」セクションをご覧ください。";
 
 /* DonationViewController */
-"__DONATE_THANKS__" = "%@の送金、ありがとうございます。支援は、Onion BrowserとTorがiOSに対応するために活用されます。";
+"__DONATE_THANKS__" = "ありがとうございます！あなたの %@ での寄付は、Onion Browser の継続的な開発や、Tor を他の iOS アプリに簡単に統合するためのツールの開発を可能にします。";
 
 /* SettingsViewController */
-"About" = "バージョン情報";
+"About" = "製品情報";
 
 /* Placeholder is 'Orbot' */
-"Access to %@ was Denied" = "%@へのアクセスが拒否されました";
+"Access to %@ was Denied" = "%@ へのアクセスが拒否されました";
 
 /* SearchEnginesViewController, AddSearchEngineViewController */
-"Add" = "新規";
+"Add" = "追加";
 
 /* AddSearchEngineViewController */
-"Add \"%@\" as the search term placeholder!" = "\"%@\"を検索初期値に追加";
+"Add \"%@\" as the search term placeholder!" = "検索語句のプレースホルダーとして「%@」を追加します。";
 
 /* BookmarkViewController */
-"Add Bookmark" = "お気に入りリストに追加";
+"Add Bookmark" = "ブックマークを追加";
 
 /* Scene title */
-"Add Folder" = "Add Folder";
+"Add Folder" = "フォルダーを追加";
 
 /* AddSearchEngineViewController */
 "Add Search Engine" = "検索エンジンを追加";
@@ -95,37 +95,37 @@
 "Add Site" = "サイトを追加";
 
 /* Placeholder is 'Orbot' */
-"Add to %@" = "%@に追加";
+"Add to %@" = "%@ に追加";
 
 /* Placeholder is 'Onion Browser' */
-"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "サーバー上にないが%@には保存されているお気に入りが作成されます。";
+"Additionally, all bookmarks not existing on the server but in %@ will be created there." = "また、サーバーには存在せず %@ にのみ存在するブックマークは、すべてサーバー上に作成されます。";
 
 /* BookmarkViewController */
 "Address" = "アドレス";
 
 /* VoiceOver */
-"Address and search bar" = "Address and search bar";
+"Address and search bar" = "アドレスと検索バー";
 
 /* RuleEditorController */
-"All rules" = "全てのルール";
+"All rules" = "すべてのルール";
 
 /* SettingsViewController */
-"Allow 3rd-Party Keyboards" = "サードパーティのキーボードを許可";
+"Allow 3rd-Party Keyboards" = "サードパーティ製キーボードを許可する";
 
 /* Option title */
-"Allow Access to Microphone and Video" = "マイクと動画を許可";
+"Allow Access to Microphone and Video" = "マイクとカメラへのアクセスを許可する";
 
 /* Option title */
-"Allow Access to Orientation and Motion Data" = "画面の向きセンサーを許可";
+"Allow Access to Orientation and Motion Data" = "モーションデータへのアクセスを許可する";
 
 /* SecurityViewController */
-"Allow hosts to permanently store cookies and local storage databases." = "クッキーとローカルストレージを許可";
+"Allow hosts to permanently store cookies and local storage databases." = "ホストが Cookie およびローカルストレージデータベースを永続的に保存できるようにします。";
 
 /* Option title */
-"Allow JavaScript" = "Javascriptを許可";
+"Allow JavaScript" = "JavaScript を許可する";
 
 /* SecurityViewController */
-"Allow Persistent Cookies" = "永続的クッキーを許可";
+"Allow Persistent Cookies" = "永続的な Cookie を許可する";
 
 /* DonationViewController */
 "Are you sure you want to send a %@ tip?" = "本当に %@ チップを送金しますか？";
@@ -161,7 +161,7 @@
 "Bookmarks" = "お気に入り";
 
 /* No comment provided by engineer. */
-"Both are free to use. Free of tracking. Code is open source." = "いずれも無料です。トラッキングの恐れがなく、オープンソースです。";
+"Both are free to use. Free of tracking. Code is open source." = "どちらも無料です。トラッキングは一切なく、コードはオープンソースです。";
 
 /* CircuitViewController */
 "Bridge Configuration" = "ブリッジの設定";
@@ -350,7 +350,7 @@
 "Host" = "ホスト";
 
 /* Placeholder is 'Onion Browser' */
-"If you sync, all bookmarks will be read from the server and added/updated in %@." = "同期すると、サーバー上のすべての「お気に入り」が%@に追加（更新）されます。";
+"If you sync, all bookmarks will be read from the server and added/updated in %@." = "同期すると、すべてのブックマークがサーバーから読み込まれ、%@ に追加または更新されます。";
 
 /* Tab+UIWebViewDelegate */
 "Ignore for this host" = "このホストを無視";
@@ -380,7 +380,7 @@
 "Learn more about %@" = "%@ の詳しい情報";
 
 /* DonationViewController */
-"Loading in-app purchase data…" = "購入データの読み込み中…";
+"Loading in-app purchase data…" = "アプリ内購入データを読み込んでいます…";
 
 /* Storage2ViewController */
 "Local Storage" = "ローカル・ストレージ";
@@ -476,7 +476,7 @@
 "Rate on App Store" = "App Storeでレビューする";
 
 /* No comment provided by engineer. */
-"Reasons to use the built-in Tor (iOS 17 only)" = "組み込みTorを使う理由（iOS 17のみ）";
+"Reasons to use the built-in Tor (iOS 17 only)" = "内蔵の Tor を使う必要があるケース (iOS 17 のみ)";
 
 /* AppDelegate */
 "Reload Tab" = "タブを再読み込み";
@@ -548,7 +548,7 @@
 "Silver" = "シルバー";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"So that you can do more with Tor on iOS! In %1$@, %2$@ improves the browsing experience with:" = "もちろん、iOSでもTorが活用できるためです。%1$@では、%2$@を併用することによって:";
+"So that you can do more with Tor on iOS! In %1$@, %2$@ improves the browsing experience with:" = "iOS で Tor をもっと活用するためです！%1$@ では、%2$@ によって以下の点でブラウジング体験が向上します:";
 
 /* DonationViewController */
 "Sorry, in-app purchase is disabled on your device!" = "アプリ内支払いが無効になっています";
@@ -584,10 +584,10 @@
 "Switch to Tab %d" = "タブ%dへ切り替え";
 
 /* BookmarksViewController */
-"Sync" = "Sync";
+"Sync" = "同期";
 
 /* SyncViewController */
-"Sync Bookmarks" = "お気に入りを同期する";
+"Sync Bookmarks" = "ブックマークを同期";
 
 /* SyncViewController */
 "Sync Bookmarks with Nextcloud Server" = "お気に入りをNextCloudサーバーと同期する";
@@ -617,10 +617,10 @@
 "This is your default security setting for every website you visit in %@." = "以下は %@ のセキュリティの初期設定です。";
 
 /* Placeholder is 'Orbot' */
-"This site may need authentication. If you received an authentication key for this site, add it to %@!" = "このサイトは認証が必要かもしれません。このサイトの認証鍵を入手したら、%@に追加登録してください。";
+"This site may need authentication. If you received an authentication key for this site, add it to %@!" = "このサイトは認証が必要かもしれません。このサイトの認証鍵を入手したら、%@ に追加してください。";
 
 /* Placeholder is 'Onion Browser' */
-"This will allow %@ to:" = "アクセス許可によって、%@は:";
+"This will allow %@ to:" = "これにより、%@ は以下のことができるようになります:";
 
 /* DonationViewController */
 "Tip: %@" = "チップ: %@";
@@ -656,10 +656,10 @@
 "URL Blocker" = "URLブロッカー";
 
 /* Placeholder is 'Orbot' */
-"Use %@" = "%@を使う";
+"Use %@" = "%@ を使う";
 
 /* No comment provided by engineer. */
-"Use built-in Tor" = "組み込みTorを使う";
+"Use built-in Tor" = "内蔵の Tor を使う";
 
 /* No comment provided by engineer. */
 "Use URL Blocker" = "Use URL Blocker";
@@ -695,10 +695,10 @@
 "When disabled, all text entered in search bar will be sent to the search engine unless it starts with \"http\"." = "無効にすると、\"http\"で始まらない限り、検索バーに入力されたテキストがすべて検索エンジンに送信されます";
 
 /* No comment provided by engineer. */
-"Why" = "理由は？";
+"Why" = "理由";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"Why %1$@ needs %2$@" = "なぜ %1$@に%2$@が必要なのか？";
+"Why %1$@ needs %2$@" = "%1$@ に %2$@ が必要な理由";
 
 /* SecurityPresetsRow */
 "Works pretty well. Your identity is mostly protected." = "完全に機能します。ほとんどの場合、あなたの身元も保護されます。";
