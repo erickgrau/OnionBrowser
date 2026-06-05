@@ -12,8 +12,10 @@
 			<string>NSStringPluralRuleType</string>
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
+			<key>zero</key>
+			<string>쿠키 없음</string>
 			<key>other</key>
-			<string>%d 쿠키</string>
+			<string>%d개의 쿠키</string>
 		</dict>
 	</dict>
 </dict>
