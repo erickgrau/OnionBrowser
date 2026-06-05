@@ -1,2 +1,2 @@
-- Oppdatert koreansk oversettelse.
-- Lagt til tips om kampanjen.
+- Oppdatert Tor til versjon 0.4.9.9. (Inneholder mange sikkerhetsrettelser!)
+- Oppdatert oversettelser til koreansk, japansk, kroatisk og forenklet kinesisk.

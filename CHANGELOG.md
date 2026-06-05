@@ -1,5 +1,9 @@
 #  Onion Browser Changelog
 
+## 3.3.10
+- Updated Tor to 0.4.9.9. (Contains many security fixes!)
+- Updated Korean, Japanese, Croatian amd simplified Chinese translations. 
+
 ## 3.3.9
 - Updated Korean translation.
 - Added promotion hint.

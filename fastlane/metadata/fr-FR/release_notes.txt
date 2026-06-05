@@ -1,2 +1,2 @@
-- Mise à jour de la traduction en coréen.
-- Ajout d'un conseil sur la promotion.
+- Mise à jour de Tor vers la version 0.4.9.9. (Comprend de nombreuses corrections de sécurité !)
+- Mise à jour des traductions en coréen, japonais, croate et chinois simplifié.

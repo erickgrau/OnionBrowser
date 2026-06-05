@@ -1,2 +1,2 @@
-- Se ha actualizado la traducción al coreano.
-- Se ha añadido una sugerencia sobre la promoción.
+- Se ha actualizado Tor a la versión 0.4.9.9. (¡Incluye numerosas correcciones de seguridad!)
+- Se han actualizado las traducciones al coreano, japonés, croata y chino simplificado.

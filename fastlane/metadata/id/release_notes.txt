@@ -1,2 +1,2 @@
-- Terjemahan bahasa Korea telah diperbarui.
-- Petunjuk promosi telah ditambahkan.
+- Tor telah diperbarui ke versi 0.4.9.9. (Berisi banyak perbaikan keamanan!)
+- Terjemahan dalam bahasa Korea, Jepang, Kroasia, dan Mandarin Sederhana telah diperbarui.

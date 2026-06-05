@@ -1,2 +1,2 @@
-- Päivitetty koreankielinen käännös.
-- Lisätty kampanjavinkki.
+- Tor päivitetty versioon 0.4.9.9. (Sisältää useita tietoturvakorjauksia!)
+- Päivitetty korean-, japanin-, kroatian- ja yksinkertaistetun kiinan käännökset.

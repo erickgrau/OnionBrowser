@@ -1,2 +1,2 @@
-- Traducció al coreà actualitzada.
-- S'ha afegit una pista de promoció.
+- Actualitzat Tor a la versió 0.4.9.9. (Inclou moltes correccions de seguretat!)
+- Actualitzades les traduccions al coreà, japonès, croat i xinès simplificat.

@@ -1,2 +1,2 @@
-- Ažurirani korejski prijevod.
-- Dodan nagovještaj promocije.
+- Ažuriran Tor na verziju 0.4.9.9. (Sadrži brojne sigurnosne ispravke!)
+- Ažurirani prijevodi na korejski, japanski, hrvatski i kineski (pojednostavljeni).

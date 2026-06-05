@@ -1,2 +1,2 @@
-- Korece çeviri güncellendi.
-- Promosyon ipucu eklendi.
+- Tor 0.4.9.9 sürümüne güncellendi. (Çok sayıda güvenlik düzeltmesi içeriyor!)
+- Korece, Japonca, Hırvatça ve Basitleştirilmiş Çince çeviriler güncellendi.

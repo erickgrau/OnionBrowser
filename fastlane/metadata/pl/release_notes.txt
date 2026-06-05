@@ -1,2 +1,2 @@
-- Zaktualizowano tłumaczenie na język koreański.
-- Dodano wskazówkę dotyczącą promocji.
+- Zaktualizowano program Tor do wersji 0.4.9.9. (Zawiera wiele poprawek dotyczących bezpieczeństwa!)
+- Zaktualizowano tłumaczenia na język koreański, japoński, chorwacki i chiński (uproszczony).

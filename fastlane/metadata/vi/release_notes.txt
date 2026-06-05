@@ -1,2 +1,2 @@
-- Cập nhật bản dịch tiếng Hàn.
-- Thêm gợi ý khuyến mãi.
+- Đã cập nhật Tor lên phiên bản 0.4.9.9. (Bản cập nhật này bao gồm nhiều bản vá lỗi bảo mật!)
+- Đã cập nhật bản dịch tiếng Hàn, tiếng Nhật, tiếng Croatia và tiếng Trung giản thể.

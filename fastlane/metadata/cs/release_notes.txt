@@ -1,2 +1,2 @@
-- Aktualizován korejský překlad.
-- Přidán tip k propagační akci.
+- Aktualizován Tor na verzi 0.4.9.9. (Obsahuje řadu oprav zabezpečení!)
+- Aktualizovány překlady do korejštiny, japonštiny, chorvatštiny a zjednodušené čínštiny.

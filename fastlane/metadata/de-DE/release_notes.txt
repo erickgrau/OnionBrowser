@@ -1,2 +1,2 @@
-- Die koreanische Übersetzung wurde aktualisiert.
-- Ein Hinweis zur Werbeaktion wurde hinzugefügt.
+- Tor auf Version 0.4.9.9 aktualisiert. (Enthält zahlreiche Sicherheitskorrekturen!)
+- Die Übersetzungen ins Koreanische, Japanische, Kroatische und vereinfachte Chinesisch wurden aktualisiert.

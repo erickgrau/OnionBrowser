@@ -1,2 +1,2 @@
-- De Koreaanse vertaling is bijgewerkt.
-- Er is een promotietip toegevoegd.
+- Tor bijgewerkt naar versie 0.4.9.9. (Bevat talrijke beveiligingsverbeteringen!)
+- De vertalingen in het Koreaans, Japans, Kroatisch en Vereenvoudigd Chinees zijn bijgewerkt.
