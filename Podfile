@@ -36,7 +36,7 @@ target 'OnionBrowser Tests' do
   pod 'DTFoundation/DTASN1'
 end
 
-# Fix Xcode 15 compile issues.
+# Fix Xcode 15+ compile issues and code signing for Pods.
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     if target.respond_to?(:name) and !target.name.start_with?("Pods-")
@@ -44,6 +44,10 @@ post_install do |installer|
         if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 12
           config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
         end
+        # Allow pod targets to be signed with the app's team
+        config.build_settings['CODE_SIGN_IDENTITY'] = '-'
+        config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
+        config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
       end
     end
   end
