@@ -74,6 +74,8 @@
 		A06EC2A12BBA0C80003A9944 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A06EC2A02BBA0C71003A9944 /* PrivacyInfo.xcprivacy */; };
 		A07037C623C7571B00D670EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07037C523C7571B00D670EC /* AppDelegate.swift */; };
 		A07037C723C79AE500D670EC /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07037C223C74DC900D670EC /* Media.xcassets */; };
+		A07754F02FE035AA00B1EC4E /* PreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07754EF2FE035AA00B1EC4E /* PreviewWebView.swift */; };
+		A07754F22FE038FC00B1EC4E /* BaseNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07754F12FE038FC00B1EC4E /* BaseNavigationDelegate.swift */; };
 		A07B55FC23D736D60051663B /* CertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07B55FB23D736D60051663B /* CertificateViewController.swift */; };
 		A08563142A04E9D900A3A7FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08563122A04E9D800A3A7FF /* Localizable.strings */; };
 		A085633A2A04EA1E00A3A7FF /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = A08563382A04EA1E00A3A7FF /* Localizable.stringsdict */; };
@@ -295,6 +297,8 @@
 		A0734CFE2DEF0893007B5249 /* ps */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ps; path = ps.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A0734CFF2DEF0893007B5249 /* ps */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ps; path = ps.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		A0734D002DEF0893007B5249 /* ps */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ps; path = ps.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A07754EF2FE035AA00B1EC4E /* PreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWebView.swift; sourceTree = "<group>"; };
+		A07754F12FE038FC00B1EC4E /* BaseNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationDelegate.swift; sourceTree = "<group>"; };
 		A077D6BA2F361FED00CFC6FD /* .weblate */ = {isa = PBXFileReference; lastKnownFileType = text; path = .weblate; sourceTree = "<group>"; };
 		A07B55FB23D736D60051663B /* CertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
 		A07D65582208A2540002D775 /* mk_build_versions.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = mk_build_versions.sh; sourceTree = "<group>"; };
@@ -745,6 +749,8 @@
 				A0BF520A23AFC3580096624A /* HistoryViewController.swift */,
 				A09A39612A17BE61008CC06A /* DownloadActivity.swift */,
 				A0C1FB172D50FC9A00AE97A7 /* TlsCertificate.swift */,
+				A07754EF2FE035AA00B1EC4E /* PreviewWebView.swift */,
+				A07754F12FE038FC00B1EC4E /* BaseNavigationDelegate.swift */,
 			);
 			path = Browsing;
 			sourceTree = "<group>";
@@ -1221,6 +1227,7 @@
 				A0204FA12D721006006CDA3B /* UpdateAdvertisement.swift in Sources */,
 				A0BF527623AFC3580096624A /* OrbotManager.swift in Sources */,
 				A0D9008B24095F5C0046C9B3 /* AltSvcHeader.swift in Sources */,
+				A07754F02FE035AA00B1EC4E /* PreviewWebView.swift in Sources */,
 				A0BF527223AFC3580096624A /* SettingsViewController.swift in Sources */,
 				A0BF527723AFC3580096624A /* BlurredSnapshot.swift in Sources */,
 				A013DEDA2434E69A0087D12B /* UIImage+Helpers.swift in Sources */,
@@ -1268,6 +1275,7 @@
 				A0BF526823AFC3580096624A /* BookmarkCell.swift in Sources */,
 				A0BF526123AFC3580096624A /* BookmarkViewController.swift in Sources */,
 				A0AF2C062A123E65000BCC85 /* BrowsingViewController+UIResponder.swift in Sources */,
+				A07754F22FE038FC00B1EC4E /* BaseNavigationDelegate.swift in Sources */,
 				A0BF526A23AFC3580096624A /* SecurityPresetsRow.swift in Sources */,
 				A0140DB92D70844700BD2658 /* Log.swift in Sources */,
 				A0BF526E23AFC3580096624A /* Storage1ViewController.swift in Sources */,

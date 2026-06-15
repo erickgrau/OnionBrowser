@@ -20,25 +20,12 @@ extension Tab: WKNavigationDelegate {
 				 preferences: WKWebpagePreferences,
 				 decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void)
 	{
-		guard let url = navigationAction.request.url else {
+		guard let result = BaseNavigationDelegate.webView(webView, decidePolicyFor: navigationAction, preferences: preferences)
+		else {
 			return decisionHandler(.cancel, preferences)
 		}
 
-		guard OrbotManager.shared.allowRequests() else {
-			return decisionHandler(.cancel, preferences)
-		}
-
-		if Settings.useBuiltInTor ?? false, #available(iOS 17.0, *) {
-			guard !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty else {
-				return decisionHandler(.cancel, preferences)
-			}
-		}
-
-		let hs = HostSettings.for(url.host)
-
-		if hs.blockInsecureHttp && url.isHttp && !url.isOnion {
-			return decisionHandler(.cancel, preferences)
-		}
+		let url = result.url
 
 		if let rule = UrlBlocker.shared.blockRule(for: url, withMain: self.url) {
 			applicableUrlBlockerRules.insert(rule)
@@ -51,7 +38,7 @@ extension Tab: WKNavigationDelegate {
 		// Try to prevent universal links from triggering by refusing the initial request and starting a new one.
 		let iframe = url.absoluteString != navigationAction.request.mainDocumentURL?.absoluteString
 
-		if hs.universalLinkProtection {
+		if result.hs.universalLinkProtection {
 			if iframe {
 				Log.debug(for: Self.self, "[Tab \(index)] not doing universal link workaround for iframe \(url).")
 			}
@@ -81,21 +68,6 @@ extension Tab: WKNavigationDelegate {
 
 		if !iframe {
 			reset(navigationAction.request.mainDocumentURL)
-		}
-
-		preferences.allowsContentJavaScript = hs.javaScript
-
-		if #available(iOS 16.0, *) {
-#if DEBUG
-			// There is no web-browser entitlement in debugging, and without that,
-			// *disabling* lockdown mode is disallowed and we would crash here.
-			// Hence, only try to enable it, if it's *not* enabled, yet, but it should.
-			if !preferences.isLockdownModeEnabled && hs.lockdownMode {
-				preferences.isLockdownModeEnabled = true
-			}
-#else
-			preferences.isLockdownModeEnabled = hs.lockdownMode
-#endif
 		}
 
 		if navigationAction.shouldPerformDownload {
@@ -210,20 +182,11 @@ extension Tab: WKNavigationDelegate {
 		handle(challenge: challenge, completionHandler)
 	}
 
-	func handle(challenge: URLAuthenticationChallenge, _ completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+	func handle(challenge: URLAuthenticationChallenge, _ completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void)
+	{
 		let space = challenge.protectionSpace
 
 		switch space.authenticationMethod {
-		case NSURLAuthenticationMethodServerTrust:
-			if let serverTrust = space.serverTrust,
-			   HostSettings.for(space.host).ignoreTlsErrors
-			{
-				completionHandler(.useCredential, URLCredential(trust: serverTrust))
-			}
-			else {
-				completionHandler(.performDefaultHandling, nil)
-			}
-
 		case NSURLAuthenticationMethodHTTPBasic, NSURLAuthenticationMethodHTTPDigest:
 			let storage = URLCredentialStorage.shared
 
@@ -277,23 +240,19 @@ extension Tab: WKNavigationDelegate {
 			}
 
 		default:
-			completionHandler(.performDefaultHandling, nil)
+			let credential = BaseNavigationDelegate.handle(challenge: challenge)
+			completionHandler(credential != nil ? .useCredential : .performDefaultHandling, credential)
 		}
 	}
 
 	func webView(_ webView: WKWebView, authenticationChallenge challenge: URLAuthenticationChallenge,
 				 shouldAllowDeprecatedTLS decisionHandler: @escaping (Bool) -> Void)
 	{
+		if let decision = BaseNavigationDelegate.shouldAllowDeprecatedTls(challenge) {
+			return decisionHandler(decision)
+		}
+
 		let space = challenge.protectionSpace
-
-		guard space.authenticationMethod == NSURLAuthenticationMethodServerTrust
-		else {
-			return decisionHandler(false)
-		}
-
-		if HostSettings.for(space.host).ignoreTlsErrors {
-			return decisionHandler(true)
-		}
 
 		let msg = NSLocalizedString("The encryption method for this server is outdated.", comment: "")
 			+ "\n\n"
