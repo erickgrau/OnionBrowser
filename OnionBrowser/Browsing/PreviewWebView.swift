@@ -26,6 +26,21 @@ class PreviewWebView: WKWebView, WKNavigationDelegate {
 	}
 
 
+	override func load(_ request: URLRequest) -> WKNavigation? {
+		var userAgent = HostSettings.for(request.url?.host).userAgent
+
+		if userAgent.isEmpty {
+			userAgent = Tab.defaultUserAgent
+		}
+
+		if !userAgent.isEmpty {
+			customUserAgent = userAgent
+		}
+
+		return super.load(request)
+	}
+
+
 	// MARK: WKNavigationDelegate
 
 	func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction,

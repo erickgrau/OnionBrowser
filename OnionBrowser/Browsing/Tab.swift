@@ -52,7 +52,7 @@ class Tab: UIView {
 	 from "Mozilla/5.0 (iPhone; CPU iPhone OS 8_4_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12H321"
 	 to   "Mozilla/5.0 (iPhone; CPU iPhone OS 8_4_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12H321 Safari/600.1.4"
 	 */
-	private static var defaultUserAgent = "" {
+	static var defaultUserAgent = "" {
 		didSet {
 			var uaparts = defaultUserAgent.components(separatedBy: " ")
 
