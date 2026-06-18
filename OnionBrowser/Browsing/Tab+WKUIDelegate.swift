@@ -95,6 +95,7 @@ extension Tab: WKUIDelegate {
 			identifier: nil,
 			previewProvider: {
 				let vc = UIViewController()
+				vc.view.backgroundColor = .systemBackground
 
 				let label = UILabel()
 				label.translatesAutoresizingMaskIntoConstraints = false
