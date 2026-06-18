@@ -177,6 +177,16 @@ class SecurityViewController: FixedFormViewController {
 		}
 
 		<<< SwitchRow() {
+			$0.title = NSLocalizedString("Allow Link Preview", comment: "Option title")
+			$0.value = hostSettings.linkPreview
+			$0.cell.switchControl.onTintColor = .accent
+			$0.cell.textLabel?.numberOfLines = 0
+		}
+		.onChange({ [weak self] row in
+			self?.hostSettings.linkPreview = row.value ?? false
+		})
+
+		<<< SwitchRow() {
 			$0.title = NSLocalizedString("Universal Link Protection", comment: "Option title")
 			$0.value = hostSettings.universalLinkProtection
 			$0.cell.switchControl.onTintColor = .accent
