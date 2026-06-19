@@ -1,1 +1,1 @@
-Browser,Tor,Tor Browser,Onion Browser,anonymous,private,private browser,orbot,orfox,onion,浏览器,匿名,隐私
+Browser,Tor,Tor Browser,Onion Browser,anonymous,private,private browser,orbot,orfox,onion,浏览器,匿名,私密

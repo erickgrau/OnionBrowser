@@ -8,7 +8,7 @@
 "%1$@ if you want to use %2$@ over another VPN" = "%1$@ 다른 VPN 대신 %2$@를 사용하려는 경우";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ now relies on %2$@ for a secure connection to Tor." = "%1$@은 이제 Tor에 대한 보안 연결을 위해 %2$@에 의존합니다.";
+"%1$@ now relies on %2$@ for a secure connection to Tor." = "%1$@는 이제 Tor에 대한 보안 연결을 위해 %2$@에 의존합니다.";
 
 /* 1. placeholder is 'Onion Browser', 2. is translated 'Lockdown Mode', 3. is two line breaks, 4. is translated 'Default Security', 5. is translated 'Block Insecure HTTP Requests'. */
 "%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature." = "%1$@가 이제 iOS의 %2$@를 선택적으로 지원합니다! (iOS 16 이상)%3$@Gold 및 Silver 보안 수준에서는 이 설정이 기본으로 적용됩니다. 단, 기존 설정이 자동으로 변경되지는 않습니다.%3$@기본 보안 수준을 변경하려면 '%4$@' 페이지를 방문하세요!%3$@추신: 새로운 '%5$@' 기능도 한 번 살펴보는 것을 추천합니다.";
@@ -17,7 +17,7 @@
 "%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue." = "%1$@는 Tor에 안전하게 연결하기 위해 %2$@에 의존합니다. 계속하려면 %2$@ 앱을 설치하세요.";
 
 /* Placeholder 1 is 'Orbot', placeholder 2 is 'Onion Browser' */
-"%1$@ runs in onion-only mode. This is dangerous and %2$@ does not support it. Switch it off to use %2$@!" = "%1$@가 onion-only 모드로 실행 중입니다. 이는 위험하며 %2$@는 이를 지원하지 않습니다. %2$@를 사용하려면 이 기능을 끄세요!";
+"%1$@ runs in onion-only mode. This is dangerous and %2$@ does not support it. Switch it off to use %2$@!" = "%1$@이 onion-only 모드로 실행 중입니다. 이는 위험하며 %2$@는 이를 지원하지 않습니다. %2$@를 사용하려면 이 기능을 끄세요!";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
 "%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ 공식 Tor 네트워크에 연결하려면 %2$@를 사용하세요.";
@@ -59,16 +59,16 @@
 "(not recommended)" = "(권장하지 않음)";
 
 /* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH1__" = "Onion 브라우저는 무료 앱이지만 개발 및 유지보수에 시간과 자원이 소요됩니다.";
+"__DONATE_EXPLANATION_PARAGRAPH1__" = "Onion Browser는 무료 앱이지만 개발 및 유지보수에 시간과 자원이 소요됩니다.";
 
 /* DonationViewController */
-"__DONATE_EXPLANATION_PARAGRAPH2__" = "아래의 앱 내 구입을 통해 작은 팁을 보내주면 앱을 지원할 수 있습니다. 이것은 일회성 비반복적인 거래이지만, 언제든지 돌아와서 팁을 보낼 수 있습니다. 앱 내 구입에 대한 정보는 Onion 브라우저 개발자가 수집하거나 저장하지 않습니다.";
+"__DONATE_EXPLANATION_PARAGRAPH2__" = "아래의 앱 내 구입을 통해 작은 팁을 보내주시면 앱을 지원할 수 있습니다. 이것은 일회성인 비반복적인 거래이지만, 언제든지 돌아와서 팁을 보낼 수 있습니다. 앱 내 구입에 대한 정보는 Onion Browser의 개발자가 수집하거나 저장하지 않습니다.";
 
 /* DonationViewController */
 "__DONATE_EXPLANATION_PARAGRAPH3__" = "'설정' 페이지의 '정보' 섹션에서 다른 도움 방법(Patreon, PayPal, 비트코인 또는 Zcash포함)에 대해 배울 수 있습니다.";
 
 /* DonationViewController */
-"__DONATE_THANKS__" = "감사합니다! 조금이라도 도움이 돼요! %@를 지불하면 Tor를 다른 iOS 앱에 쉽게 통합할 수 있는 Onion 브라우저 및 도구에 대한 지속적인 개발을 보장할 수 있습니다.";
+"__DONATE_THANKS__" = "감사합니다! 조금이라도 도움이 돼요! %@ 지불하면 Tor를 다른 iOS 앱에 쉽게 통합할 수 있는 Onion  Browser 및 도구에 대한 지속적인 개발을 보장할 수 있습니다.";
 
 /* SettingsViewController */
 "About" = "정보";
@@ -575,7 +575,7 @@
 "Support" = "지원";
 
 /* DonationViewController */
-"Support Onion Browser Development" = "Onion 브라우저 개발 지원";
+"Support Onion Browser Development" = "Onion Browser 개발 지원";
 
 /* Placeholder is 'Orbot' */
 "Switch back to %@" = "%@로 다시 전환";
@@ -698,7 +698,7 @@
 "Why" = "이유";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"Why %1$@ needs %2$@" = "왜 %1$@에 %2$@가 필요한가?";
+"Why %1$@ needs %2$@" = "%1$@에 %2$@이 필요한 이유";
 
 /* SecurityPresetsRow */
 "Works pretty well. Your identity is mostly protected." = "꽤 잘 작동합니다. 귀하의 신원은 대부분 보호받고 있습니다.";

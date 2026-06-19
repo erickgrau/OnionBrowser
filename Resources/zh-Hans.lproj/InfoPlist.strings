@@ -7,8 +7,8 @@
 //
 //  This file is part of Onion Browser. See LICENSE file for redistribution terms.
 //
-NSPhotoLibraryAddUsageDescription = "用于在相册中保存选定的图片。";
-NSCameraUsageDescription = "用于从显示的二维码读取网桥地址。";
+NSPhotoLibraryAddUsageDescription = "需要将选定的图片保存到您的相册中。";
+NSCameraUsageDescription = "需要从显示的二维码中读取网桥地址。";
 NSFaceIDUsageDescription = "如果您想使用面容 ID 解锁应用，则为必需。";
 "New Tab" = "新标签页";
 "Clear Data" = "清除数据";

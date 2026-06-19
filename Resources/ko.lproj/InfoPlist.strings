@@ -8,7 +8,7 @@
 //  This file is part of Onion Browser. See LICENSE file for redistribution terms.
 //
 NSPhotoLibraryAddUsageDescription = "선택한 사진을 저장하기 위해서 필요합니다.";
-NSCameraUsageDescription = "QR코트에 있는 브릿지 주소를 읽기위해 필요합니다.";
+NSCameraUsageDescription = "QR코드에 있는 브리지 주소를 읽기위해 필요합니다.";
 NSFaceIDUsageDescription = "Face ID로 앱의 잠금을 해제하려면 필요한 경우.";
 "New Tab" = "새로운 탭";
 "Clear Data" = "데이터 지우기";
