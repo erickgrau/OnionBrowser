@@ -1,2 +1,8 @@
-- A Tor szoftvert 0.4.9.9-es verzióra frissítettük. (Számos biztonsági javítást tartalmaz!)
-- Frissítettük a koreai, japán, horvát és egyszerűsített kínai nyelvű fordításokat.
+- A Tor verziója 0.4.9.10-re frissült.
+- A Snowflake verziója 2.14.0-ra frissült.
+- A DNSTT verziója 1.20260501.0-ra frissült.
+- Biztonsági javítás: A linkek előnézetének biztonsági szintjét a normál lapokéval megegyezőre emeltük.
+- Javítottuk a linkek előnézetének címháttérét az iOS 26-ban.
+- A linkek előnézete opcionálissá vált.
+- Frissítettük a koreai, japán és egyszerűsített kínai fordításokat.
+- Eltávolítottuk az elavult NYT alapértelmezett könyvjelzőt. Az Onion szolgáltatás megszűnt.

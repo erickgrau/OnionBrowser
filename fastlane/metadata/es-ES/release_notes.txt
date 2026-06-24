@@ -1,2 +1,8 @@
-- Se ha actualizado Tor a la versión 0.4.9.9. (¡Incluye numerosas correcciones de seguridad!)
-- Se han actualizado las traducciones al coreano, japonés, croata y chino simplificado.
+- Se ha actualizado Tor a la versión 0.4.9.10.
+- Se ha actualizado Snowflake a la versión 2.14.0.
+- Se ha actualizado DNSTT a la versión 1.20260501.0.
+- Corrección de seguridad: se ha elevado el nivel de seguridad de la vista previa de enlaces al mismo nivel que el de las pestañas normales.
+- Se ha corregido el fondo del título de la vista previa de enlaces en iOS 26.
+- Se ha hecho opcional la vista previa de enlaces.
+- Se han actualizado las traducciones al coreano, japonés y chino simplificado.
+- Se ha eliminado el marcador predeterminado del NYT, ya que estaba obsoleto. El servicio «onion» ha dejado de estar disponible.

@@ -1,2 +1,8 @@
-- Updated Tor to 0.4.9.9. (Contains many security fixes!)
-- Updated Korean, Japanese, Croatian amd simplified Chinese translations.
+- Updated Tor to 0.4.9.10.
+- Updated Snowflake to 2.14.0.
+- Updated DNSTT to 1.20260501.0.
+- Security fix: Elevated link preview security to same as normal tabs.
+- Fixed link preview title background in iOS 26.
+- Make link preview optional.
+- Updated Korean, Japanese and simplified Chinese translations.
+- Removed outdated NYT default bookmark. Onion service was discontinued.

@@ -1,2 +1,8 @@
-- Tor telah diperbarui ke versi 0.4.9.9. (Berisi banyak perbaikan keamanan!)
-- Terjemahan dalam bahasa Korea, Jepang, Kroasia, dan Mandarin Sederhana telah diperbarui.
+- Tor telah diperbarui ke versi 0.4.9.10.
+- Snowflake telah diperbarui ke versi 2.14.0.
+- DNSTT telah diperbarui ke versi 1.20260501.0.
+- Perbaikan keamanan: Meningkatkan tingkat keamanan pratinjau tautan agar sama dengan tab biasa.
+- Memperbaiki latar belakang judul pratinjau tautan di iOS 26.
+- Menjadikan pratinjau tautan sebagai fitur opsional.
+- Memperbarui terjemahan bahasa Korea, Jepang, dan Mandarin Sederhana.
+- Menghapus bookmark default NYT yang sudah tidak berlaku. Layanan Onion tersebut telah dihentikan.

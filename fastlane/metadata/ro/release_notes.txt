@@ -1,2 +1,8 @@
-- S-a actualizat Tor la versiunea 0.4.9.9. (Conține numeroase remedieri de securitate!)
-- S-au actualizat traducerile în coreeană, japoneză, croată și chineză simplificată.
+- S-a actualizat Tor la versiunea 0.4.9.10.
+- S-a actualizat Snowflake la versiunea 2.14.0.
+- S-a actualizat DNSTT la versiunea 1.20260501.0.
+- Remediere de securitate: s-a îmbunătățit securitatea previzualizării linkurilor, aducând-o la același nivel cu cel al filelor normale.
+- S-a remediat problema fundalului titlului previzualizării linkurilor în iOS 26.
+- Previzualizarea linkurilor a devenit opțională.
+- S-au actualizat traducerile în coreeană, japoneză și chineză simplificată.
+- S-a eliminat marcajul implicit NYT, care era depășit. Serviciul Onion a fost întrerupt.

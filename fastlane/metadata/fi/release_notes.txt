@@ -1,2 +1,8 @@
-- Tor päivitetty versioon 0.4.9.9. (Sisältää useita tietoturvakorjauksia!)
-- Päivitetty korean-, japanin-, kroatian- ja yksinkertaistetun kiinan käännökset.
+- Tor päivitetty versioon 0.4.9.10.
+- Snowflake päivitetty versioon 2.14.0.
+- DNSTT päivitetty versioon 1.20260501.0.
+- Turvallisuuskorjaus: Linkkien esikatselun turvallisuustaso nostettiin vastaamaan tavallisten välilehtien tasoa.
+- Korjattiin linkkien esikatselun otsikon tausta iOS 26:ssa.
+- Tehtiin linkkien esikatselusta valinnainen.
+- Päivitettiin korean-, japanin- ja yksinkertaistetun kiinan kielen käännökset.
+- Poistettiin vanhentunut NYT:n oletuskirjanmerkki. Onion-palvelu lopetettiin.
