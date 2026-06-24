@@ -121,6 +121,9 @@
 /* Option title */
 "Allow JavaScript" = "允许 JavaScript";
 
+/* Option title */
+"Allow Link Preview" = "允许链接预览";
+
 /* SecurityViewController */
 "Allow Persistent Cookies" = "允许持久性 Cookie";
 
@@ -708,4 +711,3 @@
 
 /* CircuitViewController */
 "Your traffic goes to 3 different parts of the world." = "您的流量经过世界各地的三个不同地区。";
-"Allow Link Preview" = "允许链接预览";
