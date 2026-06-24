@@ -22,9 +22,6 @@
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
 "%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ Koristi %2$@ za povezivanje s javnom Tor mrežom.";
 
-/* No comment provided by engineer. */
-"%1$@31%2$@ days. %1$@5%2$@ ways to give." = "%1$@31%2$@ dana. %1$@5%2$@ načina darivanja.";
-
 /* Placeholder is bullet point */
 "%@ a little more speed" = "%@ veća brzina";
 
@@ -264,9 +261,6 @@
 
 /* No comment provided by engineer. */
 "Drawbacks:" = "Nedostaci:";
-
-/* No comment provided by engineer. */
-"Each donation to an internet freedom project gets matched." = "Svaka donacija projektu za slobodu interneta udvostručuje se.";
 
 /* SecurityPresetsRow */
 "Easy breezy. Though it could be dangerous." = "Propusno, ali može biti opasno.";

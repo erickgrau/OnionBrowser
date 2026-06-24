@@ -22,9 +22,6 @@
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
 "%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ Utilisez %2$@ pour vous connecter au réseau Tor officiel";
 
-/* No comment provided by engineer. */
-"%1$@31%2$@ days. %1$@5%2$@ ways to give." = "%1$@31%2$@ jours. %1$@5%2$@ façons de faire un don.";
-
 /* Placeholder is bullet point */
 "%@ a little more speed" = "%@ Un débit légèrement supérieur ;";
 
@@ -264,9 +261,6 @@
 
 /* No comment provided by engineer. */
 "Drawbacks:" = "Inconvénients :";
-
-/* No comment provided by engineer. */
-"Each donation to an internet freedom project gets matched." = "Chaque don versé à un projet en faveur de la liberté sur Internet est doublé.";
 
 /* SecurityPresetsRow */
 "Easy breezy. Though it could be dangerous." = "Tout fonctionne, bien que cela puisse être dangereux.";
