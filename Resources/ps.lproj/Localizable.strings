@@ -121,6 +121,9 @@
 /* Option title */
 "Allow JavaScript" = "Allow JavaScript";
 
+/* Option title */
+"Allow Link Preview" = "Allow Link Preview";
+
 /* SecurityViewController */
 "Allow Persistent Cookies" = "پاتېکېدونکي ککوړي پرېښل ";
 

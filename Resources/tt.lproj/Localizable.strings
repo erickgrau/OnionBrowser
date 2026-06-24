@@ -121,6 +121,9 @@
 /* Option title */
 "Allow JavaScript" = "JavaScript-ны рөхсәт итү";
 
+/* Option title */
+"Allow Link Preview" = "Allow Link Preview";
+
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Даими кукиларны рөхсәт итү";
 

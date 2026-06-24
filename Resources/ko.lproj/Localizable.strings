@@ -121,6 +121,9 @@
 /* Option title */
 "Allow JavaScript" = "JavaScript 허용";
 
+/* Option title */
+"Allow Link Preview" = "Allow Link Preview";
+
 /* SecurityViewController */
 "Allow Persistent Cookies" = "영구(Persistent) 쿠키 허용";
 

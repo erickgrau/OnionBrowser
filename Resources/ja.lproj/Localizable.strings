@@ -121,6 +121,9 @@
 /* Option title */
 "Allow JavaScript" = "JavaScript を許可する";
 
+/* Option title */
+"Allow Link Preview" = "Allow Link Preview";
+
 /* SecurityViewController */
 "Allow Persistent Cookies" = "永続的な Cookie を許可する";
 

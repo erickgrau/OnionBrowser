@@ -121,6 +121,9 @@
 /* Option title */
 "Allow JavaScript" = "อนุญาตจาวาสคริปต์";
 
+/* Option title */
+"Allow Link Preview" = "Allow Link Preview";
+
 /* SecurityViewController */
 "Allow Persistent Cookies" = "อนุญาตคุกกี้แบบถาวร";
 

@@ -121,6 +121,9 @@
 /* Option title */
 "Allow JavaScript" = "Дозволити JavaScript";
 
+/* Option title */
+"Allow Link Preview" = "Allow Link Preview";
+
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Дозволити постійні файли cookie";
 

@@ -121,6 +121,9 @@
 /* Option title */
 "Allow JavaScript" = "السماح لجافا سكريبت";
 
+/* Option title */
+"Allow Link Preview" = "Allow Link Preview";
+
 /* SecurityViewController */
 "Allow Persistent Cookies" = "السماح بملفات تعريف الارتباط الدائمة";
 
