@@ -33,7 +33,7 @@ DEPENDENCIES:
   - Eureka (~> 5.5)
   - FavIcon (from `https://github.com/tladesignz/FavIcon.git`)
   - ImageRow (from `https://github.com/erickyim/ImageRow.git`, commit `d38369b8894425a9225ccf1e267226833b1950f0`)
-  - IPtProxyUI (~> 5.3)
+  - IPtProxyUI (~> 5.4)
   - MBProgressHUD (~> 1.2)
   - OCMock
   - OrbotKit (~> 1.1)
@@ -88,6 +88,6 @@ SPEC CHECKSUMS:
   Tor: 1dd335893175610967a943796abba233ea35e33f
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
 
-PODFILE CHECKSUM: be763d8445bf88d222c74192bab56833f0928c7a
+PODFILE CHECKSUM: 539a79111f3c3b7e5bb4eb80c8546698bfaf17d5
 
 COCOAPODS: 1.16.2
