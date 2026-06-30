@@ -1,8 +1,8 @@
 #  Onion Browser Changelog
 
 ## 3.4.0
-- Updated Tor to 0.4.9.10.
-- Updated Snowflake to 2.14.0.
+- Updated Tor to 0.4.9.11.
+- Updated Snowflake to 2.14.1.
 - Updated DNSTT to 1.20260501.0.
 - Security fix: Elevated link preview security to same as normal tabs.
 - Fixed link preview title background in iOS 26.

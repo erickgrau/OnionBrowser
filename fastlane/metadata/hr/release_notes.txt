@@ -1,5 +1,5 @@
-- Ažuriran Tor na verziju 0.4.9.10.
-- Ažuriran Snowflake na verziju 2.14.0.
+- Ažuriran Tor na verziju 0.4.9.11.
+- Ažuriran Snowflake na verziju 2.14.1.
 - Ažuriran DNSTT na verziju 1.20260501.0.
 - Sigurnosna ispravka: Povećana je sigurnost pretpregleda poveznica na razinu normalnih kartica.
 - Ispravljen je pozadinski sloj naslova pretpregleda poveznica na iOS-u 26.

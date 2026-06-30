@@ -1,5 +1,5 @@
-- A Tor verziója 0.4.9.10-re frissült.
-- A Snowflake verziója 2.14.0-ra frissült.
+- A Tor verziója 0.4.9.11-re frissült.
+- A Snowflake verziója 2.14.1-ra frissült.
 - A DNSTT verziója 1.20260501.0-ra frissült.
 - Biztonsági javítás: A linkek előnézetének biztonsági szintjét a normál lapokéval megegyezőre emeltük.
 - Javítottuk a linkek előnézetének címháttérét az iOS 26-ban.

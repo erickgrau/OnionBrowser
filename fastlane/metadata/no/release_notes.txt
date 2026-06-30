@@ -1,5 +1,5 @@
-- Oppdatert Tor til 0.4.9.10.
-- Oppdatert Snowflake til 2.14.0.
+- Oppdatert Tor til 0.4.9.11.
+- Oppdatert Snowflake til 2.14.1.
 - Oppdatert DNSTT til 1.20260501.0.
 - Sikkerhetsrettelse: Sikkerheten for forhåndsvisning av lenker er oppgradert til samme nivå som for vanlige faner.
 - Rettet bakgrunnen for tittelen i forhåndsvisningen av lenker i iOS 26.

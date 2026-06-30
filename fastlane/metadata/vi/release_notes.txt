@@ -1,5 +1,5 @@
-- Đã cập nhật Tor lên phiên bản 0.4.9.10.
-- Đã cập nhật Snowflake lên phiên bản 2.14.0.
+- Đã cập nhật Tor lên phiên bản 0.4.9.11.
+- Đã cập nhật Snowflake lên phiên bản 2.14.1.
 - Đã cập nhật DNSTT lên phiên bản 1.20260501.0.
 - Sửa lỗi bảo mật: Nâng cấp mức độ bảo mật của bản xem trước liên kết lên ngang bằng với các tab thông thường.
 - Sửa lỗi nền tiêu đề bản xem trước liên kết trên iOS 26.

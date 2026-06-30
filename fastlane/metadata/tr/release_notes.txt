@@ -1,5 +1,5 @@
-- Tor, 0.4.9.10 sürümüne güncellendi.
-- Snowflake, 2.14.0 sürümüne güncellendi.
+- Tor, 0.4.9.11 sürümüne güncellendi.
+- Snowflake, 2.14.1 sürümüne güncellendi.
 - DNSTT, 1.20260501.0 sürümüne güncellendi.
 - Güvenlik düzeltmesi: Bağlantı önizlemesinin güvenliği, normal sekmelerle aynı seviyeye yükseltildi.
 - iOS 26'da bağlantı önizlemesinin başlık arka planı düzeltildi.

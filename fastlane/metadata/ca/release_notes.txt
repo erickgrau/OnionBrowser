@@ -1,5 +1,5 @@
-- S'ha actualitzat Tor a la versió 0.4.9.10.
-- S'ha actualitzat Snowflake a la versió 2.14.0.
+- S'ha actualitzat Tor a la versió 0.4.9.11.
+- S'ha actualitzat Snowflake a la versió 2.14.1.
 - S'ha actualitzat DNSTT a la versió 1.20260501.0.
 - Correcció de seguretat: s'ha millorat la seguretat de la previsualització d'enllaços per igualar-la a la de les pestanyes normals.
 - S'ha corregit el fons del títol de la previsualització d'enllaços a iOS 26.

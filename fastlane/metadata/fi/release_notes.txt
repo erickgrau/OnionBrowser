@@ -1,5 +1,5 @@
-- Tor päivitetty versioon 0.4.9.10.
-- Snowflake päivitetty versioon 2.14.0.
+- Tor päivitetty versioon 0.4.9.11.
+- Snowflake päivitetty versioon 2.14.1.
 - DNSTT päivitetty versioon 1.20260501.0.
 - Turvallisuuskorjaus: Linkkien esikatselun turvallisuustaso nostettiin vastaamaan tavallisten välilehtien tasoa.
 - Korjattiin linkkien esikatselun otsikon tausta iOS 26:ssa.

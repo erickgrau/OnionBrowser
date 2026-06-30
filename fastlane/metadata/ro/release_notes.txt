@@ -1,5 +1,5 @@
-- S-a actualizat Tor la versiunea 0.4.9.10.
-- S-a actualizat Snowflake la versiunea 2.14.0.
+- S-a actualizat Tor la versiunea 0.4.9.11.
+- S-a actualizat Snowflake la versiunea 2.14.1.
 - S-a actualizat DNSTT la versiunea 1.20260501.0.
 - Remediere de securitate: s-a îmbunătățit securitatea previzualizării linkurilor, aducând-o la același nivel cu cel al filelor normale.
 - S-a remediat problema fundalului titlului previzualizării linkurilor în iOS 26.

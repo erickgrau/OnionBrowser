@@ -1,5 +1,5 @@
-- Aggiornato Tor alla versione 0.4.9.10.
-- Aggiornato Snowflake alla versione 2.14.0.
+- Aggiornato Tor alla versione 0.4.9.11.
+- Aggiornato Snowflake alla versione 2.14.1.
 - Aggiornato DNSTT alla versione 1.20260501.0.
 - Correzione di sicurezza: la sicurezza dell'anteprima dei link è stata portata allo stesso livello delle schede normali.
 - Risolto il problema dello sfondo del titolo dell'anteprima dei link in iOS 26.

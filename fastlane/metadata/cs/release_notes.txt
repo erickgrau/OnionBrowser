@@ -1,5 +1,5 @@
-- Aktualizován Tor na verzi 0.4.9.10.
-- Aktualizován Snowflake na verzi 2.14.0.
+- Aktualizován Tor na verzi 0.4.9.11.
+- Aktualizován Snowflake na verzi 2.14.1.
 - Aktualizován DNSTT na verzi 1.20260501.0.
 - Oprava zabezpečení: Zvýšena úroveň zabezpečení náhledu odkazů na úroveň běžných záložek.
 - Opraveno pozadí názvu náhledu odkazu v iOS 26.

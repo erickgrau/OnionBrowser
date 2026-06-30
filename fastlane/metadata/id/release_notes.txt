@@ -1,5 +1,5 @@
-- Tor telah diperbarui ke versi 0.4.9.10.
-- Snowflake telah diperbarui ke versi 2.14.0.
+- Tor telah diperbarui ke versi 0.4.9.11.
+- Snowflake telah diperbarui ke versi 2.14.1.
 - DNSTT telah diperbarui ke versi 1.20260501.0.
 - Perbaikan keamanan: Meningkatkan tingkat keamanan pratinjau tautan agar sama dengan tab biasa.
 - Memperbaiki latar belakang judul pratinjau tautan di iOS 26.

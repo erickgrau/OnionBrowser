@@ -1,5 +1,5 @@
-- Tor bijgewerkt naar 0.4.9.10.
-- Snowflake bijgewerkt naar 2.14.0.
+- Tor bijgewerkt naar 0.4.9.11.
+- Snowflake bijgewerkt naar 2.14.1.
 - DNSTT bijgewerkt naar 1.20260501.0.
 - Beveiligingsfix: de beveiliging van linkvoorbeelden is aangepast naar hetzelfde niveau als bij normale tabbladen.
 - De achtergrond van de titel bij linkvoorbeelden in iOS 26 is gecorrigeerd.

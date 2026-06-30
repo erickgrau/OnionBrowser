@@ -1,5 +1,5 @@
-- Mise à jour de Tor vers la version 0.4.9.10.
-- Mise à jour de Snowflake vers la version 2.14.0.
+- Mise à jour de Tor vers la version 0.4.9.11.
+- Mise à jour de Snowflake vers la version 2.14.1.
 - Mise à jour de DNSTT vers la version 1.20260501.0.
 - Correction de sécurité : le niveau de sécurité de l'aperçu des liens a été aligné sur celui des onglets normaux.
 - Correction de l'arrière-plan du titre de l'aperçu des liens sous iOS 26.
