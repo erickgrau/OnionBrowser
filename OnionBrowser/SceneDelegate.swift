@@ -143,7 +143,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 					 performActionFor shortcutItem: UIApplicationShortcutItem,
 					 completionHandler: @escaping (Bool) -> Void)
 	{
-		handle(shortcut, starting: false, completionHandler)
+		handle(shortcutItem, starting: false, completionHandler)
 	}
 
 	func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
