@@ -138,6 +138,9 @@ extension Tab: WKNavigationDelegate {
 	}
 
 	func webView(_ webView: WKWebView, didFinish navigation: WKNavigation?) {
+		// Clear the timeout — page loaded successfully.
+		loadStartTime = nil
+
 		Task {
 			// If we have JavaScript blocked, these will be empty.
 			var finalUrl = await stringByEvaluatingJavaScript(from: "window.location.href")
@@ -287,6 +290,9 @@ extension Tab: WKNavigationDelegate {
 	 TLS testing site: https://badssl.com/
 	 */
 	private func handle(error: Error, _ webView: WKWebView, _ navigation: WKNavigation?) {
+		// Clear the timeout — navigation failed, not still loading.
+		loadStartTime = nil
+
 		var failedUrl = url
 
 		if let url = webView.url {

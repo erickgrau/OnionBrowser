@@ -202,10 +202,14 @@ class Tab: UIView {
 	}
 
 	var isLoading: Bool {
-		// BUGFIX: Sometimes, isLoading still shows true, even if progress is already at 100%.
-		// So check that, too, to fix reload/cancel button display.
-		return (webView?.isLoading ?? false) && progress < 1
+	// BUGFIX: Sometimes, isLoading still shows true, even if progress is already at 100%.
+	// So check that, too, to fix reload/cancel button display.
+	return (webView?.isLoading ?? false) && progress < 1
 	}
+
+	/// Timestamp of the last navigation start. Used to enforce a timeout
+	/// so the webview doesn't spin forever on unreachable sites.
+	var loadStartTime: Date?
 
 	var previewController: QLPreviewController?
 
@@ -354,7 +358,24 @@ class Tab: UIView {
 					webView?.customUserAgent = userAgent
 				}
 
+				loadStartTime = Date()
 				webView?.load(request)
+
+				// Timeout: if the page hasn't finished loading in 30 seconds,
+				// stop the webview and show an error. This prevents the infinite
+				// X/refresh flip when the SOCKS5 proxy can't reach the site.
+				Task {
+					try? await Task.sleep(nanoseconds: 30_000_000_000)
+					await MainActor.run {
+						guard let start = loadStartTime,
+						      Date().timeIntervalSince(start) >= 29 else { return }
+						if webView?.isLoading ?? false && progress < 1 {
+							webView?.stopLoading()
+							progress = 1
+							loadStartTime = nil
+						}
+					}
+				}
 			}
 		}
 	}
