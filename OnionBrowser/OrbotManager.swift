@@ -15,7 +15,11 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 	static let shared = OrbotManager()
 
 #if DEBUG
-	static let simulatorIgnoreOrbot = true
+	#if targetEnvironment(simulator)
+		static let simulatorIgnoreOrbot = true
+	#else
+		static let simulatorIgnoreOrbot = false
+	#endif
 #endif
 
 	// MARK: OnionManager instance
@@ -23,7 +27,6 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 	public private(set) var lastInfo: OrbotKit.Info?
 
 	public private(set) var lastError: Error?
-
 
 	// MARK: Public Methods
 
@@ -87,7 +90,20 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 		OrbotKit.shared.removeStatusChangeListener(self)
 
 		if !Settings.didWelcome {
-			return WelcomeViewController()
+			#if DEBUG
+			#if targetEnvironment(simulator)
+				// Auto-complete onboarding in simulator, use built-in Tor.
+				Settings.didWelcome = true
+				Settings.useBuiltInTor = true
+				Settings.updateAdvertiseLockdownMode = true
+
+				// Skip welcome screen, fall through to built-in Tor path below.
+			#endif
+			#endif
+
+			if !Settings.didWelcome {
+				return WelcomeViewController()
+			}
 		}
 
 		if #available(iOS 17.0, *) {
@@ -153,11 +169,7 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 			return vc
 		}
 
-#if DEBUG
-		if Self.simulatorIgnoreOrbot {
-			return nil
-		}
-#endif
+		// simulatorIgnoreOrbot bypass removed - simulator now uses built-in Tor path above.
 
 		if lastInfo?.status == .stopped || lastInfo?.onionOnly ?? false {
 			return StartOrbotViewController()
@@ -173,11 +185,7 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 			return TorManager.shared.status == .started
 		}
 		else {
-#if DEBUG
-			if Self.simulatorIgnoreOrbot {
-				return true
-			}
-#endif
+			// simulatorIgnoreOrbot bypass removed - simulator uses built-in Tor.
 
 			let status = lastInfo?.status
 			return status == .starting || status == .started
