@@ -106,13 +106,15 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 			}
 		}
 
-		if #available(iOS 15.0, *) {
+		if #available(iOS 17.0, *) {
 			if let useBuiltinTor = Settings.useBuiltInTor {
 				if useBuiltinTor {
 					// User wants to use built-in Tor. Skip Orbot entirely.
 
 					if TorManager.shared.status == .started {
-						// Built-in Tor is running. All good.
+						// Built-in Tor is running. Reinitialize webviews to ensure
+						// the SOCKS proxy is configured, then show the browser.
+						AppDelegate.shared?.allOpenTabs.forEach { $0.reinitWebView() }
 						return nil
 					}
 
@@ -153,7 +155,7 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 	}
 
 	func allowRequests() -> Bool {
-		if Settings.useBuiltInTor == true, #available(iOS 15.0, *) {
+		if Settings.useBuiltInTor == true, #available(iOS 17.0, *) {
 			return TorManager.shared.status == .started
 		}
 		else {
