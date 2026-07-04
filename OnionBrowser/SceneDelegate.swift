@@ -91,14 +91,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// Dogfood/device-debug safety: make sure a real root view controller is
 		// installed during scene connection. On iOS 27 beta, waiting until
 		// sceneDidBecomeActive can leave only the launch storyboard visible.
-		if ProcessInfo.processInfo.arguments.contains("--dogfood-eager-ui") {
-			Log.log(for: Self.self, "DOGFOOD eager UI from willConnect")
-			_ = SecureEnclave.removeKey()
-			Settings.hideContent = false
-			Settings.stateRestoreLock = false
+		Log.log(for: Self.self, "DOGFOOD eager UI from willConnect")
+		_ = SecureEnclave.removeKey()
+		Settings.hideContent = false
+		Settings.stateRestoreLock = false
 
-			show(OrbotManager.shared.checkStatus())
-		}
+		show(OrbotManager.shared.checkStatus())
 		#endif
 
 		Log.log(for: Self.self, "DOGFOOD scene willConnectTo end")
@@ -110,12 +108,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		AppDelegate.shared?.dontStopApp()
 
 		#if DEBUG
-		if ProcessInfo.processInfo.arguments.contains("--dogfood-reset-startup") {
-			Log.log(for: Self.self, "DOGFOOD reset startup state: remove SecureEnclave key and disable blur")
-			_ = SecureEnclave.removeKey()
-			Settings.hideContent = false
-			Settings.stateRestoreLock = false
-		}
+		Log.log(for: Self.self, "DOGFOOD reset startup state: remove SecureEnclave key and disable blur")
+		_ = SecureEnclave.removeKey()
+		Settings.hideContent = false
+		Settings.stateRestoreLock = false
 		#endif
 
 		if !verified, let privateKey = SecureEnclave.loadKey() {
