@@ -514,8 +514,16 @@ class Tab: UIView {
 	/// Retry setting up the proxy connection and reload if needed.
 	/// Called when Tor finishes bootstrapping after the webview was already created.
 	func ensureProxyAndReload() {
-		if #available(iOS 17.0, *), conf.websiteDataStore.proxyConfigurations.isEmpty {
-			setupConnection()
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
+			// If the webview was created without a proxy (because Tor wasn't
+			// ready yet), we MUST recreate it so the proxy config takes effect.
+			// WKWebView copies the configuration at creation time, so updating
+			// conf.websiteDataStore.proxyConfigurations on an existing webview
+			// has no effect.
+			if conf.websiteDataStore.proxyConfigurations.isEmpty {
+				print("Proxy not set on existing webview, reinitializing...")
+				reinitWebView()
+			}
 		}
 		if needsRefresh {
 			refresh()
@@ -528,11 +536,31 @@ class Tab: UIView {
 	private func setupConnection() {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
 			if let proxy = TorManager.shared.torSocks5 {
-				conf.websiteDataStore.proxyConfigurations = [ProxyConfiguration(socksv5Proxy: proxy)]
-				print("Connection established - SOCKS5 proxy set")
+				// Only set and recreate if proxy isn't already configured.
+				if conf.websiteDataStore.proxyConfigurations.isEmpty {
+					conf.websiteDataStore.proxyConfigurations = [ProxyConfiguration(socksv5Proxy: proxy)]
+					print("Connection established - SOCKS5 proxy set")
+
+					// If webview already exists, it was created without the proxy.
+					// Recreate it so the proxy config takes effect.
+					if webView != nil {
+						print("Recreating webview with proxy config...")
+						reinitWebView()
+					}
+				}
 				return
 			}
-			print("Connection failed - Tor SOCKS5 not yet available, will retry")
+
+			// Tor not ready yet. Retry in 2 seconds.
+			print("Tor SOCKS5 not yet available, scheduling retry...")
+			Task {
+				try? await Task.sleep(nanoseconds: 2_000_000_000)
+				await MainActor.run {
+					if TorManager.shared.torSocks5 != nil {
+						setupConnection()
+					}
+				}
+			}
 		}
 	}
 
