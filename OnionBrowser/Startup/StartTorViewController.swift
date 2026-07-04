@@ -127,11 +127,16 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 
 				await MainActor.run {
 					// Tor is now started and torSocks5 should be available.
-					// Reinitialize webviews with the proxy and reload.
+					// Reinitialize webviews so the scheme handler is registered,
+					// then reload.
 					AppDelegate.shared?.allOpenTabs.forEach { tab in
 						tab.reinitWebView()
-						// Ensure proxy is set and reload if needed.
 						tab.ensureProxyAndReload()
+					}
+
+					// Update chrome to show green icon now that Tor is started.
+					AppDelegate.shared?.sceneDelegates.forEach { delegate in
+						delegate.browsingUi.updateChrome()
 					}
 
 					self?.view.sceneDelegate?.show(OrbotManager.shared.checkStatus())

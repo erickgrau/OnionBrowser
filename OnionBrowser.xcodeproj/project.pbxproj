@@ -159,6 +159,7 @@
 		A0FA965E2A015EBB005EDC3F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA965C2A015EBB005EDC3F /* WelcomeViewController.swift */; };
 		A0FA96612A0161DA005EDC3F /* InstallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FA965F2A0161DA005EDC3F /* InstallViewController.xib */; };
 		A0FA96622A0161DA005EDC3F /* InstallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA96602A0161DA005EDC3F /* InstallViewController.swift */; };
+		BD85EACF2C8ADB97CB692D29 /* TorSchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593F4CA097E148A1051CA9CF /* TorSchemeHandler.swift */; };
 		CEDA353A2FF5099400F2292B /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = CEDA35392FF5099400F2292B /* AppIcon.icon */; };
 		FB82A6359CAB80598FDF8C75 /* Pods_OnionBrowser_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4788BE51729A80A3E7A54568 /* Pods_OnionBrowser_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -211,6 +212,7 @@
 		4788BE51729A80A3E7A54568 /* Pods_OnionBrowser_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnionBrowser_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB06867B9EBE246EE798331 /* Pods_OnionBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnionBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F7DBC7281C189700CBEFDB /* CALayer+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Helpers.swift"; sourceTree = "<group>"; };
+		593F4CA097E148A1051CA9CF /* TorSchemeHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TorSchemeHandler.swift; sourceTree = "<group>"; };
 		693145FD1D3EEAE400D08A6A /* Tor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tor.framework; path = Carthage/Build/iOS/Tor.framework; sourceTree = "<group>"; };
 		9DCBAE6D06623206CD9036DA /* Pods-OnionBrowser Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnionBrowser Tests.release.xcconfig"; path = "Target Support Files/Pods-OnionBrowser Tests/Pods-OnionBrowser Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A003A1922A0D1628008D8845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -758,6 +760,7 @@
 				A0C1FB172D50FC9A00AE97A7 /* TlsCertificate.swift */,
 				A07754EF2FE035AA00B1EC4E /* PreviewWebView.swift */,
 				A07754F12FE038FC00B1EC4E /* BaseNavigationDelegate.swift */,
+				593F4CA097E148A1051CA9CF /* TorSchemeHandler.swift */,
 			);
 			path = Browsing;
 			sourceTree = "<group>";
@@ -1286,6 +1289,7 @@
 				A0172C72288827E1008D42CD /* ApiError.swift in Sources */,
 				A0BF525723AFC3580096624A /* SecurityPopUpViewController.swift in Sources */,
 				A0696EAD2406C7D000512695 /* SyncViewController.swift in Sources */,
+				BD85EACF2C8ADB97CB692D29 /* TorSchemeHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

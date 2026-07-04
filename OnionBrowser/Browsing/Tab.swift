@@ -11,6 +11,7 @@
 import UIKit
 import QuickLook
 import WebKit
+import ObjectiveC
 
 protocol TabDelegate: AnyObject {
 	func updateChrome()
@@ -326,6 +327,14 @@ class Tab: UIView {
 			setup()
 		}
 
+		// Rewrite http/https URLs to our custom scheme so TorSchemeHandler
+		// intercepts them and routes through Tor's SOCKS5 proxy.
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true,
+		   let url = request.url, let torURL = TorSchemeHandler.toTorURL(url) {
+			request.url = torURL
+			print("[OnionBrowser] Rewrote URL to \(torURL.absoluteString)")
+		}
+
 		// https://globalprivacycontrol.github.io/gpc-spec/
 		if Settings.sendGpc {
 			request.setValue("1", forHTTPHeaderField: "Sec-GPC")
@@ -515,13 +524,10 @@ class Tab: UIView {
 	/// Called when Tor finishes bootstrapping after the webview was already created.
 	func ensureProxyAndReload() {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
-			// If the webview was created without a proxy (because Tor wasn't
-			// ready yet), we MUST recreate it so the proxy config takes effect.
-			// WKWebView copies the configuration at creation time, so updating
-			// conf.websiteDataStore.proxyConfigurations on an existing webview
-			// has no effect.
-			if conf.websiteDataStore.proxyConfigurations.isEmpty {
-				print("Proxy not set on existing webview, reinitializing...")
+			// Check if our scheme handler is registered. If not, reinit.
+			let hasScheme = conf.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) != nil
+			if !hasScheme {
+				print("[OnionBrowser] Scheme handler not registered, reinitializing...")
 				reinitWebView()
 			}
 		}
@@ -531,28 +537,26 @@ class Tab: UIView {
 	}
 
 
-	// MARK: Private Methods
-
 	private func setupConnection() {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
-			if let proxy = TorManager.shared.torSocks5 {
-				// Only set and recreate if proxy isn't already configured.
-				if conf.websiteDataStore.proxyConfigurations.isEmpty {
-					conf.websiteDataStore.proxyConfigurations = [ProxyConfiguration(socksv5Proxy: proxy)]
-					print("Connection established - SOCKS5 proxy set")
+			print("[OnionBrowser] setupConnection: useBuiltInTor=true, torSocks5=\(TorManager.shared.torSocks5 ?? .none)")
 
-					// If webview already exists, it was created without the proxy.
-					// Recreate it so the proxy config takes effect.
-					if webView != nil {
-						print("Recreating webview with proxy config...")
-						reinitWebView()
-					}
-				}
+			if TorManager.shared.torSocks5 != nil {
+				// Register our custom scheme handler to bypass the broken
+				// ProxyConfiguration API on iOS 27.
+				let schemeHandler = TorSchemeHandler()
+				conf.setURLSchemeHandler(schemeHandler, forURLScheme: TorSchemeHandler.torHttpScheme)
+				conf.setURLSchemeHandler(schemeHandler, forURLScheme: TorSchemeHandler.torHttpsScheme)
+
+				// Store reference so we can reset it when Tor restarts.
+				 objc_setAssociatedObject(self, &Self.schemeHandlerKey, schemeHandler, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+
+				print("[OnionBrowser] TorSchemeHandler registered for \(TorSchemeHandler.torHttpScheme) and \(TorSchemeHandler.torHttpsScheme)")
 				return
 			}
 
 			// Tor not ready yet. Retry in 2 seconds.
-			print("Tor SOCKS5 not yet available, scheduling retry...")
+			print("[OnionBrowser] Tor SOCKS5 not yet available, scheduling retry...")
 			Task {
 				try? await Task.sleep(nanoseconds: 2_000_000_000)
 				await MainActor.run {
@@ -561,8 +565,12 @@ class Tab: UIView {
 					}
 				}
 			}
+		} else {
+			print("[OnionBrowser] setupConnection: useBuiltInTor=\(String(describing: Settings.useBuiltInTor))")
 		}
 	}
+
+	private static var schemeHandlerKey: UInt8 = 0
 
 	private func setup() {
 	    setupConnection()
@@ -614,6 +622,10 @@ class Tab: UIView {
 
 		webView?.removeFromSuperview()
 		webView = nil
+
+		// Clear cached configuration so reinitWebView creates a fresh one
+		// with the correct proxy settings.
+		_conf = nil
 	}
 
 	@objc
