@@ -44,10 +44,13 @@ post_install do |installer|
         if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 12
           config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
         end
-        # Allow pod targets to be signed with the app's team
+        # Disable signing for pod targets (not needed for dev builds)
         config.build_settings['CODE_SIGN_IDENTITY'] = '-'
         config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
         config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+        # Set a unique bundle ID per pod target so frameworks don't inherit
+        # the app's bundle ID and cause DuplicateIdentifier install errors.
+        config.build_settings['PRODUCT_BUNDLE_IDENTIFIER'] = "com.cocoapods.#{target.name}"
       end
     end
   end
