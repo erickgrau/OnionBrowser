@@ -20,11 +20,11 @@ target 'OnionBrowser' do
 
   pod 'Tor/GeoIP',
 #    :podspec => 'https://raw.githubusercontent.com/iCepa/Tor.framework/refs/heads/pure_pod/Arti.podspec'
-    '~> 409.9'
+    '~> 409.11'
 #    :path => '../Tor.framework'
 
   pod 'IPtProxyUI',
-    '~> 5.3'
+    '~> 5.4'
 #    :git => 'https://github.com/tladesignz/IPtProxyUI-ios'
 #    :path => '../IPtProxyUI'
 

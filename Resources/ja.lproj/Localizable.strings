@@ -22,9 +22,6 @@
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
 "%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ %2$@ を使用して正規の Tor ネットワークに接続する。";
 
-/* No comment provided by engineer. */
-"%1$@31%2$@ days. %1$@5%2$@ ways to give." = "%1$@31%2$@ 日間。%1$@5%2$@ つの寄付方法。";
-
 /* Placeholder is bullet point */
 "%@ a little more speed" = "%@ 速度の向上";
 
@@ -124,26 +121,29 @@
 /* Option title */
 "Allow JavaScript" = "JavaScript を許可する";
 
+/* Option title */
+"Allow Link Preview" = "Allow Link Preview";
+
 /* SecurityViewController */
 "Allow Persistent Cookies" = "永続的な Cookie を許可する";
 
 /* DonationViewController */
-"Are you sure you want to send a %@ tip?" = "本当に %@ チップを送金しますか？";
+"Are you sure you want to send a %@ tip?" = "%@ の寄付をしますか？";
 
 /* Placeholder is 'Orbot' */
-"Ask %@ for permission to access it." = "%@ から許可をもらってください";
+"Ask %@ for permission to access it." = "%@ にアクセス許可をリクエストしてください。";
 
 /* No comment provided by engineer. */
-"Ask again to continue." = "もう一度許可を求めてください。";
+"Ask again to continue." = "もう一度リクエストしてください。";
 
 /* AppDelegate */
 "Authentication Required" = "認証が必要です";
 
 /* SettingsViewController */
-"Auto-Complete Search Results" = "検索結果のオートコンプリート";
+"Auto-Complete Search Results" = "検索結果を自動補完する";
 
 /* AddSearchEngineViewController */
-"Autocomplete URL" = "URLを自動補完";
+"Autocomplete URL" = "自動補完 URL";
 
 /* VoiceOver */
 "Back" = "戻る";
@@ -152,13 +152,13 @@
 "Begins On" = "開始日時";
 
 /* Option title */
-"Block Insecure HTTP Requests" = "HTTPリクエストをブロックする";
+"Block Insecure HTTP Requests" = "HTTP リクエストをブロックする";
 
 /* URLBlockerRuleController */
-"Blocked 3rd-Party Hosts" = "ブロックされた第三者ホスト";
+"Blocked 3rd-Party Hosts" = "ブロックされたサードパーティのホスト";
 
 /* BookmarksViewController */
-"Bookmarks" = "お気に入り";
+"Bookmarks" = "ブックマーク";
 
 /* No comment provided by engineer. */
 "Both are free to use. Free of tracking. Code is open source." = "どちらも無料です。トラッキングは一切なく、コードはオープンソースです。";
@@ -170,22 +170,22 @@
 "Bronze" = "ブロンズ";
 
 /* SecurityViewController */
-"By editing this setting, you have created a custom security setting." = "設定を編集すると、カスタムセキュリティ設定を作成したことになります。";
+"By editing this setting, you have created a custom security setting." = "この設定を編集すると、カスタムセキュリティ設定が作成されます。";
 
 /* AlertHelper */
 "Cancel" = "キャンセル";
 
 /* CertificateViewController */
-"Certificate Information" = "TLS証明書情報";
+"Certificate Information" = "証明書情報";
 
 /* SettingsViewController */
-"Changing this option requires restarting the app." = "このオプションを変更すると、アプリを再起動する必要があります。";
+"Changing this option requires restarting the app." = "このオプションを変更するには、アプリを再起動する必要があります。";
 
 /* SettingsViewController */
-"Choose how long app remembers open tabs." = "タブの記憶期間を選択";
+"Choose how long app remembers open tabs." = "アプリが開いているタブを保存する期間を設定します。";
 
 /* No comment provided by engineer. */
-"Choose your preferred blocklist:" = "Choose your preferred blocklist:";
+"Choose your preferred blocklist:" = "ブロックリストを選択します:";
 
 /* AppDelegate */
 "Close Tab" = "タブを閉じる";
@@ -194,34 +194,34 @@
 "Configure Bridges" = "ブリッジの設定";
 
 /* DonationViewController */
-"Confirm %@" = "%@ を購入します";
+"Confirm %@" = "%@ を送る";
 
 /* DonationViewController */
 "Confirm Purchase" = "購入確認";
 
 /* CircuitViewController */
-"Connect to a website to see your circuit." = "ウェブサイトに接続して、経路を確認して下さい。";
+"Connect to a website to see your circuit." = "ウェブサイトにアクセスして、回線を確認してみましょう。";
 
 /* SyncViewController */
-"Connection to Nextcloud Server Failed" = "NextCloudサーバーへの接続に失敗しました。";
+"Connection to Nextcloud Server Failed" = "Nextcloud サーバーへの接続に失敗しました";
 
 /* No comment provided by engineer. */
-"Cookies" = "Cookies";
+"Cookies" = "Cookie";
 
 /* SettingsViewController, Storage1ViewController, Storage2ViewController */
-"Cookies and Local Storage" = "クッキーとローカル・ストレージ";
+"Cookies and Local Storage" = "Cookie とローカルストレージ";
 
 /* No comment provided by engineer. */
-"Couldn't understand server response." = "サーバーのレスポンスが理解できませんでした";
+"Couldn't understand server response." = "サーバーの応答を認識できませんでした。";
 
 /* AppDelegate */
 "Create New Tab" = "新しいタブを開く";
 
 /* SecurityPresetsRow; a security level */
-"Custom" = "カスタム設定";
+"Custom" = "カスタム";
 
 /* SettingsViewController, CustomSitesViewController */
-"Custom Site Security" = "特定サイトのセキュリティ";
+"Custom Site Security" = "カスタムサイトセキュリティ";
 
 /* SecurityViewController */
 "Custom user-agent string, or blank to use the default." = "ユーザーエージェント文字列。空白の場合、初期設定値を利用します。";
@@ -230,16 +230,16 @@
 "Customize" = "カスタマイズ";
 
 /* SecurityViewController */
-"Default Security" = "セキュリティ初期値";
+"Default Security" = "デフォルトセキュリティ";
 
 /* CustomSitesViewController */
-"Define custom settings for specific sites." = "特定サイトのカスタム設定";
+"Define custom settings for specific sites." = "特定のサイトに対してカスタム設定を指定します。";
 
 /* SearchEnginesViewController */
 "Delete" = "削除";
 
 /* RuleEditorController */
-"Disable" = "無効化";
+"Disable" = "無効にする";
 
 /* SettingsViewController */
 "Disable Bookmarks on Start Page" = "スタートページでブックマークを無効にする";
@@ -251,10 +251,10 @@
 "Disk Cache" = "ディスクキャッシュ";
 
 /* DonationViewController */
-"Donate" = "寄付のお願い";
+"Donate" = "寄付";
 
 /* Bookmark, placeholder is app name "Onion Browser" */
-"Donate to %@" = "%@ に寄付";
+"Donate to %@" = "%@ にご寄付ください";
 
 /* BrowsingViewController */
 "Done" = "完了";
@@ -265,23 +265,20 @@
 /* No comment provided by engineer. */
 "Drawbacks:" = "欠点:";
 
-/* No comment provided by engineer. */
-"Each donation to an internet freedom project gets matched." = "インターネットの自由を守るプロジェクトへの寄付は、1件ごとに同額が上乗せされます。";
-
 /* SecurityPresetsRow */
-"Easy breezy. Though it could be dangerous." = "閲覧はスムースですが、リスクがあります。";
+"Easy breezy. Though it could be dangerous." = "快適にブラウジングできますが、セキュリティは低下します。";
 
 /* BookmarkViewController */
-"Edit Bookmark" = "お気に入りを編集";
+"Edit Bookmark" = "ブックマークを編集";
 
 /* Scene title */
-"Edit Folder" = "Edit Folder";
+"Edit Folder" = "フォルダーを編集";
 
 /* AddSearchEngineViewController */
 "Edit Search Engine" = "検索エンジンを編集";
 
 /* RuleEditorController */
-"Enable" = "有効";
+"Enable" = "有効にする";
 
 /* AlertHelper */
 "Error" = "エラー";
@@ -290,37 +287,37 @@
 "Expires After" = "終了日時";
 
 /* BookmarksViewController */
-"Export Bookmarks" = "Export Bookmarks";
+"Export Bookmarks" = "ブックマークをエクスポート";
 
 /* CertificateViewController */
-"Extended Validation: Organization" = "EV証明書: 組織";
+"Extended Validation: Organization" = "EV 証明書: 組織";
 
 /* No comment provided by engineer. */
 "Fetch Cache" = "キャッシュを取得";
 
 /* No comment provided by engineer. */
-"Find in Page" = "ページを検索";
+"Find in Page" = "ページ内検索";
 
 /* AppDelegate */
-"Focus URL Field" = "URLフィールドにフォーカスを合わせる";
+"Focus URL Field" = "URL フィールドにフォーカスを合わせる";
 
 /* SecurityViewController */
-"Follow Onion-Location Header Automatically" = "自動的にOnion-Locationヘッダーをフォロー";
+"Follow Onion-Location Header Automatically" = "自動的に Onion-Location ヘッダーを確認する";
 
 /* SettingsViewController */
 "Forget at Shutdown" = "アプリ終了時に消去";
 
 /* SettingsViewController */
-"Forget in Background" = "バックグラウンド時に消去";
+"Forget in Background" = "バックグラウンドで消去";
 
 /* VoiceOver */
-"Forward" = "Forward";
+"Forward" = "進む";
 
 /* SettingsViewController */
-"Fund Development" = "開発資金を支援";
+"Fund Development" = "開発を支援する";
 
 /* Placeholder is 'Orbot' */
-"Get %@" = "%@を入手";
+"Get %@" = "%@ を入手";
 
 /* AppDelegate */
 "Go Back" = "戻る";
@@ -335,7 +332,7 @@
 "Gold" = "ゴールド";
 
 /* CircuSitsViewController */
-"Guard" = "保護";
+"Guard" = "ガード";
 
 /* SecurityViewController */
 "Handle tapping on links in a non-standard way to avoid possibly opening external applications." = "外部アプリケーションを開かないようにするために、リンクのタップを標準以外の方法で処理します";
@@ -416,7 +413,7 @@
 "Name" = "名前";
 
 /* CircuSitsViewController */
-"New Circuit for this Site" = "新経路を設定する";
+"New Circuit for this Site" = "このサイト用の回線を再構築";
 
 /* No comment provided by engineer. */
 "New Security Features" = "新セキュリティ機能";
@@ -491,7 +488,7 @@
 "Report a Bug" = "バグを報告";
 
 /* No comment provided by engineer. */
-"Request Access" = "アクセス許可を求める";
+"Request Access" = "リクエスト";
 
 /* No comment provided by engineer. */
 "Request could not be formed. Please check host and username/password!" = "ブリッジ依頼を形成できませんでした。ホスト名・ユーザー名などを確認してください。";
@@ -539,7 +536,7 @@
 "Show All Sites" = "すべてのサイト";
 
 /* AppDelegate */
-"Show Bookmarks" = "お気に入りを表示";
+"Show Bookmarks" = "ブックマークを表示";
 
 /* CertificateViewController */
 "Signature Algorithm" = "署名アルゴリズム";
@@ -590,13 +587,13 @@
 "Sync Bookmarks" = "ブックマークを同期";
 
 /* SyncViewController */
-"Sync Bookmarks with Nextcloud Server" = "お気に入りをNextCloudサーバーと同期する";
+"Sync Bookmarks with Nextcloud Server" = "ブックマークを NextCloud サーバーと同期";
 
 /* SettingsViewController */
 "Tab Security" = "タブのセキュリティ";
 
 /* VoiceOver */
-"Tabs" = "Tabs";
+"Tabs" = "タブ";
 
 /* Option title */
 "Tell websites that you object to processing and selling of your personal data" = "あなたの個人情報を処理したり転売することに反対であることをサイトに伝える";
@@ -635,10 +632,10 @@
 "TLS handshake failed" = "TLSハンドシェイクに失敗しました";
 
 /* Tab+UIWebViewDelegate */
-"TLS protocol error" = "TLSプロトコールのエラー";
+"TLS protocol error" = "TLS プロトコルエラー";
 
 /* CircuitsViewController */
-"Tor Circuit" = "Tor経路";
+"Tor Circuit" = "Tor 回線";
 
 /* SyncViewController */
 "Try Again" = "再試行する";
@@ -680,10 +677,10 @@
 "Version %@" = "バージョン: %@";
 
 /* SyncViewController */
-"We couldn't sync your bookmarks at this time. Try again to make sure your information is synced." = "お気に入りを同期化できませんでした。同期しているかどうかを確かめるため、再試行して下さい。";
+"We couldn't sync your bookmarks at this time. Try again to make sure your information is synced." = "ブックマークを同期できませんでした。情報が正しく同期されるよう、もう一度お試しください。";
 
 /* SecurityPresetsRow */
-"Websites may break. But you get great security." = "最高度のセキュリティですが、サイトによっては機能しない場合があります。";
+"Websites may break. But you get great security." = "一部のサイトが正常に機能しなくなる代わりに、攻撃面を最小限に抑えます。";
 
 /* No comment provided by engineer. */
 "WebSQL Databases" = "WebSQLデータベース";
@@ -701,7 +698,7 @@
 "Why %1$@ needs %2$@" = "%1$@ に %2$@ が必要な理由";
 
 /* SecurityPresetsRow */
-"Works pretty well. Your identity is mostly protected." = "完全に機能します。ほとんどの場合、あなたの身元も保護されます。";
+"Works pretty well. Your identity is mostly protected." = "多くの場合機能し、強力な保護が提供されます。";
 
 /* Placeholder is server domain */
 "You might be connecting to a server that is pretending to be \"%@\" which could put your confidential information at risk." = "あなたが接続しているサーバーは\"%@\"を装っているだけかもしれません。機微に触れる情報にはリスクがあります。";

@@ -93,8 +93,9 @@ extension Tab: WKUIDelegate {
 
 		completionHandler(UIContextMenuConfiguration(
 			identifier: nil,
-			previewProvider: {
+			previewProvider: HostSettings.for(url.host).linkPreview ? {
 				let vc = UIViewController()
+				vc.view.backgroundColor = .systemBackground
 
 				let label = UILabel()
 				label.translatesAutoresizingMaskIntoConstraints = false
@@ -118,7 +119,7 @@ extension Tab: WKUIDelegate {
 				webView.bottomAnchor.constraint(equalTo: vc.view.bottomAnchor).isActive = true
 
 				return vc
-			},
+			} : nil,
 			actionProvider: { (elements: [UIMenuElement]) -> UIMenu? in
 				var elements = elements
 

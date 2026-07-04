@@ -1,2 +1,8 @@
-- Tor auf Version 0.4.9.9 aktualisiert. (Enthält zahlreiche Sicherheitskorrekturen!)
-- Die Übersetzungen ins Koreanische, Japanische, Kroatische und vereinfachte Chinesisch wurden aktualisiert.
+- Tor auf Version 0.4.9.11 aktualisiert.
+- Snowflake auf Version 2.14.1 aktualisiert.
+- DNSTT auf Version 1.20260501.0 aktualisiert.
+- Sicherheitskorrektur: Die Sicherheit der Link-Vorschau wurde auf das Niveau normaler Registerkarten angehoben.
+- Der Hintergrund des Titels in der Link-Vorschau unter iOS 26 wurde korrigiert.
+- Die Link-Vorschau ist nun optional.
+- Die Übersetzungen für Koreanisch, Japanisch und vereinfachtes Chinesisch wurden aktualisiert.
+- Das veraltete Standard-Lesezeichen für die NYT wurde entfernt. Der Onion-Dienst wurde eingestellt.

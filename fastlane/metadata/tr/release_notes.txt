@@ -1,2 +1,8 @@
-- Tor 0.4.9.9 sürümüne güncellendi. (Çok sayıda güvenlik düzeltmesi içeriyor!)
-- Korece, Japonca, Hırvatça ve Basitleştirilmiş Çince çeviriler güncellendi.
+- Tor, 0.4.9.11 sürümüne güncellendi.
+- Snowflake, 2.14.1 sürümüne güncellendi.
+- DNSTT, 1.20260501.0 sürümüne güncellendi.
+- Güvenlik düzeltmesi: Bağlantı önizlemesinin güvenliği, normal sekmelerle aynı seviyeye yükseltildi.
+- iOS 26'da bağlantı önizlemesinin başlık arka planı düzeltildi.
+- Bağlantı önizlemesi isteğe bağlı hale getirildi.
+- Korece, Japonca ve basitleştirilmiş Çince çeviriler güncellendi.
+- Güncelliğini yitirmiş NYT varsayılan yer imi kaldırıldı. Onion hizmeti sonlandırıldı.

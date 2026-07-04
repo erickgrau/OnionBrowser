@@ -26,6 +26,7 @@ class PreviewWebView: WKWebView, WKNavigationDelegate {
 	}
 
 
+	@discardableResult
 	override func load(_ request: URLRequest) -> WKNavigation? {
 		var userAgent = HostSettings.for(request.url?.host).userAgent
 

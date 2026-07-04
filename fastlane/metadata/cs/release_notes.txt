@@ -1,2 +1,8 @@
-- Aktualizován Tor na verzi 0.4.9.9. (Obsahuje řadu oprav zabezpečení!)
-- Aktualizovány překlady do korejštiny, japonštiny, chorvatštiny a zjednodušené čínštiny.
+- Aktualizován Tor na verzi 0.4.9.11.
+- Aktualizován Snowflake na verzi 2.14.1.
+- Aktualizován DNSTT na verzi 1.20260501.0.
+- Oprava zabezpečení: Zvýšena úroveň zabezpečení náhledu odkazů na úroveň běžných záložek.
+- Opraveno pozadí názvu náhledu odkazu v iOS 26.
+- Náhled odkazu je nyní volitelný.
+- Aktualizovány překlady do korejštiny, japonštiny a zjednodušené čínštiny.
+- Odstraněna zastaralá výchozí záložka NYT. Služba Onion byla ukončena.

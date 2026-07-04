@@ -1,2 +1,8 @@
-- Đã cập nhật Tor lên phiên bản 0.4.9.9. (Bản cập nhật này bao gồm nhiều bản vá lỗi bảo mật!)
-- Đã cập nhật bản dịch tiếng Hàn, tiếng Nhật, tiếng Croatia và tiếng Trung giản thể.
+- Đã cập nhật Tor lên phiên bản 0.4.9.11.
+- Đã cập nhật Snowflake lên phiên bản 2.14.1.
+- Đã cập nhật DNSTT lên phiên bản 1.20260501.0.
+- Sửa lỗi bảo mật: Nâng cấp mức độ bảo mật của bản xem trước liên kết lên ngang bằng với các tab thông thường.
+- Sửa lỗi nền tiêu đề bản xem trước liên kết trên iOS 26.
+- Cho phép tùy chọn bật/tắt bản xem trước liên kết.
+- Cập nhật bản dịch tiếng Hàn, tiếng Nhật và tiếng Trung giản thể.
+- Loại bỏ dấu trang mặc định NYT đã lỗi thời. Dịch vụ Onion đã ngừng hoạt động.

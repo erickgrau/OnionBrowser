@@ -38,6 +38,7 @@ class HostSettings: NSObject {
 	private static let lockdownModeKey = "lockdown_mode"
 	private static let orientationAndMotionKey = "orientation_and_motion"
 	private static let mediaCaptureKey = "media_capture"
+	private static let linkPreviewKey = "link_preview"
 
 	private static var _raw: [String: [String: String]]?
 	private static var raw: [String: [String: String]] {
@@ -271,6 +272,17 @@ class HostSettings: NSObject {
 		}
 	}
 
+	var linkPreview: Bool {
+		get {
+			// This twisted logic is necessary to make sure, default is on
+			// after an upgrade from an older version, which didn't have this option.
+			return get(Self.linkPreviewKey) != Self.false
+		}
+		set {
+			raw[Self.linkPreviewKey] = newValue ? Self.true : Self.false
+		}
+	}
+
 	/**
 	Will be used by `HostSettings.for()`.
 
@@ -309,6 +321,7 @@ class HostSettings: NSObject {
 				Self.lockdownModeKey: Self.true,
 				Self.orientationAndMotionKey: Self.false,
 				Self.mediaCaptureKey: Self.false,
+				Self.linkPreviewKey: Self.true
 			]
 		}
 		else {

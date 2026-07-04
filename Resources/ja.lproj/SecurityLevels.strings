@@ -8,7 +8,7 @@
 
 "Disables orientation and motion data access" = "画面の向きと動きに関する情報を遮断";
 
-"Easy breezy. Though it could be dangerous." = "閲覧はスムースですが、リスクがあります。";
+"Easy breezy. Though it could be dangerous." = "快適にブラウジングできますが、セキュリティは低下します。";
 
 "JavaScript allowed" = "JavaScriptは許可されます";
 
@@ -42,11 +42,11 @@
 
 "Use when you’re concerned about your activity being logged, but accept that some of it might be monitored." = "活動を記録されたくはないが、監視される可能性をある程度容認する場合。";
 
-"Websites may break. But you get great security." = "最高度のセキュリティですが、サイトによってはうまく機能しない場合があります。";
+"Websites may break. But you get great security." = "一部のサイトが正常に機能しなくなる代わりに、攻撃面を最小限に抑えます。";
 
 "When to Use:" = "使用例:";
 
-"Works pretty well. Your identity is mostly protected." = "サイトはほぼ機能します。ほとんどの場合、あなたの身元が保護されます。";
+"Works pretty well. Your identity is mostly protected." = "多くの場合機能し、強力な保護が提供されます。";
 
 "Yes" = "はい";
 

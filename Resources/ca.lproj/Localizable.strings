@@ -22,9 +22,6 @@
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
 "%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ Utilitzeu %2$@ per a connectar amb la xarxa oficial del Tor.";
 
-/* No comment provided by engineer. */
-"%1$@31%2$@ days. %1$@5%2$@ ways to give." = "%1$@31%2$@ dies. %1$@5%2$@ maneres de donar.";
-
 /* Placeholder is bullet point */
 "%@ a little more speed" = "%@ una poca més de velocitat";
 
@@ -123,6 +120,9 @@
 
 /* Option title */
 "Allow JavaScript" = "Permet el JavaScript";
+
+/* Option title */
+"Allow Link Preview" = "Allow Link Preview";
 
 /* SecurityViewController */
 "Allow Persistent Cookies" = "Permet galetes persistents";
@@ -264,9 +264,6 @@
 
 /* No comment provided by engineer. */
 "Drawbacks:" = "Inconvenients:";
-
-/* No comment provided by engineer. */
-"Each donation to an internet freedom project gets matched." = "Cada donació a un projecte de llibertat a Internet es duplica.";
 
 /* SecurityPresetsRow */
 "Easy breezy. Though it could be dangerous." = "Com la seda, però podria ser perillós.";

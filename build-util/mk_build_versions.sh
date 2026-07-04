@@ -17,9 +17,9 @@
 # 2.3.X epoch: 2019-10-07 20:00 UTC
 # 2.4.X epoch: 2019-12-05 21:00 UTC
 # 2.5.X epoch: 2020-01-22 20:57 UTC
-# epoch changes at v3.3.0 (or next major version) OR April 2026
-OB_BUNDLE_SHORT_VERSION_DATE="2025-11-04 09:00:00 GMT"
-OB_BUNDLE_SHORT_VERSION_STRING=3.3.17
+# epoch changes at v3.4.0 (or next major version) OR April 2026
+OB_BUNDLE_SHORT_VERSION_DATE="2026-06-24 11:00:00 GMT"
+OB_BUNDLE_SHORT_VERSION_STRING=3.4.0
 #
 BASH_SOURCE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 

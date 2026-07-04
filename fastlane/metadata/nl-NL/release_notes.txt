@@ -1,2 +1,8 @@
-- Tor bijgewerkt naar versie 0.4.9.9. (Bevat talrijke beveiligingsverbeteringen!)
-- De vertalingen in het Koreaans, Japans, Kroatisch en Vereenvoudigd Chinees zijn bijgewerkt.
+- Tor bijgewerkt naar 0.4.9.11.
+- Snowflake bijgewerkt naar 2.14.1.
+- DNSTT bijgewerkt naar 1.20260501.0.
+- Beveiligingsfix: de beveiliging van linkvoorbeelden is aangepast naar hetzelfde niveau als bij normale tabbladen.
+- De achtergrond van de titel bij linkvoorbeelden in iOS 26 is gecorrigeerd.
+- Linkvoorbeelden zijn nu optioneel.
+- De vertalingen voor het Koreaans, Japans en Vereenvoudigd Chinees zijn bijgewerkt.
+- De verouderde standaardbladwijzer voor de NYT is verwijderd. De Onion-service is stopgezet.

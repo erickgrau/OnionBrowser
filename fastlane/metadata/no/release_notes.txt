@@ -1,2 +1,8 @@
-- Oppdatert Tor til versjon 0.4.9.9. (Inneholder mange sikkerhetsrettelser!)
-- Oppdatert oversettelser til koreansk, japansk, kroatisk og forenklet kinesisk.
+- Oppdatert Tor til 0.4.9.11.
+- Oppdatert Snowflake til 2.14.1.
+- Oppdatert DNSTT til 1.20260501.0.
+- Sikkerhetsrettelse: Sikkerheten for forhåndsvisning av lenker er oppgradert til samme nivå som for vanlige faner.
+- Rettet bakgrunnen for tittelen i forhåndsvisningen av lenker i iOS 26.
+- Gjort forhåndsvisning av lenker valgfritt.
+- Oppdatert oversettelser til koreansk, japansk og forenklet kinesisk.
+- Fjernet utdatert NYT-standardbokmerke. Onion-tjenesten ble avviklet.

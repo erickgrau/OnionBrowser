@@ -1,2 +1,8 @@
-- Mise à jour de Tor vers la version 0.4.9.9. (Comprend de nombreuses corrections de sécurité !)
-- Mise à jour des traductions en coréen, japonais, croate et chinois simplifié.
+- Mise à jour de Tor vers la version 0.4.9.11.
+- Mise à jour de Snowflake vers la version 2.14.1.
+- Mise à jour de DNSTT vers la version 1.20260501.0.
+- Correction de sécurité : le niveau de sécurité de l'aperçu des liens a été aligné sur celui des onglets normaux.
+- Correction de l'arrière-plan du titre de l'aperçu des liens sous iOS 26.
+- L'aperçu des liens est désormais facultatif.
+- Mise à jour des traductions en coréen, japonais et chinois simplifié.
+- Suppression du signet par défaut obsolète du NYT. Le service Onion a été interrompu.

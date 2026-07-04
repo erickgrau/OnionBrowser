@@ -1,2 +1,8 @@
-- Zaktualizowano program Tor do wersji 0.4.9.9. (Zawiera wiele poprawek dotyczących bezpieczeństwa!)
-- Zaktualizowano tłumaczenia na język koreański, japoński, chorwacki i chiński (uproszczony).
+- Zaktualizowano Tor do wersji 0.4.9.11.
+- Zaktualizowano Snowflake do wersji 2.14.1.
+- Zaktualizowano DNSTT do wersji 1.20260501.0.
+- Poprawka bezpieczeństwa: podniesiono poziom bezpieczeństwa podglądu linków do poziomu zgodnego z normalnymi kartami.
+- Naprawiono tło tytułu podglądu linków w systemie iOS 26.
+- Podgląd linków stał się opcjonalny.
+- Zaktualizowano tłumaczenia na język koreański, japoński i chiński uproszczony.
+- Usunięto nieaktualną domyślną zakładkę NYT. Usługa Onion została wycofana.

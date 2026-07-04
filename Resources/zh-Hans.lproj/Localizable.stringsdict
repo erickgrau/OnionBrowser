@@ -12,8 +12,10 @@
 			<string>NSStringPluralRuleType</string>
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
+			<key>zero</key>
+			<string>无</string>
 			<key>other</key>
-			<string>%d cookies</string>
+			<string>%d 个 Cookie</string>
 		</dict>
 	</dict>
 </dict>

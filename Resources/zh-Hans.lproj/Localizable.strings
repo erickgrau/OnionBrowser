@@ -14,16 +14,13 @@
 "%1$@ now selectively supports iOS' %2$@! (From iOS 16 onwards.)%3$@Gold and silver security levels will have this set by default. Your settings won't change automatically, though.%3$@Visit the '%4$@' page to update your default security level!%3$@P.S.: You might also want to have a look at the new '%5$@' feature." = "%1$@ 现已选择性地支持 iOS 的 %2$@！（适用于 iOS 16 及更高版本。）%3$@最安全和较安全安全级别默认启用此功能。但您的设置不会自动更改。%3$@请访问“%4$@”页面更新您的默认安全级别！%3$@附注：您可能还想了解一下新增的“%5$@”功能。";
 
 /* Placeholder 1 is 'Onion Browser', placeholder 2 is 'Orbot' */
-"%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue." = "%1$@ 依赖 %2$@ 来建立与 Tor 的安全连接。请安装 %2$@应用程序以继续。";
+"%1$@ relies on %2$@ for a secure connection to Tor. Install the %2$@ app to continue." = "%1$@ 依赖 %2$@ 来建立与 Tor 的安全连接。请安装 %2$@ 应用以继续。";
 
 /* Placeholder 1 is 'Orbot', placeholder 2 is 'Onion Browser' */
-"%1$@ runs in onion-only mode. This is dangerous and %2$@ does not support it. Switch it off to use %2$@!" = "%1$@正在执行 onion-only 模式。这十分危险，并且 %2$@ 不支持此模式。关闭此模式以使用 %2$@！";
+"%1$@ runs in onion-only mode. This is dangerous and %2$@ does not support it. Switch it off to use %2$@!" = "%1$@ 以仅洋葱模式运行。这很危险，且 %2$@ 不支持此模式。请将其关闭以使用 %2$@！";
 
 /* Placeholder 1 is bullet point, placeholder 2 is 'Orbot' */
 "%1$@ Use %2$@ to connect to the official Tor network." = "%1$@ 使用 %2$@ 连接到 Tor 官方网络。";
-
-/* No comment provided by engineer. */
-"%1$@31%2$@ days. %1$@5%2$@ ways to give." = "%1$@31%2$@ 天。%1$@5%2$@ 种捐赠方式。";
 
 /* Placeholder is bullet point */
 "%@ a little more speed" = "%@ 速度更快一点";
@@ -119,10 +116,13 @@
 "Allow Access to Orientation and Motion Data" = "允许访问设备方向及动作数据";
 
 /* SecurityViewController */
-"Allow hosts to permanently store cookies and local storage databases." = "允许站点永久存储 Cookie 和本地存储数据库。";
+"Allow hosts to permanently store cookies and local storage databases." = "允许主机永久存储 Cookie 和本地存储数据库。";
 
 /* Option title */
 "Allow JavaScript" = "允许 JavaScript";
+
+/* Option title */
+"Allow Link Preview" = "允许链接预览";
 
 /* SecurityViewController */
 "Allow Persistent Cookies" = "允许持久性 Cookie";
@@ -155,7 +155,7 @@
 "Block Insecure HTTP Requests" = "阻止不安全的 HTTP 请求";
 
 /* URLBlockerRuleController */
-"Blocked 3rd-Party Hosts" = "已阻拦第三方站点";
+"Blocked 3rd-Party Hosts" = "已屏蔽第三方主机";
 
 /* BookmarksViewController */
 "Bookmarks" = "书签";
@@ -265,9 +265,6 @@
 /* No comment provided by engineer. */
 "Drawbacks:" = "缺点：";
 
-/* No comment provided by engineer. */
-"Each donation to an internet freedom project gets matched." = "对互联网自由项目的每一笔捐款都将获得等额配捐。";
-
 /* SecurityPresetsRow */
 "Easy breezy. Though it could be dangerous." = "轻松使用，却较为危险。";
 
@@ -347,13 +344,13 @@
 "History" = "历史";
 
 /* AddSiteViewController, SyncViewController */
-"Host" = "站点";
+"Host" = "主机";
 
 /* Placeholder is 'Onion Browser' */
 "If you sync, all bookmarks will be read from the server and added/updated in %@." = "如果您进行同步，所有书签都将从服务器读取并添加到/更新到 %@ 中。";
 
 /* Tab+UIWebViewDelegate */
-"Ignore for this host" = "忽略来自该站点的错误";
+"Ignore for this host" = "为此主机忽略";
 
 /* SecurityViewController */
 "Ignore TLS Errors" = "忽略 TLS 错误";
@@ -473,7 +470,7 @@
 "Purchase Failure" = "购买失败";
 
 /* SettingsViewController */
-"Rate on App Store" = "在应用商店评价";
+"Rate on App Store" = "在 App Store 评价";
 
 /* No comment provided by engineer. */
 "Reasons to use the built-in Tor (iOS 17 only)" = "使用内置 Tor 的理由（仅限 iOS 17）";
@@ -494,7 +491,7 @@
 "Request Access" = "请求访问";
 
 /* No comment provided by engineer. */
-"Request could not be formed. Please check host and username/password!" = "无法生成请求。请检查主机名和用户名/密码！";
+"Request could not be formed. Please check host and username/password!" = "无法构建请求。请检查主机名和用户名/密码！";
 
 /* No comment provided by engineer. */
 "Response body missing." = "响应正文缺失。";
@@ -533,7 +530,7 @@
 "Settings" = "设置";
 
 /* SecurityPresetsRow */
-"Settings have been customized." = "已自定义设置。";
+"Settings have been customized." = "设置已自定义。";
 
 /* Storage2ViewController */
 "Show All Sites" = "显示所有站点";
