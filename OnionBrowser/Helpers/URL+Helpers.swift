@@ -24,13 +24,13 @@ extension URL {
 
 	var withFixedScheme: URL? {
 		switch scheme?.lowercased() {
-		case "onionhttp":
+		case "onionhttp", "torhttp":
 			var urlc = URLComponents(url: self, resolvingAgainstBaseURL: true)
 			urlc?.scheme = "http"
 
 			return urlc?.url
 
-		case "onionhttps":
+		case "onionhttps", "torhttps":
 			var urlc = URLComponents(url: self, resolvingAgainstBaseURL: true)
 			urlc?.scheme = "https"
 
@@ -99,11 +99,11 @@ extension URL {
 	}
 
 	var isHttp: Bool {
-		["http", "onionhttp"].contains(scheme?.lowercased())
+		["http", "onionhttp", "torhttp"].contains(scheme?.lowercased())
 	}
 
 	var isHttps: Bool {
-		["https", "onionhttps"].contains(scheme?.lowercased())
+		["https", "onionhttps", "torhttps"].contains(scheme?.lowercased())
 	}
 
 	var isOnion: Bool {

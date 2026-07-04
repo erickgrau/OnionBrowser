@@ -92,10 +92,20 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
 
             // Rewrite any Location header to use our custom scheme
             var modifiedHeaders = httpResponse.allHeaderFields
-            if let location = modifiedHeaders["Location"] as? String,
-               let locURL = URL(string: location),
-               let torLocURL = Self.toTorURL(locURL) {
-                modifiedHeaders["Location"] = torLocURL.absoluteString
+            if let location = modifiedHeaders["Location"] as? String {
+                // Location can be absolute (https://...) or relative (/search?q=...)
+                if let locURL = URL(string: location),
+                   let torLocURL = Self.toTorURL(locURL) {
+                    // Absolute URL
+                    modifiedHeaders["Location"] = torLocURL.absoluteString
+                } else if location.hasPrefix("/") {
+                    // Relative URL -- resolve against the real URL's origin
+                    var components = URLComponents(url: realURL, resolvingAgainstBaseURL: false)
+                    components?.path = location
+                    if let resolved = components?.url, let torLocURL = Self.toTorURL(resolved) {
+                        modifiedHeaders["Location"] = torLocURL.absoluteString
+                    }
+                }
             }
 
             // Rewrite Content-Security-Policy to allow our custom scheme
@@ -226,6 +236,42 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         result = result.replacingOccurrences(
             of: "href='http://",
             with: "href='\(torHttpScheme)://"
+        )
+
+        // Also rewrite form action URLs
+        result = result.replacingOccurrences(
+            of: "action=\"https://",
+            with: "action=\"\(torHttpsScheme)://"
+        )
+        result = result.replacingOccurrences(
+            of: "action=\"http://",
+            with: "action=\"\(torHttpScheme)://"
+        )
+        result = result.replacingOccurrences(
+            of: "action='https://",
+            with: "action='\(torHttpsScheme)://"
+        )
+        result = result.replacingOccurrences(
+            of: "action='http://",
+            with: "action='\(torHttpScheme)://"
+        )
+
+        // Rewrite protocol-relative URLs (//example.com -> torhttps://example.com)
+        result = result.replacingOccurrences(
+            of: "src=\"//",
+            with: "src=\"\(torHttpsScheme)://"
+        )
+        result = result.replacingOccurrences(
+            of: "src='//",
+            with: "src='\(torHttpsScheme)://"
+        )
+        result = result.replacingOccurrences(
+            of: "href=\"//",
+            with: "href=\"\(torHttpsScheme)://"
+        )
+        result = result.replacingOccurrences(
+            of: "href='//",
+            with: "href='\(torHttpsScheme)://"
         )
 
         // Add a <base> tag so relative URLs resolve correctly

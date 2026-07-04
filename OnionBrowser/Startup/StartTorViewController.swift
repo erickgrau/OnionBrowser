@@ -139,7 +139,9 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 						delegate.browsingUi.updateChrome()
 					}
 
-					self?.view.sceneDelegate?.show(OrbotManager.shared.checkStatus())
+					// Force show the browser UI -- don't re-check status which
+					// could race and return StartTorViewController again.
+					self?.view.sceneDelegate?.show(nil)
 				}
 			}
 		}

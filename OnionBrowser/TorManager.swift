@@ -230,18 +230,33 @@ class TorManager {
 					Task {
 						let response = await torController.info(forKeys: ["net/listeners/socks"])
 
-						guard let parts = response.first?.split(separator: ":"),
-							  let host = parts.first,
-							  let host = IPv4Address(String(host)),
-							  let port = parts.last,
-							  let port = NWEndpoint.Port(String(port))
+						self?.log("#startTunnel socks response=\(response)")
+
+						// Tor may return the address quoted, e.g. "\"127.0.0.1:9050\""
+						let raw = response.first?
+							.trimmingCharacters(in: .whitespacesAndNewlines)
+							.trimmingCharacters(in: CharacterSet(charactersIn: "\""))
+
+						guard let raw = raw,
+							  let colonIndex = raw.lastIndex(of: ":")
 						else {
 							self?.stop()
+							return completion(Errors.noSocksAddr)
+						}
 
+						let hostStr = String(raw[raw.startIndex..<colonIndex])
+						let portStr = String(raw[raw.index(after: colonIndex)...])
+
+						guard let host = IPv4Address(hostStr),
+							  let port = NWEndpoint.Port(portStr)
+						else {
+							self?.stop()
 							return completion(Errors.noSocksAddr)
 						}
 
 						self?.torSocks5 = .hostPort(host: NWEndpoint.Host.ipv4(host), port: port)
+
+						self?.log("#startTunnel SOCKS5 at \(self?.torSocks5 ?? .none)")
 
 						completion(nil)
 					}
