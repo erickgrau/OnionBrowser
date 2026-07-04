@@ -25,12 +25,6 @@
                                     <constraint firstAttribute="width" secondItem="b0j-LP-igT" secondAttribute="height" multiplier="1:1.34286" id="RNN-fy-uy6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHIBITEK BUILD 3.3.12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chb-build-label">
-                                <rect key="frame" x="32" y="455" width="256" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.7019607843" blue="0.5960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,9 +34,6 @@
                             <constraint firstItem="b0j-LP-igT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="16" id="TGJ-1e-mUk"/>
                             <constraint firstItem="kzq-eO-YbK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="X3d-p9-99g"/>
                             <constraint firstItem="b0j-LP-igT" firstAttribute="width" relation="lessThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.75" id="YZt-I0-KTZ"/>
-                            <constraint firstItem="chb-build-label" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="chb-build-center-x"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="chb-build-label" secondAttribute="bottom" constant="40" id="chb-build-bottom"/>
-                            <constraint firstItem="chb-build-label" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="chb-build-width"/>
                             <constraint firstItem="b0j-LP-igT" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cmM-l4-rIY"/>
                             <constraint firstItem="kzq-eO-YbK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="dEP-c8-GXe"/>
                             <constraint firstItem="kzq-eO-YbK" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="g5M-BU-IIt"/>

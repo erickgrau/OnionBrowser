@@ -22,7 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		BrowsingViewController()
 	}()
 
-
 	/**
 	 Flag, if biometric/password authentication after activation was successful.
 
@@ -38,10 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
 			   options connectionOptions: UIScene.ConnectionOptions)
 	{
-		Log.log(for: Self.self, "DOGFOOD scene willConnectTo begin")
-
 		guard let scene = scene as? UIWindowScene else {
-			Log.error(for: Self.self, "DOGFOOD scene willConnectTo no UIWindowScene")
 			return
 		}
 
@@ -88,34 +84,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		}
 
 		#if DEBUG
-		// Dogfood/device-debug safety: make sure a real root view controller is
-		// installed during scene connection. On iOS 27 beta, waiting until
-		// sceneDidBecomeActive can leave only the launch storyboard visible.
-		Log.log(for: Self.self, "DOGFOOD eager UI from willConnect")
+		// iOS 27 beta fix: install a real root view controller during scene connection.
+		// Waiting until sceneDidBecomeActive can leave only the launch storyboard visible.
 		_ = SecureEnclave.removeKey()
 		Settings.hideContent = false
 		Settings.stateRestoreLock = false
 
 		show(OrbotManager.shared.checkStatus())
 		#endif
-
-		Log.log(for: Self.self, "DOGFOOD scene willConnectTo end")
 	}
 
 	func sceneDidBecomeActive(_ scene: UIScene) {
-		Log.log(for: Self.self, "DOGFOOD sceneDidBecomeActive begin verified=\(verified)")
-
 		AppDelegate.shared?.dontStopApp()
 
 		#if DEBUG
-		Log.log(for: Self.self, "DOGFOOD reset startup state: remove SecureEnclave key and disable blur")
 		_ = SecureEnclave.removeKey()
 		Settings.hideContent = false
 		Settings.stateRestoreLock = false
 		#endif
 
 		if !verified, let privateKey = SecureEnclave.loadKey() {
-			Log.log(for: Self.self, "DOGFOOD SecureEnclave key found, verifying")
 			var counter = 0
 
 			repeat {
@@ -129,13 +117,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			} while !verified && counter < 3
 
 			if !verified {
-				Log.error(for: Self.self, "DOGFOOD SecureEnclave verification failed; destroying scene")
 				sceneWillResignActive(scene)
 
 				UIApplication.shared.requestSceneSessionDestruction(scene.session, options: nil)
-			}
-			else {
-				Log.log(for: Self.self, "DOGFOOD SecureEnclave verification passed")
 			}
 
 			// Always return here, as the SecureEnclave operations will always
@@ -146,14 +130,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			return
 		}
 
-		Log.log(for: Self.self, "DOGFOOD continuing to OrbotManager.checkStatus")
-
 		verified = false
 
 		BlurredSnapshot.remove()
 
 		let vc = OrbotManager.shared.checkStatus()
-		Log.log(for: Self.self, "DOGFOOD checkStatus returned \(String(describing: vc))")
 
 		show(vc)
 	}
@@ -162,7 +143,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 					 performActionFor shortcutItem: UIApplicationShortcutItem,
 					 completionHandler: @escaping (Bool) -> Void)
 	{
-		handle(shortcutItem, starting: false, completionHandler)
+		handle(shortcut, starting: false, completionHandler)
 	}
 
 	func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
@@ -212,8 +193,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	// MARK: Public Methods
 
 	func show(_ viewController: UIViewController? = nil, _ completion: ((Bool) -> Void)? = nil) {
-		Log.log(for: Self.self, "DOGFOOD show begin viewController=\(String(describing: viewController)) windowNil=\(window == nil)")
-
 		if window == nil {
 			window = UIWindow(frame: UIScreen.main.bounds)
 			window?.backgroundColor = .accent
@@ -257,11 +236,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		window?.rootViewController = viewController
 		window?.makeKeyAndVisible()
-		Log.log(for: Self.self, "DOGFOOD rootViewController set to \(String(describing: viewController))")
 
 		UIView.transition(with: window!, duration: 0.3, options: .transitionCrossDissolve,
 						  animations: {}, completion: completion)
-		Log.log(for: Self.self, "DOGFOOD show end")
 	}
 
 
@@ -284,7 +261,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		else if shortcut.type.contains("ClearData")
 		{
 			for scene in UIApplication.shared.connectedScenes {
-				// This will only work on an iPad. On an iPhone, this will trigger
+				// This will only work on an iPad. On a iPhone, this will trigger
 				// "Invalid attempt to call -[UIApplication requestSceneSessionDestruction:] from an unsupported device."
 				// In that case, we'll just remove all tabs from the scene ourselves.
 				UIApplication.shared.requestSceneSessionDestruction(scene.session, options: nil) { _ in
