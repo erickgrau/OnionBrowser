@@ -330,8 +330,7 @@ class TorManager {
 			conf.httpCookieStorage?.setCookies(cookies, for: url, mainDocumentURL: nil)
 		}
 
-		if #available(iOS 15.0, *), Settings.useBuiltInTor == true {
-			// There should be a started Tor and the correct proxy configuration available.
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
 			// If not, use an invalid one to make the request fail and not leak.
 			let proxy = torSocks5 ?? NWEndpoint.hostPort(host: .ipv4(.loopback), port: .any)
 			conf.proxyConfigurations.append(.init(socksv5Proxy: proxy))
