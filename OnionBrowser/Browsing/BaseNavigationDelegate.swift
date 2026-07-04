@@ -24,7 +24,7 @@ class BaseNavigationDelegate {
 			return nil
 		}
 
-		if Settings.useBuiltInTor ?? false, #available(iOS 15.0, *) {
+		if Settings.useBuiltInTor ?? false, #available(iOS 17.0, *) {
 			guard !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty else {
 				return nil
 			}

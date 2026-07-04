@@ -86,22 +86,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		#if DEBUG
 		// iOS 27 beta fix: install a real root view controller during scene connection.
 		// Waiting until sceneDidBecomeActive can leave only the launch storyboard visible.
-		_ = SecureEnclave.removeKey()
-		Settings.hideContent = false
-		Settings.stateRestoreLock = false
+		// Only do this on first run to avoid resetting app state on every background-to-foreground.
+		if firstRun {
+			_ = SecureEnclave.removeKey()
+			Settings.hideContent = false
+			Settings.stateRestoreLock = false
 
-		show(OrbotManager.shared.checkStatus())
+			show(OrbotManager.shared.checkStatus())
+		}
 		#endif
 	}
 
 	func sceneDidBecomeActive(_ scene: UIScene) {
 		AppDelegate.shared?.dontStopApp()
-
-		#if DEBUG
-		_ = SecureEnclave.removeKey()
-		Settings.hideContent = false
-		Settings.stateRestoreLock = false
-		#endif
 
 		if !verified, let privateKey = SecureEnclave.loadKey() {
 			var counter = 0
