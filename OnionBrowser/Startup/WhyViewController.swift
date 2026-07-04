@@ -100,7 +100,7 @@ class WhyViewController: UIViewController {
 	@IBOutlet weak var title2Lb: UILabel! {
 		didSet {
 			eventuallyHide(title2Lb)
-			title2Lb.text = NSLocalizedString("Reasons to use the built-in Tor (iOS 17 only)", comment: "")
+			title2Lb.text = NSLocalizedString("Reasons to use the built-in Tor", comment: "")
 		}
 	}
 
@@ -172,7 +172,7 @@ class WhyViewController: UIViewController {
 
 
 	private func eventuallyHide(_ view: UIView) {
-		if #available(iOS 17.0, *) {
+		if #available(iOS 15.0, *) {
 			guard delegate?.buttonTitle2?.isEmpty ?? true else {
 				return
 			}

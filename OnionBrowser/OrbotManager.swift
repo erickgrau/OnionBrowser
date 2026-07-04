@@ -106,45 +106,17 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 			}
 		}
 
-		if #available(iOS 17.0, *) {
+		if #available(iOS 15.0, *) {
 			if let useBuiltinTor = Settings.useBuiltInTor {
 				if useBuiltinTor {
-					// User wants to use built-in Tor.
-
-					if OrbotKit.shared.installed {
-						// But Orbot is installed.
-
-						if !hasOrbotPermission() {
-							// ...and we cannot access it. That needs to change.
-
-							let vc = PermissionViewController()
-							vc.error = lastError
-
-							return vc
-						}
-
-						// NOTE: lastInfo should be filled as a side effect of `hasOrbotPermission()`!
-						if lastInfo?.status != .stopped {
-							if lastInfo?.onionOnly ?? false {
-								// Uh-oh. No onion-only mode allowed.
-								return StartOrbotViewController()
-							}
-
-							// User has a running Orbot. Just use that.
-							Settings.useBuiltInTor = false
-
-							OrbotKit.shared.notifyOnStatusChanges(self)
-
-							return nil
-						}
-					}
+					// User wants to use built-in Tor. Skip Orbot entirely.
 
 					if TorManager.shared.status == .started {
-						// No Orbot running, but built-in Tor. Also ok.
+						// Built-in Tor is running. All good.
 						return nil
 					}
 
-					// No Orbot running, no built-in Tor. Let the user start it!
+					// No built-in Tor running. Let the user start it!
 					return StartTorViewController()
 				}
 
@@ -181,7 +153,7 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 	}
 
 	func allowRequests() -> Bool {
-		if Settings.useBuiltInTor == true, #available(iOS 17.0, *) {
+		if Settings.useBuiltInTor == true, #available(iOS 15.0, *) {
 			return TorManager.shared.status == .started
 		}
 		else {
