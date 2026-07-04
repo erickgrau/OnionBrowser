@@ -315,6 +315,13 @@ class Tab: UIView {
 
 		var request = request ?? URLRequest(url: URL.start)
 
+		// If webView doesn't exist yet (e.g. setup() returned early waiting
+		// for Tor), create it now — Tor should be running by the time
+		// the user tries to load a URL.
+		if webView == nil {
+			setup()
+		}
+
 		// https://globalprivacycontrol.github.io/gpc-spec/
 		if Settings.sendGpc {
 			request.setValue("1", forHTTPHeaderField: "Sec-GPC")
