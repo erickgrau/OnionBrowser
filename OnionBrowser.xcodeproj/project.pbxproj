@@ -911,12 +911,12 @@
 					};
 					018333D61A35727C00670CD1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = W36S8KLY7S;
+						DevelopmentTeam = DJT34EQN2G;
 						ProvisioningStyle = Manual;
 					};
 					8AC3B3A721700AD300E0CB4A = {
 						CreatedOnToolsVersion = 10.0;
-						DevelopmentTeam = W36S8KLY7S;
+						DevelopmentTeam = DJT34EQN2G;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1657,7 +1657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Resources/debug-no-entitlements.plist;
+				CODE_SIGN_ENTITLEMENTS = "Resources/debug-no-entitlements.plist";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -1674,10 +1674,10 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "OnionBrowser/OnionBrowser-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				};
-				name = Release;
-				};
-				018333E01A35727C00670CD1 /* Debug */ = {
+			};
+			name = Release;
+		};
+		018333E01A35727C00670CD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 92EFBD1332C76AE7937152DB /* Pods-OnionBrowser Tests.debug.xcconfig */;
 			buildSettings = {
