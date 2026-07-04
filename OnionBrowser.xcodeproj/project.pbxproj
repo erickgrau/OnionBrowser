@@ -902,7 +902,7 @@
 					01801E911A32CA2A002B4718 = {
 						CreatedOnToolsVersion = 6.1.1;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
 								enabled = 1;
@@ -911,12 +911,12 @@
 					};
 					018333D61A35727C00670CD1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = DJT34EQN2G;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = DF9FB764AR;
+						ProvisioningStyle = Automatic;
 					};
 					8AC3B3A721700AD300E0CB4A = {
 						CreatedOnToolsVersion = 10.0;
-						DevelopmentTeam = DJT34EQN2G;
+						DevelopmentTeam = DF9FB764AR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1537,7 +1537,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = DJT34EQN2G;
+				DEVELOPMENT_TEAM = DF9FB764AR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1599,7 +1599,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = DJT34EQN2G;
+				DEVELOPMENT_TEAM = DF9FB764AR;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1633,7 +1633,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DJT34EQN2G;
+				DEVELOPMENT_TEAM = DF9FB764AR;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1661,7 +1661,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DJT34EQN2G;
+				DEVELOPMENT_TEAM = DF9FB764AR;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
