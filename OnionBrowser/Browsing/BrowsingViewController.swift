@@ -462,6 +462,17 @@ class BrowsingViewController: UIViewController, TabDelegate {
 
 		let preset = SecurityPreset(HostSettings.for(tab.url.host))
 
+		// Color the security button based on Tor connection status.
+		if Settings.useBuiltInTor == true {
+			if TorManager.shared.status == .started {
+				securityBt?.tintColor = .systemGreen
+			} else {
+				securityBt?.tintColor = .systemRed
+			}
+		} else {
+			securityBt?.tintColor = .label
+		}
+
 		if preset == .custom {
 			securityBt?.setBackgroundImage(SecurityLevelCell.customShieldImage, for: .normal)
 			securityBt?.setTitle(nil)

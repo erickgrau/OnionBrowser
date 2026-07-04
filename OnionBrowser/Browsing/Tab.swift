@@ -505,27 +505,40 @@ class Tab: UIView {
 	}
 
 	func reinitWebView() {
-		destructWebView()
-		setup()
+	destructWebView()
+	setup()
 
-		needsRefresh = true
+	needsRefresh = true
+	}
+
+	/// Retry setting up the proxy connection and reload if needed.
+	/// Called when Tor finishes bootstrapping after the webview was already created.
+	func ensureProxyAndReload() {
+		if #available(iOS 17.0, *), conf.websiteDataStore.proxyConfigurations.isEmpty {
+			setupConnection()
+		}
+		if needsRefresh {
+			refresh()
+		}
 	}
 
 
 	// MARK: Private Methods
 
-	private func setup() {
+	private func setupConnection() {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
 			if let proxy = TorManager.shared.torSocks5 {
 				conf.websiteDataStore.proxyConfigurations = [ProxyConfiguration(socksv5Proxy: proxy)]
-			}
-			else {
-				// Delay setup until we have Tor available and somebody tells us.
+				print("Connection established - SOCKS5 proxy set")
 				return
 			}
+			print("Connection failed - Tor SOCKS5 not yet available, will retry")
 		}
+	}
 
-		webView = WKWebView(frame: .zero, configuration: conf)
+	private func setup() {
+	    setupConnection()
+	    webView = WKWebView(frame: .zero, configuration: conf)
 
 #if DEBUG
 		if #available(iOS 16.4, *) {

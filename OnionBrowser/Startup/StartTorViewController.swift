@@ -126,8 +126,12 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 				}
 
 				await MainActor.run {
+					// Tor is now started and torSocks5 should be available.
+					// Reinitialize webviews with the proxy and reload.
 					AppDelegate.shared?.allOpenTabs.forEach { tab in
 						tab.reinitWebView()
+						// Ensure proxy is set and reload if needed.
+						tab.ensureProxyAndReload()
 					}
 
 					self?.view.sceneDelegate?.show(OrbotManager.shared.checkStatus())

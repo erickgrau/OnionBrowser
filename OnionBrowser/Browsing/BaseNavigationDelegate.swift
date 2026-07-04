@@ -26,6 +26,9 @@ class BaseNavigationDelegate {
 
 		if Settings.useBuiltInTor ?? false, #available(iOS 17.0, *) {
 			guard !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty else {
+				// Tor SOCKS5 proxy not configured yet. Cancel navigation
+				// but don't silently fail -- the caller should show an error.
+				print("Navigation cancelled: Tor SOCKS5 proxy not configured")
 				return nil
 			}
 		}

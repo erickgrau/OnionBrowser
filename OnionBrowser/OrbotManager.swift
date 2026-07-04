@@ -114,7 +114,7 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 					if TorManager.shared.status == .started {
 						// Built-in Tor is running. Reinitialize webviews to ensure
 						// the SOCKS proxy is configured, then show the browser.
-						AppDelegate.shared?.allOpenTabs.forEach { $0.reinitWebView() }
+						AppDelegate.shared?.allOpenTabs.forEach { $0.reinitWebView(); $0.ensureProxyAndReload() }
 						return nil
 					}
 
