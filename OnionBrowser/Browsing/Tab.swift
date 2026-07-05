@@ -554,16 +554,20 @@ class Tab: UIView {
 			print("[OnionBrowser] setupConnection: useBuiltInTor=true, torSocks5=\(TorManager.shared.torSocks5 ?? .none)")
 
 			if TorManager.shared.torSocks5 != nil {
-				// Register our custom scheme handler to bypass the broken
-				// ProxyConfiguration API on iOS 27.
-				let schemeHandler = TorSchemeHandler()
-				conf.setURLSchemeHandler(schemeHandler, forURLScheme: TorSchemeHandler.torHttpScheme)
-				conf.setURLSchemeHandler(schemeHandler, forURLScheme: TorSchemeHandler.torHttpsScheme)
+				// Only register if not already registered (avoids crash:
+				// "URL scheme already has a registered URL schemeHandler")
+				if conf.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) == nil {
+					let schemeHandler = TorSchemeHandler()
+					conf.setURLSchemeHandler(schemeHandler, forURLScheme: TorSchemeHandler.torHttpScheme)
+					conf.setURLSchemeHandler(schemeHandler, forURLScheme: TorSchemeHandler.torHttpsScheme)
 
-				// Store reference so we can reset it when Tor restarts.
-				 objc_setAssociatedObject(self, &Self.schemeHandlerKey, schemeHandler, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+					// Store reference so we can reset it when Tor restarts.
+					objc_setAssociatedObject(self, &Self.schemeHandlerKey, schemeHandler, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
 
-				print("[OnionBrowser] TorSchemeHandler registered for \(TorSchemeHandler.torHttpScheme) and \(TorSchemeHandler.torHttpsScheme)")
+					print("[OnionBrowser] TorSchemeHandler registered for \(TorSchemeHandler.torHttpScheme) and \(TorSchemeHandler.torHttpsScheme)")
+				} else {
+					print("[OnionBrowser] TorSchemeHandler already registered, skipping")
+				}
 				return
 			}
 
