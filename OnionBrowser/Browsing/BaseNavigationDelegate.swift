@@ -24,13 +24,16 @@ class BaseNavigationDelegate {
 			return nil
 		}
 
-		if Settings.useBuiltInTor ?? false, #available(iOS 17.0, *) {
-			// Check either proxyConfigurations OR our custom scheme handler.
+		if Settings.useBuiltInTor ?? false, #available(iOS 17.0, *), url.isOnion {
+			// Only .onion URLs need Tor. Regular sites load through
+			// WKWebView's normal networking, even while Tor is still starting.
 			let hasProxy = !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty
 			let hasSchemeHandler = webView.configuration.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) != nil
 			guard hasProxy || hasSchemeHandler else {
 				// Tor not configured yet. Cancel navigation.
-				print("Navigation cancelled: Tor not configured (no proxy, no scheme handler)")
+				// Tab.load marks the tab for refresh, so the page retries
+				// automatically once Tor finishes bootstrapping.
+				print("Navigation cancelled: .onion requested but Tor not configured yet")
 				return nil
 			}
 		}

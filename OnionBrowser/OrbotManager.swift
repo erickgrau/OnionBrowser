@@ -116,8 +116,14 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 						TorManager.shared.start(Settings.transport,
 							{ _, _ in },
 							{ _ in
-								AppDelegate.shared?.sceneDelegates.forEach { delegate in
-									delegate.browsingUi.updateChrome()
+								DispatchQueue.main.async {
+									// Tor is ready: register the scheme handler on all
+									// open tabs and retry any pending .onion loads.
+									AppDelegate.shared?.allOpenTabs.forEach { $0.ensureProxyAndReload() }
+
+									AppDelegate.shared?.sceneDelegates.forEach { delegate in
+										delegate.browsingUi.updateChrome()
+									}
 								}
 							})
 					}

@@ -358,6 +358,13 @@ class Tab: UIView {
 			   let torURL = TorSchemeHandler.toTorURL(normalURL) {
 				request.url = torURL
 				print("[OnionBrowser] Rewrote .onion URL to \(torURL.absoluteString)")
+
+				// Tor still bootstrapping: the navigation gate will cancel this
+				// load. Mark for refresh so ensureProxyAndReload retries it
+				// once Tor is ready.
+				if conf.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) == nil {
+					needsRefresh = true
+				}
 			}
 			// Regular URLs: load as-is through WKWebView's normal networking
 		}
@@ -554,6 +561,13 @@ class Tab: UIView {
 
 	func ensureProxyAndReload() {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
+			// Reinit can only register the scheme handler once Tor is up.
+			// Before that, leave the webview alone so normal browsing
+			// isn't interrupted.
+			guard TorManager.shared.torSocks5 != nil else {
+				return
+			}
+
 			// Check if our scheme handler is registered. If not, reinit.
 			let hasScheme = conf.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) != nil
 			if !hasScheme && !isEnsuringProxy {
