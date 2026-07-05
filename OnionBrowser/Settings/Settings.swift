@@ -320,7 +320,13 @@ class Settings: IPtProxyUI.Settings {
 				return level
 			}
 
-			return .clearOnBackground
+			// Default to forgetting tabs only on full shutdown — NOT on every
+			// backgrounding. clearOnBackground wiped all tabs whenever the app
+			// lost focus (Face ID autofill, switching to a PGP app to decrypt,
+			// a password prompt), dumping the user back to the start page and
+			// destroying in-progress logins. Tabs now survive an app switch;
+			// they're still cleared when the app is fully shut down.
+			return .forgetOnShutdown
 		}
 		set {
 			UserDefaults.standard.set(newValue.rawValue, forKey: "tab_security")
