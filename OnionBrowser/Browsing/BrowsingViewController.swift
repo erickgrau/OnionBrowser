@@ -485,21 +485,23 @@ class BrowsingViewController: UIViewController, TabDelegate {
 
 		let preset = SecurityPreset(HostSettings.for(tab.url.host))
 
-		// Color the security button based on Tor connection status.
+		// Color the onion button (top right) by Tor state:
+		// green = connected, red = enabled but not connected,
+		// purple accent = normal browsing mode (built-in Tor off).
 		let torStatus: String
 		if Settings.useBuiltInTor == true {
 			if TorManager.shared.status == .started {
-				securityBt?.tintColor = .systemGreen
+				torBt?.tintColor = .systemGreen
 				torStatus = "started"
 			} else if TorManager.shared.status == .starting {
-				securityBt?.tintColor = .systemOrange
+				torBt?.tintColor = .systemRed
 				torStatus = "starting"
 			} else {
-				securityBt?.tintColor = .systemRed
+				torBt?.tintColor = .systemRed
 				torStatus = "stopped"
 			}
 		} else {
-			securityBt?.tintColor = .label
+			torBt?.tintColor = .accent
 			torStatus = "no built-in Tor"
 		}
 
