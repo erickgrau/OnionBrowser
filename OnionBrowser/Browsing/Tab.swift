@@ -156,6 +156,13 @@ class Tab: UIView {
 		}
 	}
 
+	#if DEBUG
+	@available(iOS 17.0, *)
+	var hasTorSchemeHandler: Bool {
+		return conf.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) != nil
+	}
+	#endif
+
 	private var _conf: WKWebViewConfiguration?
 	private var conf: WKWebViewConfiguration {
 		get {

@@ -13,6 +13,10 @@ import WebKit
 
 class BrowsingViewController: UIViewController, TabDelegate {
 
+	#if DEBUG
+	var debugLabel: UILabel?
+	#endif
+
 	@objc
 	enum Transition: Int {
 		case `default`
@@ -221,6 +225,23 @@ class BrowsingViewController: UIViewController, TabDelegate {
 		for tab in tabs {
 			tab.add(to: container)
 		}
+
+		#if DEBUG
+		let label = UILabel()
+		label.font = .monospacedSystemFont(ofSize: 10, weight: .regular)
+		label.textColor = .white
+		label.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+		label.numberOfLines = 0
+		label.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(label)
+		NSLayoutConstraint.activate([
+			label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 2),
+			label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 4),
+			label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -4),
+			label.heightAnchor.constraint(equalToConstant: 16)
+		])
+		debugLabel = label
+		#endif
 
 		updateChrome()
 	}
@@ -463,15 +484,31 @@ class BrowsingViewController: UIViewController, TabDelegate {
 		let preset = SecurityPreset(HostSettings.for(tab.url.host))
 
 		// Color the security button based on Tor connection status.
+		let torStatus: String
 		if Settings.useBuiltInTor == true {
 			if TorManager.shared.status == .started {
 				securityBt?.tintColor = .systemGreen
+				torStatus = "started"
+			} else if TorManager.shared.status == .starting {
+				securityBt?.tintColor = .systemOrange
+				torStatus = "starting"
 			} else {
 				securityBt?.tintColor = .systemRed
+				torStatus = "stopped"
 			}
 		} else {
 			securityBt?.tintColor = .label
+			torStatus = "no built-in Tor"
 		}
+
+		#if DEBUG
+		let socksDesc = TorManager.shared.torSocks5.map { "\($0)" } ?? "nil"
+		var hasScheme = "no"
+		if #available(iOS 17.0, *) {
+			hasScheme = tab.hasTorSchemeHandler ? "yes" : "no"
+		}
+		debugLabel?.text = "Tor: \(torStatus) | SOCKS: \(socksDesc) | Scheme: \(hasScheme)"
+		#endif
 
 		if preset == .custom {
 			securityBt?.setBackgroundImage(SecurityLevelCell.customShieldImage, for: .normal)
