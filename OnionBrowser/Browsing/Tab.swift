@@ -343,7 +343,8 @@ class Tab: UIView {
 		// Only rewrite .onion URLs to our custom Tor scheme so they go through
 		// the Tor SOCKS5 proxy. Regular http/https URLs load normally through
 		// WKWebView's standard networking.
-		if #available(iOS 17.0, *), Settings.useBuiltInTor == true,
+		// With native proxy, WebKit routes .onion itself — no rewrite needed.
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true, !Self.useNativeProxy,
 		   let url = request.url {
 			// Normalize schemeless URLs to https://
 			let normalURL: URL
@@ -594,7 +595,25 @@ class Tab: UIView {
 	}
 
 
+	/// Experimental: route the WebView natively through Tor's SOCKS proxy by
+	/// setting it on the data store, instead of the custom-scheme-handler +
+	/// HTML-rewriting approach. WebKit then loads .onion pages itself, so they
+	/// render exactly like Safari.
+	static let useNativeProxy = false
+
 	private func setupConnection() {
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true, Self.useNativeProxy {
+			if let proxy = TorManager.shared.torSocks5 {
+				let store = WKWebsiteDataStore.nonPersistent()
+				store.proxyConfigurations = [.init(socksv5Proxy: proxy)]
+				conf.websiteDataStore = store
+				print("[OnionBrowser] setupConnection: native SOCKS proxy on data store at \(proxy)")
+			} else {
+				print("[OnionBrowser] setupConnection: Tor not ready, native proxy deferred")
+			}
+			return
+		}
+
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
 			print("[OnionBrowser] setupConnection: useBuiltInTor=true, torSocks5=\(TorManager.shared.torSocks5 ?? .none)")
 

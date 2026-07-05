@@ -270,13 +270,16 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
                     }
                 }
 
-                // Update Content-Length to match potentially modified data
-                if stringHeaders["Content-Length"] != nil {
-                    stringHeaders["Content-Length"] = String(finalData.count)
+                // URLSession already decompressed the body and dechunked the
+                // stream. Forwarding these headers with the decoded data makes
+                // WebKit try to decode again — gzip on plain HTML fails and
+                // the page renders blank.
+                for key in ["Content-Encoding", "content-encoding",
+                            "Transfer-Encoding", "transfer-encoding",
+                            "Content-Length", "content-length"] {
+                    stringHeaders.removeValue(forKey: key)
                 }
-                // Remove Transfer-Encoding to avoid confusion with chunked encoding
-                stringHeaders.removeValue(forKey: "Transfer-Encoding")
-                stringHeaders.removeValue(forKey: "transfer-encoding")
+                stringHeaders["Content-Length"] = String(finalData.count)
 
                 let finalResponse = HTTPURLResponse(
                     url: url, // Keep the custom scheme URL WebKit asked for
@@ -456,9 +459,11 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
             return url
         }
 
-        // Resolve relative URLs against the base URL first
+        // Resolve relative URLs against the base URL first. absoluteURL
+        // matters: URLComponents on a relative URL wrapper sees only the
+        // relative part and produces host-less garbage like "torhttps:/path".
         let resolvedURL: URL
-        if let resolved = URL(string: trimmed, relativeTo: baseURL) {
+        if let resolved = URL(string: trimmed, relativeTo: baseURL)?.absoluteURL {
             resolvedURL = resolved
         } else {
             return url
@@ -734,24 +739,25 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
             }
         }
 
-        // No <base> tag found, insert one after <head...>
+        // No <base> tag found, insert one after <head...>. The ">" search
+        // must start AFTER the tag name — searching inside the "<head"
+        // range itself never matches, which used to prepend the base tag
+        // before <!DOCTYPE and put WebKit into quirks mode.
         let baseTag = "<base href=\"\(baseHref)\">"
-        if let headRange = html.range(of: "<head", options: .caseInsensitive) {
-            if let closeHeadTagRange = html.range(of: ">", range: headRange) {
-                var result = html
-                result.insert(contentsOf: baseTag, at: closeHeadTagRange.upperBound)
-                return result
-            }
+        if let headRange = html.range(of: "<head", options: .caseInsensitive),
+           let closeHeadTagRange = html.range(of: ">", range: headRange.upperBound..<html.endIndex) {
+            var result = html
+            result.insert(contentsOf: baseTag, at: closeHeadTagRange.upperBound)
+            return result
         }
 
         // No <head> tag found, try <html
-        if let htmlRange = html.range(of: "<html", options: .caseInsensitive) {
-            if let closeHtmlTagRange = html.range(of: ">", range: htmlRange) {
-                let headWithBase = "<head>\(baseTag)</head>"
-                var result = html
-                result.insert(contentsOf: headWithBase, at: closeHtmlTagRange.upperBound)
-                return result
-            }
+        if let htmlRange = html.range(of: "<html", options: .caseInsensitive),
+           let closeHtmlTagRange = html.range(of: ">", range: htmlRange.upperBound..<html.endIndex) {
+            let headWithBase = "<head>\(baseTag)</head>"
+            var result = html
+            result.insert(contentsOf: headWithBase, at: closeHtmlTagRange.upperBound)
+            return result
         }
 
         // Fallback: prepend
@@ -795,6 +801,31 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
             result = regex.stringByReplacingMatches(
                 in: result, range: NSRange(result.startIndex..., in: result),
                 withTemplate: "http: \(torHttpScheme):")
+        }
+
+        // Sites like DuckDuckGo list their own onion address as an explicit
+        // https:// host source with default-src 'none' and no 'self'. Our
+        // rewritten torhttps:// subresources match nothing then, and every
+        // script/stylesheet is blocked. Append a tor-scheme twin next to
+        // every .onion host source.
+        if let regex = try? NSRegularExpression(pattern: #"https?://[^\s;]*\.onion[^\s;]*"#, options: .caseInsensitive) {
+            let nsRange = NSRange(result.startIndex..., in: result)
+            let matches = regex.matches(in: result, options: [], range: nsRange)
+
+            for match in matches.reversed() {
+                guard let r = Range(match.range, in: result) else { continue }
+
+                let source = String(result[r])
+                let twin: String
+                if source.lowercased().hasPrefix("https://") {
+                    twin = torHttpsScheme + "://" + source.dropFirst("https://".count)
+                }
+                else {
+                    twin = torHttpScheme + "://" + source.dropFirst("http://".count)
+                }
+
+                result.replaceSubrange(r, with: "\(source) \(twin)")
+            }
         }
 
         return result

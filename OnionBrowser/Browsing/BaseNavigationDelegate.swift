@@ -28,7 +28,8 @@ class BaseNavigationDelegate {
 			// Only .onion URLs need Tor. Regular sites load through
 			// WKWebView's normal networking, even while Tor is still starting.
 			let hasProxy = !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty
-			let hasSchemeHandler = webView.configuration.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) != nil
+			let hasSchemeHandler = !Tab.useNativeProxy
+				&& webView.configuration.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) != nil
 			guard hasProxy || hasSchemeHandler else {
 				// Tor not configured yet. Cancel navigation.
 				// Tab.load marks the tab for refresh, so the page retries
