@@ -316,6 +316,15 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
             request.httpBodyStream = urlSchemeTask.request.httpBodyStream
         }
 
+        #if DEBUG
+        // Diagnose form submissions: WebKit is known to drop the POST body for
+        // custom URL schemes. If method=POST but body is empty, that's why a
+        // token login "resets" — the token never reaches the server.
+        if (request.httpMethod ?? "GET").uppercased() != "GET" {
+            print("[TorDiag] \(request.httpMethod ?? "?") \(realURL.absoluteString) httpBody=\(urlSchemeTask.request.httpBody?.count ?? -1) bodyStream=\(urlSchemeTask.request.httpBodyStream != nil) contentType=\(urlSchemeTask.request.value(forHTTPHeaderField: "Content-Type") ?? "nil")")
+        }
+        #endif
+
         let id = ObjectIdentifier(urlSchemeTask)
 
         let task = session.dataTask(with: request) { [weak self] data, response, error in
