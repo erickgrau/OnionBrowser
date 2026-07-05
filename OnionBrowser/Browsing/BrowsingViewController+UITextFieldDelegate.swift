@@ -32,8 +32,11 @@ extension BrowsingViewController: UITextFieldDelegate {
 				liveSearchVc.hide()
 				textField.resignFirstResponder()
 
-				// User is shifting to a new place. Probably a good time to clear old data.
-				WebsiteStorage.shared.cleanup()
+				// NOTE: do NOT wipe cookies/data here. This fired on EVERY
+				// address-bar navigation and deleted all non-whitelisted
+				// cookies — destroying the login session you'd just
+				// established. Data is cleared only on explicit user action
+				// (Settings clear-data / clear-history) and on shutdown.
 
 				if let url = parseSearch(search) {
 					debug("#textFieldShouldReturn url=\(url)")

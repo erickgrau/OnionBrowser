@@ -335,7 +335,7 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
 
         let id = ObjectIdentifier(urlSchemeTask)
 
-        let task = session.dataTask(with: request) { [weak self] data, response, error in
+        let task = session.dataTask(with: request) { [weak self, weak webView] data, response, error in
             // WKURLSchemeTask methods must run on the thread that called
             // start(urlSchemeTask:) — main. Dispatching there also serializes
             // the liveness check with stop(urlSchemeTask:).
@@ -426,6 +426,30 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
                 for (key, value) in modifiedHeaders {
                     if let key = key as? String, let value = value as? String {
                         stringHeaders[key] = value
+                    }
+                }
+
+                // COOKIES: HTTPURLResponse's [String:String] can only hold ONE
+                // Set-Cookie, so multiple cookies (Django sends csrftoken +
+                // session + rotating cookies as separate Set-Cookie lines) get
+                // collapsed and lost, and WebKit's cookie jar diverges from the
+                // URLSession jar we send with. Fix both: parse ALL cookies from
+                // the real response, drop the mangled Set-Cookie from what we
+                // hand WebKit, and write the parsed cookies into BOTH jars so
+                // the session is complete and consistent everywhere.
+                var rawHeaders: [String: String] = [:]
+                for (k, v) in httpResponse.allHeaderFields {
+                    if let k = k as? String, let v = v as? String { rawHeaders[k] = v }
+                }
+                let cookies = HTTPCookie.cookies(withResponseHeaderFields: rawHeaders, for: finalURL)
+                if !cookies.isEmpty {
+                    for k in stringHeaders.keys where k.lowercased() == "set-cookie" {
+                        stringHeaders.removeValue(forKey: k)
+                    }
+                    Self.sharedCookieStorage?.setCookies(cookies, for: finalURL, mainDocumentURL: finalURL)
+                    let webStore = webView?.configuration.websiteDataStore.httpCookieStore
+                    for cookie in cookies {
+                        webStore?.setCookie(cookie)
                     }
                 }
 
