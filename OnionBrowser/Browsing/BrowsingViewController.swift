@@ -227,19 +227,34 @@ class BrowsingViewController: UIViewController, TabDelegate {
 		}
 
 		#if DEBUG
+		// Development status strip. Gets its own row between the top bar and
+		// the web content instead of overlaying the URL bar, so screenshots
+		// show both the chrome and the status.
 		let label = UILabel()
 		label.font = .monospacedSystemFont(ofSize: 10, weight: .regular)
 		label.textColor = .white
-		label.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+		label.backgroundColor = UIColor.black.withAlphaComponent(0.85)
 		label.numberOfLines = 0
 		label.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(label)
-		NSLayoutConstraint.activate([
-			label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 2),
-			label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 4),
-			label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -4),
-			label.heightAnchor.constraint(equalToConstant: 16)
-		])
+
+		if let searchBar = searchBar, let container = container {
+			// The XIB pins the web content directly below the search bar.
+			// Detach that so the strip can push the content down.
+			let containerTop = view.constraints.filter {
+				($0.firstItem as? UIView) === container && $0.firstAttribute == .top
+			}
+			NSLayoutConstraint.deactivate(containerTop)
+
+			NSLayoutConstraint.activate([
+				label.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+				label.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+				label.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+				label.heightAnchor.constraint(greaterThanOrEqualToConstant: 18),
+				container.topAnchor.constraint(equalTo: label.bottomAnchor),
+			])
+		}
+
 		debugLabel = label
 		#endif
 
@@ -511,7 +526,10 @@ class BrowsingViewController: UIViewController, TabDelegate {
 		if #available(iOS 17.0, *) {
 			hasScheme = tab.hasTorSchemeHandler ? "yes" : "no"
 		}
-		debugLabel?.text = "Tor: \(torStatus) | SOCKS: \(socksDesc) | Scheme: \(hasScheme)"
+		let info = Bundle.main.infoDictionary
+		let version = info?["CFBundleShortVersionString"] as? String ?? "?"
+		let build = info?["CFBundleVersion"] as? String ?? "?"
+		debugLabel?.text = " v\(version) (\(build)) | Tor: \(torStatus) | SOCKS: \(socksDesc)\n Scheme: \(hasScheme) | builtInTor: \(Settings.useBuiltInTor.map(String.init) ?? "nil") | tabs: \(tabs.count)"
 		#endif
 
 		if preset == .custom {
