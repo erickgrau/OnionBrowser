@@ -500,15 +500,16 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
 
     // MARK: - Session Management
 
-    /// One in-memory cookie jar shared by every tab's Tor session. Login/
-    /// verification flows set a session cookie ("you're verified") and redirect
-    /// in; if that cookie lived in a per-tab session it would be lost the moment
-    /// a tab reinitialized or the session was rebuilt on a Tor restart, and the
-    /// site would bounce the user back to the start. Sharing it keeps you logged
-    /// in across tabs and reconnects. In-memory only (grabbed from an ephemeral
-    /// config), so nothing is written to disk; cleared on quit or clearCache().
-    private static let sharedCookieStorage: HTTPCookieStorage? =
-        URLSessionConfiguration.ephemeral.httpCookieStorage
+    /// One cookie jar shared by every tab's Tor session. Login/verification
+    /// flows set a session cookie ("you're verified") and redirect in; sharing
+    /// the jar keeps you logged in across tabs and Tor reconnects instead of
+    /// bouncing back to the start.
+    ///
+    /// Disk-backed (HTTPCookieStorage.shared) so a login — and the site
+    /// settings tied to it — survives quitting and reopening the app. This is a
+    /// deliberate privacy trade-off (onion cookies persist on device); wiped by
+    /// clearCache() / clear-data.
+    private static let sharedCookieStorage: HTTPCookieStorage? = HTTPCookieStorage.shared
 
     private func getSession() -> URLSession? {
         lock.lock()
