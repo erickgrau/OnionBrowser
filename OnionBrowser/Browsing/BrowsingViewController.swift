@@ -290,10 +290,12 @@ class BrowsingViewController: UIViewController, TabDelegate {
 
 	func encodeRestorableState(with activity: NSUserActivity) {
 		if !(currentTab?.url.isSpecial ?? true) {
-			activity.webpageURL = currentTab?.url.clean
+			// Convert torhttp/torhttps back to standard scheme for
+			// NSUserActivity, which rejects custom URL schemes.
+			activity.webpageURL = currentTab?.url.withFixedScheme?.real.clean
 			activity.title = currentTab?.title
 		}
-		activity.userInfo = ["webViewTabs": tabs.map({ $0.url.clean }),
+		activity.userInfo = ["webViewTabs": tabs.map({ $0.url.withFixedScheme?.real.clean ?? $0.url.clean }),
 							 "curTabIndex": NSNumber(value: currentTabIndex)]
 	}
 

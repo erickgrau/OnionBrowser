@@ -567,12 +567,21 @@ class Tab: UIView {
 				return
 			}
 
-			// Tor not ready yet. Retry in 2 seconds.
+			// Tor not ready yet. Retry in 1 second until Tor is ready.
 			print("[OnionBrowser] Tor SOCKS5 not yet available, scheduling retry...")
 			Task {
-				try? await Task.sleep(nanoseconds: 2_000_000_000)
+				try? await Task.sleep(nanoseconds: 1_000_000_000)
 				await MainActor.run {
 					if TorManager.shared.torSocks5 != nil {
+						setupConnection()
+						// Now that the scheme handler is registered, create the webview.
+						if webView == nil {
+							setup()
+							// Reload the page if one was requested.
+							if needsRefresh { refresh() }
+						}
+					} else {
+						// Tor still not ready, retry again.
 						setupConnection()
 					}
 				}
@@ -586,6 +595,18 @@ class Tab: UIView {
 
 	private func setup() {
 	    setupConnection()
+
+	    // Don't create the webview until the scheme handler is registered.
+	    // If Tor isn't ready yet, setupConnection() scheduled a retry
+	    // which will call setup() again via reinitWebView().
+	    if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
+	        let hasScheme = conf.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) != nil
+	        if !hasScheme && TorManager.shared.torSocks5 == nil {
+	            print("[OnionBrowser] setup() deferred -- Tor not ready, no scheme handler")
+	            return
+	        }
+	    }
+
 	    webView = WKWebView(frame: .zero, configuration: conf)
 
 #if DEBUG
