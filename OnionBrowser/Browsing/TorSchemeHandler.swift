@@ -262,42 +262,31 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         let cacheKey = url.absoluteString
         let isReloadable = (urlSchemeTask.request.httpMethod ?? "GET").uppercased() == "GET"
 
-        // Serve from cache for GETs unless the user forced a reload
-        // (Cache-Control: no-cache is set by our reload path). This keeps a
-        // page consistent across app switches and works even while Tor is
-        // still restarting.
-        let noCache = (urlSchemeTask.request.value(forHTTPHeaderField: "Cache-Control") ?? "")
-            .lowercased().contains("no-cache")
-
-        if isReloadable, !noCache, let (response, data) = Self.cachedResponse(for: cacheKey) {
-            print("[TorSchemeHandler] cache hit: \(cacheKey)")
+        // Cache is a FALLBACK, not the primary source: always fetch fresh when
+        // Tor is reachable, so redirect/auth flows (page A -> signin -> back to
+        // A) resolve instead of looping on a stale cached copy. The cache is
+        // only served when Tor can't be reached (e.g. mid-restart after an
+        // app switch), so a page still comes back instead of erroring.
+        func serveFromCacheOrFail(_ fallbackError: Error) {
             let id = ObjectIdentifier(urlSchemeTask)
             addLiveOnly(id)
             DispatchQueue.main.async {
                 guard self.finishTask(id) else { return }
-                urlSchemeTask.didReceive(response)
-                urlSchemeTask.didReceive(data)
-                urlSchemeTask.didFinish()
-            }
-            return
-        }
-
-        guard let session = getSession() else {
-            print("[TorSchemeHandler] No Tor session for \(url.absoluteString)")
-            // Last resort: if Tor isn't up yet but we have any cached copy,
-            // serve it rather than failing.
-            if isReloadable, let (response, data) = Self.cachedResponse(for: cacheKey) {
-                let id = ObjectIdentifier(urlSchemeTask)
-                addLiveOnly(id)
-                DispatchQueue.main.async {
-                    guard self.finishTask(id) else { return }
+                if isReloadable, let (response, data) = Self.cachedResponse(for: cacheKey) {
+                    print("[TorSchemeHandler] serving from cache (Tor unreachable): \(cacheKey)")
                     urlSchemeTask.didReceive(response)
                     urlSchemeTask.didReceive(data)
                     urlSchemeTask.didFinish()
                 }
-                return
+                else {
+                    urlSchemeTask.didFailWithError(fallbackError)
+                }
             }
-            urlSchemeTask.didFailWithError(URLError(.cannotConnectToHost))
+        }
+
+        guard let session = getSession() else {
+            print("[TorSchemeHandler] No Tor session for \(url.absoluteString)")
+            serveFromCacheOrFail(URLError(.cannotConnectToHost))
             return
         }
 
@@ -331,11 +320,23 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
                 }
 
                 if let error = error {
-                    // Don't log cancellation errors (happen on page navigation)
-                    if (error as NSError).code != URLError.cancelled.rawValue {
-                        print("[TorSchemeHandler] Fetch error for \(realURL.absoluteString): \(error.localizedDescription)")
+                    let code = (error as NSError).code
+                    // Don't touch a task WebKit cancelled (page navigation).
+                    if code == URLError.cancelled.rawValue {
+                        return
                     }
-                    urlSchemeTask.didFailWithError(error)
+                    print("[TorSchemeHandler] Fetch error for \(realURL.absoluteString): \(error.localizedDescription)")
+                    // Fall back to a cached copy if the live fetch failed (e.g.
+                    // Tor dropped mid-request), so the page still comes back.
+                    if isReloadable, let (response, cached) = Self.cachedResponse(for: cacheKey) {
+                        print("[TorSchemeHandler] serving from cache after fetch error: \(cacheKey)")
+                        urlSchemeTask.didReceive(response)
+                        urlSchemeTask.didReceive(cached)
+                        urlSchemeTask.didFinish()
+                    }
+                    else {
+                        urlSchemeTask.didFailWithError(error)
+                    }
                     return
                 }
 
@@ -495,9 +496,13 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         // (start fires, no response), which hung every .onion load. The modern
         // API is the same one TorManager.session() uses successfully.
         config.proxyConfigurations = [.init(socksv5Proxy: proxy)]
-        config.waitsForConnectivity = true
-        config.timeoutIntervalForRequest = 30
-        config.timeoutIntervalForResource = 60
+        // Don't wait forever for connectivity: if Tor drops mid-request the
+        // fetch should error promptly so we can fall back to cache, rather
+        // than hang with no response. Onion connects are slow, so allow a
+        // generous per-request timeout.
+        config.waitsForConnectivity = false
+        config.timeoutIntervalForRequest = 60
+        config.timeoutIntervalForResource = 90
 
         let session = URLSession(configuration: config)
         self.session = session
