@@ -128,6 +128,25 @@ login session) wiped. Default changed to `.forgetOnShutdown`: tabs survive an ap
 clear only on full shutdown. Options in Settings: Always Remember / Forget On Shutdown /
 Clear On Background.
 
+### Session-persistence audit (26 confirmed root causes) — the two that killed logins
+
+1. `WebsiteStorage.cleanup()` (deletes all non-whitelisted cookies from the default
+   WKWebsiteDataStore) was called on **every address-bar navigation**
+   (`BrowsingViewController+UITextFieldDelegate.textFieldShouldReturn`) and on tab ops.
+   So a login cookie was wiped almost immediately → instant logout. Removed the
+   per-navigation call; cleanup now runs only on explicit clear-data / shutdown.
+2. Multiple `Set-Cookie` headers were collapsed to one when rebuilding the response as
+   `[String:String]` (Foundation combines them; a dict keeps one), and WebKit's cookie
+   jar diverged from the URLSession jar used for sends. `TorSchemeHandler` now parses ALL
+   cookies via `HTTPCookie.cookies(withResponseHeaderFields:for:)`, strips the mangled
+   Set-Cookie from the delivered response, and writes the parsed cookies into BOTH the
+   shared `HTTPCookieStorage` and the WebView's `WKHTTPCookieStore`.
+
+Other confirmed contributors (watch these): `reinitWebView()` recreates the config and
+destroys WebKit's cookie/session state — keep `ensureProxyAndReload` from reinitting a
+live page; the Settings Tor toggle reinits all tabs (user-initiated, acceptable);
+`resetSession()` can cancel an in-flight request before its Set-Cookie is stored.
+
 Related session-persistence notes:
 - Login cookies are disk-backed (`HTTPCookieStorage.shared`) and shared across tabs, but
   **session cookies (no Expires/Max-Age) are never persisted to disk by design** — sites
