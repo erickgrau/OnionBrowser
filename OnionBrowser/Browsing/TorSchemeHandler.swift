@@ -98,13 +98,17 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         }
     }
 
-    /// Drop all cached .onion content (called when the user clears data).
+    /// Drop all cached .onion content and cookies (user "clear data" / logout).
     static func clearCache() {
         cacheLock.lock()
         responseCache.removeAll()
         cacheOrder.removeAll()
         cacheBytes = 0
         cacheLock.unlock()
+
+        if let storage = sharedCookieStorage {
+            storage.cookies?.forEach { storage.deleteCookie($0) }
+        }
     }
 
     // Custom schemes that map to http and https
@@ -476,6 +480,16 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
 
     // MARK: - Session Management
 
+    /// One in-memory cookie jar shared by every tab's Tor session. Login/
+    /// verification flows set a session cookie ("you're verified") and redirect
+    /// in; if that cookie lived in a per-tab session it would be lost the moment
+    /// a tab reinitialized or the session was rebuilt on a Tor restart, and the
+    /// site would bounce the user back to the start. Sharing it keeps you logged
+    /// in across tabs and reconnects. In-memory only (grabbed from an ephemeral
+    /// config), so nothing is written to disk; cleared on quit or clearCache().
+    private static let sharedCookieStorage: HTTPCookieStorage? =
+        URLSessionConfiguration.ephemeral.httpCookieStorage
+
     private func getSession() -> URLSession? {
         lock.lock()
         defer { lock.unlock() }
@@ -503,6 +517,11 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         config.waitsForConnectivity = false
         config.timeoutIntervalForRequest = 60
         config.timeoutIntervalForResource = 90
+
+        // Persist cookies across tabs and session rebuilds so logins stick.
+        config.httpCookieStorage = Self.sharedCookieStorage
+        config.httpCookieAcceptPolicy = .always
+        config.httpShouldSetCookies = true
 
         let session = URLSession(configuration: config)
         self.session = session
