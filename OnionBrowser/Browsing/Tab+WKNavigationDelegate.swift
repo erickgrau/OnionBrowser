@@ -32,17 +32,22 @@ extension Tab: WKNavigationDelegate {
 		   let onionUrl = navigationAction.request.url, onionUrl.isOnion,
 		   (onionUrl.scheme == "http" || onionUrl.scheme == "https")
 		{
-			let iframe = onionUrl.absoluteString != navigationAction.request.mainDocumentURL?.absoluteString
+			// Use WebKit's own frame info, not a URL comparison: a top-level
+			// link click FROM a clearnet page to a .onion has a different
+			// mainDocumentURL, which the old heuristic misread as an iframe
+			// and blocked — so the link did nothing. nil targetFrame = a new
+			// window/tab, which we also treat as a main-frame navigation.
+			let isMainFrame = navigationAction.targetFrame?.isMainFrame ?? true
 			let proxiedNatively = Tab.useNativeProxy
 				&& !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty
 
 			if !proxiedNatively {
-				if iframe {
-					Log.debug(for: Self.self, "[Tab \(index)] blocking plain .onion iframe load: \(onionUrl)")
-				}
-				else {
+				if isMainFrame {
 					Log.debug(for: Self.self, "[Tab \(index)] routing .onion navigation through Tor: \(onionUrl)")
 					load(navigationAction.request)
+				}
+				else {
+					Log.debug(for: Self.self, "[Tab \(index)] blocking plain .onion subframe load: \(onionUrl)")
 				}
 
 				return decisionHandler(.cancel, preferences)
