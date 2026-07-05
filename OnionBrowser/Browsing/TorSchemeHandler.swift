@@ -151,6 +151,8 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
             return
         }
 
+        print("[TorSchemeHandler] start: \(url.absoluteString)")
+
         // Convert torhttp/torhttps back to http/https for the actual fetch
         guard let realURL = Self.toStandardURL(url) else {
             urlSchemeTask.didFailWithError(URLError(.unsupportedURL))
@@ -158,6 +160,7 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         }
 
         guard let session = getSession() else {
+            print("[TorSchemeHandler] No Tor session for \(url.absoluteString)")
             urlSchemeTask.didFailWithError(URLError(.cannotConnectToHost))
             return
         }
@@ -193,6 +196,8 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
                 urlSchemeTask.didFailWithError(URLError(.badServerResponse))
                 return
             }
+
+            print("[TorSchemeHandler] response: \(realURL.absoluteString) status=\(httpResponse.statusCode) size=\(data?.count ?? 0)")
 
             // Rewrite any Location header to use our custom scheme
             var modifiedHeaders = httpResponse.allHeaderFields
