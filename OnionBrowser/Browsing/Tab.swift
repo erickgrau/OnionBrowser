@@ -639,20 +639,30 @@ class Tab: UIView {
 				return
 			}
 
-			// Check if our scheme handler is registered. If not, reinit.
+			// Preserve a live page. If a real page is already showing, do NOT
+			// reinit or reload it on foreground/Tor events — that's what made
+			// a PGP-token login page regenerate its challenge when the user
+			// came back from decrypting, invalidating the token. Just refresh
+			// the SOCKS session so future requests use the current Tor port.
+			let hasLivePage = (webView?.url != nil) && !(webView?.url?.isSpecial ?? true)
 			let hasScheme = conf.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) != nil
-			if !hasScheme && !isEnsuringProxy {
+
+			if hasScheme {
+				(objc_getAssociatedObject(self, &Self.schemeHandlerKey) as? TorSchemeHandler)?.resetSession()
+			}
+			else if !hasLivePage && !isEnsuringProxy {
+				// Only rebuild when there's no live page to lose.
 				isEnsuringProxy = true
 				print("[OnionBrowser] Scheme handler not registered, reinitializing...")
 				reinitWebView()
 				isEnsuringProxy = false
 			}
-			else if hasScheme {
-				// Tor may have restarted on a different SOCKS port. Drop the
-				// handler's cached URLSession so the next request connects to
-				// the current port, without destroying the webview.
-				(objc_getAssociatedObject(self, &Self.schemeHandlerKey) as? TorSchemeHandler)?.resetSession()
+
+			// Never auto-reload a page the user is looking at; only load if blank.
+			if needsRefresh && !hasLivePage {
+				refresh()
 			}
+			return
 		}
 		if needsRefresh {
 			refresh()
