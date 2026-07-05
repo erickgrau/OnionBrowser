@@ -309,7 +309,13 @@ class Tab: UIView {
 	func load(_ url: URL?) {
 		var request: URLRequest?
 
-		if let url = url?.withFixedScheme?.real, !url.absoluteString.isEmpty {
+		if var url = url?.withFixedScheme?.real, !url.absoluteString.isEmpty {
+			// If no scheme, default to https
+			if url.scheme == nil || url.scheme?.isEmpty == true {
+				if let fixed = URL(string: "https://\(url.absoluteString)") {
+					url = fixed
+				}
+			}
 			request = URLRequest(url: url)
 		}
 
