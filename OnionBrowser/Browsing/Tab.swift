@@ -340,8 +340,9 @@ class Tab: UIView {
 			setup()
 		}
 
-		// Rewrite http/https URLs to our custom scheme so TorSchemeHandler
-		// intercepts them and routes through Tor's SOCKS5 proxy.
+		// Only rewrite .onion URLs to our custom Tor scheme so they go through
+		// the Tor SOCKS5 proxy. Regular http/https URLs load normally through
+		// WKWebView's standard networking.
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true,
 		   let url = request.url {
 			// Normalize schemeless URLs to https://
@@ -351,10 +352,14 @@ class Tab: UIView {
 			} else {
 				normalURL = url
 			}
-			if let torURL = TorSchemeHandler.toTorURL(normalURL) {
+
+			// Only route through Tor if it's a .onion URL
+			if normalURL.host?.hasSuffix(".onion") == true,
+			   let torURL = TorSchemeHandler.toTorURL(normalURL) {
 				request.url = torURL
-				print("[OnionBrowser] Rewrote URL to \(torURL.absoluteString)")
+				print("[OnionBrowser] Rewrote .onion URL to \(torURL.absoluteString)")
 			}
+			// Regular URLs: load as-is through WKWebView's normal networking
 		}
 
 		// https://globalprivacycontrol.github.io/gpc-spec/
@@ -568,15 +573,15 @@ class Tab: UIView {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
 			print("[OnionBrowser] setupConnection: useBuiltInTor=true, torSocks5=\(TorManager.shared.torSocks5 ?? .none)")
 
+			// Register the scheme handler if Tor is ready. If not, the
+			// scheme handler will be registered later when Tor starts.
+			// The webview is still created immediately for normal browsing.
 			if TorManager.shared.torSocks5 != nil {
-				// Only register if not already registered (avoids crash:
-				// "URL scheme already has a registered URL schemeHandler")
 				if conf.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) == nil {
 					let schemeHandler = TorSchemeHandler()
 					conf.setURLSchemeHandler(schemeHandler, forURLScheme: TorSchemeHandler.torHttpScheme)
 					conf.setURLSchemeHandler(schemeHandler, forURLScheme: TorSchemeHandler.torHttpsScheme)
 
-					// Store reference so we can reset it when Tor restarts.
 					objc_setAssociatedObject(self, &Self.schemeHandlerKey, schemeHandler, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
 
 					print("[OnionBrowser] TorSchemeHandler registered for \(TorSchemeHandler.torHttpScheme) and \(TorSchemeHandler.torHttpsScheme)")
@@ -586,22 +591,10 @@ class Tab: UIView {
 				return
 			}
 
-			// Tor not ready yet. Retry in 1 second until Tor is ready.
-			print("[OnionBrowser] Tor SOCKS5 not yet available, scheduling retry...")
-			Task {
-				try? await Task.sleep(nanoseconds: 1_000_000_000)
-				await MainActor.run {
-					if TorManager.shared.torSocks5 != nil {
-						// Tor is ready. Reinit webview so scheme handler is
-						// registered on the config before creation.
-						reinitWebView()
-						if needsRefresh { refresh() }
-					} else {
-						// Tor still not ready, retry again.
-						setupConnection()
-					}
-				}
-			}
+			// Tor not ready yet. Don't block -- create the webview anyway.
+			// When Tor becomes ready, ensureProxyAndReload will register the
+			// scheme handler. Normal browsing works without it.
+			print("[OnionBrowser] Tor not ready yet, creating webview anyway for normal browsing")
 		} else {
 			print("[OnionBrowser] setupConnection: useBuiltInTor=\(String(describing: Settings.useBuiltInTor))")
 		}

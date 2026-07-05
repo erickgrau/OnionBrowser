@@ -26,6 +26,11 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
     /// and rewrite http/https URLs to our custom scheme.
     static let interceptionScript: String = """
     (function() {
+        // Only activate on .onion pages. Regular pages use normal networking.
+        if (!window.location.hostname || !window.location.hostname.endsWith('.onion')) {
+            return;
+        }
+
         var TOR_HTTP = '\(torHttpScheme)';
         var TOR_HTTPS = '\(torHttpsScheme)';
 
@@ -229,7 +234,10 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
                 headerFields: stringHeaders
             )!
 
-            // For HTML responses, rewrite subresource URLs
+            // For HTML responses, rewrite subresource URLs to use our custom
+            // scheme so subresources on .onion pages also go through Tor.
+            // Only rewrite URLs that resolve to .onion hosts -- external
+            // resources (CDNs, etc.) load normally through WKWebView.
             var finalData = data ?? Data()
             let contentType = (stringHeaders["Content-Type"] ?? stringHeaders["content-type"] ?? "").lowercased()
             let isHTML = contentType.contains("text/html") || contentType.contains("application/xhtml+xml")
@@ -424,24 +432,12 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         return result
     }
 
-    /// Rewrite a single URL string (absolute, protocol-relative, or relative)
-    /// to use our custom scheme.
+    /// Rewrite a single URL string to use our custom scheme.
+    /// Only rewrites .onion URLs -- external URLs are left alone so they
+    /// load through WKWebView's normal networking.
     private static func rewriteSingleURL(_ url: String, baseURL: URL) -> String {
         let trimmed = url.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return url }
-
-        // Absolute http/https URL
-        if trimmed.hasPrefix("https://") {
-            return torHttpsScheme + "://" + trimmed.dropFirst("https://".count)
-        }
-        if trimmed.hasPrefix("http://") {
-            return torHttpScheme + "://" + trimmed.dropFirst("http://".count)
-        }
-
-        // Protocol-relative URL (//example.com/path)
-        if trimmed.hasPrefix("//") {
-            return torHttpsScheme + "://" + trimmed.dropFirst(2)
-        }
 
         // Skip data: URLs, blob: URLs, javascript: URLs, mailto:, etc.
         if trimmed.hasPrefix("data:") || trimmed.hasPrefix("blob:")
@@ -451,14 +447,22 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
             return url
         }
 
-        // Relative URL (e.g. /path, ./path, ../path, path)
-        // Resolve against baseURL and then convert
-        if let resolved = URL(string: trimmed, relativeTo: baseURL),
-           let torURL = toTorURL(resolved) {
-            // Only rewrite if it resolves to http/https
-            if resolved.scheme == "http" || resolved.scheme == "https" {
-                return torURL.absoluteString
-            }
+        // Resolve relative URLs against the base URL first
+        let resolvedURL: URL
+        if let resolved = URL(string: trimmed, relativeTo: baseURL) {
+            resolvedURL = resolved
+        } else {
+            return url
+        }
+
+        // Only rewrite if the resolved URL is a .onion URL
+        guard resolvedURL.host?.hasSuffix(".onion") == true else {
+            return url
+        }
+
+        // Convert to our custom scheme
+        if let torURL = toTorURL(resolvedURL) {
+            return torURL.absoluteString
         }
 
         return url
@@ -690,8 +694,13 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
     }
 
     /// Add or update the <base> tag so relative URLs resolve against the
-    /// tor-scheme version of the page's origin.
+    /// tor-scheme version of the page's origin. Only for .onion pages.
     private static func addOrUpdateBaseTag(_ html: String, baseURL: URL) -> String {
+        // Only add base tag for .onion pages
+        guard baseURL.host?.hasSuffix(".onion") == true else {
+            return html
+        }
+
         let torBaseScheme = baseURL.scheme == "https" ? torHttpsScheme : torHttpScheme
         let baseHref = "\(torBaseScheme)://\(baseURL.host ?? "")\(baseURL.path)"
 

@@ -109,17 +109,22 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 		if #available(iOS 17.0, *) {
 			if let useBuiltinTor = Settings.useBuiltInTor {
 				if useBuiltinTor {
-					// User wants to use built-in Tor. Skip Orbot entirely.
-
-					if TorManager.shared.status == .started {
-						// Built-in Tor is running. Only reinit if the scheme handler
-						// isn't already registered (avoids destroying loaded pages).
-						AppDelegate.shared?.allOpenTabs.forEach { $0.ensureProxyAndReload() }
-						return nil
+					// User wants to use built-in Tor. Start it silently in the
+					// background and show the browser immediately. Tor will be
+					// ready by the time the user navigates to a .onion site.
+					if TorManager.shared.status != .started && TorManager.shared.status != .starting {
+						TorManager.shared.start(Settings.transport,
+							{ _, _ in },
+							{ _ in
+								AppDelegate.shared?.sceneDelegates.forEach { delegate in
+									delegate.browsingUi.updateChrome()
+								}
+							})
 					}
 
-					// No built-in Tor running. Let the user start it!
-					return StartTorViewController()
+					// Always show the browser UI. Tor runs in the background.
+					AppDelegate.shared?.allOpenTabs.forEach { $0.ensureProxyAndReload() }
+					return nil
 				}
 
 				// User decided against built-in Tor.
