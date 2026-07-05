@@ -337,9 +337,18 @@ class Tab: UIView {
 		// Rewrite http/https URLs to our custom scheme so TorSchemeHandler
 		// intercepts them and routes through Tor's SOCKS5 proxy.
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true,
-		   let url = request.url, let torURL = TorSchemeHandler.toTorURL(url) {
-			request.url = torURL
-			print("[OnionBrowser] Rewrote URL to \(torURL.absoluteString)")
+		   let url = request.url {
+			// Normalize schemeless URLs to https://
+			let normalURL: URL
+			if url.scheme == nil {
+				normalURL = URL(string: "https://\(url.absoluteString)") ?? url
+			} else {
+				normalURL = url
+			}
+			if let torURL = TorSchemeHandler.toTorURL(normalURL) {
+				request.url = torURL
+				print("[OnionBrowser] Rewrote URL to \(torURL.absoluteString)")
+			}
 		}
 
 		// https://globalprivacycontrol.github.io/gpc-spec/
