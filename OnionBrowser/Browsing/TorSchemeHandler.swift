@@ -42,11 +42,17 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         function rewriteURL(url) {
             if (typeof url !== 'string') return url;
             try {
+                // Only .onion targets go through Tor; leave clearnet alone.
+                // Replace just the scheme prefix — earlier code used the wrong
+                // substring offsets and produced 'torhttpss://' / 'torhttpp://'
+                // (unsupported URL) on every rewritten link.
                 if (url.indexOf('https://') === 0) {
-                    return TOR_HTTPS + url.substring(4);
+                    if (url.indexOf('.onion', 8) === -1 && url.indexOf('.onion/', 8) === -1) return url;
+                    return TOR_HTTPS + '://' + url.substring(8);
                 }
                 if (url.indexOf('http://') === 0) {
-                    return TOR_HTTP + url.substring(3);
+                    if (url.indexOf('.onion', 7) === -1 && url.indexOf('.onion/', 7) === -1) return url;
+                    return TOR_HTTP + '://' + url.substring(7);
                 }
                 if (url.indexOf('//') === 0) {
                     return TOR_HTTPS + ':' + url;

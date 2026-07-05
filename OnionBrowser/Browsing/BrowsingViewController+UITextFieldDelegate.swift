@@ -119,7 +119,8 @@ extension BrowsingViewController: UITextFieldDelegate {
 				return
 			}
 
-			searchFl?.text = currentTab?.url.clean?.absoluteString
+			// Show the real .onion address, not the internal torhttp(s) scheme.
+			searchFl?.text = currentTab?.url.withFixedScheme?.clean?.absoluteString
 
 			// .unlessEditing would be such a great state, if it wouldn't show
 			// while editing an empty field. Argh.
@@ -129,7 +130,7 @@ extension BrowsingViewController: UITextFieldDelegate {
 			searchFl?.textAlignment = .natural
 		}
 		else {
-			searchFl?.text = BrowsingViewController.prettyTitle(currentTab?.url)
+			searchFl?.text = BrowsingViewController.prettyTitle(currentTab?.url.withFixedScheme)
 			searchFl?.leftViewMode = encryptionBt.image(for: .normal) == nil ? .never : .always
 			searchFl?.rightViewMode = searchFl?.text?.isEmpty ?? true ? .never : .always
 

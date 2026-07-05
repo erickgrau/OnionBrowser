@@ -340,18 +340,24 @@ class Tab: UIView {
 			setup()
 		}
 
-		// Native proxy mode: WebKit routes .onion itself through the proxied
-		// data store — the tab just needs that store attached before loading.
+		// Native proxy mode: WebKit only understands http/https and routes
+		// .onion itself through the proxied data store. Normalize any custom
+		// scheme (onionhttp(s), torhttp(s)) back to http/https first, or WebKit
+		// rejects the URL as bad (-1000).
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true, Self.useNativeProxy,
 		   let url = request.url {
-			let normalURL = url.scheme == nil
-				? (URL(string: "https://\(url.absoluteString)") ?? url)
-				: url
+			let normalURL: URL
+			if url.scheme == nil {
+				normalURL = URL(string: "https://\(url.absoluteString)") ?? url
+			} else {
+				normalURL = url.withFixedScheme ?? url
+			}
+			request.url = normalURL
 
 			if normalURL.host?.lowercased().hasSuffix(".onion") == true {
-				request.url = normalURL
-
 				if TorManager.shared.torSocks5 != nil {
+					// .onion must load on a proxied store, or iOS rejects the
+					// reserved TLD. Attach it before the load fires below.
 					if conf.websiteDataStore.proxyConfigurations.isEmpty {
 						print("[OnionBrowser] Upgrading tab to proxied data store for .onion")
 						reinitWebView()
@@ -640,7 +646,12 @@ class Tab: UIView {
 	/// setting it on the data store, instead of the custom-scheme-handler +
 	/// HTML-rewriting approach. WebKit then loads .onion pages itself, so they
 	/// render exactly like Safari.
-	static let useNativeProxy = true
+	// Native proxy is a dead end for .onion: WKWebView/CFNetwork rejects the
+	// reserved .onion TLD (RFC 7686) with "bad URL" (-1000) even with the SOCKS
+	// proxy set on the data store. The scheme handler gives .onion a scheme
+	// WebKit will load (torhttps://) and fetches it via URLSession, which does
+	// route .onion through the proxy. Kept only for reference.
+	static let useNativeProxy = false
 
 	private func setupConnection() {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true, Self.useNativeProxy {
