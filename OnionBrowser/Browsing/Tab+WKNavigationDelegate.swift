@@ -70,11 +70,25 @@ extension Tab: WKNavigationDelegate {
 			else if navigationType == .formSubmitted {
 				Log.debug(for: Self.self, "[Tab \(index)] not doing universal link workaround for form submission to \(url).")
 			}
-			else if (url.isHttp || url.isHttps)
+			else if url == universalLinkWorkaroundUrl {
+				// Second pass of the workaround reload. iOS 27 beta WebKit
+				// drops the URLProtocol marker, so recognize the re-issued
+				// navigation by URL and let it through — otherwise every
+				// page load cancels and reloads itself forever.
+				universalLinkWorkaroundUrl = nil
+
+				Log.debug(for: Self.self, "[Tab \(index)] universal link workaround reload for \(url), allowing.")
+			}
+			// Only plain http/https can trigger universal links. Tor-scheme
+			// URLs (torhttp/torhttps) go through our scheme handler and must
+			// not re-enter load(), which would rewrite and loop.
+			else if (url.scheme == "http" || url.scheme == "https")
 						&& (URLProtocol.property(forKey: Tab.universalLinksWorkaroundKey, in: navigationAction.request) == nil)
 			{
 				if let tr = navigationAction.request as? NSMutableURLRequest {
 					URLProtocol.setProperty(true, forKey: Tab.universalLinksWorkaroundKey, in: tr)
+
+					universalLinkWorkaroundUrl = url
 
 					Log.debug(for: Self.self, "[Tab \(index)] doing universal link workaround for \(url).")
 

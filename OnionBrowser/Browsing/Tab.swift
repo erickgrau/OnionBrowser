@@ -219,6 +219,12 @@ class Tab: UIView {
 	/// so the webview doesn't spin forever on unreachable sites.
 	var loadStartTime: Date?
 
+	/// URL last re-issued by the universal-link workaround. WebKit on
+	/// iOS 27 beta drops the URLProtocol marker property between load()
+	/// and decidePolicyFor, so the workaround must also match by URL or
+	/// it cancels/reloads the same navigation forever.
+	var universalLinkWorkaroundUrl: URL?
+
 	var previewController: QLPreviewController?
 
 	/**
