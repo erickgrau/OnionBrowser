@@ -20,22 +20,33 @@ extension Tab: WKNavigationDelegate {
 				 preferences: WKWebpagePreferences,
 				 decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void)
 	{
-		// Native proxy mode: a .onion navigation reaching a tab whose data
-		// store isn't proxied yet must be re-issued through load(), which
-		// upgrades the tab first. This runs before the readiness gate below,
-		// which would otherwise cancel the navigation without a retry.
-		if #available(iOS 17.0, *), Settings.useBuiltInTor == true, Tab.useNativeProxy,
+		// A plain http/https .onion navigation (bookmark/link click, form
+		// submit, address bar) must be routed through Tor via load(), which
+		// rewrites to the tor scheme (scheme-handler mode) or attaches the
+		// proxied store (native mode). This runs BEFORE the readiness gate
+		// below: otherwise a .onion click is cancelled outright with no retry
+		// whenever the scheme handler / proxy isn't attached to the tab yet
+		// (e.g. right after launch) — which reads as "the link does nothing".
+		// load() rewrites and sets needsRefresh so it retries once Tor is up.
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true,
 		   let onionUrl = navigationAction.request.url, onionUrl.isOnion,
-		   (onionUrl.scheme == "http" || onionUrl.scheme == "https"),
-		   webView.configuration.websiteDataStore.proxyConfigurations.isEmpty,
-		   TorManager.shared.torSocks5 != nil,
-		   onionUrl.absoluteString == navigationAction.request.mainDocumentURL?.absoluteString
+		   (onionUrl.scheme == "http" || onionUrl.scheme == "https")
 		{
-			Log.debug(for: Self.self, "[Tab \(index)] upgrading tab to proxied store for .onion: \(onionUrl)")
+			let iframe = onionUrl.absoluteString != navigationAction.request.mainDocumentURL?.absoluteString
+			let proxiedNatively = Tab.useNativeProxy
+				&& !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty
 
-			load(navigationAction.request)
+			if !proxiedNatively {
+				if iframe {
+					Log.debug(for: Self.self, "[Tab \(index)] blocking plain .onion iframe load: \(onionUrl)")
+				}
+				else {
+					Log.debug(for: Self.self, "[Tab \(index)] routing .onion navigation through Tor: \(onionUrl)")
+					load(navigationAction.request)
+				}
 
-			return decisionHandler(.cancel, preferences)
+				return decisionHandler(.cancel, preferences)
+			}
 		}
 
 		guard let result = BaseNavigationDelegate.webView(webView, decidePolicyFor: navigationAction, preferences: preferences)
@@ -56,35 +67,9 @@ extension Tab: WKNavigationDelegate {
 		// Try to prevent universal links from triggering by refusing the initial request and starting a new one.
 		let iframe = url.absoluteString != navigationAction.request.mainDocumentURL?.absoluteString
 
-		// A .onion navigation with a plain http/https scheme (link click,
-		// form submission, back/forward) must go through Tor:
-		// - scheme-handler mode: re-issue via load(), which rewrites to the
-		//   tor scheme; letting it through would resolve the onion hostname
-		//   over normal DNS (a leak) and fail.
-		// - native proxy mode: allowed if this tab's data store is proxied;
-		//   otherwise re-issue via load(), which upgrades the tab first.
-		if #available(iOS 17.0, *), Settings.useBuiltInTor == true,
-		   url.isOnion, (url.scheme == "http" || url.scheme == "https")
-		{
-			let proxiedNatively = Tab.useNativeProxy
-				&& !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty
-
-			if !proxiedNatively {
-				if !iframe {
-					Log.debug(for: Self.self, "[Tab \(index)] rerouting .onion navigation through Tor: \(url)")
-
-					var request = navigationAction.request
-					request.url = url
-
-					load(request)
-				}
-				else {
-					Log.debug(for: Self.self, "[Tab \(index)] blocking plain .onion iframe load: \(url)")
-				}
-
-				return decisionHandler(.cancel, preferences)
-			}
-		}
+		// Plain http/https .onion navigations were already routed through Tor
+		// above (before the readiness gate), so anything reaching here is
+		// either clearnet or an already-rewritten torhttp(s):// request.
 
 		if result.hs.universalLinkProtection {
 			if iframe {
