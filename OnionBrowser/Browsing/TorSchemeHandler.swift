@@ -297,11 +297,16 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         // Build a new request with the real URL
         var request = URLRequest(url: realURL)
         request.httpMethod = urlSchemeTask.request.httpMethod ?? "GET"
-        // Copy safe headers, avoiding ones that would break the proxy fetch
+        // Copy safe headers, avoiding ones that would break the proxy fetch.
         if let headers = urlSchemeTask.request.allHTTPHeaderFields {
             for (key, value) in headers {
-                // Skip Host header - URLSession will set it from the URL
-                if key.lowercased() == "host" { continue }
+                let k = key.lowercased()
+                // Host: URLSession sets it from the URL.
+                // Cookie: let URLSession add cookies from our shared store as
+                // the single source of truth. Copying WebKit's own Cookie
+                // header too can send a doubled/conflicting header, which some
+                // .onion sites' anti-bot rejects with 403 right after login.
+                if k == "host" || k == "cookie" { continue }
                 request.setValue(value, forHTTPHeaderField: key)
             }
         }
@@ -356,6 +361,21 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
                 let finalURL = httpResponse.url ?? realURL
 
                 print("[TorSchemeHandler] response: \(finalURL.absoluteString) status=\(httpResponse.statusCode) size=\(data?.count ?? 0)")
+
+                #if DEBUG
+                // On a rejection (4xx/5xx), dump why so we can diagnose 403s
+                // etc. from the device console instead of guessing.
+                if httpResponse.statusCode >= 400 {
+                    let sentCookies = self.session?.configuration.httpCookieStorage?
+                        .cookies(for: finalURL)?.map { $0.name }.joined(separator: ",") ?? "none"
+                    let bodySnippet = String(data: (data ?? Data()).prefix(300), encoding: .utf8) ?? ""
+                    print("[TorDiag] \(httpResponse.statusCode) for \(finalURL.absoluteString)")
+                    print("[TorDiag] req method=\(request.httpMethod ?? "?") ua=\(request.value(forHTTPHeaderField: "User-Agent") ?? "nil") referer=\(request.value(forHTTPHeaderField: "Referer") ?? "nil")")
+                    print("[TorDiag] cookies-for-host=[\(sentCookies)]")
+                    print("[TorDiag] resp headers=\(httpResponse.allHeaderFields)")
+                    print("[TorDiag] body[0..300]=\(bodySnippet)")
+                }
+                #endif
 
                 // Rewrite any Location header to use our custom scheme
                 var modifiedHeaders = httpResponse.allHeaderFields
