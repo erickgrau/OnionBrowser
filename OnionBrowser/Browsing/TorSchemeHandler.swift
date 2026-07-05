@@ -343,40 +343,21 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
             return nil
         }
 
-        // Extract host and port from NWEndpoint
-        var host: String?
-        var port: Int?
-
-        switch proxy {
-        case .hostPort(let h, let p):
-            if case .ipv4(let addr) = h {
-                host = String(describing: addr)
-            }
-            port = Int(p.rawValue)
-        default:
-            break
-        }
-
-        guard let proxyHost = host, let proxyPort = port else {
-            print("[TorSchemeHandler] Could not extract host/port from \(proxy)")
-            return nil
-        }
-
         let config = URLSessionConfiguration.ephemeral
-        // Use legacy connectionProxyDictionary instead of ProxyConfiguration
-        // because ProxyConfiguration(socksv5Proxy:) is broken on iOS 27 beta.
-        config.connectionProxyDictionary = [
-            "SOCKSEnable": 1,
-            "SOCKSProxy": proxyHost,
-            "SOCKSPort": proxyPort
-        ]
+
+        // Route through Tor's SOCKS5 proxy using the modern ProxyConfiguration
+        // API with the NWEndpoint directly. The legacy connectionProxyDictionary
+        // SOCKS path issues the request but never calls back on iOS 27 beta
+        // (start fires, no response), which hung every .onion load. The modern
+        // API is the same one TorManager.session() uses successfully.
+        config.proxyConfigurations = [.init(socksv5Proxy: proxy)]
         config.waitsForConnectivity = true
         config.timeoutIntervalForRequest = 30
         config.timeoutIntervalForResource = 60
 
         let session = URLSession(configuration: config)
         self.session = session
-        print("[TorSchemeHandler] URLSession created with SOCKS5 proxy at \(proxyHost):\(proxyPort)")
+        print("[TorSchemeHandler] URLSession created with SOCKS5 ProxyConfiguration at \(proxy)")
         return session
     }
 
