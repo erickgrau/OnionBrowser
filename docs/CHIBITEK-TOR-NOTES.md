@@ -114,6 +114,30 @@ redirect/auth flows settle while still surviving app switches (Tor down → cach
 - `refresh(forceReload:)` sends `Cache-Control: no-cache` — wired to reload button,
   pull-to-refresh, Cmd-R, new-circuit.
 
+## Tabs vanishing on background (THE "back to start page" root cause)
+
+Symptom that ate many debugging rounds: logging into a site, then leaving to decrypt a
+PGP token / using Face ID or saved-password autofill / any system prompt, and coming
+back to the app's start page with the in-progress login destroyed — looked like a
+token/cookie bug but wasn't.
+
+Cause: default `Settings.tabSecurity` was `.clearOnBackground`, and
+`SceneDelegate.sceneWillResignActive` calls `browsingUi.removeAllTabs()` for that level.
+Face ID / autofill / app-switch all make the app resign active → every tab (and its live
+login session) wiped. Default changed to `.forgetOnShutdown`: tabs survive an app switch,
+clear only on full shutdown. Options in Settings: Always Remember / Forget On Shutdown /
+Clear On Background.
+
+Related session-persistence notes:
+- Login cookies are disk-backed (`HTTPCookieStorage.shared`) and shared across tabs, but
+  **session cookies (no Expires/Max-Age) are never persisted to disk by design** — sites
+  using them require re-login after a full quit no matter what. Some markets also bind the
+  session to the Tor circuit, so a circuit change logs you out.
+- Form POSTs (login/token) DO carry their body to the scheme handler when JS is enabled
+  and the form action is the tor scheme (verified: `type=1 POST body=121`). With JS
+  disabled, JS-driven submit buttons do nothing (no navigation at all) — some market
+  logins require JS. Enable JS per-site via the shield.
+
 ## Features in place
 
 - **Tor toggle**: Settings → "Built-in Tor for .onion Sites" (`SettingsViewController`).
