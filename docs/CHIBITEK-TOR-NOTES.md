@@ -96,14 +96,23 @@ stops Tor; iOS also reclaims the WKWebView content process. So returning to a ta
 to restart Tor and refetch the whole page through a fresh circuit.
 
 Fix: `TorSchemeHandler` keeps an **in-memory** (never on disk, for privacy),
-LRU-bounded cache of fully-rewritten `.onion` responses. GET reloads/returns serve from
-cache instantly — even while Tor is mid-restart or the onion is momentarily down.
+LRU-bounded cache of fully-rewritten `.onion` responses.
+
+The cache is a **FALLBACK, not the primary source** — this matters. Always fetch fresh
+when Tor is reachable; serve cache only when the fetch errors or Tor is unreachable
+(e.g. mid-restart after an app switch). Cache-FIRST caused a redirect loop: a market
+entry page that redirects through a verification/signin flow (site A → signin → back to
+A) kept getting served the stale cached entry page on every bounce, so it never resolved
+— looked like the site was broken though it was reachable. Fetching fresh lets
+redirect/auth flows settle while still surviving app switches (Tor down → cache fills in).
 - TTL: `Settings.torCacheSeconds` (default 24h; `0` disables). `TorSchemeHandler.clearCache()`
   wipes it.
-- `webViewWebContentProcessDidTerminate` reloads from cache instead of showing blank.
-- `refresh()` is cache-friendly (automatic/foreground); `refresh(forceReload:)` sends
-  `Cache-Control: no-cache` to bypass the cache — wired to the reload button,
-  pull-to-refresh, Cmd-R, and new-circuit.
+- Session uses `waitsForConnectivity = false` so a dropped Tor connection errors promptly
+  (→ cache fallback) instead of hanging with no response. 60s request / 90s resource
+  timeout for slow onion connects.
+- `webViewWebContentProcessDidTerminate` reloads (cache fills in if Tor is down).
+- `refresh(forceReload:)` sends `Cache-Control: no-cache` — wired to reload button,
+  pull-to-refresh, Cmd-R, new-circuit.
 
 ## Features in place
 
