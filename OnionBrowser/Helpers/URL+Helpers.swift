@@ -72,7 +72,7 @@ extension URL {
 
 	var isSpecial: Bool {
 		switch scheme?.lowercased() {
-		case "http", "https", "onionhttp", "onionhttps":
+		case "http", "https", "onionhttp", "onionhttps", "torhttp", "torhttps":
 			break
 
 		default:
