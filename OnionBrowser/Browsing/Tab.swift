@@ -340,6 +340,30 @@ class Tab: UIView {
 			setup()
 		}
 
+		// Native proxy mode: WebKit routes .onion itself through the proxied
+		// data store — the tab just needs that store attached before loading.
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true, Self.useNativeProxy,
+		   let url = request.url {
+			let normalURL = url.scheme == nil
+				? (URL(string: "https://\(url.absoluteString)") ?? url)
+				: url
+
+			if normalURL.host?.lowercased().hasSuffix(".onion") == true {
+				request.url = normalURL
+
+				if TorManager.shared.torSocks5 != nil {
+					if conf.websiteDataStore.proxyConfigurations.isEmpty {
+						print("[OnionBrowser] Upgrading tab to proxied data store for .onion")
+						reinitWebView()
+					}
+				}
+				else {
+					// Tor still bootstrapping; retry once it's ready.
+					needsRefresh = true
+				}
+			}
+		}
+
 		// Only rewrite .onion URLs to our custom Tor scheme so they go through
 		// the Tor SOCKS5 proxy. Regular http/https URLs load normally through
 		// WKWebView's standard networking.
@@ -567,10 +591,27 @@ class Tab: UIView {
 
 	func ensureProxyAndReload() {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
-			// Reinit can only register the scheme handler once Tor is up.
+			// Reinit can only configure Tor routing once Tor is up.
 			// Before that, leave the webview alone so normal browsing
 			// isn't interrupted.
 			guard TorManager.shared.torSocks5 != nil else {
+				return
+			}
+
+			if Self.useNativeProxy {
+				// Native mode: a tab only needs the proxied data store when
+				// it is on (or retrying) a .onion page. Clearnet tabs keep
+				// fast, unproxied networking.
+				let hasProxy = !conf.websiteDataStore.proxyConfigurations.isEmpty
+				if url.isOnion && !hasProxy && !isEnsuringProxy {
+					isEnsuringProxy = true
+					print("[OnionBrowser] Native proxy missing for .onion tab, reinitializing...")
+					reinitWebView()
+					isEnsuringProxy = false
+				}
+				if needsRefresh {
+					refresh()
+				}
 				return
 			}
 
@@ -599,7 +640,7 @@ class Tab: UIView {
 	/// setting it on the data store, instead of the custom-scheme-handler +
 	/// HTML-rewriting approach. WebKit then loads .onion pages itself, so they
 	/// render exactly like Safari.
-	static let useNativeProxy = false
+	static let useNativeProxy = true
 
 	private func setupConnection() {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true, Self.useNativeProxy {

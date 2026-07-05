@@ -20,6 +20,24 @@ extension Tab: WKNavigationDelegate {
 				 preferences: WKWebpagePreferences,
 				 decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void)
 	{
+		// Native proxy mode: a .onion navigation reaching a tab whose data
+		// store isn't proxied yet must be re-issued through load(), which
+		// upgrades the tab first. This runs before the readiness gate below,
+		// which would otherwise cancel the navigation without a retry.
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true, Tab.useNativeProxy,
+		   let onionUrl = navigationAction.request.url, onionUrl.isOnion,
+		   (onionUrl.scheme == "http" || onionUrl.scheme == "https"),
+		   webView.configuration.websiteDataStore.proxyConfigurations.isEmpty,
+		   TorManager.shared.torSocks5 != nil,
+		   onionUrl.absoluteString == navigationAction.request.mainDocumentURL?.absoluteString
+		{
+			Log.debug(for: Self.self, "[Tab \(index)] upgrading tab to proxied store for .onion: \(onionUrl)")
+
+			load(navigationAction.request)
+
+			return decisionHandler(.cancel, preferences)
+		}
+
 		guard let result = BaseNavigationDelegate.webView(webView, decidePolicyFor: navigationAction, preferences: preferences)
 		else {
 			return decisionHandler(.cancel, preferences)
@@ -39,25 +57,33 @@ extension Tab: WKNavigationDelegate {
 		let iframe = url.absoluteString != navigationAction.request.mainDocumentURL?.absoluteString
 
 		// A .onion navigation with a plain http/https scheme (link click,
-		// form submission, back/forward) would resolve the onion hostname
-		// through normal DNS — leaking it — and fail to load. Funnel it
-		// through load(), which rewrites it to the Tor scheme.
+		// form submission, back/forward) must go through Tor:
+		// - scheme-handler mode: re-issue via load(), which rewrites to the
+		//   tor scheme; letting it through would resolve the onion hostname
+		//   over normal DNS (a leak) and fail.
+		// - native proxy mode: allowed if this tab's data store is proxied;
+		//   otherwise re-issue via load(), which upgrades the tab first.
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true,
 		   url.isOnion, (url.scheme == "http" || url.scheme == "https")
 		{
-			if !iframe {
-				Log.debug(for: Self.self, "[Tab \(index)] rerouting .onion navigation through Tor: \(url)")
+			let proxiedNatively = Tab.useNativeProxy
+				&& !webView.configuration.websiteDataStore.proxyConfigurations.isEmpty
 
-				var request = navigationAction.request
-				request.url = url
+			if !proxiedNatively {
+				if !iframe {
+					Log.debug(for: Self.self, "[Tab \(index)] rerouting .onion navigation through Tor: \(url)")
 
-				load(request)
+					var request = navigationAction.request
+					request.url = url
+
+					load(request)
+				}
+				else {
+					Log.debug(for: Self.self, "[Tab \(index)] blocking plain .onion iframe load: \(url)")
+				}
+
+				return decisionHandler(.cancel, preferences)
 			}
-			else {
-				Log.debug(for: Self.self, "[Tab \(index)] blocking plain .onion iframe load: \(url)")
-			}
-
-			return decisionHandler(.cancel, preferences)
 		}
 
 		if result.hs.universalLinkProtection {
