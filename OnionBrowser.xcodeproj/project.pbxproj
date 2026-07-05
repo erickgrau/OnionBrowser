@@ -512,15 +512,11 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A03CBD982F3B98EA00B22D96 /* misc */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = misc;
 			sourceTree = "<group>";
 		};
 		A0CEE4762EA9273600F278A0 /* AppIntents */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = AppIntents;
 			sourceTree = "<group>";
 		};
@@ -923,6 +919,7 @@
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = DF9FB764AR;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 01801E911A32CA2A002B4718;
 					};
 					8AC3B3A721700AD300E0CB4A = {
 						CreatedOnToolsVersion = 10.0;
@@ -1053,9 +1050,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OnionBrowser/Pods-OnionBrowser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OnionBrowser/Pods-OnionBrowser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1070,9 +1071,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OnionBrowser/Pods-OnionBrowser-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OnionBrowser/Pods-OnionBrowser-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1105,9 +1110,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OnionBrowser Tests/Pods-OnionBrowser Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OnionBrowser Tests/Pods-OnionBrowser Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1636,7 +1645,7 @@
 				DEVELOPMENT_TEAM = DF9FB764AR;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1664,7 +1673,7 @@
 				DEVELOPMENT_TEAM = DF9FB764AR;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1681,6 +1690,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F73476E67A029888FBA3AE2 /* Pods-OnionBrowser Tests.debug.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1714,6 +1724,7 @@
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "OnionBrowser-Swift.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnionBrowser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OnionBrowser";
 			};
 			name = Debug;
 		};
@@ -1721,6 +1732,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DCBAE6D06623206CD9036DA /* Pods-OnionBrowser Tests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1750,6 +1762,7 @@
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "OnionBrowser-Swift.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnionBrowser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OnionBrowser";
 			};
 			name = Release;
 		};

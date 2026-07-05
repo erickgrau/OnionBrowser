@@ -297,6 +297,14 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         // Build a new request with the real URL
         var request = URLRequest(url: realURL)
         request.httpMethod = urlSchemeTask.request.httpMethod ?? "GET"
+        // Mark the request first-party to its own origin so URLSession sends
+        // SameSite=Lax/Strict cookies. Without this, our custom-scheme routing
+        // makes URLSession treat every request as cross-site and withhold the
+        // SameSite cookie — which breaks CSRF-protected login POSTs (Django's
+        // csrftoken is SameSite=Lax): the login is rejected and re-renders,
+        // looking like the form "wipes itself out". All navigation here is the
+        // user browsing one onion first-party, so this is correct.
+        request.mainDocumentURL = realURL
         // Copy safe headers, avoiding ones that would break the proxy fetch.
         if let headers = urlSchemeTask.request.allHTTPHeaderFields {
             for (key, value) in headers {
