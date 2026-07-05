@@ -131,6 +131,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		BlurredSnapshot.remove()
 
+		// If using built-in Tor and it was stopped during background,
+		// auto-restart instead of showing the StartTor screen.
+		if Settings.useBuiltInTor == true, #available(iOS 17.0, *),
+		   TorManager.shared.status == .stopped,
+		   TorManager.shared.torSocks5 == nil {
+			print("[OnionBrowser] Tor stopped during background, auto-restarting...")
+			show(StartTorViewController())
+			return
+		}
+
 		let vc = OrbotManager.shared.checkStatus()
 
 		show(vc)
