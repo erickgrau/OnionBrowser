@@ -131,6 +131,47 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		BlurredSnapshot.remove()
 
+		#if DEBUG
+		// Real-form-POST test: load a page with an auto-submitting POST form to
+		// a torhttps action, to check whether WebKit delivers a *form* POST body
+		// to the scheme handler (vs. a programmatic load). OB_FORM_TEST=<torhttps url>.
+		if let formTarget = ProcessInfo.processInfo.environment["OB_FORM_TEST"] {
+			Task {
+				for _ in 0 ..< 120 {
+					if #available(iOS 17.0, *), TorManager.shared.torSocks5 != nil { break }
+					try? await Task.sleep(nanoseconds: 500_000_000)
+				}
+				await MainActor.run {
+					let html = "<html><body><form id='f' method='POST' action='\(formTarget)'><input name='token' value='SECRET123'></form><script>document.getElementById('f').submit();</script></body></html>"
+					let data = "data:text/html;charset=utf-8," + (html.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? html)
+					print("[OB_FORM_TEST] loading auto-submitting POST form -> \(formTarget)")
+					self.browsingUi.currentTab?.load(URL(string: data))
+				}
+			}
+		}
+
+		// POST-body test: fire a POST at an onion and let TorDiag log whether
+		// the body survives WebKit -> custom scheme handler. OB_POST_TEST=<onion>.
+		if let postTarget = ProcessInfo.processInfo.environment["OB_POST_TEST"] {
+			Task {
+				for _ in 0 ..< 120 {
+					if #available(iOS 17.0, *), TorManager.shared.torSocks5 != nil { break }
+					try? await Task.sleep(nanoseconds: 500_000_000)
+				}
+				await MainActor.run {
+					guard let tab = self.browsingUi.currentTab,
+						  let url = URL(string: postTarget) else { return }
+					var req = URLRequest(url: url)
+					req.httpMethod = "POST"
+					req.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+					req.httpBody = "q=onionbrowsertest&token=ABC123".data(using: .utf8)
+					print("[OB_POST_TEST] issuing POST with body 31 bytes to \(postTarget)")
+					tab.load(req)
+				}
+			}
+		}
+		#endif
+
 		// If using built-in Tor and it was stopped during background,
 		// auto-restart silently instead of showing the StartTor screen.
 		if Settings.useBuiltInTor == true, #available(iOS 17.0, *),

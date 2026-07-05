@@ -28,6 +28,12 @@ extension Tab: WKNavigationDelegate {
 		// whenever the scheme handler / proxy isn't attached to the tab yet
 		// (e.g. right after launch) — which reads as "the link does nothing".
 		// load() rewrites and sets needsRefresh so it retries once Tor is up.
+		#if DEBUG
+		if let u = navigationAction.request.url, u.isOnion || u.scheme == TorSchemeHandler.torHttpScheme || u.scheme == TorSchemeHandler.torHttpsScheme {
+			print("[TorDiag] decidePolicy type=\(navigationAction.navigationType.rawValue) method=\(navigationAction.request.httpMethod ?? "?") body=\(navigationAction.request.httpBody?.count ?? -1) mainFrame=\(navigationAction.targetFrame?.isMainFrame ?? true) url=\(u.absoluteString)")
+		}
+		#endif
+
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true,
 		   let onionUrl = navigationAction.request.url, onionUrl.isOnion,
 		   (onionUrl.scheme == "http" || onionUrl.scheme == "https")
