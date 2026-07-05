@@ -522,13 +522,18 @@ class Tab: UIView {
 
 	/// Retry setting up the proxy connection and reload if needed.
 	/// Called when Tor finishes bootstrapping after the webview was already created.
+	/// Guard against re-entrant reinit to avoid webview recreation loops.
+	private var isEnsuringProxy = false
+
 	func ensureProxyAndReload() {
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
 			// Check if our scheme handler is registered. If not, reinit.
 			let hasScheme = conf.urlSchemeHandler(forURLScheme: TorSchemeHandler.torHttpsScheme) != nil
-			if !hasScheme {
+			if !hasScheme && !isEnsuringProxy {
+				isEnsuringProxy = true
 				print("[OnionBrowser] Scheme handler not registered, reinitializing...")
 				reinitWebView()
+				isEnsuringProxy = false
 			}
 		}
 		if needsRefresh {

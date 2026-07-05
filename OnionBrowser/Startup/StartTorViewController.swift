@@ -128,10 +128,19 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 				await MainActor.run {
 					// Tor is now started and torSocks5 should be available.
 					// Reinitialize webviews so the scheme handler is registered,
-					// then reload.
+					// then reload. ensureProxyAndReload will handle the refresh
+					// after reinit, so no need to call both separately.
 					AppDelegate.shared?.allOpenTabs.forEach { tab in
 						tab.reinitWebView()
-						tab.ensureProxyAndReload()
+					}
+					// Give the reinit a moment to settle, then ensure proxy + reload.
+					Task {
+						try? await Task.sleep(nanoseconds: 500_000_000)
+						await MainActor.run {
+							AppDelegate.shared?.allOpenTabs.forEach { tab in
+								tab.ensureProxyAndReload()
+							}
+						}
 					}
 
 					// Update chrome to show green icon now that Tor is started.

@@ -65,6 +65,13 @@ extension Tab: WKScriptMessageHandler {
 		if Settings.sendGpc {
 			register(script: Self.gpcScript, in: configuration)
 		}
+
+		// Inject Tor URL interception script when built-in Tor is enabled.
+		// This monkey-patches fetch() and XMLHttpRequest to rewrite http/https
+		// URLs to torhttp/torhttps so they go through the scheme handler.
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
+			register(script: TorSchemeHandler.interceptionScript, in: configuration)
+		}
 	}
 
 
