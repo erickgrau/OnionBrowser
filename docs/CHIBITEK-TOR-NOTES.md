@@ -89,6 +89,22 @@ told the body was gzip while it was already decoded → blank), resolving subres
 URLs via `absoluteURL`, inserting the injected `<base>` after `<head>` (not before
 `<!DOCTYPE>`), and appending tor-scheme twins to `.onion` CSP host sources.
 
+## Page persistence across app switching (cache)
+
+Problem: iOS stops the background task (~30s after backgrounding) → `terminate()`
+stops Tor; iOS also reclaims the WKWebView content process. So returning to a tab used
+to restart Tor and refetch the whole page through a fresh circuit.
+
+Fix: `TorSchemeHandler` keeps an **in-memory** (never on disk, for privacy),
+LRU-bounded cache of fully-rewritten `.onion` responses. GET reloads/returns serve from
+cache instantly — even while Tor is mid-restart or the onion is momentarily down.
+- TTL: `Settings.torCacheSeconds` (default 24h; `0` disables). `TorSchemeHandler.clearCache()`
+  wipes it.
+- `webViewWebContentProcessDidTerminate` reloads from cache instead of showing blank.
+- `refresh()` is cache-friendly (automatic/foreground); `refresh(forceReload:)` sends
+  `Cache-Control: no-cache` to bypass the cache — wired to the reload button,
+  pull-to-refresh, Cmd-R, and new-circuit.
+
 ## Features in place
 
 - **Tor toggle**: Settings → "Built-in Tor for .onion Sites" (`SettingsViewController`).
