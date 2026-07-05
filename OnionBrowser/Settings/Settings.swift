@@ -297,6 +297,21 @@ class Settings: IPtProxyUI.Settings {
 		}
 	}
 
+	/// How long the Tor scheme handler serves a page from its in-memory cache
+	/// before refetching. Lets a page survive app switching. 0 disables caching;
+	/// default 24h.
+	class var torCacheSeconds: TimeInterval {
+		get {
+			if UserDefaults.standard.object(forKey: "tor_cache_seconds") == nil {
+				return 24 * 60 * 60
+			}
+			return UserDefaults.standard.double(forKey: "tor_cache_seconds")
+		}
+		set {
+			UserDefaults.standard.set(newValue, forKey: "tor_cache_seconds")
+		}
+	}
+
 	class var tabSecurity: TabSecurityLevel {
 		get {
 			if let value = UserDefaults.standard.object(forKey: "tab_security") as? String,

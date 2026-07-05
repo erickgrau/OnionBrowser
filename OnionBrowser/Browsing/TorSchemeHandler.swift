@@ -23,6 +23,90 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
     private var liveTasks: Set<ObjectIdentifier> = []
     private var session: URLSession?
 
+    // MARK: - Response cache
+
+    /// One cached page/subresource: the rewritten data WebKit expects, the
+    /// custom-scheme response, and when it was fetched.
+    private struct CacheEntry {
+        let date: Date
+        let response: HTTPURLResponse
+        let data: Data
+    }
+
+    /// In-memory cache shared across all tabs, keyed by custom-scheme URL.
+    /// Lets a page come straight back after an app switch — WebKit reloads
+    /// when iOS reclaims its content process, and Tor may be mid-restart, so
+    /// serving from cache keeps the page consistent without a round trip.
+    /// Memory-only on purpose: no .onion content is written to disk.
+    private static let cacheLock = NSLock()
+    private static var responseCache: [String: CacheEntry] = [:]
+    private static var cacheOrder: [String] = []
+    private static let cacheMaxEntries = 400
+    private static let cacheMaxBytes = 64 * 1024 * 1024
+    private static var cacheBytes = 0
+
+    /// How long a cached response is served before refetching. Matches the
+    /// "cache for 24 hours" ask; overridable via Settings.torCacheSeconds.
+    static var cacheTTL: TimeInterval {
+        Settings.torCacheSeconds
+    }
+
+    private static func cachedResponse(for key: String) -> (HTTPURLResponse, Data)? {
+        cacheLock.lock()
+        defer { cacheLock.unlock() }
+
+        guard let entry = responseCache[key] else { return nil }
+
+        if Date().timeIntervalSince(entry.date) > cacheTTL {
+            responseCache[key] = nil
+            cacheOrder.removeAll { $0 == key }
+            cacheBytes -= entry.data.count
+            return nil
+        }
+
+        return (entry.response, entry.data)
+    }
+
+    private static func store(_ response: HTTPURLResponse, _ data: Data, for key: String) {
+        // Only cache successful, non-empty GET-style bodies, and only when
+        // caching is enabled.
+        guard cacheTTL > 0,
+              (200...299).contains(response.statusCode), !data.isEmpty,
+              data.count < cacheMaxBytes / 4
+        else {
+            return
+        }
+
+        cacheLock.lock()
+        defer { cacheLock.unlock() }
+
+        if let existing = responseCache[key] {
+            cacheBytes -= existing.data.count
+            cacheOrder.removeAll { $0 == key }
+        }
+
+        responseCache[key] = CacheEntry(date: Date(), response: response, data: data)
+        cacheOrder.append(key)
+        cacheBytes += data.count
+
+        // Evict oldest until back under both limits.
+        while cacheOrder.count > cacheMaxEntries || cacheBytes > cacheMaxBytes,
+              let oldest = cacheOrder.first {
+            if let e = responseCache[oldest] { cacheBytes -= e.data.count }
+            responseCache[oldest] = nil
+            cacheOrder.removeFirst()
+        }
+    }
+
+    /// Drop all cached .onion content (called when the user clears data).
+    static func clearCache() {
+        cacheLock.lock()
+        responseCache.removeAll()
+        cacheOrder.removeAll()
+        cacheBytes = 0
+        cacheLock.unlock()
+    }
+
     // Custom schemes that map to http and https
     static let torHttpScheme = "torhttp"
     static let torHttpsScheme = "torhttps"
@@ -175,8 +259,44 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
             return
         }
 
+        let cacheKey = url.absoluteString
+        let isReloadable = (urlSchemeTask.request.httpMethod ?? "GET").uppercased() == "GET"
+
+        // Serve from cache for GETs unless the user forced a reload
+        // (Cache-Control: no-cache is set by our reload path). This keeps a
+        // page consistent across app switches and works even while Tor is
+        // still restarting.
+        let noCache = (urlSchemeTask.request.value(forHTTPHeaderField: "Cache-Control") ?? "")
+            .lowercased().contains("no-cache")
+
+        if isReloadable, !noCache, let (response, data) = Self.cachedResponse(for: cacheKey) {
+            print("[TorSchemeHandler] cache hit: \(cacheKey)")
+            let id = ObjectIdentifier(urlSchemeTask)
+            addLiveOnly(id)
+            DispatchQueue.main.async {
+                guard self.finishTask(id) else { return }
+                urlSchemeTask.didReceive(response)
+                urlSchemeTask.didReceive(data)
+                urlSchemeTask.didFinish()
+            }
+            return
+        }
+
         guard let session = getSession() else {
             print("[TorSchemeHandler] No Tor session for \(url.absoluteString)")
+            // Last resort: if Tor isn't up yet but we have any cached copy,
+            // serve it rather than failing.
+            if isReloadable, let (response, data) = Self.cachedResponse(for: cacheKey) {
+                let id = ObjectIdentifier(urlSchemeTask)
+                addLiveOnly(id)
+                DispatchQueue.main.async {
+                    guard self.finishTask(id) else { return }
+                    urlSchemeTask.didReceive(response)
+                    urlSchemeTask.didReceive(data)
+                    urlSchemeTask.didFinish()
+                }
+                return
+            }
             urlSchemeTask.didFailWithError(URLError(.cannotConnectToHost))
             return
         }
@@ -294,6 +414,12 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
                     headerFields: stringHeaders
                 )!
 
+                // Cache the fully-rewritten payload so returning to the page
+                // (or a WebKit content-process reload) is instant and offline.
+                if isReloadable {
+                    Self.store(finalResponse, finalData, for: cacheKey)
+                }
+
                 urlSchemeTask.didReceive(finalResponse)
                 urlSchemeTask.didReceive(finalData)
                 urlSchemeTask.didFinish()
@@ -315,6 +441,15 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
     private func addTask(_ id: ObjectIdentifier, _ task: URLSessionTask) {
         lock.lock()
         activeTasks[id] = task
+        liveTasks.insert(id)
+        lock.unlock()
+    }
+
+    /// Register a scheme task as live without a URLSession task, for responses
+    /// served synchronously from cache. finishTask() still guards delivery
+    /// against a stop() that arrives first.
+    private func addLiveOnly(_ id: ObjectIdentifier) {
+        lock.lock()
         liveTasks.insert(id)
         lock.unlock()
     }

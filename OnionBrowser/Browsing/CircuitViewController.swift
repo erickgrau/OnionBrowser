@@ -180,7 +180,8 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 			}
 
 			await MainActor.run {
-				view.sceneDelegate?.browsingUi.currentTab?.refresh()
+				// New circuit → fetch fresh through it, bypass cache.
+				view.sceneDelegate?.browsingUi.currentTab?.refresh(forceReload: true)
 
 				dismiss(animated: true)
 			}

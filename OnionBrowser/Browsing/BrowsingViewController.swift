@@ -389,7 +389,8 @@ class BrowsingViewController: UIViewController, TabDelegate {
 				currentTab?.stop()
 			}
 			else {
-				currentTab?.refresh()
+				// User tapped reload: fetch fresh, bypass the Tor cache.
+				currentTab?.refresh(forceReload: true)
 			}
 			updateReloadBt()
 

@@ -241,6 +241,21 @@ extension Tab: WKNavigationDelegate {
 		handle(error: error, webView, navigation)
 	}
 
+	func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+		// iOS reclaims a backgrounded tab's web content process, leaving it
+		// blank. Reload (without forcing) so the page comes straight back from
+		// the Tor scheme handler's cache instead of a blank screen.
+		Log.debug(for: Self.self, "[Tab \(index)] web content process terminated, reloading from cache")
+
+		if webView.url != nil {
+			webView.reload()
+		}
+		else {
+			needsRefresh = true
+			refresh(forceReload: false)
+		}
+	}
+
 	func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge,
 				 completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void)
 	{

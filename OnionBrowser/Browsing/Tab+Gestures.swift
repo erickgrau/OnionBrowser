@@ -45,7 +45,7 @@ extension Tab {
 
 	@objc
 	private func refresherTriggered() {
-		refresh()
+		refresh(forceReload: true)
 
 		Task {
 			// Delay just so it confirms to the user that something happened.

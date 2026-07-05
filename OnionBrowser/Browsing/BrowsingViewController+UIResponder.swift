@@ -73,7 +73,7 @@ extension BrowsingViewController {
 				return
 
 			case "r":
-				currentTab?.refresh()
+				currentTab?.refresh(forceReload: true)
 				return
 
 			case "t":

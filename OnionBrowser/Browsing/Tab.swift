@@ -289,6 +289,14 @@ class Tab: UIView {
 
 	@objc
 	func refresh() {
+		refresh(forceReload: false)
+	}
+
+	/// Reload the current page. `forceReload` = a user-initiated reload that
+	/// should fetch fresh content, bypassing the Tor scheme handler's cache.
+	/// Automatic refreshes (foreground, setting changes) leave it false so a
+	/// cached page comes straight back instead of a slow Tor round trip.
+	func refresh(forceReload: Bool) {
 		if url == URL.start || url == URL.aboutSecurityLevels {
 			NcBookmarks.updateStartPage()
 		}
@@ -296,8 +304,18 @@ class Tab: UIView {
 		needsRefresh = false
 		skipHistory = true
 
-		if webView?.url != nil {
-			webView?.reload()
+		if let current = webView?.url {
+			if forceReload,
+			   #available(iOS 17.0, *),
+			   current.isOnion || current.scheme == TorSchemeHandler.torHttpScheme || current.scheme == TorSchemeHandler.torHttpsScheme
+			{
+				var request = URLRequest(url: current)
+				request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+				load(request)
+			}
+			else {
+				webView?.reload()
+			}
 		}
 		else {
 			load(url)
