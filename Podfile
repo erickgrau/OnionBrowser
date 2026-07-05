@@ -44,6 +44,11 @@ post_install do |installer|
         if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 12
           config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
         end
+        # The Tor pod builds Tor.framework while linking the vendored "tor"
+        # binary. With eager linking, ld resolves "tor" to the pod's own
+        # stub TBD on case-insensitive filesystems and fails with
+        # "can't link a dylib with itself" on device builds.
+        config.build_settings['EAGER_LINKING'] = 'NO'
         # Disable signing for pod targets (not needed for dev builds)
         config.build_settings['CODE_SIGN_IDENTITY'] = '-'
         config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
