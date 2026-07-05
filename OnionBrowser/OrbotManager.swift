@@ -166,12 +166,15 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 	}
 
 	func allowRequests() -> Bool {
-		if Settings.useBuiltInTor == true, #available(iOS 17.0, *) {
-			return TorManager.shared.status == .started
+		if #available(iOS 17.0, *), Settings.useBuiltInTor != nil {
+			// Dual-mode browser: regular sites always load normally, with or
+			// without Tor. Only .onion URLs need Tor, and their readiness is
+			// gated in BaseNavigationDelegate.
+			return true
 		}
 		else {
-			// simulatorIgnoreOrbot bypass removed - simulator uses built-in Tor.
-
+			// Legacy Orbot flow: everything routes through Orbot's VPN, so
+			// block requests unless Orbot is running.
 			let status = lastInfo?.status
 			return status == .starting || status == .started
 		}

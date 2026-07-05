@@ -323,12 +323,6 @@ class Tab: UIView {
 	}
 
 	func load(_ request: URLRequest?) {
-		Task {
-			await MainActor.run {
-				webView?.stopLoading()
-			}
-		}
-
 		reset(request?.url)
 
 		var request = request ?? URLRequest(url: URL.start)
@@ -391,6 +385,10 @@ class Tab: UIView {
 
 		Task {
 			await MainActor.run {
+				// Stop any in-flight load here, in the same Task that starts
+				// the new load, so the stop can never land after it.
+				webView?.stopLoading()
+
 				var userAgent = HostSettings.for(request.url?.host).userAgent
 
 				if userAgent.isEmpty {
@@ -407,15 +405,16 @@ class Tab: UIView {
 				// Timeout: if the page hasn't finished loading in 30 seconds,
 				// stop the webview and show an error. This prevents the infinite
 				// X/refresh flip when the SOCKS5 proxy can't reach the site.
-				Task {
+				Task { [weak self] in
 					try? await Task.sleep(nanoseconds: 30_000_000_000)
-					await MainActor.run {
-						guard let start = loadStartTime,
+					await MainActor.run { [weak self] in
+						guard let self,
+						      let start = self.loadStartTime,
 						      Date().timeIntervalSince(start) >= 29 else { return }
-						if webView?.isLoading ?? false && progress < 1 {
-							webView?.stopLoading()
-							progress = 1
-							loadStartTime = nil
+						if self.webView?.isLoading ?? false && self.progress < 1 {
+							self.webView?.stopLoading()
+							self.progress = 1
+							self.loadStartTime = nil
 						}
 					}
 				}
@@ -576,6 +575,12 @@ class Tab: UIView {
 				reinitWebView()
 				isEnsuringProxy = false
 			}
+			else if hasScheme {
+				// Tor may have restarted on a different SOCKS port. Drop the
+				// handler's cached URLSession so the next request connects to
+				// the current port, without destroying the webview.
+				(objc_getAssociatedObject(self, &Self.schemeHandlerKey) as? TorSchemeHandler)?.resetSession()
+			}
 		}
 		if needsRefresh {
 			refresh()
@@ -655,6 +660,11 @@ class Tab: UIView {
 
 	private func destructWebView() {
 		NotificationCenter.default.removeObserver(self)
+
+		// NotificationCenter removal does NOT unregister KVO observers.
+		// Releasing the webview while still observed is a programmer error
+		// that can crash, especially across repeated reinitWebView cycles.
+		webView?.removeObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress))
 
 		scrollView?.delegate = nil
 		webView?.uiDelegate = nil

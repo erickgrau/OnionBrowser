@@ -152,13 +152,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 							}
 						})
 				}
-				// Wait for Tor to be ready, then reinit webviews
-				while TorManager.shared.torSocks5 == nil {
+				// Wait for Tor to be ready (up to 60s), then fix up tabs.
+				// ensureProxyAndReload registers the scheme handler where
+				// missing and refreshes the SOCKS session where not — it
+				// must NOT tear down webviews wholesale, or every foreground
+				// wipes history, scroll position and form state on all tabs.
+				var waited = 0
+				while TorManager.shared.torSocks5 == nil, waited < 120 {
 					try? await Task.sleep(nanoseconds: 500_000_000)
+					waited += 1
 					if TorManager.shared.status == .stopped { break }
 				}
 				await MainActor.run {
-					AppDelegate.shared?.allOpenTabs.forEach { $0.reinitWebView(); $0.ensureProxyAndReload() }
+					AppDelegate.shared?.allOpenTabs.forEach { $0.ensureProxyAndReload() }
 					AppDelegate.shared?.sceneDelegates.forEach { $0.browsingUi.updateChrome() }
 				}
 			}

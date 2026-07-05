@@ -15,7 +15,12 @@ import Network
 class TorSchemeHandler: NSObject, WKURLSchemeHandler {
 
     private let lock = NSLock()
-    private var activeTasks: [Int: URLSessionTask] = [:]
+    /// URLSession tasks keyed by the scheme task's identity.
+    private var activeTasks: [ObjectIdentifier: URLSessionTask] = [:]
+    /// Scheme tasks WebKit has not stopped yet. Calling didReceive/didFinish/
+    /// didFailWithError on a stopped WKURLSchemeTask throws NSInternal-
+    /// InconsistencyException, so every callback must be guarded by this set.
+    private var liveTasks: Set<ObjectIdentifier> = []
     private var session: URLSession?
 
     // Custom schemes that map to http and https
@@ -182,123 +187,146 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
             }
         }
         request.httpBody = urlSchemeTask.request.httpBody
-
-        let task = session.dataTask(with: request) { [weak self] data, response, error in
-            guard let self = self else { return }
-
-            self.removeTask(urlSchemeTask.hash)
-
-            if let error = error {
-                // Don't log cancellation errors (happen on page navigation)
-                if (error as NSError).code != URLError.cancelled.rawValue {
-                    print("[TorSchemeHandler] Fetch error for \(realURL.absoluteString): \(error.localizedDescription)")
-                }
-                urlSchemeTask.didFailWithError(error)
-                return
-            }
-
-            guard let httpResponse = response as? HTTPURLResponse else {
-                urlSchemeTask.didFailWithError(URLError(.badServerResponse))
-                return
-            }
-
-            print("[TorSchemeHandler] response: \(realURL.absoluteString) status=\(httpResponse.statusCode) size=\(data?.count ?? 0)")
-
-            // Rewrite any Location header to use our custom scheme
-            var modifiedHeaders = httpResponse.allHeaderFields
-            if let location = modifiedHeaders["Location"] as? String {
-                let rewritten = Self.rewriteLocationHeader(location, baseURL: realURL)
-                if rewritten != location {
-                    modifiedHeaders["Location"] = rewritten
-                }
-            }
-
-            // Rewrite Content-Security-Policy to allow our custom scheme
-            if let csp = modifiedHeaders["Content-Security-Policy"] as? String {
-                let modifiedCSP = Self.rewriteCSP(csp)
-                modifiedHeaders["Content-Security-Policy"] = modifiedCSP
-            }
-
-            // Convert [AnyHashable: Any] to [String: String] for HTTPURLResponse
-            var stringHeaders: [String: String] = [:]
-            for (key, value) in modifiedHeaders {
-                if let key = key as? String, let value = value as? String {
-                    stringHeaders[key] = value
-                }
-            }
-
-            let modifiedResponse = HTTPURLResponse(
-                url: url, // Keep the custom scheme URL
-                statusCode: httpResponse.statusCode,
-                httpVersion: "HTTP/1.1",
-                headerFields: stringHeaders
-            )!
-
-            // For HTML responses, rewrite subresource URLs to use our custom
-            // scheme so subresources on .onion pages also go through Tor.
-            // Only rewrite URLs that resolve to .onion hosts -- external
-            // resources (CDNs, etc.) load normally through WKWebView.
-            var finalData = data ?? Data()
-            let contentType = (stringHeaders["Content-Type"] ?? stringHeaders["content-type"] ?? "").lowercased()
-            let isHTML = contentType.contains("text/html") || contentType.contains("application/xhtml+xml")
-            let isCSS = contentType.contains("text/css")
-
-            if isHTML, let htmlString = String(data: finalData, encoding: .utf8) {
-                let rewritten = Self.rewriteHTMLURLs(in: htmlString, baseURL: realURL)
-                if let rewrittenData = rewritten.data(using: .utf8) {
-                    finalData = rewrittenData
-                }
-            } else if isCSS, let cssString = String(data: finalData, encoding: .utf8) {
-                let rewritten = Self.rewriteCSSURLs(in: cssString, baseURL: realURL)
-                if let rewrittenData = rewritten.data(using: .utf8) {
-                    finalData = rewrittenData
-                }
-            }
-
-            // Update Content-Length to match potentially modified data
-            if stringHeaders["Content-Length"] != nil {
-                stringHeaders["Content-Length"] = String(finalData.count)
-            }
-            // Remove Transfer-Encoding to avoid confusion with chunked encoding
-            stringHeaders.removeValue(forKey: "Transfer-Encoding")
-            stringHeaders.removeValue(forKey: "transfer-encoding")
-
-            // Rebuild response with updated headers
-            let finalResponse = HTTPURLResponse(
-                url: url,
-                statusCode: httpResponse.statusCode,
-                httpVersion: "HTTP/1.1",
-                headerFields: stringHeaders
-            )!
-
-            urlSchemeTask.didReceive(finalResponse)
-            urlSchemeTask.didReceive(finalData)
-            urlSchemeTask.didFinish()
+        if request.httpBody == nil {
+            // WebKit delivers large/multipart bodies (file uploads) as a stream.
+            request.httpBodyStream = urlSchemeTask.request.httpBodyStream
         }
 
-        addTask(urlSchemeTask.hash, task)
+        let id = ObjectIdentifier(urlSchemeTask)
+
+        let task = session.dataTask(with: request) { [weak self] data, response, error in
+            // WKURLSchemeTask methods must run on the thread that called
+            // start(urlSchemeTask:) — main. Dispatching there also serializes
+            // the liveness check with stop(urlSchemeTask:).
+            DispatchQueue.main.async {
+                guard let self = self, self.finishTask(id) else {
+                    // WebKit already stopped this task; touching it would throw.
+                    return
+                }
+
+                if let error = error {
+                    // Don't log cancellation errors (happen on page navigation)
+                    if (error as NSError).code != URLError.cancelled.rawValue {
+                        print("[TorSchemeHandler] Fetch error for \(realURL.absoluteString): \(error.localizedDescription)")
+                    }
+                    urlSchemeTask.didFailWithError(error)
+                    return
+                }
+
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    urlSchemeTask.didFailWithError(URLError(.badServerResponse))
+                    return
+                }
+
+                // URLSession follows redirects transparently, so the page we
+                // got may live at a different URL than requested. All rewriting
+                // must resolve against the final URL, or every relative link on
+                // a redirected page breaks.
+                let finalURL = httpResponse.url ?? realURL
+
+                print("[TorSchemeHandler] response: \(finalURL.absoluteString) status=\(httpResponse.statusCode) size=\(data?.count ?? 0)")
+
+                // Rewrite any Location header to use our custom scheme
+                var modifiedHeaders = httpResponse.allHeaderFields
+                if let location = modifiedHeaders["Location"] as? String {
+                    let rewritten = Self.rewriteLocationHeader(location, baseURL: finalURL)
+                    if rewritten != location {
+                        modifiedHeaders["Location"] = rewritten
+                    }
+                }
+
+                // Rewrite Content-Security-Policy to allow our custom scheme
+                if let csp = modifiedHeaders["Content-Security-Policy"] as? String {
+                    let modifiedCSP = Self.rewriteCSP(csp)
+                    modifiedHeaders["Content-Security-Policy"] = modifiedCSP
+                }
+
+                // Convert [AnyHashable: Any] to [String: String] for HTTPURLResponse
+                var stringHeaders: [String: String] = [:]
+                for (key, value) in modifiedHeaders {
+                    if let key = key as? String, let value = value as? String {
+                        stringHeaders[key] = value
+                    }
+                }
+
+                // For HTML responses, rewrite subresource URLs to use our custom
+                // scheme so subresources on .onion pages also go through Tor.
+                // Only rewrite URLs that resolve to .onion hosts -- external
+                // resources (CDNs, etc.) load normally through WKWebView.
+                var finalData = data ?? Data()
+                let contentType = (stringHeaders["Content-Type"] ?? stringHeaders["content-type"] ?? "").lowercased()
+                let isHTML = contentType.contains("text/html") || contentType.contains("application/xhtml+xml")
+                let isCSS = contentType.contains("text/css")
+
+                if isHTML, let htmlString = String(data: finalData, encoding: .utf8) {
+                    let rewritten = Self.rewriteHTMLURLs(in: htmlString, baseURL: finalURL)
+                    if let rewrittenData = rewritten.data(using: .utf8) {
+                        finalData = rewrittenData
+                    }
+                } else if isCSS, let cssString = String(data: finalData, encoding: .utf8) {
+                    let rewritten = Self.rewriteCSSURLs(in: cssString, baseURL: finalURL)
+                    if let rewrittenData = rewritten.data(using: .utf8) {
+                        finalData = rewrittenData
+                    }
+                }
+
+                // Update Content-Length to match potentially modified data
+                if stringHeaders["Content-Length"] != nil {
+                    stringHeaders["Content-Length"] = String(finalData.count)
+                }
+                // Remove Transfer-Encoding to avoid confusion with chunked encoding
+                stringHeaders.removeValue(forKey: "Transfer-Encoding")
+                stringHeaders.removeValue(forKey: "transfer-encoding")
+
+                let finalResponse = HTTPURLResponse(
+                    url: url, // Keep the custom scheme URL WebKit asked for
+                    statusCode: httpResponse.statusCode,
+                    httpVersion: "HTTP/1.1",
+                    headerFields: stringHeaders
+                )!
+
+                urlSchemeTask.didReceive(finalResponse)
+                urlSchemeTask.didReceive(finalData)
+                urlSchemeTask.didFinish()
+            }
+        }
+
+        addTask(id, task)
         task.resume()
     }
 
     func webView(_ webView: WKWebView, stop urlSchemeTask: WKURLSchemeTask) {
-        if let task = removeTask(urlSchemeTask.hash) {
+        if let task = removeTask(ObjectIdentifier(urlSchemeTask)) {
             task.cancel()
         }
     }
 
     // MARK: - Task Management (thread-safe)
 
-    private func addTask(_ hash: Int, _ task: URLSessionTask) {
+    private func addTask(_ id: ObjectIdentifier, _ task: URLSessionTask) {
         lock.lock()
-        activeTasks[hash] = task
+        activeTasks[id] = task
+        liveTasks.insert(id)
         lock.unlock()
     }
 
-    private func removeTask(_ hash: Int) -> URLSessionTask? {
+    /// Marks the scheme task stopped and returns its URLSession task.
+    private func removeTask(_ id: ObjectIdentifier) -> URLSessionTask? {
         lock.lock()
-        let task = activeTasks.removeValue(forKey: hash)
+        let task = activeTasks.removeValue(forKey: id)
+        liveTasks.remove(id)
         lock.unlock()
         return task
+    }
+
+    /// Atomically checks the scheme task is still live and retires it.
+    /// Returns false if WebKit already stopped the task.
+    private func finishTask(_ id: ObjectIdentifier) -> Bool {
+        lock.lock()
+        let wasLive = liveTasks.remove(id) != nil
+        activeTasks.removeValue(forKey: id)
+        lock.unlock()
+        return wasLive
     }
 
     // MARK: - Session Management
@@ -702,7 +730,8 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
         }
 
         let torBaseScheme = baseURL.scheme == "https" ? torHttpsScheme : torHttpScheme
-        let baseHref = "\(torBaseScheme)://\(baseURL.host ?? "")\(baseURL.path)"
+        let portPart = baseURL.port.map { ":\($0)" } ?? ""
+        let baseHref = "\(torBaseScheme)://\(baseURL.host ?? "")\(portPart)\(baseURL.path)"
 
         // Check if a <base> tag already exists
         if let baseRegex = try? NSRegularExpression(pattern: #"<base\s[^>]*>"#, options: .caseInsensitive) {
@@ -749,32 +778,44 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
     }
 
     /// Rewrite Location header value to use our custom scheme.
+    /// Only .onion targets are rewritten — clearnet redirect targets load
+    /// through WKWebView's normal networking.
     private static func rewriteLocationHeader(_ location: String, baseURL: URL) -> String {
-        if let locURL = URL(string: location),
-           let torLocURL = toTorURL(locURL) {
+        guard let resolved = URL(string: location, relativeTo: baseURL)?.absoluteURL else {
+            return location
+        }
+
+        guard resolved.host?.lowercased().hasSuffix(".onion") == true else {
+            return location
+        }
+
+        if let torLocURL = toTorURL(resolved) {
             return torLocURL.absoluteString
         }
-        if location.hasPrefix("/") {
-            var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
-            components?.path = location
-            components?.query = nil
-            components?.fragment = nil
-            if let resolved = components?.url, let torLocURL = toTorURL(resolved) {
-                return torLocURL.absoluteString
-            }
-        }
+
         return location
     }
 
     /// Rewrite Content-Security-Policy header to allow our custom schemes.
+    /// Appends the tor schemes next to standalone scheme-source tokens
+    /// ("https:" → "https: torhttps:"). Never touches host sources like
+    /// "https://cdn.example.com", which must keep matching the clearnet
+    /// subresources that are deliberately not rewritten.
     private static func rewriteCSP(_ csp: String) -> String {
-        // Replace scheme references in CSP
         var result = csp
-        // Add our schemes to any existing scheme-src directives
-        result = result.replacingOccurrences(of: "https:", with: "\(torHttpsScheme):")
-        result = result.replacingOccurrences(of: "http:", with: "\(torHttpScheme):")
-        // Also add 'self' + scheme to default-src if not present
-        // (Don't overthink it -- just make the schemes match)
+
+        if let regex = try? NSRegularExpression(pattern: #"(?<=^|[\s;])https:(?=[\s;]|$)"#) {
+            result = regex.stringByReplacingMatches(
+                in: result, range: NSRange(result.startIndex..., in: result),
+                withTemplate: "https: \(torHttpsScheme):")
+        }
+
+        if let regex = try? NSRegularExpression(pattern: #"(?<=^|[\s;])http:(?=[\s;]|$)"#) {
+            result = regex.stringByReplacingMatches(
+                in: result, range: NSRange(result.startIndex..., in: result),
+                withTemplate: "http: \(torHttpScheme):")
+        }
+
         return result
     }
 }

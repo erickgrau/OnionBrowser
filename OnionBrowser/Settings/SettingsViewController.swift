@@ -42,19 +42,54 @@ class SettingsViewController: FixedFormViewController {
 			barButtonSystemItem: .done, target: self, action: #selector(dismsiss_))
 		navigationItem.title = NSLocalizedString("Settings", comment: "Scene title")
 
-		if Settings.useBuiltInTor == true {
+		if #available(iOS 17.0, *) {
 			form
-			+++ ButtonRow {
-				$0.title = String(format: NSLocalizedString("Switch back to %@", comment: "Placeholder is 'Orbot'"), OrbotKit.orbotName)
+			+++ Section(header: NSLocalizedString("Tor", comment: "Section header"),
+						footer: NSLocalizedString("When enabled, .onion sites are routed through Tor. Regular websites always load normally.",
+												  comment: "Explanation in section footer"))
+
+			<<< SwitchRow() {
+				$0.title = NSLocalizedString("Built-in Tor for .onion Sites", comment: "Option title")
+				$0.value = Settings.useBuiltInTor ?? false
+				$0.cell.switchControl.onTintColor = .accent
+				$0.cell.textLabel?.numberOfLines = 0
 			}
-			.onCellSelection { [weak self] _, _ in
-				TorManager.shared.stop()
+			.onChange { row in
+				let newValue = row.value ?? false
 
-				AppDelegate.shared?.allOpenTabs.forEach({ $0.reinitWebView() })
+				guard newValue != (Settings.useBuiltInTor ?? false) else {
+					return
+				}
 
-				Settings.useBuiltInTor = false
+				Settings.useBuiltInTor = newValue
 
-				self?.view.sceneDelegate?.show(OrbotManager.shared.checkStatus())
+				if newValue {
+					if TorManager.shared.status != .started && TorManager.shared.status != .starting {
+						TorManager.shared.start(Settings.transport,
+							{ _, _ in },
+							{ _ in
+								DispatchQueue.main.async {
+									AppDelegate.shared?.allOpenTabs.forEach { $0.ensureProxyAndReload() }
+
+									AppDelegate.shared?.sceneDelegates.forEach { delegate in
+										delegate.browsingUi.updateChrome()
+									}
+								}
+							})
+					}
+					else {
+						AppDelegate.shared?.allOpenTabs.forEach { $0.ensureProxyAndReload() }
+					}
+				}
+				else {
+					TorManager.shared.stop()
+
+					AppDelegate.shared?.allOpenTabs.forEach { $0.reinitWebView() }
+
+					AppDelegate.shared?.sceneDelegates.forEach { delegate in
+						delegate.browsingUi.updateChrome()
+					}
+				}
 			}
 		}
 

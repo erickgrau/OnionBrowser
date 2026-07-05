@@ -50,7 +50,9 @@ class TorManager {
 
 	var status: Status {
 		if !torRunning {
-			return .stopped
+			// Thread.isExecuting only flips some time after Thread.start(),
+			// so rely on the explicit flag while a start is in flight.
+			return isStarting ? .starting : .stopped
 		}
 
 		if (torController?.isConnected ?? false) && torSocks5 != nil {
@@ -73,6 +75,13 @@ class TorManager {
 	}
 
 	private lazy var controllerQueue = DispatchQueue.global(qos: .userInitiated)
+
+	private let stateLock = NSLock()
+
+	/// True from the moment start() commits to starting until its completion
+	/// fires or stop() is called. Guards against two concurrent start() calls
+	/// spawning two tor threads over the same locked data directory.
+	private var isStarting = false
 
 	private var transport = Transport.none
 
@@ -103,6 +112,26 @@ class TorManager {
 			   _ progressCallback: @escaping (_ progress: Int?, _ summary: String?) -> Void,
 			   _ completion: @escaping (Error?) -> Void)
 	{
+		stateLock.lock()
+		if isStarting {
+			stateLock.unlock()
+			// A start is already in flight; its completion performs the same
+			// tab fix-ups all callers do, so this call can simply bail.
+			log("#start ignored: already starting")
+			return
+		}
+		isStarting = true
+		stateLock.unlock()
+
+		// Clear the flag exactly once, whichever way this start ends.
+		let completion = { [weak self] (error: Error?) in
+			self?.stateLock.lock()
+			self?.isStarting = false
+			self?.stateLock.unlock()
+
+			completion(error)
+		}
+
 		self.transport = transport
 
 		if !torRunning {
@@ -230,6 +259,13 @@ class TorManager {
 					Task {
 						let response = await torController.info(forKeys: ["net/listeners/socks"])
 
+						// If stop() ran while we awaited, this controller is
+						// dead — assigning torSocks5 now would resurrect a
+						// stale endpoint pointing at a closed port.
+						guard self?.torController === torController else {
+							return
+						}
+
 						self?.log("#startTunnel socks response=\(response)")
 
 						// Tor may return the address quoted, e.g. "\"127.0.0.1:9050\""
@@ -302,6 +338,10 @@ class TorManager {
 	}
 
 	func stop() {
+		stateLock.lock()
+		isStarting = false
+		stateLock.unlock()
+
 		torSocks5 = nil
 
 		torController?.removeObserver(self.establishedObs)

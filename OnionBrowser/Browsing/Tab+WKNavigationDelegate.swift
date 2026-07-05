@@ -38,6 +38,28 @@ extension Tab: WKNavigationDelegate {
 		// Try to prevent universal links from triggering by refusing the initial request and starting a new one.
 		let iframe = url.absoluteString != navigationAction.request.mainDocumentURL?.absoluteString
 
+		// A .onion navigation with a plain http/https scheme (link click,
+		// form submission, back/forward) would resolve the onion hostname
+		// through normal DNS — leaking it — and fail to load. Funnel it
+		// through load(), which rewrites it to the Tor scheme.
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true,
+		   url.isOnion, (url.scheme == "http" || url.scheme == "https")
+		{
+			if !iframe {
+				Log.debug(for: Self.self, "[Tab \(index)] rerouting .onion navigation through Tor: \(url)")
+
+				var request = navigationAction.request
+				request.url = url
+
+				load(request)
+			}
+			else {
+				Log.debug(for: Self.self, "[Tab \(index)] blocking plain .onion iframe load: \(url)")
+			}
+
+			return decisionHandler(.cancel, preferences)
+		}
+
 		if result.hs.universalLinkProtection {
 			if iframe {
 				Log.debug(for: Self.self, "[Tab \(index)] not doing universal link workaround for iframe \(url).")
