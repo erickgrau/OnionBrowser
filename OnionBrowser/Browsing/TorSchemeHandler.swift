@@ -372,6 +372,18 @@ class TorSchemeHandler: NSObject, WKURLSchemeHandler {
                 print("[TorSchemeHandler] response: \(finalURL.absoluteString) status=\(httpResponse.statusCode) size=\(data?.count ?? 0)")
 
                 #if DEBUG
+                // Cookie diagnostics: what the site sets (and whether it's a
+                // persistent or session cookie), plus what we're holding for
+                // this host. Tells us if a login can survive at all.
+                if let setCookie = (httpResponse.allHeaderFields.first { ($0.key as? String)?.lowercased() == "set-cookie" }?.value) as? String {
+                    print("[TorCookie] Set-Cookie on \(finalURL.path): \(setCookie.prefix(200))")
+                }
+                let held = Self.sharedCookieStorage?.cookies(for: finalURL) ?? []
+                let summary = held.map { "\($0.name)\($0.expiresDate == nil ? "(session)" : "(persist)")" }.joined(separator: ",")
+                print("[TorCookie] jar-for-host after \(finalURL.path): [\(summary)]")
+                #endif
+
+                #if DEBUG
                 // On a rejection (4xx/5xx), dump why so we can diagnose 403s
                 // etc. from the device console instead of guessing.
                 if httpResponse.statusCode >= 400 {
