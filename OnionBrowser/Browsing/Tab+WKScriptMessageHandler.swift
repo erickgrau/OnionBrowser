@@ -66,12 +66,13 @@ extension Tab: WKScriptMessageHandler {
 			register(script: Self.gpcScript, in: configuration)
 		}
 
-		// Inject Tor URL interception script only for .onion pages.
-		// This monkey-patches fetch() and XMLHttpRequest to rewrite http/https
-		// URLs to torhttp/torhttps so they go through the scheme handler.
-		// We inject it at documentStart so it's ready before page scripts run,
-		// but the script itself checks if the current page is .onion before activating.
-		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
+		// Inject Tor URL interception script only for .onion pages, and only
+		// in scheme-handler mode. It monkey-patches fetch/XHR/clicks to rewrite
+		// http/https URLs to the torhttp/torhttps scheme.
+		// In native-proxy mode WebKit loads .onion directly through the proxy,
+		// so rewriting to a scheme with no handler produces
+		// "unsupported URL (-1002)" on every link click and form submit.
+		if #available(iOS 17.0, *), Settings.useBuiltInTor == true, !Tab.useNativeProxy {
 			register(script: TorSchemeHandler.interceptionScript, in: configuration)
 		}
 	}
