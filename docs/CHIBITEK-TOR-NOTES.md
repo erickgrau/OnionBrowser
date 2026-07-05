@@ -8,24 +8,49 @@ Branches: work on `development`, fast-forward `main` to match, push both. `main`
 the GitHub default. The upstream OnionBrowser remote was removed; re-add with
 `git remote add upstream https://github.com/OnionBrowser/OnionBrowser.git` if needed.
 
-## How `.onion` routing works now (native proxy)
+## How `.onion` routing works (scheme handler — the only workable path)
 
-As of the "Render .onion natively via WebView SOCKS proxy" change, `.onion` pages are
-rendered by WebKit itself, routed through Tor's SOCKS proxy set on the WebView's data
-store. No HTML rewriting, no custom URL scheme for the render path.
+`.onion` requests are rewritten to a custom `torhttps://` / `torhttp://` scheme that
+WebKit *will* load, intercepted by `TorSchemeHandler` (a `WKURLSchemeHandler`), fetched
+over URLSession through Tor's SOCKS proxy, and the HTML/CSS rewritten so subresources
+resolve back through the same scheme. Verified in the simulator rendering a real onion
+fully (HTML, CSS, color images, QR codes, links).
 
-- Flag: `Tab.useNativeProxy` (default `true`). Set `false` to fall back to the old
-  scheme-handler + HTML-rewriting engine, which is still present.
-- A tab uses normal, direct networking until it navigates to a `.onion`. At that
-  point `Tab.load` / the navigation delegate reinit the tab with a
-  **non-persistent** `WKWebsiteDataStore` whose `proxyConfigurations` is
-  `[.init(socksv5Proxy: TorManager.shared.torSocks5)]`.
-- Clearnet tabs never get the proxy, so regular browsing stays fast.
-- `.onion` names resolve remotely through Tor (SOCKS5h behavior of the proxy config),
-  which is why clearnet-local DNS never sees them.
+- Flag: `Tab.useNativeProxy` (default **`false`** = scheme handler). The native-proxy
+  code path is kept only for reference; see the dead-end note below.
+- Regular http/https tabs use normal WKWebView networking (dual mode: only `.onion`
+  goes through Tor).
+- `.onion` names resolve remotely through Tor because URLSession with modern
+  `proxyConfigurations` does SOCKS5h — verified on device (NETDIAG pulled a real onion
+  200/171KB).
 
-Verified in the simulator: a real onion (Dark Matter Network) renders fully — HTML,
-CSS, images, QR codes, working links.
+### Why native WebView proxy does NOT work (dead end, proven)
+
+Setting the SOCKS proxy on `WKWebsiteDataStore.proxyConfigurations` and loading a plain
+`https://<addr>.onion` fails with **bad URL (-1000)** even with the proxy attached and
+live (confirmed by logging `proxied=true` at the moment of `webView.load`). iOS/CFNetwork
+rejects the reserved `.onion` TLD (RFC 7686) at URL validation, before any proxying. This
+is why the scheme handler exists: `torhttps://` is a scheme WebKit accepts, and URLSession
+(unlike WKWebView) *does* allow `.onion` through the proxy. Don't re-attempt native proxy
+for `.onion`.
+
+### Scheme-handler rendering fixes that made real sites work (were blank before)
+
+- Strip `Content-Encoding`/`Transfer-Encoding`/`Content-Length` before delivery —
+  URLSession already decoded the body; a leftover gzip header blanks the page.
+- Resolve rewritten subresource URLs via `absoluteURL` (host-less `torhttps:/path` never
+  loaded).
+- Insert the injected `<base>` after `<head>`, not before `<!DOCTYPE>` (quirks mode).
+- Append tor-scheme twins to `.onion` CSP host sources (else subresources are blocked).
+- Injected interception JS (`TorSchemeHandler.interceptionScript`) rewrites dynamic
+  fetch/XHR/link-clicks to the tor scheme. It had off-by-one substring offsets producing
+  `torhttpss://` / `torhttpp://` → "unsupported URL (-1002)" on every click; fixed to
+  replace only the scheme prefix and only for `.onion`.
+
+Known limitation: heavy JS SPAs (e.g. DuckDuckGo's onion) may still render blank because
+a custom scheme gets an opaque origin that breaks some web APIs. Server-rendered / mostly
+static onion sites render fine. Onion reachability is flaky — many onions simply don't
+respond; `start:` with no `response:` in the log means the onion is down/slow, not a bug.
 
 ## iOS 27 beta gotchas (each cost real debugging time)
 
