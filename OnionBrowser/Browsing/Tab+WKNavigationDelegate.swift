@@ -29,7 +29,7 @@ extension Tab: WKNavigationDelegate {
 		// (e.g. right after launch) — which reads as "the link does nothing".
 		// load() rewrites and sets needsRefresh so it retries once Tor is up.
 		#if DEBUG
-		if let u = navigationAction.request.url, u.isOnion || u.scheme == TorSchemeHandler.torHttpScheme || u.scheme == TorSchemeHandler.torHttpsScheme {
+		if let u = navigationAction.request.url, u.isOnion || u.scheme == "torhttp" || u.scheme == "torhttps" {
 			print("[TorDiag] decidePolicy type=\(navigationAction.navigationType.rawValue) method=\(navigationAction.request.httpMethod ?? "?") body=\(navigationAction.request.httpBody?.count ?? -1) mainFrame=\(navigationAction.targetFrame?.isMainFrame ?? true) url=\(u.absoluteString)")
 		}
 		#endif
