@@ -132,12 +132,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		BlurredSnapshot.remove()
 
 		// If using built-in Tor and it was stopped during background,
-		// auto-restart instead of showing the StartTor screen.
+		// auto-restart silently instead of showing the StartTor screen.
 		if Settings.useBuiltInTor == true, #available(iOS 17.0, *),
 		   TorManager.shared.status == .stopped,
 		   TorManager.shared.torSocks5 == nil {
 			print("[OnionBrowser] Tor stopped during background, auto-restarting...")
-			show(StartTorViewController())
+			// Show browser immediately, start Tor in background
+			show(nil)
+			Task {
+				await MainActor.run {
+					// Start Tor silently
+					TorManager.shared.start(Settings.transport,
+						{ progress, summary in
+							print("[OnionBrowser] Tor restart progress: \(progress ?? 0)%")
+						},
+						{ error in
+							if let error = error {
+								print("[OnionBrowser] Tor restart failed: \(error)")
+							}
+						})
+				}
+				// Wait for Tor to be ready, then reinit webviews
+				while TorManager.shared.torSocks5 == nil {
+					try? await Task.sleep(nanoseconds: 500_000_000)
+					if TorManager.shared.status == .stopped { break }
+				}
+				await MainActor.run {
+					AppDelegate.shared?.allOpenTabs.forEach { $0.reinitWebView(); $0.ensureProxyAndReload() }
+					AppDelegate.shared?.sceneDelegates.forEach { $0.browsingUi.updateChrome() }
+				}
+			}
 			return
 		}
 
