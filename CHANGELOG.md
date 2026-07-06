@@ -1,5 +1,18 @@
 #  Onion Browser Changelog
 
+## 3.4.1
+- Major stability improvements for iOS 27 beta compatibility
+- Fixed session persistence issues causing shopping carts and login sessions to disappear
+- Resolved PGP token verification timeouts during app switching
+- Improved Tor connection reliability with modern SOCKS proxy API
+- Enhanced cookie handling to preserve all Set-Cookie headers
+- Fixed SameSite cookie delivery for .onion requests
+- Changed default tab security from clearOnBackground to forgetOnShutdown
+- Implemented proper cache fallback behavior to prevent redirect loops
+- Added disk-backed cookie storage for session persistence across app restarts
+- Fixed timeout handling to prevent indefinite hangs when Tor is unreachable
+- Prevented page reloads on foreground that reset PGP token challenges
+
 ## 3.4.0
 - Updated Tor to 0.4.9.11.
 - Updated Snowflake to 2.14.1.
